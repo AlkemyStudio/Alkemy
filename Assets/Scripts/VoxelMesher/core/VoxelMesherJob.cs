@@ -45,7 +45,7 @@ public struct VoxelMeshJob : IJob {
         if (algorithm == MeshingAlgorithm.NAIVE) {
             NaiveMeshing();
         } else if (algorithm == MeshingAlgorithm.GREEDY) {
-            
+            // @TODO: Implement greedy meshing
         }
     }
 
@@ -54,8 +54,11 @@ public struct VoxelMeshJob : IJob {
             for (int y = 0; y < height; y++) {
                 for (int z = 0; z < depth; z++) {
                     int color = voxels[GetIndex(x, y, z)];
+                    // Extract the Alpha channel from the color, if the alpha is 0, then there is no voxel
                     if ((color & 0xFF) == 0) continue;
 
+                    // Only create a face if the adjacent voxel is empty
+                    // otherwise the face will be hidden under the adjacent voxel
                     if (IsVoxelEmpty(x, y + 1, z)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.UP);
                     if (IsVoxelEmpty(x, y - 1, z)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.DOWN);
                     if (IsVoxelEmpty(x - 1, y, z)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.LEFT);
@@ -68,10 +71,12 @@ public struct VoxelMeshJob : IJob {
     }
 
     bool IsVoxelEmpty(int x, int y, int z) {
+        // The voxel is empty if out of bounds
         if (x < 0 || x >= width) return true;
         if (y < 0 || y >= height) return true;
         if (z < 0 || z >= depth) return true;
 
+        // Extract the Alpha channel from the color, if the alpha is 0 then the voxel is empty
         if ((voxels[GetIndex(x, y, z)] & 0xFF) == 0) return true;
         return false;
     }
@@ -80,6 +85,10 @@ public struct VoxelMeshJob : IJob {
         return x + y * width + z * width * height;
     }
 
+    /**
+     * Push a face into the mesh
+     * Creates 4 vertices and 6 indices and 4 colors (one for each vertex)
+     */
     private void PushFace(float x, float y, float z, int color, FaceDirection dir) {
         int start = vertices.Length;
 

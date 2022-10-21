@@ -42,12 +42,10 @@ public struct PlyVoxelParseJob : IJob {
                 endHeader = true;
                 continue;
             }
+
             if (!endHeader) {
                 string[] parts = line.Split(' ');
                 switch (parts[0]) {
-                    case "format":
-                    case "element":
-                        break;
                     case "property":
                         properties.Add(parts[2]);
                         break;
@@ -56,6 +54,8 @@ public struct PlyVoxelParseJob : IJob {
                         break;
                     case "origin":
                         voxelData.origin = new Vector3(float.Parse(parts[1]), float.Parse(parts[2]), float.Parse(parts[3]));
+                        break;
+                    default:
                         break;
                 }
             } else if (line.Length > 0) {
@@ -96,13 +96,18 @@ public struct PlyVoxelParseJob : IJob {
                 voxelsInfo.Add(voxelInfo);
             }
         }
+        // Compute the size of the voxel grid
         voxelData.width = maxX - minX + 1;
         voxelData.height = maxY - minY + 1;
         voxelData.depth = maxZ - minZ + 1;
+
+        // Resize the capacity of the voxel array to avoid reallocations
         voxels.Resize(voxelData.width * voxelData.height * voxelData.depth, NativeArrayOptions.ClearMemory);
+
         for (int i = 0; i < voxelsInfo.Count; i++) {
             VoxelInfo voxelInfo = voxelsInfo[i];
             int index = (voxelInfo.x - minX) + (voxelInfo.y - minY) * voxelData.width + (voxelInfo.z - minZ) * voxelData.width * voxelData.height;
+            // Encode the color in the voxel
             voxels[index] = (voxelInfo.alpha) | (voxelInfo.red << 8) | (voxelInfo.green << 16) | (voxelInfo.blue << 24);
         }
 

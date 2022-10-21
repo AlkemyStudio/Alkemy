@@ -15,8 +15,10 @@ public class VoxelData {
     public event VoxelDataReady OnVoxelDataReady;
 
     public void MarkReady() {
-        _ready = true;
-        OnVoxelDataReady.Invoke(this);
+        if (!_ready) {
+            _ready = true;
+            OnVoxelDataReady.Invoke(this);
+        }
     }
 
     public bool IsReady() {
