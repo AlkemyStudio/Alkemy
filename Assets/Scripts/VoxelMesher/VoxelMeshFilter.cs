@@ -11,7 +11,7 @@ public class VoxelMeshFilter : MonoBehaviour
     private MeshFilter meshFilter;
     private VoxelParser parser;
     private VoxelMesh voxelMesh;
-    private NaiveMeshJob meshJob;
+    private VoxelMeshJob meshJob;
     private JobHandle meshJobHandle;
     private bool meshJobRunning = false;
     void Start()
@@ -36,7 +36,8 @@ public class VoxelMeshFilter : MonoBehaviour
         } else {
             voxelMesh = VoxelMeshStore.SetVoxelMesh(voxelData.name, new VoxelMesh(1));
 
-            meshJob = new NaiveMeshJob();
+            meshJob = new VoxelMeshJob();
+            meshJob.algorithm = MeshingAlgorithm.NAIVE;
             meshJob.voxels = new NativeArray<int>(voxelData.voxels, Allocator.Persistent);
             meshJob.origin = voxelData.origin;
             meshJob.width = voxelData.width;

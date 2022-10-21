@@ -13,7 +13,12 @@ public enum FaceDirection {
     BACK
 }
 
-public struct NaiveMeshJob : IJob {
+public enum MeshingAlgorithm {
+    NAIVE = 1,
+    GREEDY = 2
+}
+
+public struct VoxelMeshJob : IJob {
     [ReadOnly]
     public NativeArray<int> voxels;
 
@@ -29,11 +34,22 @@ public struct NaiveMeshJob : IJob {
     [ReadOnly]
     public int depth;
 
+    [ReadOnly]
+    public MeshingAlgorithm algorithm;
+
     public NativeList<Vector3> vertices;
     public NativeList<int> triangles;
     public NativeList<Color32> colors;
 
     public void Execute() {
+        if (algorithm == MeshingAlgorithm.NAIVE) {
+            NaiveMeshing();
+        } else if (algorithm == MeshingAlgorithm.GREEDY) {
+            
+        }
+    }
+
+    void NaiveMeshing() {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 for (int z = 0; z < depth; z++) {
