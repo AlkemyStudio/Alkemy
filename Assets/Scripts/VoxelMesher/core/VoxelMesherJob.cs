@@ -45,7 +45,7 @@ public struct VoxelMeshJob : IJob {
         if (algorithm == MeshingAlgorithm.NAIVE) {
             NaiveMeshing();
         } else if (algorithm == MeshingAlgorithm.GREEDY) {
-            // @TODO: Implement greedy meshing
+            GreedyMeshing();
         }
     }
 
@@ -70,6 +70,10 @@ public struct VoxelMeshJob : IJob {
         }
     }
 
+    void GreedyMeshing() {
+        
+    }
+
     bool IsVoxelEmpty(int x, int y, int z) {
         // The voxel is empty if out of bounds
         if (x < 0 || x >= width) return true;
@@ -89,7 +93,7 @@ public struct VoxelMeshJob : IJob {
      * Push a face into the mesh
      * Creates 4 vertices and 6 indices and 4 colors (one for each vertex)
      */
-    private void PushFace(float x, float y, float z, int color, FaceDirection dir) {
+    private void PushFace(float x, float y, float z, int color, FaceDirection dir, int w = 1, int h = 1) {
         int start = vertices.Length;
 
         byte A = (byte)(color & 0xFF);
@@ -100,39 +104,39 @@ public struct VoxelMeshJob : IJob {
         switch (dir) {
             case FaceDirection.UP:
                 vertices.Add(new Vector3(x, y + 1, z));
-                vertices.Add(new Vector3(x + 1, y + 1, z));
-                vertices.Add(new Vector3(x, y + 1, z + 1));
-                vertices.Add(new Vector3(x + 1, y + 1, z + 1));
+                vertices.Add(new Vector3(x + w, y + 1, z));
+                vertices.Add(new Vector3(x, y + 1, z + h));
+                vertices.Add(new Vector3(x + w, y + 1, z + h));
                 break;
             case FaceDirection.DOWN:
-                vertices.Add(new Vector3(x, y, z + 1));
-                vertices.Add(new Vector3(x + 1, y, z + 1));
+                vertices.Add(new Vector3(x, y, z + h));
+                vertices.Add(new Vector3(x + w, y, z + h));
                 vertices.Add(new Vector3(x, y, z));
-                vertices.Add(new Vector3(x + 1, y, z));
+                vertices.Add(new Vector3(x + w, y, z));
                 break;
             case FaceDirection.LEFT:
-                vertices.Add(new Vector3(x, y + 1, z));
-                vertices.Add(new Vector3(x, y + 1, z + 1));
+                vertices.Add(new Vector3(x, y + h, z));
+                vertices.Add(new Vector3(x, y + h, z + w));
                 vertices.Add(new Vector3(x, y, z));
-                vertices.Add(new Vector3(x, y, z + 1));
+                vertices.Add(new Vector3(x, y, z + w));
                 break;
             case FaceDirection.RIGHT:
-                vertices.Add(new Vector3(x + 1, y + 1, z + 1));
-                vertices.Add(new Vector3(x + 1, y + 1, z));
-                vertices.Add(new Vector3(x + 1, y, z + 1));
+                vertices.Add(new Vector3(x + 1, y + h, z + w));
+                vertices.Add(new Vector3(x + 1, y + h, z));
+                vertices.Add(new Vector3(x + 1, y, z + w));
                 vertices.Add(new Vector3(x + 1, y, z));
                 break;
             case FaceDirection.BACK:
-                vertices.Add(new Vector3(x + 1, y + 1, z));
-                vertices.Add(new Vector3(x, y + 1, z));
-                vertices.Add(new Vector3(x + 1, y, z));
+                vertices.Add(new Vector3(x + w, y + h, z));
+                vertices.Add(new Vector3(x, y + h, z));
+                vertices.Add(new Vector3(x + w, y, z));
                 vertices.Add(new Vector3(x, y, z));
                 break;
             case FaceDirection.FRONT:
-                vertices.Add(new Vector3(x, y + 1, z + 1));
-                vertices.Add(new Vector3(x + 1, y + 1, z + 1));
+                vertices.Add(new Vector3(x, y + h, z + 1));
+                vertices.Add(new Vector3(x + w, y + h, z + 1));
                 vertices.Add(new Vector3(x, y, z + 1));
-                vertices.Add(new Vector3(x + 1, y, z + 1));
+                vertices.Add(new Vector3(x + w, y, z + 1));
                 break;
             default:
                 break;
