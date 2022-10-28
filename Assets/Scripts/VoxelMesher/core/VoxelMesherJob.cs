@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Jobs;
 using UnityEngine;
 using Unity.Collections;
+using System;
 
 public enum FaceDirection {
     UP,
@@ -15,7 +14,8 @@ public enum FaceDirection {
 
 public enum MeshingAlgorithm {
     NAIVE = 1,
-    GREEDY = 2
+    GREEDY = 2,
+    DONE = 3, // Used to indicate that there is no more optimisation to be done
 }
 
 public struct VoxelMeshJob : IJob {
@@ -42,6 +42,7 @@ public struct VoxelMeshJob : IJob {
     public NativeList<Color32> colors;
 
     public void Execute() {
+        DateTime start = DateTime.Now;
         if (algorithm == MeshingAlgorithm.NAIVE) {
             NaiveMeshing();
         } else if (algorithm == MeshingAlgorithm.GREEDY) {
@@ -71,8 +72,131 @@ public struct VoxelMeshJob : IJob {
     }
 
     void GreedyMeshing() {
-        
+        GenerateSlicedVoxelMesh(FaceDirection.UP);
+        GenerateSlicedVoxelMesh(FaceDirection.DOWN);
+        GenerateSlicedVoxelMesh(FaceDirection.LEFT);
+        GenerateSlicedVoxelMesh(FaceDirection.RIGHT);
+        GenerateSlicedVoxelMesh(FaceDirection.BACK);
+        GenerateSlicedVoxelMesh(FaceDirection.FRONT);
     }
+
+    Vector3Int ConvertToFaceCoordinate(int x, int y, int z, FaceDirection direction) {
+        switch (direction) {
+            case FaceDirection.UP:
+            case FaceDirection.DOWN:
+                return new Vector3Int(x, z, y);
+            case FaceDirection.LEFT:
+            case FaceDirection.RIGHT:
+                return new Vector3Int(z, y, x);
+            case FaceDirection.BACK:
+            case FaceDirection.FRONT:
+                return new Vector3Int(x, y, z);
+            default:
+                return Vector3Int.zero;
+        }
+    }
+
+    bool IsVoxelOccluded(int x, int y, int z, FaceDirection direction) {
+        switch (direction) {
+            case FaceDirection.UP:
+                return !IsVoxelEmpty(x, y + 1, z);
+            case FaceDirection.DOWN:
+                return !IsVoxelEmpty(x, y - 1, z);
+            case FaceDirection.LEFT:
+                return !IsVoxelEmpty(x - 1, y, z);
+            case FaceDirection.RIGHT:
+                return !IsVoxelEmpty(x + 1, y, z);
+            case FaceDirection.BACK:
+                return !IsVoxelEmpty(x, y, z - 1);
+            case FaceDirection.FRONT:
+                return !IsVoxelEmpty(x, y, z + 1);
+            default:
+                return false;
+        }
+    }
+
+    void GenerateSlicedVoxelMesh(FaceDirection direction) {
+        Vector3Int size = ConvertToFaceCoordinate(width, height, depth, direction);
+        byte[] voxelsMask = new byte[size.x * size.y];
+
+        /**
+         * Slice the voxel data into 2D slices
+         */
+        for (int z = 0; z < size.z; z++) {
+            Array.Fill<byte>(voxelsMask, 0);
+
+            int faceWidth = 0;
+            int faceHeight = 0;
+            int color = 0;
+            for (int x = 0; x < size.x; x++) {
+                for (int y = 0; y < size.y; y++) {
+                    Vector3Int pos = ConvertToFaceCoordinate(x, y, z, direction);
+                    int index = x + y * size.x;
+                    int globalIndex = GetIndex(pos.x, pos.y, pos.z);
+
+                    /**
+                     * Find the first voxel that has not been visited yet and that is not empty and not occluded
+                     */
+                    if (voxelsMask[index] == 0 && !IsVoxelEmpty(pos.x, pos.y, pos.z) && !IsVoxelOccluded(pos.x, pos.y, pos.z, direction)) {
+                        color = voxels[globalIndex];
+                        faceWidth = 1;
+                        faceHeight = 1;
+
+                        /**
+                         * Expand along the Column as long as the voxel is not empty and has not been visited yet
+                         * Compute the expanded height
+                         */
+                        for (int ny = y + 1; ny < size.y; ny++) {
+                            Vector3Int npos = ConvertToFaceCoordinate(x, ny, z, direction);
+                            int nindex = x + ny * size.x;
+                            int nglobalIndex = GetIndex(npos.x, npos.y, npos.z);
+                            if (voxelsMask[nindex] != 0 || voxels[nglobalIndex] != color || IsVoxelOccluded(npos.x, npos.y, npos.z, direction)) {
+                                break;
+                            }
+                            faceHeight += 1;
+                        }
+
+                        /**
+                         * Expand along the Rows as long as all the voxel in the column have the same color and have not been visited yet
+                         */
+                        for (int nx = x + 1; nx < size.x; nx++) {
+                            bool columnValid = true;
+                            for (int ny = y; ny < y + faceHeight; ny++) {
+                                Vector3Int npos = ConvertToFaceCoordinate(nx, ny, z, direction);
+                                int nindex = nx + ny * size.x;
+                                int nglobalIndex = GetIndex(npos.x, npos.y, npos.z);
+                                if (voxelsMask[nindex] != 0 || voxels[nglobalIndex] != color || IsVoxelOccluded(npos.x, npos.y, npos.z, direction)) {
+                                    columnValid = false;
+                                    break;
+                                }
+                            }
+
+                            if (!columnValid) {
+                                break;
+                            }
+
+                            faceWidth += 1;
+                        }
+
+                        /**
+                         * Push the face to the mesh
+                         */
+                        if (faceWidth > 0 && faceHeight > 0) {
+                            Vector3Int npos = ConvertToFaceCoordinate(x, y, z, direction);
+                            PushFace(npos.x - origin.x, npos.y - origin.y, npos.z - origin.z, color, direction, faceWidth, faceHeight);
+                            for (int nx = x; nx < x + faceWidth; nx++) {
+                                for (int ny = y; ny < y + faceHeight; ny++) {
+                                    int nindex = nx + ny * size.x;
+                                    voxelsMask[nindex] = 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
     bool IsVoxelEmpty(int x, int y, int z) {
         // The voxel is empty if out of bounds

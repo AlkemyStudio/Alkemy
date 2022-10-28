@@ -14,20 +14,19 @@ public class VoxelMeshFilter : MonoBehaviour
     private VoxelMeshJob meshJob;
     private JobHandle meshJobHandle;
     private bool meshJobRunning = false;
-    void Start()
-    {
+    void Start() {
         parser = GetComponent<VoxelParser>();
 
         if (parser == null || parser.voxelData == null) return;
 
         if (parser.voxelData.IsReady()) {
-            setupVoxelMesh(parser.voxelData);
+            SetupVoxelMesh(parser.voxelData);
         } else {
-            parser.voxelData.OnVoxelDataReady += setupVoxelMesh;
+            parser.voxelData.OnVoxelDataReady += SetupVoxelMesh;
         }
     }
 
-    private void setupVoxelMesh(VoxelData voxelData) {
+    private void SetupVoxelMesh(VoxelData voxelData) {
         voxelMesh = VoxelMeshStore.GetVoxelMesh(voxelData.name);
         meshFilter = GetComponent<MeshFilter>();
 
@@ -35,6 +34,7 @@ public class VoxelMeshFilter : MonoBehaviour
             meshFilter.mesh = voxelMesh.mesh;
         } else {
             voxelMesh = VoxelMeshStore.SetVoxelMesh(voxelData.name, new VoxelMesh(1));
+            voxelMesh.waitOptimization = true;
 
             meshJob = new VoxelMeshJob();
             meshJob.algorithm = MeshingAlgorithm.NAIVE;
@@ -53,16 +53,39 @@ public class VoxelMeshFilter : MonoBehaviour
     }
 
     void LateUpdate() {
+        if (voxelMesh != null && !voxelMesh.waitOptimization && !meshJobRunning && voxelMesh.optimizationLevel < ((int)MeshingAlgorithm.DONE - 1)) {
+            voxelMesh.waitOptimization = true;
+            voxelMesh.optimizationLevel++;
+
+            meshJob = new VoxelMeshJob();
+            meshJob.algorithm = (MeshingAlgorithm)voxelMesh.optimizationLevel;
+            meshJob.voxels = new NativeArray<int>(parser.voxelData.voxels, Allocator.Persistent);
+            meshJob.origin = parser.voxelData.origin;
+            meshJob.width = parser.voxelData.width;
+            meshJob.height = parser.voxelData.height;
+            meshJob.depth = parser.voxelData.depth;
+            meshJob.vertices = new NativeList<Vector3>(Allocator.Persistent);
+            meshJob.colors = new NativeList<Color32>(Allocator.Persistent);
+            meshJob.triangles = new NativeList<int>(Allocator.Persistent);
+
+            meshJobHandle = meshJob.Schedule(parser.parserJobHandle);
+            meshJobRunning = true;
+        }
+
         if (meshJobRunning && meshJobHandle.IsCompleted) {
             meshJobHandle.Complete();
 
+            voxelMesh.waitOptimization = false;
             meshJobRunning = false;
+
+            voxelMesh.mesh.Clear();
             voxelMesh.mesh.SetVertices(meshJob.vertices.ToArray());
             voxelMesh.mesh.SetColors(meshJob.colors.ToArray());
             voxelMesh.mesh.SetTriangles(meshJob.triangles.ToArray(), 0);
             voxelMesh.mesh.Optimize();
             voxelMesh.mesh.RecalculateNormals();
             voxelMesh.mesh.RecalculateBounds();
+
 
             meshFilter.mesh = voxelMesh.mesh;
 
