@@ -7,6 +7,11 @@ TagManager:
   - Destructible
   - Bomb
   - Terrain
+<<<<<<< HEAD
+=======
+  - Explosion
+  - Bonus
+>>>>>>> character-controller
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Damageable
   - 
   - 
   - 
@@ -43,4 +48,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 3437156255
+    locked: 0
+  - name: Bomb
+    uniqueID: 3415634521
+    locked: 0
+  - name: Particles
+    uniqueID: 2178154155
     locked: 0

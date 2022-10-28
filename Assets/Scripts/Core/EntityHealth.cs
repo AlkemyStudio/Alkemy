@@ -5,7 +5,8 @@ namespace Character
 {
     public class EntityHealth : MonoBehaviour
     {
-        public delegate void HealthAction(GameObject gameObject);
+        public delegate void HealthAction(GameObject go);
+
         public event HealthAction OnDeath;
 
         public void PerformDamage()

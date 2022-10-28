@@ -1,7 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Character;
+using Player;
 using Terrain;
 using UnityEngine;
 
@@ -9,145 +8,97 @@ namespace Bomb
 {
     public abstract class BaseBombController : MonoBehaviour
     {
-        [SerializeField] MeshRenderer meshRenderer;
-        
-        private BombData _bombData;
-        private TerrainManager _terrainManager;
-        private bool _isExploded;
-        private bool _isExploding;
+        [SerializeField] protected Explosion explosionPrefabs;
+        [SerializeField] protected MeshRenderer meshRenderer;
 
-        private readonly Vector3 SouthRayDirection = new Vector3(0, 0.5f, -1);
-        private readonly Vector3 NorthRayDirection = new Vector3(0, 0.5f, 1);
-        private readonly Vector3 WestRayDirection = new Vector3(-1, 0.5f, 0);
-        private readonly Vector3 EastRayDirection = new Vector3(1, 0.5f, 0);
+        protected PlayerBombController _playerBombController;
+        protected int _bombPower;
 
-        public virtual void SetupBomb(BombData bombData, TerrainManager terrainManager)
+        private void Start()
         {
-            _bombData = bombData;
-            _terrainManager = terrainManager;
-            StartCoroutine(StartCountdown());
+            meshRenderer.material = new Material(meshRenderer.material);
         }
 
-        private void Explode()
+        public virtual void SetupBomb(PlayerBombController bombController, int bombPower)
         {
-            StopCoroutine(StartCountdown());
-            _isExploded = true;
-            StartCoroutine(ExplodeCoroutine());
+            _playerBombController = bombController;
+            _bombPower = bombPower;
+            StartCoroutine(StartTimer());
         }
 
-        protected virtual IEnumerator StartCountdown()
+        protected virtual IEnumerator StartTimer()
         {
-            yield return new WaitForSeconds(BombData.CountdownDuration);
-            Explode();
+            yield return new WaitForSeconds(BombData.FuseTime);
+            StartExplode();
         }
         
-        private IEnumerator ExplodeCoroutine()
+        public virtual void CancelTimer()
         {
-            _isExploding = true;
-            yield return new WaitForSeconds(BombData.ExplosionDuration);
-            _isExploding = false;
+            StopAllCoroutines();
         }
 
-        private void FixedUpdate()
+        public virtual void StartExplode()
         {
-            if (_isExploded && _isExploding)
-            {
-                Explooooooosionnn();
-            }
-        }
-
-        // ReSharper disable once IdentifierTypo
-        protected virtual void Explooooooosionnn()
-        {
-            Vector2Int bombGridPosition = _terrainManager.GetTilePosition(transform.position);
-            _terrainManager.SetValue(bombGridPosition, TerrainEntityType.None);
-            meshRenderer.enabled = false;
-
-            List<GameObject> hitEntities = GetHitEntitiesToDestroy(bombGridPosition);
-            foreach (GameObject hitEntity in hitEntities)
-            {
-                if (hitEntity.CompareTag("Player")) {
-                    hitEntity.GetComponent<EntityHealth>()?.PerformDamage();
-                } else if (hitEntity.CompareTag("Bomb")) {
-                    hitEntity.GetComponent<BaseBombController>()?.Explode();
-                } else if (hitEntity.CompareTag("Destructible")) {
-                    _terrainManager.SetValue(_terrainManager.GetTilePosition(transform.position), TerrainEntityType.None);
-                    hitEntity.GetComponent<EntityHealth>()?.PerformDamage();
-                }
-            }
+            Vector3 bombPosition = TerrainUtils.GetTerrainPosition(transform.position);
             
+            Explosion baseExplosion = Instantiate(explosionPrefabs, bombPosition, Quaternion.identity);
+            baseExplosion.DestroyAfter(BombData.ExplosionDuration);
+            
+            Explode(bombPosition, Vector3.back, _bombPower);
+            Explode(bombPosition, Vector3.right, _bombPower);
+            Explode(bombPosition, Vector3.forward, _bombPower);
+            Explode(bombPosition, Vector3.left, _bombPower);
+            
+            _playerBombController.OnBombExplode();
             Destroy(gameObject);
         }
-
-        protected virtual List<GameObject> GetHitEntitiesToDestroy(Vector2Int bombGridPosition)
+        
+        public void EnableFlickeringStepOne()
         {
-            Vector3 bombPosition = new Vector3(bombGridPosition.x, 0.5f, bombGridPosition.y);
-            RaycastHit[] souRaycastHits = Physics.RaycastAll(bombPosition, SouthRayDirection, _bombData.power);
-            RaycastHit[] norRaycastHits = Physics.RaycastAll(bombPosition, NorthRayDirection, _bombData.power);
-            RaycastHit[] wesRaycastHits = Physics.RaycastAll(bombPosition, WestRayDirection, _bombData.power);
-            RaycastHit[] easRaycastHits = Physics.RaycastAll(bombPosition, EastRayDirection, _bombData.power);
-
-            List<GameObject> hitEntities = new List<GameObject>();
-
-            hitEntities.AddRange(ComputeHitEntities(souRaycastHits));
-            hitEntities.AddRange(ComputeHitEntities(norRaycastHits));
-            hitEntities.AddRange(ComputeHitEntities(wesRaycastHits));
-            hitEntities.AddRange(ComputeHitEntities(easRaycastHits));
-
-            return hitEntities;
+            meshRenderer.sharedMaterial.SetFloat("_IncreaseStep1Enabled", 1.0f);
         }
 
-        private List<GameObject> ComputeHitEntities(RaycastHit[] raycastHits)
+        public void EnableFlickeringStepTwo()
         {
-            bool foundDestructible = false;
-            GameObject firstDestructible = null;
-            float lastWallDistance = Mathf.Infinity;
-
-            List<GameObject> hitEntities = new List<GameObject>();
-            foreach (RaycastHit raycastHit in raycastHits)
-            {
-                if (raycastHit.collider.gameObject.CompareTag("Player") ||
-                    raycastHit.collider.gameObject.CompareTag("Bomb"))
-                {
-                    hitEntities.Add(raycastHit.collider.gameObject);
-                    continue;
-                }
-
-                if (!raycastHit.collider.gameObject.CompareTag("Destructible")) continue;
-
-                if (!foundDestructible)
-                {
-                    firstDestructible = raycastHit.collider.gameObject;
-                    foundDestructible = true;
-                }
-                else if (Vector3.Distance(firstDestructible.transform.position, raycastHit.collider.transform.position) <
-                         lastWallDistance)
-                {
-                    firstDestructible = raycastHit.collider.gameObject;
-                    lastWallDistance = Vector3.Distance(firstDestructible.transform.position,
-                        raycastHit.collider.transform.position);
-                }
-            }
-
-            if (foundDestructible)
-            {
-                hitEntities.Add(firstDestructible);
-            }
-
-            return hitEntities;
+            meshRenderer.sharedMaterial.SetFloat("_IncreaseStep2Enabled", 1.0f);
         }
 
-        private void OnDrawGizmos()
+        protected virtual void Explode(Vector3 position, Vector3 direction, int length)
         {
-            if (!Application.isPlaying) return;
+            if (length <= 0) return;
+
+            position += direction;
+
+            Collider[] colliders = Physics.OverlapBox(position, new Vector3(0.49f, 0.49f, 0.49f), Quaternion.identity);
+
+            foreach (Collider c in colliders)
+            {
+                if (c.CompareTag("Explosion") || c.CompareTag("Terrain"))
+                {
+                    return;
+                }
+                
+                if (c.CompareTag("Bomb"))
+                {
+                    BaseBombController bombController = c.GetComponent<BaseBombController>();
+                    bombController.CancelTimer();
+                    bombController.StartExplode();
+                    return;
+                }
+
+                if (c.CompareTag("Destructible"))
+                {
+                    EntityHealth entityHealth = c.GetComponent<EntityHealth>();
+                    entityHealth.PerformDamage();
+                    length = 0;
+                    break;
+                }
+            }
             
-            Vector2Int bombGridPosition = _terrainManager.GetTilePosition(transform.position); 
-            Vector3 _bombPosition = new Vector3(bombGridPosition.x, 0.5f, bombGridPosition.y);
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(_bombPosition, SouthRayDirection * _bombData.power);
-            Gizmos.DrawRay(_bombPosition, NorthRayDirection * _bombData.power);
-            Gizmos.DrawRay(_bombPosition, WestRayDirection * _bombData.power);
-            Gizmos.DrawRay(_bombPosition, EastRayDirection * _bombData.power);
+            Explosion explosion = Instantiate(explosionPrefabs, position, Quaternion.identity);
+            explosion.DestroyAfter(BombData.ExplosionDuration);
+            
+            Explode(position, direction, length - 1);
         }
     }
 }
