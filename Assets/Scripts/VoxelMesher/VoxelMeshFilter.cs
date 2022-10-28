@@ -53,12 +53,17 @@ public class VoxelMeshFilter : MonoBehaviour
     }
 
     void LateUpdate() {
+        /**
+         * If no optimisation or meshing is currently running on the mesh
+         * we start the optimisation process by incrementing the algorithm level that is going to be used
+         * and creating a new job to optimise the mesh.
+         */
         if (voxelMesh != null && !voxelMesh.waitOptimization && !meshJobRunning && voxelMesh.optimizationLevel < ((int)MeshingAlgorithm.DONE - 1)) {
-            voxelMesh.waitOptimization = true;
-            voxelMesh.optimizationLevel++;
+            voxelMesh.waitOptimization = true; // Prevent other jobs from running on the mesh
+            voxelMesh.optimizationLevel++; // Increment the optimisation level
 
             meshJob = new VoxelMeshJob();
-            meshJob.algorithm = (MeshingAlgorithm)voxelMesh.optimizationLevel;
+            meshJob.algorithm = (MeshingAlgorithm)voxelMesh.optimizationLevel; // Select the proper algorithm based on the optimisation level
             meshJob.voxels = new NativeArray<int>(parser.voxelData.voxels, Allocator.Persistent);
             meshJob.origin = parser.voxelData.origin;
             meshJob.width = parser.voxelData.width;
@@ -72,6 +77,10 @@ public class VoxelMeshFilter : MonoBehaviour
             meshJobRunning = true;
         }
 
+        /**
+         * Wait for the current running job to be done
+         * and then update the mesh information with the results of the job
+         */
         if (meshJobRunning && meshJobHandle.IsCompleted) {
             meshJobHandle.Complete();
 
