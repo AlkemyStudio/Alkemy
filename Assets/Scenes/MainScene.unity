@@ -614,11 +614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731400397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 8, y: 0.26, z: 5}
-=======
   m_LocalPosition: {x: 8.5, y: 0.26, z: 5.5}
->>>>>>> character-controller
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -635,11 +631,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_Name: pb_Mesh28728
-=======
   m_Name: pb_Mesh28754
->>>>>>> character-controller
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18906,11 +18898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831617374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: 8, y: 0, z: 5}
-=======
   m_LocalPosition: {x: 8.5, y: 0, z: 5.5}
->>>>>>> character-controller
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

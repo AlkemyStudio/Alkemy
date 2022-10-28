@@ -13,12 +13,8 @@ GameObject:
   - component: {fileID: 4967157756374902458}
   - component: {fileID: 4967157756374902457}
   - component: {fileID: 6487069792405373640}
-<<<<<<< HEAD
-  m_Layer: 0
-=======
   - component: {fileID: 6232599410323691821}
   m_Layer: 8
->>>>>>> character-controller
   m_Name: DestructibleTile
   m_TagString: Destructible
   m_Icon: {fileID: 0}
@@ -114,9 +110,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8943184b4d0b4eb49cb8139c12b12c04, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
+  m_EditorClassIdentifier:
 --- !u!114 &6232599410323691821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,4 +129,3 @@ MonoBehaviour:
   - {fileID: 8316536697196289076, guid: 3dcaf2d9e59cb90a2b8cf4aae0330094, type: 3}
   - {fileID: 3428231013816836945, guid: ebdf3c51fbc9ed0c8a61be7d027b1ca9, type: 3}
   - {fileID: 6246498869493565027, guid: 28c563472ddcb91afb51e920d1e07e70, type: 3}
->>>>>>> character-controller
