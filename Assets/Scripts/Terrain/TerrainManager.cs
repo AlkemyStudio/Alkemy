@@ -106,7 +106,7 @@ namespace Terrain
                 for (int x = 0; x < Width; x++)
                 {
                     if (GetTerrainEntityType(x, y) != TerrainEntityType.Wall) continue;
-                    GameObject instantiateGameObject = Instantiate(wallPrefab, new Vector3(x, 0.41f, y), Quaternion.identity);
+                    GameObject instantiateGameObject = Instantiate(wallPrefab, new Vector3(x + 0.5F, 0.41f, y + 0.5F), Quaternion.identity);
                     _previouslyInstantiatedWall.Add(instantiateGameObject);
                 }
             }
@@ -135,6 +135,11 @@ namespace Terrain
             return terrainEntityType == TerrainEntityType.None;
         }
 
+        public bool IsFilled(Vector2Int gridPosition)
+        {
+            return IsFilled(gridPosition.x, gridPosition.y);
+        }
+        
         public TerrainEntityType GetTerrainEntityType(int x, int y)
         {
             return _filledTiles[x + y * Width];

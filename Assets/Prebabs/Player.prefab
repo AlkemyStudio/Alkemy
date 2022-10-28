@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4189541259374453872}
   - component: {fileID: 4189541259374453875}
   - component: {fileID: 264882209699561022}
-  - component: {fileID: 1319196751273344234}
   - component: {fileID: 4859222277973809530}
   - component: {fileID: 6054517025683855794}
+  - component: {fileID: 8209527461632197761}
+  - component: {fileID: 7966452505072329019}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -117,25 +118,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1319196751273344234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189541259374453874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76b25f3d11443bc80883101141c8817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterState:
-    speed: 1000
-    bombPrefabs: {fileID: 7726575602201243998, guid: fde0c308cecebd9579845b0a21fdf0f3,
-      type: 3}
-    bombPower: 1
-    simultaneousBomb: 1
-  playerRigidbody: {fileID: 264882209699561022}
 --- !u!114 &4859222277973809530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,3 +169,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8943184b4d0b4eb49cb8139c12b12c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8209527461632197761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189541259374453874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7677af86fc475b8fb6fd0a74fbb5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 8028605745407525638, guid: fde0c308cecebd9579845b0a21fdf0f3,
+    type: 3}
+  bombPower: 1
+  minBombPower: 1
+  maxBombPower: 9
+  bombAmount: 1
+  bombLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &7966452505072329019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189541259374453874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba02c6022c0c4fcd980a0af40b4c5cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRigidbody: {fileID: 264882209699561022}
+  baseSpeed: 4
+  bonusSpeed: 1
+  bonusNumber: 1
+  minBonusNumber: 1
+  maxBonusNumber: 9
