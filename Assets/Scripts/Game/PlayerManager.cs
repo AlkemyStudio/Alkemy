@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Character;
 using Terrain;
@@ -21,7 +22,7 @@ namespace Game
         {
             Instance = this;
             _instantiatedPlayer = new List<GameObject>();
-        }    
+        }
 
         private void GeneratePlayers()
         {
@@ -53,6 +54,25 @@ namespace Game
         private void OnPlayerDeath(GameObject player)
         {
             Destroy(player);
+            CheckAlivePlayers();
+        }
+        
+        private void CheckAlivePlayers()
+        {
+            int alivePlayers = 0;
+            
+            foreach (GameObject player in _instantiatedPlayer)
+            {
+                if (player.activeSelf)
+                {
+                    alivePlayers++;
+                }
+            }
+            
+            if (alivePlayers == 0)
+            {
+                _gameManager.SetGameState(GameState.Ended);
+            }
         }
         
         private void OnEnable()
@@ -67,10 +87,33 @@ namespace Game
 
         private void OnGameStateChanged(GameState state)
         {
-            if (state != GameState.TerrainGenerated) return;
+            switch (state)
+            {
+                case GameState.TerrainGenerated:
+                    OnTerrainGenerated();
+                    break;
+                case GameState.Ended:
+                    OnGameEnded();
+                    break;
+            }
+        }
+        
+        private void OnTerrainGenerated()
+        {
             GeneratePlayers();
             _gameManager.SetGameState(GameState.Ready);
             _gameManager.SetGameState(GameState.Playing);
+        }
+
+        private void OnGameEnded()
+        {
+            StartCoroutine(Restart());
+        }
+
+        private IEnumerator Restart()
+        {
+            yield return new WaitForSeconds(3);
+            _gameManager.SetGameState(GameState.Initialization);
         }
         
         private void OnValidate()

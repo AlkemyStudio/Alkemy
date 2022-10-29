@@ -17,6 +17,11 @@ namespace Bomb
         private void Start()
         {
             meshRenderer.material = new Material(meshRenderer.material);
+            meshRenderer.sharedMaterial.SetFloat("_FuseTime", BombData.FuseTime);
+            meshRenderer.sharedMaterial.SetFloat("_SpawnTime", Time.time);
+            
+            // (temps max - temps écoulé) / temps max
+            
         }
 
         public virtual void SetupBomb(PlayerBombController bombController, int bombPower)
@@ -51,16 +56,6 @@ namespace Bomb
             
             _playerBombController.OnBombExplode();
             Destroy(gameObject);
-        }
-        
-        public void EnableFlickeringStepOne()
-        {
-            meshRenderer.sharedMaterial.SetFloat("_IncreaseStep1Enabled", 1.0f);
-        }
-
-        public void EnableFlickeringStepTwo()
-        {
-            meshRenderer.sharedMaterial.SetFloat("_IncreaseStep2Enabled", 1.0f);
         }
 
         protected virtual void Explode(Vector3 position, Vector3 direction, int length)
