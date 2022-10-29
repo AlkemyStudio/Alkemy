@@ -1,7 +1,6 @@
 using UnityEngine;
 using Unity.Jobs;
 using Unity.Collections;
-using System.Collections;
 using System.Collections.Generic;
 
 struct VoxelInfo {
