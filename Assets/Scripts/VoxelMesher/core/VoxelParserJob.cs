@@ -52,7 +52,7 @@ public struct PlyVoxelParseJob : IJob {
                         voxelData.canExplode = true;
                         break;
                     case "origin":
-                        voxelData.origin = new Vector3(float.Parse(parts[1]), float.Parse(parts[2]), float.Parse(parts[3]));
+                        voxelData.origin = new Vector3(float.Parse(parts[1], System.Globalization.CultureInfo.InvariantCulture), float.Parse(parts[2], System.Globalization.CultureInfo.InvariantCulture), float.Parse(parts[3], System.Globalization.CultureInfo.InvariantCulture));
                         break;
                     default:
                         break;
