@@ -103,8 +103,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FlickeringFrequencyBound: 2
-    - _FlickeringSpeed: 100
+    - _FlickeringFrequencyBound: 100
+    - _FlickeringSpeed: 20
     - _FuseTime: 3
     - _GlossMapScale: 0
     - _Glossiness: 0

@@ -58,7 +58,6 @@ namespace Game
 
         private void OnPlayerDeath(GameObject player)
         {
-            Debug.Log("Player died");
             Destroy(player);
             _alivePlayerCount--;
             
@@ -71,8 +70,6 @@ namespace Game
         private bool ShouldEndTheGame()
         {
             if (_alivePlayerCount > 0) return false;
-            
-            Debug.Log("No more players alive");
             return true;
         }
         
@@ -88,8 +85,6 @@ namespace Game
 
         private void OnGameStateChanged(GameState state)
         {
-            Debug.Log("PlayerManager: State change to " + Enum.GetName(typeof(GameState), state));
-            
             switch (state)
             {
                 case GameState.TerrainGenerated:
@@ -115,7 +110,6 @@ namespace Game
 
         private IEnumerator Restart()
         {
-            Debug.Log("Restarting in 3 seconds...");
             yield return new WaitForSeconds(3);
             _gameManager.ReloadGame();
         }
