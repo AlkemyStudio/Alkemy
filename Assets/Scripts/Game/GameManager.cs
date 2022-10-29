@@ -28,6 +28,11 @@ namespace Game
         {
             SetGameState(GameState.Initialization);
         }
+        
+        public void EndTheGame()
+        {
+            SetGameState(GameState.Ended);
+        }
 
         public void PauseGame()
         {

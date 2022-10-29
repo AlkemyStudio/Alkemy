@@ -1,3 +1,4 @@
+using System;
 using Bomb;
 using Terrain;
 using UnityEngine;
@@ -90,6 +91,30 @@ namespace Player
             if (minBombPower <= 0) minBombPower = 1;
             if (maxBombPower < minBombPower) maxBombPower = minBombPower;
             bombPower = Mathf.Clamp(bombPower, minBombPower, maxBombPower);
+        }
+
+        private void OnGUI()
+        {
+            if (GUI.Button(new Rect(new Vector2(10, 10), new Vector2(120, 25)), "Add Bomb Power"))
+            {
+                AddBombPower();
+            }
+            
+            if (GUI.Button(new Rect(new Vector2(140, 10), new Vector2(150, 25)), "Set Max Bomb Power"))
+            {
+                bombPower = maxBombPower;
+            }
+            
+            if (GUI.Button(new Rect(new Vector2(10, 45), new Vector2(120, 25)), "Add Bomb Amount"))
+            {
+                AddBombAmount();
+            }
+            
+            if (GUI.Button(new Rect(new Vector2(140, 45), new Vector2(150, 25)), "Set Max Bomb Amount"))
+            {
+                bombAmount = maxBombPower;
+                _remainingBombs = bombAmount;
+            }
         }
     }
 }

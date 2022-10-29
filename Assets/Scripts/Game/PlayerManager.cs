@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Character;
 using Terrain;
@@ -6,22 +7,24 @@ using UnityEngine;
 
 namespace Game
 {
-    [RequireComponent(typeof(TerrainManager))]
+    [RequireComponent(typeof(TerrainManager), typeof(GameManager))]
     public class PlayerManager : MonoBehaviour
     {
         public static PlayerManager Instance { get; private set; }
 
-        private GameManager _gameManager;
+        [SerializeField] private GameManager _gameManager;
         
         [SerializeField] private GameObject[] playerPrefabs;
         [SerializeField] private GameObject[] playerSpawns;
+
         private List<GameObject> _instantiatedPlayer;
+        private int _alivePlayerCount;
 
         private void Awake()
         {
             Instance = this;
             _instantiatedPlayer = new List<GameObject>();
-        }    
+        }
 
         private void GeneratePlayers()
         {
@@ -41,6 +44,7 @@ namespace Game
         
         private void DoSpawnPlayers()
         {
+            
             for (int i = 0; i < playerPrefabs.Length; i++)
             {
                 GameObject newPlayer = Instantiate(playerPrefabs[i], playerSpawns[i].transform.position,
@@ -48,11 +52,28 @@ namespace Game
                 newPlayer.GetComponent<EntityHealth>().OnDeath += OnPlayerDeath;
                 _instantiatedPlayer.Add(newPlayer);
             }
+            
+            _alivePlayerCount = _instantiatedPlayer.Count;
         }
 
         private void OnPlayerDeath(GameObject player)
         {
+            Debug.Log("Player died");
             Destroy(player);
+            _alivePlayerCount--;
+            
+            if (ShouldEndTheGame())
+            {
+                _gameManager.EndTheGame();
+            }
+        }
+        
+        private bool ShouldEndTheGame()
+        {
+            if (_alivePlayerCount > 0) return false;
+            
+            Debug.Log("No more players alive");
+            return true;
         }
         
         private void OnEnable()
@@ -67,10 +88,36 @@ namespace Game
 
         private void OnGameStateChanged(GameState state)
         {
-            if (state != GameState.TerrainGenerated) return;
+            Debug.Log("PlayerManager: State change to " + Enum.GetName(typeof(GameState), state));
+            
+            switch (state)
+            {
+                case GameState.TerrainGenerated:
+                    OnTerrainGenerated();
+                    break;
+                case GameState.Ended:
+                    OnGameEnded();
+                    break;
+            }
+        }
+        
+        private void OnTerrainGenerated()
+        {
             GeneratePlayers();
             _gameManager.SetGameState(GameState.Ready);
             _gameManager.SetGameState(GameState.Playing);
+        }
+
+        private void OnGameEnded()
+        {
+            StartCoroutine(Restart());
+        }
+
+        private IEnumerator Restart()
+        {
+            Debug.Log("Restarting in 3 seconds...");
+            yield return new WaitForSeconds(3);
+            _gameManager.ReloadGame();
         }
         
         private void OnValidate()
