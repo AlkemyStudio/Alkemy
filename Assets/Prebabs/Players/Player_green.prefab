@@ -130,10 +130,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 8028605745407525638, guid: fde0c308cecebd9579845b0a21fdf0f3,
     type: 3}
-  bombPower: 6
+  bombPower: 1
   minBombPower: 1
   maxBombPower: 20
-  bombAmount: 6
+  bombAmount: 1
   bombLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -152,9 +152,9 @@ MonoBehaviour:
   playerRigidbody: {fileID: 264882209699561022}
   baseSpeed: 140
   speedPerBonus: 80
-  bonusNumber: 6
+  bonusNumber: 1
   minBonusNumber: 1
-  maxBonusNumber: 6
+  maxBonusNumber: 12
 --- !u!136 &3630786557208056644
 CapsuleCollider:
   m_ObjectHideFlags: 0

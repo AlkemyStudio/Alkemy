@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Character;
@@ -6,8 +5,6 @@ using Lobby;
 using Player;
 using Terrain;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Utils;
 
 namespace Game
 {
@@ -49,8 +46,6 @@ namespace Game
             SelectableCharacterRegister selectableCharacterRegister = SelectableCharacterRegister.Instance;
             List<PlayerConfiguration> playerConfigurations = PlayerConfigurationManager.Instance.PlayerConfigurations;
             
-            Debug.Log("playerConfigurations.Count: " + playerConfigurations.Count);
-            
             for (int i = 0; i < playerConfigurations.Count; i++)
             {
                 PlayerConfiguration playerConfiguration = playerConfigurations[i];
@@ -61,11 +56,6 @@ namespace Game
                 GameObject player = Instantiate(characterPrefab, playerSpawns[spawnIndex].transform.position, Quaternion.identity);
                 
                 player.GetComponent<EntityHealth>().OnDeath += OnPlayerDeath;
-                foreach (MonoBehaviour component in playerConfigurationGameObject.GetComponents<MonoBehaviour>())
-                {
-                    Debug.Log(component.GetType().FullName);
-                }
-                Debug.Log(playerConfigurationGameObject.GetComponent<PlayerInputHandler>());
                 playerConfigurationGameObject.GetComponent<PlayerInputHandler>().InitializePlayer(playerConfiguration, player);
                 
                 _instantiatedPlayer.Add(player);

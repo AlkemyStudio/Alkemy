@@ -33,7 +33,6 @@ namespace Player
             Vector3 playerTilePosition = TerrainUtils.GetTerrainPosition(transform.position);
 
             bool canBePlaced = PlayerCanPlaceBombAt(playerTilePosition);
-            Debug.Log("can be placed: " + canBePlaced);
             if (!canBePlaced) return;
             
             PlaceBombAt(playerTilePosition);
@@ -41,8 +40,7 @@ namespace Player
         
         private bool PlayerCanPlaceBombAt(Vector3 tilePosition)
         {
-            
-            return !Physics.CheckBox(tilePosition, Vector3.one / 2, Quaternion.identity, bombLayerMask);
+            return !Physics.CheckBox(tilePosition, new Vector3(0.3f, 0.3f, 0.3f), Quaternion.identity, bombLayerMask);
         }
 
         private void PlaceBombAt(Vector3 tilePosition)
