@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using Character;
+using Game;
 using Player;
 using Terrain;
 using UnityEngine;
@@ -21,16 +23,22 @@ namespace Bomb
             meshRenderer.material = new Material(meshRenderer.material);
             meshRenderer.sharedMaterial.SetFloat("_FuseTime", BombData.FuseTime);
             meshRenderer.sharedMaterial.SetFloat("_SpawnTime", Time.time);
-            
-            // (temps max - temps écoulé) / temps max
-            
         }
 
         public virtual void SetupBomb(PlayerBombController bombController, int bombPower)
         {
             _playerBombController = bombController;
             _bombPower = bombPower;
+            GameManager.Instance.GameStateChanged += OnGameStateChanged;
             StartCoroutine(StartTimer());
+        }
+        
+        private void OnGameStateChanged(GameState gameState)
+        {
+            if (gameState == GameState.Ended)
+            {
+                Destroy(gameObject);
+            }
         }
 
         protected virtual IEnumerator StartTimer()
@@ -107,6 +115,11 @@ namespace Bomb
             explosion.DestroyAfter(BombData.ExplosionDuration);
             
             Explode(position, direction, length - 1);
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.GameStateChanged -= OnGameStateChanged;
         }
     }
 }
