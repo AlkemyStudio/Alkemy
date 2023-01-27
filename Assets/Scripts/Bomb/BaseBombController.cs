@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using Character;
+using Game;
 using Player;
 using Terrain;
 using UnityEngine;
@@ -13,22 +15,30 @@ namespace Bomb
 
         protected PlayerBombController _playerBombController;
         protected int _bombPower;
+        
+        protected bool _hasAlreadyExploded = false;
 
         private void Start()
         {
             meshRenderer.material = new Material(meshRenderer.material);
             meshRenderer.sharedMaterial.SetFloat("_FuseTime", BombData.FuseTime);
             meshRenderer.sharedMaterial.SetFloat("_SpawnTime", Time.time);
-            
-            // (temps max - temps écoulé) / temps max
-            
         }
 
         public virtual void SetupBomb(PlayerBombController bombController, int bombPower)
         {
             _playerBombController = bombController;
             _bombPower = bombPower;
+            GameManager.Instance.GameStateChanged += OnGameStateChanged;
             StartCoroutine(StartTimer());
+        }
+        
+        private void OnGameStateChanged(GameState gameState)
+        {
+            if (gameState == GameState.Ended)
+            {
+                Destroy(gameObject);
+            }
         }
 
         protected virtual IEnumerator StartTimer()
@@ -42,8 +52,14 @@ namespace Bomb
             StopAllCoroutines();
         }
 
+        public virtual bool HasAlreadyExploded()
+        {
+            return _hasAlreadyExploded;
+        }
+        
         public virtual void StartExplode()
         {
+            _hasAlreadyExploded = true;
             Vector3 bombPosition = TerrainUtils.GetTerrainPosition(transform.position);
             
             Explosion baseExplosion = Instantiate(explosionPrefabs, bombPosition, Quaternion.identity);
@@ -54,7 +70,11 @@ namespace Bomb
             Explode(bombPosition, Vector3.forward, _bombPower);
             Explode(bombPosition, Vector3.left, _bombPower);
             
-            _playerBombController.OnBombExplode();
+            if (_playerBombController != null)
+            {
+                _playerBombController.OnBombExplode();
+            }
+            
             Destroy(gameObject);
         }
 
@@ -68,7 +88,7 @@ namespace Bomb
 
             foreach (Collider c in colliders)
             {
-                if (c.CompareTag("Explosion") || c.CompareTag("Terrain"))
+                if (c.CompareTag("Terrain"))
                 {
                     return;
                 }
@@ -76,6 +96,7 @@ namespace Bomb
                 if (c.CompareTag("Bomb"))
                 {
                     BaseBombController bombController = c.GetComponent<BaseBombController>();
+                    if (bombController.HasAlreadyExploded()) return;
                     bombController.CancelTimer();
                     bombController.StartExplode();
                     return;
@@ -94,6 +115,11 @@ namespace Bomb
             explosion.DestroyAfter(BombData.ExplosionDuration);
             
             Explode(position, direction, length - 1);
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.Instance.GameStateChanged -= OnGameStateChanged;
         }
     }
 }
