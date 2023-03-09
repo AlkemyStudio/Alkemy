@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Bonus;
 using Character;
+using Terrain;
 using UnityEngine;
 
 namespace Wall
@@ -14,11 +15,15 @@ namespace Wall
 
         private void Start()
         {
+            entityHealth = entityHealth.GetComponent<EntityHealth>();
             entityHealth.OnDeath += OnDeath;
         }
 
         private void OnDeath(GameObject go)
-        {
+        { 
+            Vector2Int tilePos = TerrainUtils.GetTilePosition(transform.position);
+            TerrainManager.Instance.InstantiateFloor(tilePos.x, tilePos.y);
+            
             if (ShouldSpawnBonus())
             {
                 BaseBonus bonus = Instantiate(bonusPrefabs[Random.Range(0, bonusPrefabs.Count)], transform.position, Quaternion.identity);

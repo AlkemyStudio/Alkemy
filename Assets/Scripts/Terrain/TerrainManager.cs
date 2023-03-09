@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Game;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Terrain
 {
@@ -13,17 +14,19 @@ namespace Terrain
         public const int Width = 17;
         public const int Height = 11;
 
-        [SerializeField] private GameObject wallPrefab;
+        [SerializeField] private List<GameObject> wallPrefabs;
+        [SerializeField] private GameObject indestructibleWallPrefab;
+        [SerializeField] private GameObject floor;
 
         private TerrainEntityType[] _filledTiles;
-        private List<GameObject> _previouslyInstantiatedWall;
+        private List<GameObject> _previouslyInstantiated;
         
         private GameManager _gameManager;
 
         private void Awake()
         {
             Instance = this;
-            _previouslyInstantiatedWall = new List<GameObject>();
+            _previouslyInstantiated = new List<GameObject>();
         }
 
         public void GenerateTerrain()
@@ -31,19 +34,19 @@ namespace Terrain
             ClearOldGeneration();
             GenerateDefaultTerrainData();
             GenerateSpawnsData();
-            GenerateWalls();
+            GenerateTerrainEntities();
         }
 
         private void ClearOldGeneration()
         {
-            if (_previouslyInstantiatedWall.Count == 0) return;
+            if (_previouslyInstantiated.Count == 0) return;
 
-            foreach (GameObject wall in _previouslyInstantiatedWall)
+            foreach (GameObject wall in _previouslyInstantiated)
             {
                 Destroy(wall);
             }
             
-            _previouslyInstantiatedWall.Clear();
+            _previouslyInstantiated.Clear();
         }
 
         private void GenerateDefaultTerrainData()
@@ -99,24 +102,49 @@ namespace Terrain
             SetValue(Width - 1, Height - 2, TerrainEntityType.None);
         }
 
-        private void GenerateWalls()
+        private void GenerateTerrainEntities()
         {
             for (int y = 0; y < Height; y++)
             {
                 for (int x = 0; x < Width; x++)
                 {
-                    if (GetTerrainEntityType(x, y) != TerrainEntityType.Wall) continue;
-                    GameObject instantiateGameObject = Instantiate(wallPrefab, new Vector3(x + 0.5F, 0.41f, y + 0.5F), Quaternion.identity);
-                    _previouslyInstantiatedWall.Add(instantiateGameObject);
+                    TerrainEntityType entityType = GetTerrainEntityType(x, y);
+
+                    switch (entityType)
+                    {
+                        case TerrainEntityType.Wall:
+                            InstantiateRandomWall(x, y);
+                            break;
+                        case TerrainEntityType.None:
+                            InstantiateFloor(x, y);
+                            break;
+                        case TerrainEntityType.IndestructibleEntity:
+                            InstantiateIndestructibleWall(x, y);
+                            break;
+                    }
                 }
             }
         }
 
-        public Vector2Int GetTilePosition(Vector3 position)
+        public void InstantiateFloor(int x, int y)
         {
-            int tilePosX = Mathf.RoundToInt(position.x);
-            int tilePosZ = Mathf.RoundToInt(position.z);
-            return new Vector2Int(tilePosX, tilePosZ);
+            InstantiateEntity(floor, x, y);
+        }
+
+        public void InstantiateRandomWall(int x, int y)
+        {
+            InstantiateEntity(wallPrefabs[Random.Range(0, wallPrefabs.Count)], x, y);
+        }
+
+        public void InstantiateIndestructibleWall(int x, int y)
+        {
+            InstantiateEntity(indestructibleWallPrefab, x, y);
+        }
+
+        public void InstantiateEntity(GameObject entity, int x, int y)
+        {
+            GameObject instantiateGameObject = Instantiate(entity, new Vector3(x + 0.5F, 0, y + 0.5F), Quaternion.identity);
+            _previouslyInstantiated.Add(instantiateGameObject);
         }
 
         public void SetValue(int x, int y, TerrainEntityType value)

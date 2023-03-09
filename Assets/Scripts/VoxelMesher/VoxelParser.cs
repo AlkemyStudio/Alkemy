@@ -47,6 +47,7 @@ public class VoxelParser : MonoBehaviour
 
             voxelData.canExplode = parseJob.voxelData[0].canExplode;
             voxelData.origin = parseJob.voxelData[0].origin;
+            voxelData.scale = parseJob.voxelData[0].scale;
             voxelData.width = parseJob.voxelData[0].width;
             voxelData.height = parseJob.voxelData[0].height;
             voxelData.depth = parseJob.voxelData[0].depth;

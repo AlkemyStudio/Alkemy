@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Unity.Jobs;
 using Unity.Collections;
@@ -24,6 +25,7 @@ public struct PlyVoxelParseJob : IJob {
         string text = new string(fileData.ToArray());
         JobVoxelData voxelData = new JobVoxelData();
         voxelData.canExplode = false;
+        voxelData.scale = Vector3.one;
 
         bool endHeader = false;
         List<string> properties = new List<string>();
@@ -36,7 +38,11 @@ public struct PlyVoxelParseJob : IJob {
         int minZ = int.MaxValue;
         int maxZ = int.MinValue;
 
-        foreach (string line in text.Split('\n')) {
+        var splitLines = text.IndexOf("\r\n", StringComparison.Ordinal) > -1 
+            ? text.Split("\r\n") 
+            : text.Split('\n');
+        
+        foreach (string line in splitLines) {
             if (line == "end_header") {
                 endHeader = true;
                 continue;
@@ -53,6 +59,9 @@ public struct PlyVoxelParseJob : IJob {
                         break;
                     case "origin":
                         voxelData.origin = new Vector3(float.Parse(parts[1], System.Globalization.CultureInfo.InvariantCulture), float.Parse(parts[2], System.Globalization.CultureInfo.InvariantCulture), float.Parse(parts[3], System.Globalization.CultureInfo.InvariantCulture));
+                        break;
+                    case "scale":
+                        voxelData.scale = new Vector3(float.Parse(parts[1], System.Globalization.CultureInfo.InvariantCulture), float.Parse(parts[2], System.Globalization.CultureInfo.InvariantCulture), float.Parse(parts[3], System.Globalization.CultureInfo.InvariantCulture));
                         break;
                     default:
                         break;
