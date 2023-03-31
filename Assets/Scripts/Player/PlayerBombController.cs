@@ -20,6 +20,8 @@ namespace Player
 
         private int _remainingBombs;
         private GameInputController _gameInputController;
+
+        public int BombPower => bombPower;
         
         private void Start()
         {
