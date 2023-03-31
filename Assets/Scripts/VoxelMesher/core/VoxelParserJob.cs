@@ -5,9 +5,9 @@ using Unity.Collections;
 using System.Collections.Generic;
 
 struct VoxelInfo {
-    public byte x;
-    public byte y;
-    public byte z;
+    public short x;
+    public short y;
+    public short z;
     public byte red;
     public byte green;
     public byte blue;
@@ -73,17 +73,17 @@ public struct PlyVoxelParseJob : IJob {
                 for (int i = 0; i < parts.Length; i++) {
                     switch (properties[i]) {
                         case "x":
-                            voxelInfo.x = byte.Parse(parts[i]);
+                            voxelInfo.x = short.Parse(parts[i], System.Globalization.CultureInfo.InvariantCulture);
                             minX = Mathf.Min(minX, voxelInfo.x);
                             maxX = Mathf.Max(maxX, voxelInfo.x);
                             break;
                         case "y":
-                            voxelInfo.y = byte.Parse(parts[i]);
+                            voxelInfo.y = short.Parse(parts[i], System.Globalization.CultureInfo.InvariantCulture);
                             minY = Mathf.Min(minY, voxelInfo.y);
                             maxY = Mathf.Max(maxY, voxelInfo.y);
                             break;
                         case "z":
-                            voxelInfo.z = byte.Parse(parts[i]);
+                            voxelInfo.z = short.Parse(parts[i], System.Globalization.CultureInfo.InvariantCulture);
                             minZ = Mathf.Min(minZ, voxelInfo.z);
                             maxZ = Mathf.Max(maxZ, voxelInfo.z);
                             break;
@@ -116,7 +116,7 @@ public struct PlyVoxelParseJob : IJob {
             VoxelInfo voxelInfo = voxelsInfo[i];
             int index = (voxelInfo.x - minX) + (voxelInfo.y - minY) * voxelData.width + (voxelInfo.z - minZ) * voxelData.width * voxelData.height;
             // Encode the color in the voxel
-            voxels[index] = (voxelInfo.alpha) | (voxelInfo.red << 8) | (voxelInfo.green << 16) | (voxelInfo.blue << 24);
+            voxels[index] =(voxelInfo.red) | (voxelInfo.green << 8) | (voxelInfo.blue << 16) | (voxelInfo.alpha << 24);
         }
 
         this.voxelData[0] = voxelData;

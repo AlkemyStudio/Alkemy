@@ -250,10 +250,10 @@ public struct VoxelMeshJob : IJob {
     private void PushFace(float x, float y, float z, int color, FaceDirection dir, float w = 1, float h = 1, float d = 1) {
         int start = vertices.Length;
 
-        byte A = (byte)(color & 0xFF);
-        byte R = (byte)((color >> 8) & 0xFF);
-        byte G = (byte)((color >> 16) & 0xFF);
-        byte B = (byte)((color >> 24) & 0xFF);
+        byte R = (byte)((color) & 0xFF);
+        byte G = (byte)((color >> 8) & 0xFF);
+        byte B = (byte)((color >> 16) & 0xFF);
+        byte A = (byte)((color >> 24) & 0xFF);
 
         switch (dir) {
             case FaceDirection.UP:
