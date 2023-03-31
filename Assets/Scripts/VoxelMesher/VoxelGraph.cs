@@ -30,6 +30,8 @@ public class VoxelGraph : MonoBehaviour
 
         visualEffect.SetTexture("Voxel", texture3D);
         visualEffect.SetVector3("Size", new Vector3(voxelData.width, voxelData.height, voxelData.depth));
+        visualEffect.SetVector3("Voxel Scale", voxelData.scale);
+        visualEffect.SetVector3("Voxel Origin", voxelData.origin);
         visualEffect.Play();
     }
 

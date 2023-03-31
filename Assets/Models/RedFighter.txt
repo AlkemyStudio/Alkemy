@@ -3,8 +3,8 @@ format ascii 1.0
 comment : MagicaVoxel @ Ephtracy
 element vertex 9794
 property float x
-property float y
 property float z
+property float y
 property uchar red
 property uchar green
 property uchar blue

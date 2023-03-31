@@ -235,7 +235,7 @@ public struct VoxelMeshJob : IJob {
         if (z < 0 || z >= depth) return true;
 
         // Extract the Alpha channel from the color, if the alpha is 0 then the voxel is empty
-        if ((voxels[GetIndex(x, y, z)] & 0xFF) == 0) return true;
+        if (((voxels[GetIndex(x, y, z)] >> 24) & 0xFF) == 0) return true;
         return false;
     }
 
