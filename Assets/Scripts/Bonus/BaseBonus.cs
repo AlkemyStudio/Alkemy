@@ -8,6 +8,8 @@ namespace Bonus
     public abstract class BaseBonus : MonoBehaviour
     {
         [SerializeField] private Collider bonusCollider;
+        [SerializeField] private Transform modelTransform;
+        [SerializeField] private float rotationSpeed = 125.0f;
 
         public void SetupBonus()
         {
@@ -28,6 +30,11 @@ namespace Bonus
             }
             
             Destroy(gameObject);
+        }
+
+        private void FixedUpdate()
+        {
+            modelTransform.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
         }
 
         protected abstract void OnPlayerTakeBonus(GameObject player);

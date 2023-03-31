@@ -26,7 +26,11 @@ namespace Wall
             
             if (ShouldSpawnBonus())
             {
-                BaseBonus bonus = Instantiate(bonusPrefabs[Random.Range(0, bonusPrefabs.Count)], transform.position, Quaternion.identity);
+                BaseBonus bonus = Instantiate(
+                    original: bonusPrefabs[Random.Range(0, bonusPrefabs.Count)], 
+                    position: transform.position + new Vector3(0, 0.5f, 0), 
+                    rotation: Quaternion.Euler(0, 90, 90)
+                );
                 bonus.SetupBonus();
             }
 
@@ -35,7 +39,7 @@ namespace Wall
         
         private bool ShouldSpawnBonus()
         {
-            return Random.Range(0, 100) < percentageToDropBonus;
+            return Random.Range(0, 101) < percentageToDropBonus;
         }
 
         private void OnDestroy()

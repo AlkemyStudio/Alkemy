@@ -9,6 +9,7 @@ property uchar red
 property uchar green
 property uchar blue
 origin 23 8 32
+scale 0.035 0.035 0.035
 explode
 end_header
 19 43 4 56 76 30
