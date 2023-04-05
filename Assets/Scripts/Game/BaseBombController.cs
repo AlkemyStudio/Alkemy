@@ -1,5 +1,5 @@
 using System.Collections;
-using DefaultNamespace;
+using IA;
 using UnityEngine;
 
 namespace Game
@@ -11,7 +11,7 @@ namespace Game
         public float FuseTime;
     }
 
-    public class BaseBomb : MonoBehaviour
+    public class BaseBombController : MonoBehaviour
     {
         private Vector2Int bombPositionOnTheGrid;
         private BombData bombData;
