@@ -20,6 +20,8 @@ namespace Player
 
         private int _remainingBombs;
         private GameInputController _gameInputController;
+
+        public int BombPower => bombPower;
         
         private void Start()
         {
@@ -65,11 +67,31 @@ namespace Player
                 bombPower++;
             }
         }
+
+        public void RemoveBombPower()
+        {
+            if (bombPower > minBombPower) {
+                bombPower--;
+            }
+        }
         
         public void AddBombAmount()
         {
             bombAmount++;
             _remainingBombs++;
+        }
+
+        public void RemoveBombAmount()
+        {
+            if (bombAmount > 1)
+            {
+                bombAmount--;
+            }
+
+            if (_remainingBombs > bombAmount)
+            {
+                _remainingBombs = bombAmount;
+            }
         }
         
         private void OnTriggerExit(Collider other)
