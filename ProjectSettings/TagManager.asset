@@ -12,6 +12,7 @@ TagManager:
   - Manager
   - Terrain
   - UI
+  - Spawner
   layers:
   - Default
   - TransparentFX

@@ -1,62 +1,66 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Unity.Jobs;
 using Unity.Collections;
+using Unity.Jobs;
+using UnityEngine;
+using VoxelMesher.core;
 
-
-public class VoxelParser : MonoBehaviour
+namespace VoxelMesher
 {
-    public TextAsset file;
-
-    public VoxelData voxelData;
-
-    [System.NonSerialized]
-    public JobHandle parserJobHandle;
-    private PlyVoxelParseJob parseJob;
-
-    // Start is called before the first frame update
-    void Start()
+    public class VoxelParser : MonoBehaviour
     {
-        if (file == null) return;
+        public TextAsset file;
 
-        voxelData = VoxelDataStore.GetVoxelData(file.name);
+        public VoxelData VoxelData;
 
-        if (voxelData == null) {
-            if (file.text.StartsWith("ply")) {
-                voxelData = new VoxelData();
-                voxelData.name = file.name;
+        [HideInInspector]
+        public JobHandle ParserJobHandle;
 
-                VoxelDataStore.SetVoxelData(file.name, voxelData);
-                parseJob = new PlyVoxelParseJob();
-                parseJob.fileData = new NativeArray<char>(file.text.ToCharArray(), Allocator.Persistent);
-                parseJob.voxelData = new NativeArray<JobVoxelData>(1, Allocator.Persistent);
-                parseJob.voxels = new NativeList<int>(Allocator.Persistent);
-                parserJobHandle = parseJob.Schedule();
+        private bool parserRunning = false;
+        private PlyVoxelParseJob parseJob;
+
+        // Start is called before the first frame update
+        private void Start()
+        {
+            if (file == null) return;
+
+            VoxelData = VoxelDataStore.GetVoxelData(file.name);
+
+            if (VoxelData == null) {
+                if (file.text.StartsWith("ply")) {
+                    VoxelData = new VoxelData();
+                    VoxelData.name = file.name;
+
+                    VoxelDataStore.SetVoxelData(file.name, VoxelData);
+                    parseJob = new PlyVoxelParseJob();
+                    parseJob.fileData = new NativeArray<char>(file.text.ToCharArray(), Allocator.Persistent);
+                    parseJob.voxelData = new NativeArray<JobVoxelData>(1, Allocator.Persistent);
+                    parseJob.voxels = new NativeList<int>(Allocator.Persistent);
+                    ParserJobHandle = parseJob.Schedule();
+                    parserRunning = true;
+                }
             }
         }
-    }
 
-    void LateUpdate() {
-        if (parserJobHandle.IsCompleted) {
-            parserJobHandle.Complete();
+        private void LateUpdate()
+        {
+            if (!parserRunning || !ParserJobHandle.IsCompleted) return;
+        
+            ParserJobHandle.Complete();
+            parserRunning = false;
+            enabled = false;
 
-            voxelData.canExplode = parseJob.voxelData[0].canExplode;
-            voxelData.origin = parseJob.voxelData[0].origin;
-            voxelData.scale = parseJob.voxelData[0].scale;
-            voxelData.width = parseJob.voxelData[0].width;
-            voxelData.height = parseJob.voxelData[0].height;
-            voxelData.depth = parseJob.voxelData[0].depth;
-            voxelData.voxels = parseJob.voxels.ToArray();
+            VoxelData.canExplode = parseJob.voxelData[0].canExplode;
+            VoxelData.origin = parseJob.voxelData[0].origin;
+            VoxelData.scale = parseJob.voxelData[0].scale;
+            VoxelData.width = parseJob.voxelData[0].width;
+            VoxelData.height = parseJob.voxelData[0].height;
+            VoxelData.depth = parseJob.voxelData[0].depth;
+            VoxelData.voxels = parseJob.voxels.ToArray();
 
             parseJob.fileData.Dispose();
             parseJob.voxelData.Dispose();
             parseJob.voxels.Dispose();
 
-            voxelData.MarkReady();
-            
-            // Stop the script
-            enabled = false;
+            VoxelData.MarkReady();
         }
     }
 }

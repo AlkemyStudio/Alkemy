@@ -27,18 +27,12 @@ namespace Lobby
         
         private readonly LobbySlot[] _lobbySlots = new LobbySlot[8];
         private PlayerConfigurationManager _playerConfigurationManager;
-        private SelectableCharacterRegister _selectableCharacterRegister;
+        private SelectableCharacterRegistry selectableCharacterRegistry;
 
         private void Start()
         {
             _playerConfigurationManager = PlayerConfigurationManager.Instance;
-            _selectableCharacterRegister = SelectableCharacterRegister.Instance;
-            
-            foreach (GameObject t in characterPrefabs)
-            {
-                _selectableCharacterRegister.Register(t);
-            }
-            
+            selectableCharacterRegistry = SelectableCharacterRegistry.Instance;
             SetupUI();
         }
 
@@ -110,9 +104,9 @@ namespace Lobby
             if (playerConfiguration.IsReady) return;
             
             int currentCharacterIndex = playerConfiguration.CharacterIndex;
-            int nextCharacterIndex = _selectableCharacterRegister.GetNextSelectableCharacterIndex(currentCharacterIndex);
-            _selectableCharacterRegister.SetSelectable(currentCharacterIndex, true);
-            _selectableCharacterRegister.SetSelectable(nextCharacterIndex, false);
+            int nextCharacterIndex = selectableCharacterRegistry.GetNextSelectableCharacterIndex(currentCharacterIndex);
+            selectableCharacterRegistry.SetSelectable(currentCharacterIndex, true);
+            selectableCharacterRegistry.SetSelectable(nextCharacterIndex, false);
             _playerConfigurationManager.SetPlayerCharacterIndex(playerIndex, nextCharacterIndex);
             UpdateUI();
         }
@@ -129,9 +123,9 @@ namespace Lobby
             if (playerConfiguration.IsReady) return;
             
             int currentCharacterIndex = playerConfiguration.CharacterIndex;
-            int previousCharacterIndex = _selectableCharacterRegister.GetPreviousSelectableCharacterIndex(currentCharacterIndex);
-            _selectableCharacterRegister.SetSelectable(currentCharacterIndex, true);
-            _selectableCharacterRegister.SetSelectable(previousCharacterIndex, false);
+            int previousCharacterIndex = selectableCharacterRegistry.GetPreviousSelectableCharacterIndex(currentCharacterIndex);
+            selectableCharacterRegistry.SetSelectable(currentCharacterIndex, true);
+            selectableCharacterRegistry.SetSelectable(previousCharacterIndex, false);
             _playerConfigurationManager.SetPlayerCharacterIndex(playerIndex, previousCharacterIndex);
             
             UpdateUI();

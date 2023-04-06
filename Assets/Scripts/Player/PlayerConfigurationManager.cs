@@ -12,7 +12,7 @@ namespace Player
         public static PlayerConfigurationManager Instance { get; private set; }
         public List<PlayerConfiguration> PlayerConfigurations { get; private set; }
         
-        private SelectableCharacterRegister _characterRegister;
+        private SelectableCharacterRegistry characterRegistry;
 
         private void Awake()
         {
@@ -24,7 +24,7 @@ namespace Player
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            _characterRegister = SelectableCharacterRegister.Instance;
+            characterRegistry = SelectableCharacterRegistry.Instance;
             PlayerConfigurations = new List<PlayerConfiguration>();
         }
 
@@ -50,8 +50,8 @@ namespace Player
             
             if (PlayerConfigurations.Any(p => p.PlayerIndex == playerInput.playerIndex)) return;
             
-            int characterIndex = _characterRegister.GetNextSelectableCharacterIndex(0);
-            _characterRegister.SetSelectable(characterIndex, false);
+            int characterIndex = characterRegistry.GetNextSelectableCharacterIndex(0);
+            characterRegistry.SetSelectable(characterIndex, false);
             PlayerConfiguration playerConfiguration = new PlayerConfiguration(playerInput, playerInput.playerIndex);
             PlayerConfigurations.Add(playerConfiguration);
 

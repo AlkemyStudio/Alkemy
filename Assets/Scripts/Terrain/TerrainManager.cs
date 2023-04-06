@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Game;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Terrain
@@ -11,21 +12,30 @@ namespace Terrain
     {
         public static TerrainManager Instance;
         
-        public const int Width = 17;
-        public const int Height = 11;
+        public List<Vector2Int> PlayerSpawnGridPositions { get; private set; }
+        public int width = 19;
+        public int height = 13;
 
-        [SerializeField] private List<GameObject> wallPrefabs;
-        [SerializeField] private GameObject indestructibleWallPrefab;
+        [Header("Terrain Settings")]
         [SerializeField] private GameObject floor;
+        [SerializeField] private GameObject indestructibleWallPrefab;
+        [SerializeField] private List<GameObject> wallPrefabs;
+
 
         private TerrainEntityType[] _filledTiles;
         private List<GameObject> _previouslyInstantiated;
-        
+
         private GameManager _gameManager;
 
         private void Awake()
         {
+            if (Instance != null)
+            {
+                Debug.LogError("More than one TerrainManager in scene!");
+            }
             Instance = this;
+
+            PlayerSpawnGridPositions = new List<Vector2Int>();
             _previouslyInstantiated = new List<GameObject>();
         }
 
@@ -33,6 +43,7 @@ namespace Terrain
         {
             ClearOldGeneration();
             GenerateDefaultTerrainData();
+            GenerateTerrainBorder();
             GenerateSpawnsData();
             GenerateTerrainEntities();
         }
@@ -47,22 +58,38 @@ namespace Terrain
             }
             
             _previouslyInstantiated.Clear();
+            PlayerSpawnGridPositions.Clear();
         }
 
         private void GenerateDefaultTerrainData()
         {
-            int arraySize = Width * Height;
+            int arraySize = width * height;
             _filledTiles = new TerrainEntityType[arraySize];
 
-            for (int y = 0; y < Height; y++)
+            for (int y = 0; y < height; y++)
             {
-                for (int x = 0; x < Width; x++)
+                for (int x = 0; x < width; x++)
                 {
-                    if (x % 2 == 1 && y % 2 == 1)
+                    if (x % 2 == 0 && y % 2 == 0)
                     {
                         SetValue(x, y, TerrainEntityType.IndestructibleEntity);
                     }
                 }
+            }
+        }
+
+        private void GenerateTerrainBorder()
+        {
+            for (int x = 0; x < width; x++)
+            {
+                SetValue(x, 0, TerrainEntityType.IndestructibleEntity);
+                SetValue(x, height - 1, TerrainEntityType.IndestructibleEntity);
+            }
+            
+            for (int y = 0; y < height; y++)
+            {
+                SetValue(0, y, TerrainEntityType.IndestructibleEntity);
+                SetValue(width - 1, y, TerrainEntityType.IndestructibleEntity);
             }
         }
 
@@ -76,37 +103,41 @@ namespace Terrain
 
         private void GenerateBottomLeftCornerSpawn()
         {
-            SetValue(0, 0, TerrainEntityType.None);
-            SetValue(1, 0, TerrainEntityType.None);
-            SetValue(0, 1, TerrainEntityType.None);
+            PlayerSpawnGridPositions.Add(new Vector2Int(1, 1));
+            SetValue(1, 1, TerrainEntityType.None);
+            SetValue(2, 1, TerrainEntityType.None);
+            SetValue(1, 2, TerrainEntityType.None);
         }
 
         private void GenerateBottomRightCornerSpawn()
         {
-            SetValue(Width - 1, 0, TerrainEntityType.None);
-            SetValue(Width - 2, 0, TerrainEntityType.None);
-            SetValue(Width - 1, 1, TerrainEntityType.None);
+            PlayerSpawnGridPositions.Add(new Vector2Int(width - 2, 1));
+            SetValue(width - 2, 1, TerrainEntityType.None);
+            SetValue(width - 3, 1, TerrainEntityType.None);
+            SetValue(width - 2, 2, TerrainEntityType.None);
         }
 
         private void GenerateTopLeftCornerSpawn()
         {
-            SetValue(0, Height - 1, TerrainEntityType.None);
-            SetValue(1, Height - 1, TerrainEntityType.None);
-            SetValue(0, Height - 2, TerrainEntityType.None);
+            PlayerSpawnGridPositions.Add(new Vector2Int(1, height - 2));
+            SetValue(1, height - 2, TerrainEntityType.None);
+            SetValue(2, height - 2, TerrainEntityType.None);
+            SetValue(1, height - 3, TerrainEntityType.None);
         }
 
         private void GenerateTopRightCornerSpawn()
         {
-            SetValue(Width - 1, Height - 1, TerrainEntityType.None);
-            SetValue(Width - 2, Height - 1, TerrainEntityType.None);
-            SetValue(Width - 1, Height - 2, TerrainEntityType.None);
+            PlayerSpawnGridPositions.Add(new Vector2Int(width - 2, height - 2));
+            SetValue(width - 2, height - 2, TerrainEntityType.None);
+            SetValue(width - 3, height - 2, TerrainEntityType.None);
+            SetValue(width - 2, height - 3, TerrainEntityType.None);
         }
 
         private void GenerateTerrainEntities()
         {
-            for (int y = 0; y < Height; y++)
+            for (int y = 0; y < height; y++)
             {
-                for (int x = 0; x < Width; x++)
+                for (int x = 0; x < width; x++)
                 {
                     TerrainEntityType entityType = GetTerrainEntityType(x, y);
 
@@ -121,6 +152,8 @@ namespace Terrain
                         case TerrainEntityType.IndestructibleEntity:
                             InstantiateIndestructibleWall(x, y);
                             break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
                     }
                 }
             }
@@ -149,17 +182,17 @@ namespace Terrain
 
         public void SetValue(int x, int y, TerrainEntityType value)
         {
-            _filledTiles[x + y * Width] = value;
+            _filledTiles[x + y * width] = value;
         }
         
         public void SetValue(Vector2Int position, TerrainEntityType value)
         {
-            _filledTiles[position.x + position.y * Width] = value;
+            _filledTiles[position.x + position.y * width] = value;
         }
 
         public bool IsFilled(int x, int y)
         {
-            TerrainEntityType terrainEntityType = _filledTiles[x + y * Width];
+            TerrainEntityType terrainEntityType = _filledTiles[x + y * width];
             return terrainEntityType == TerrainEntityType.None;
         }
 
@@ -170,7 +203,7 @@ namespace Terrain
         
         public TerrainEntityType GetTerrainEntityType(int x, int y)
         {
-            return _filledTiles[x + y * Width];
+            return _filledTiles[x + y * width];
         }
 
         private void OnEnable()

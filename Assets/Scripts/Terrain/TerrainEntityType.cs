@@ -4,7 +4,6 @@ namespace Terrain
     {
         Wall,
         IndestructibleEntity,
-        Bomb,
         None,
     }
 }
