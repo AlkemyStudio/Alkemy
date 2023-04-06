@@ -72,6 +72,7 @@ namespace Terrain
             GenerateBottomRightCornerSpawn();
             GenerateTopLeftCornerSpawn();
             GenerateTopRightCornerSpawn();
+            GenerateTerrainBounds();
         }
 
         private void GenerateBottomLeftCornerSpawn()
@@ -100,6 +101,30 @@ namespace Terrain
             SetValue(Width - 1, Height - 1, TerrainEntityType.None);
             SetValue(Width - 2, Height - 1, TerrainEntityType.None);
             SetValue(Width - 1, Height - 2, TerrainEntityType.None);
+        }
+
+        private void GenerateTerrainBounds()
+        {
+            GenerateHorizontalBounds();
+            GenerateVerticalBounds();
+        }
+
+        private void GenerateHorizontalBounds()
+        {
+            for (int x = -1; x < Width + 1; x++)
+            {
+                InstantiateIndestructibleWall(x, -1);
+                InstantiateIndestructibleWall(x, Height);
+            }
+        }
+        
+        private void GenerateVerticalBounds()
+        {
+            for (int y = 0; y < Height; y++)
+            {
+                InstantiateIndestructibleWall(-1, y);
+                InstantiateIndestructibleWall(Width, y);
+            }
         }
 
         private void GenerateTerrainEntities()

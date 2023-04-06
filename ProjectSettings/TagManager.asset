@@ -10,6 +10,8 @@ TagManager:
   - Destructible
   - PlayerConfiguration
   - Manager
+  - Terrain
+  - UI
   layers:
   - Default
   - TransparentFX

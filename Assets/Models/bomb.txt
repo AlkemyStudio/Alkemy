@@ -8,7 +8,8 @@ property float y
 property uchar red
 property uchar green
 property uchar blue
-origin 20 0 20
+origin 11 20 11
+scale 0.026 0.026 0.026
 end_header
 17 10 23 68 68 68
 17 10 24 68 68 68

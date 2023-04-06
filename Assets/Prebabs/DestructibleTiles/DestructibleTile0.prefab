@@ -63,11 +63,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityHealth: {fileID: 2101697650601450446}
-  percentageToDropBonus: 50
+  percentageToDropBonus: 100
   bonusPrefabs:
+  - {fileID: 5892150448060041458, guid: 0cd206ec04c394344a4a88e017189a41, type: 3}
+  - {fileID: -8612497665540069671, guid: 300bdd15414f86849aaa20cca2e7af9a, type: 3}
+  - {fileID: 5937428780689794411, guid: 44923381f69e4a14ba1057a79e884f49, type: 3}
   - {fileID: 6246498869493565027, guid: 28c563472ddcb91afb51e920d1e07e70, type: 3}
   - {fileID: 3428231013816836945, guid: ebdf3c51fbc9ed0c8a61be7d027b1ca9, type: 3}
-  - {fileID: 8316536697196289076, guid: 3dcaf2d9e59cb90a2b8cf4aae0330094, type: 3}
+  - {fileID: 2853522301849194315, guid: 3dcaf2d9e59cb90a2b8cf4aae0330094, type: 3}
 --- !u!65 &310815641447267074
 BoxCollider:
   m_ObjectHideFlags: 0
