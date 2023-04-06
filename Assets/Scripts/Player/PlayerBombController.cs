@@ -1,5 +1,6 @@
 using System;
 using Bomb;
+using Lobby;
 using Terrain;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ namespace Player
         [SerializeField] private LayerMask bombLayerMask;
 
         private int _remainingBombs;
-        private GameInputController _gameInputController;
+        private PlayerInputHandler _playerInputHandler;
 
         public int BombPower => bombPower;
         
@@ -27,9 +28,22 @@ namespace Player
         {
             _remainingBombs = bombAmount;
         }
+        
+        public void Initialize(PlayerInputHandler playerInputHandler)
+        {
+            Debug.Log("Initialize PlayerMovement");
+            _playerInputHandler = playerInputHandler;
+            _playerInputHandler.OnPlaceBomb += TryPlaceBomb;
+        }
+
+        private void OnDestroy()
+        {
+            _playerInputHandler.OnPlaceBomb -= TryPlaceBomb;
+        }
 
         public void TryPlaceBomb()
         {
+            Debug.Log("TryPlaceBomb");
             if (_remainingBombs <= 0) return;
 
             Vector3 playerTilePosition = TerrainUtils.GetTerrainPosition(transform.position);
@@ -102,47 +116,19 @@ namespace Player
             }
         }
 
-        private void OnEnable()
-        {
-            _gameInputController = new GameInputController();
-            _gameInputController.Player.PlaceBomb.Enable();
-        }
-
+#if UNITY_EDITOR
         private void OnValidate()
         {
             if (minBombPower <= 0) minBombPower = 1;
             if (maxBombPower < minBombPower) maxBombPower = minBombPower;
             bombPower = Mathf.Clamp(bombPower, minBombPower, maxBombPower);
         }
-
-        // private void OnGUI()
-        // {
-        //     if (GUI.Button(new Rect(new Vector2(10, 10), new Vector2(120, 25)), "Add Bomb Power"))
-        //     {
-        //         AddBombPower();
-        //     }
-        //     
-        //     if (GUI.Button(new Rect(new Vector2(140, 10), new Vector2(150, 25)), "Set Max Bomb Power"))
-        //     {
-        //         bombPower = maxBombPower;
-        //     }
-        //     
-        //     if (GUI.Button(new Rect(new Vector2(10, 45), new Vector2(120, 25)), "Add Bomb Amount"))
-        //     {
-        //         AddBombAmount();
-        //     }
-        //     
-        //     if (GUI.Button(new Rect(new Vector2(140, 45), new Vector2(150, 25)), "Set Max Bomb Amount"))
-        //     {
-        //         bombAmount = maxBombPower;
-        //         _remainingBombs = bombAmount;
-        //     }
-        // }
         
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(TerrainUtils.GetTerrainPosition(transform.position), Vector3.one / 2);
+            Gizmos.DrawWireCube(TerrainUtils.GetTerrainPosition(transform.position), new Vector3(0.5F, 0.5F, 0.5F));
         }
+#endif
     }
 }

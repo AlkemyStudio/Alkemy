@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Lobby;
 using Player;
 using UnityEngine;
 
@@ -7,10 +8,10 @@ namespace Utils
 {
     public class PlayerConfigurationDebugUtils
     {
-        public static void PrintPlayerConfigurations(List<PlayerConfiguration> playerConfigurations)
+        public static void PrintPlayerConfigurations(List<PlayerState> playerConfigurations)
         {
             string result = String.Empty;
-            foreach (var playerConfiguration in playerConfigurations)
+            foreach (PlayerState playerConfiguration in playerConfigurations)
             {
                 result += FormatPlayerConfiguration(playerConfiguration);
             }
@@ -18,15 +19,15 @@ namespace Utils
             Debug.Log(result);
         }
         
-        public static string FormatPlayerConfiguration(PlayerConfiguration playerConfiguration)
+        public static string FormatPlayerConfiguration(PlayerState playerState)
         {
-            string result = "PlayerConfiguration (player index = " + playerConfiguration.Input.playerIndex + "): {\n";
+            string result = "PlayerConfiguration (player index = " + playerState.PlayerInput.playerIndex + "): {\n";
             result += "  Input: {\n";
-            result += "    playerIndex: " + playerConfiguration.Input.playerIndex + "\n";
+            result += "    playerIndex: " + playerState.PlayerInput.playerIndex + "\n";
             result += "  }\n";
             result += "  Player: {\n";
-            result += "    playerIndex: " + playerConfiguration.PlayerIndex + "\n";
-            result += "    characterIndex: " + playerConfiguration.CharacterIndex + "\n";
+            result += "    playerIndex: " + playerState.PlayerIndex + "\n";
+            result += "    characterIndex: " + playerState.CharacterIndex + "\n";
             result += "  }\n";
             result += "}\n";
 

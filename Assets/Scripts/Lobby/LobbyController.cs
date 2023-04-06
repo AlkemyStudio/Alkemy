@@ -1,178 +1,237 @@
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 namespace Lobby
 {
+    [RequireComponent(
+        typeof(LobbyPlayerManager), 
+        typeof(LobbyUI), 
+        typeof(LobbyCharacterRegistry)
+    )]
     public class LobbyController : MonoBehaviour
     {
         public static LobbyController Instance { get; private set; }
+        
+        [Header("References")]
+        [SerializeField] private LobbyPlayerManager lobbyPlayerManager;
+        [SerializeField] private LobbyUI lobbyUI;
+        [SerializeField] private LobbyCharacterRegistry lobbyCharacterRegistry;
+        
+        [Header("Lobby Settings")]
+        [SerializeField] private int minPlayerCountToStart = 2;
+        [SerializeField] private int sceneBuildIndexToLoad = 2;
+        
+        [Header("Input Settings")]
+        [SerializeField] private float delayBetweenCharacterSwitch = 0.5f;
+
+        public Dictionary<int, PlayerState> LobbyPlayerStates { get; private set; }
+
+        private int _firstPlayerIndex = -1;
+        private float _lastCharacterSwitchTime;
 
         private void Awake()
         {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            
             Instance = this;
         }
 
-        [SerializeField] private GameObject[] characterPrefabs;
-
-        private VisualElement _rootElement;
-        private VisualElement _playButtonElement;
-        private VisualElement _quitButtonElement;
-        private VisualElement _secondPlayerSelectionLineElement;
-        
-        private readonly LobbySlot[] _lobbySlots = new LobbySlot[8];
-        private PlayerConfigurationManager _playerConfigurationManager;
-        private SelectableCharacterRegister _selectableCharacterRegister;
-
         private void Start()
         {
-            _playerConfigurationManager = PlayerConfigurationManager.Instance;
-            _selectableCharacterRegister = SelectableCharacterRegister.Instance;
-            
-            foreach (GameObject t in characterPrefabs)
-            {
-                _selectableCharacterRegister.Register(t);
-            }
-            
-            SetupUI();
+            LobbyPlayerStates = new Dictionary<int, PlayerState>();
         }
 
-        private void SetupUI()
+        public void PlayerJoinedHandler(PlayerInput playerInput)
         {
-            _rootElement = GetComponent<UIDocument>().rootVisualElement;
-            
-            _secondPlayerSelectionLineElement = _rootElement.Q<VisualElement>("SecondLine");
-            _playButtonElement = _rootElement.Q<VisualElement>("StartButton");
-            _quitButtonElement = _rootElement.Q<VisualElement>("ReturnButton");
-            
-            _playButtonElement.RegisterCallback<ClickEvent>(OnPlayButtonClicked);
-            _quitButtonElement.RegisterCallback<ClickEvent>(OnQuitButtonClicked);
-
-            for (int i = 0; i < 8; i++)
+            if (LobbyPlayerStates.ContainsKey(playerInput.playerIndex))
             {
-                VisualElement lobbySlotRoot = _rootElement.Q<VisualElement>("player_selector_" + (i + 1));
-                LobbySlot slot = new LobbySlot(lobbySlotRoot);
-                slot.OnNextButtonClickedEvent += OnNextButtonClicked;
-                slot.OnPreviousButtonClickedEvent += OnPreviousButtonClicked;
-                _lobbySlots[i] = slot;
+                SetIsConnected(playerInput.playerIndex, true);
+                lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerInput.playerIndex]);
+                return;
             }
             
-            UpdateUI();
+            int characterIndex = lobbyCharacterRegistry.GetFirstSelectableCharacterIndex();
+            lobbyCharacterRegistry.SetSelectable(characterIndex, true);
+            
+            PlayerState playerState = new()
+            {
+                CharacterIndex = characterIndex,
+                IsReady = false,
+                IsConnected = true,
+                PlayerInput = playerInput
+            };
+            
+            if (_firstPlayerIndex == -1)
+                _firstPlayerIndex = playerInput.playerIndex;
+            
+            LobbyPlayerStates.Add(playerInput.playerIndex, playerState);
+            lobbyUI.EnableSlotUI(playerInput.playerIndex);
+            CreateInputBindings(playerInput);
         }
 
-        public void UpdateUI()
+        private void CreateInputBindings(PlayerInput playerInput)
         {
-            List<PlayerConfiguration> playerConfigurations = _playerConfigurationManager.PlayerConfigurations;
-            int playerCount = playerConfigurations.Count;
-            
-            _secondPlayerSelectionLineElement.style.display = playerCount > 4 ? DisplayStyle.Flex : DisplayStyle.None;
-            
-            for (int i = 0; i < 8; i++)
+            PlayerInputHandler playerInputHandler = playerInput.GetComponent<PlayerInputHandler>();
+            playerInputHandler.OnDirection += OnDirectionHandler;
+            playerInputHandler.OnConfirm += OnConfirmHandler;
+            playerInputHandler.OnCancel += OnCancelHandler;
+        }
+        
+        public void PlayerDisconnectHandler(PlayerInput playerInput)
+        {
+            if (!LobbyPlayerStates.ContainsKey(playerInput.playerIndex)) return;
+            SetIsConnected(playerInput.playerIndex, false);
+            SetPlayerReady(playerInput.playerIndex, false);
+            lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerInput.playerIndex]);
+        }
+
+        public void OnPlayerRemoveHandler(int playerIndex)
+        {
+            if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
+            lobbyCharacterRegistry.SetSelectable(LobbyPlayerStates[playerIndex].CharacterIndex, false);
+            LobbyPlayerStates.Remove(playerIndex);
+
+            if (_firstPlayerIndex == playerIndex)
             {
-                LobbySlot lobbySlot = _lobbySlots[i];
-                
-                if (i >= playerCount)
+                if (lobbyPlayerManager.GetPlayerCount() > 0)
+                    _firstPlayerIndex = lobbyPlayerManager.GetFirstPlayerIndex();
+                else
+                    _firstPlayerIndex = -1;
+            }
+
+            lobbyUI.DisableSlotUI(playerIndex);
+            lobbyPlayerManager.RemovePlayer(playerIndex);
+        }
+        
+        private void OnConfirmHandler(int playerIndex)
+        {
+            if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
+            
+            if (LobbyPlayerStates[playerIndex].IsReady == false)
+            {
+                SetPlayerReady(playerIndex, true);
+
+                if (IsAllPlayersReady())
                 {
-                    lobbySlot.SetupPlayer(null);
-                    continue;
+                    lobbyUI.ShowStartGameText();
                 }
-                
-                PlayerConfiguration playerConfiguration = playerConfigurations[i];
-                
-                lobbySlot.SetupPlayer(playerConfiguration.PlayerIndex);
-                lobbySlot.SetReady(playerConfiguration.IsReady);
+
+                lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerIndex]);
+                return;
             }
 
-            _playButtonElement.SetEnabled(CanStartTheGame());
-        }
-
-        public bool CanStartTheGame()
-        {
-            int playerCount = _playerConfigurationManager.PlayerConfigurations.Count;
-            return  playerCount > 1 && 
-                    _playerConfigurationManager.PlayerConfigurations.All(p => p.IsReady);
-        }
-        
-        private void OnNextButtonClicked(int playerIndex)
-        {
-            SelectNextCharacter(playerIndex);
-        }
-
-        public void SelectNextCharacter(int playerIndex)
-        {
-            PlayerConfiguration playerConfiguration = _playerConfigurationManager.GetPlayerConfiguration(playerIndex);
+            if (_firstPlayerIndex != playerIndex || !IsAllPlayersReady()) return;
             
-            if (playerConfiguration.IsReady) return;
-            
-            int currentCharacterIndex = playerConfiguration.CharacterIndex;
-            int nextCharacterIndex = _selectableCharacterRegister.GetNextSelectableCharacterIndex(currentCharacterIndex);
-            _selectableCharacterRegister.SetSelectable(currentCharacterIndex, true);
-            _selectableCharacterRegister.SetSelectable(nextCharacterIndex, false);
-            _playerConfigurationManager.SetPlayerCharacterIndex(playerIndex, nextCharacterIndex);
-            UpdateUI();
-        }
-        
-        private void OnPreviousButtonClicked(int playerIndex)
-        {
-            SelectPreviousCharacter(playerIndex);
-        }
-        
-        public void SelectPreviousCharacter(int playerIndex)
-        {
-            PlayerConfiguration playerConfiguration = _playerConfigurationManager.GetPlayerConfiguration(playerIndex);
-            
-            if (playerConfiguration.IsReady) return;
-            
-            int currentCharacterIndex = playerConfiguration.CharacterIndex;
-            int previousCharacterIndex = _selectableCharacterRegister.GetPreviousSelectableCharacterIndex(currentCharacterIndex);
-            _selectableCharacterRegister.SetSelectable(currentCharacterIndex, true);
-            _selectableCharacterRegister.SetSelectable(previousCharacterIndex, false);
-            _playerConfigurationManager.SetPlayerCharacterIndex(playerIndex, previousCharacterIndex);
-            
-            UpdateUI();
+            lobbyUI.NoMoreUpdateUI();
+            DisableAllPlayerInputControls();
+            SceneManager.LoadScene(sceneBuildIndexToLoad);
         }
 
-        private void OnPlayButtonClicked(ClickEvent evt)
+        private void DisableAllPlayerInputControls()
         {
-            StartGame();
-        }
-
-        private void OnQuitButtonClicked(ClickEvent evt)
-        {
-            ReturnToMainMenu();
-        }
-
-        public void StartGame()
-        {
-            List<PlayerConfiguration> playerConfigurations = _playerConfigurationManager.PlayerConfigurations;
-            _playerConfigurationManager.gameObject.GetComponent<PlayerInputManager>().DisableJoining();
-
-            foreach (PlayerConfiguration playerConfiguration in playerConfigurations)
+            foreach (PlayerState playerState in LobbyPlayerStates.Values)
             {
-                PlayerInput playerInput = playerConfiguration.Input;
-                GameObject player = playerInput.gameObject;
-                player.GetComponent<LobbyCharacterInputHandler>().enabled = false;
-                player.GetComponent<PlayerInputHandler>().enabled = true;
-                playerInput.SwitchCurrentActionMap("Player");
+                PlayerInputHandler playerInputHandler = playerState.PlayerInput.GetComponent<PlayerInputHandler>();
+                playerInputHandler.OnDirection -= OnDirectionHandler;
+                playerInputHandler.OnConfirm -= OnConfirmHandler;
+                playerInputHandler.OnCancel -= OnCancelHandler;
+                
+                playerInputHandler.DisableInput();
             }
-            
-            SceneManager.LoadScene("MainScene");
         }
         
-        public void ReturnToMainMenu()
+        public void OnSelectLeftCharacterHandler(int playerIndex)
         {
-            // TODO: Go back to main menu
+            OnDirectionHandler(Vector2.left, playerIndex);
+        }
+        
+        public void OnSelectRightCharacterHandler(int playerIndex)
+        {
+            OnDirectionHandler(Vector2.right, playerIndex);
         }
 
-        private void OnDestroy()
+        private void OnDirectionHandler(Vector2 direction, int playerIndex)
         {
-            _playButtonElement.UnregisterCallback<ClickEvent>(OnPlayButtonClicked);
-            _quitButtonElement.UnregisterCallback<ClickEvent>(OnQuitButtonClicked);
+            if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
+            
+            PlayerState playerState = LobbyPlayerStates[playerIndex];
+            
+            if (playerState.IsReady) return;
+            
+            int currentCharacterIndex = playerState.CharacterIndex;
+
+            if (_lastCharacterSwitchTime + delayBetweenCharacterSwitch > Time.time) return;
+            _lastCharacterSwitchTime = Time.time;
+            
+            switch (direction.x)
+            {
+                case > 0:
+                    lobbyCharacterRegistry.GetPreviousSelectableCharacterIndex(currentCharacterIndex);
+                    break;
+                case < 0:
+                    lobbyCharacterRegistry.GetNextSelectableCharacterIndex(currentCharacterIndex);
+                    break;
+            }
+            
+            SetPlayerCharacterIndex(playerIndex, currentCharacterIndex);
+            lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerIndex]);
         }
+
+        private bool IsAllPlayersReady()
+        {
+            return 
+                LobbyPlayerStates.All(playerState => playerState.Value.IsReady) &&
+                LobbyPlayerStates.Count >= minPlayerCountToStart;
+        }
+        
+        private void OnCancelHandler(int playerIndex)
+        {
+            if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
+            SetPlayerReady(playerIndex, false);
+            lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerIndex]);
+            lobbyUI.HideStartGameText();
+        }
+        
+        private void SetIsConnected(int playerIndex, bool state)
+        {
+            PlayerState playerState = LobbyPlayerStates[playerIndex];
+            playerState.IsConnected = state;
+            LobbyPlayerStates[playerIndex] = playerState;
+        }
+        
+        private void SetPlayerReady(int playerIndex, bool state)
+        {
+            PlayerState playerState = LobbyPlayerStates[playerIndex];
+            playerState.IsReady = state;
+            LobbyPlayerStates[playerIndex] = playerState;
+        }
+
+        private void SetPlayerCharacterIndex(int playerIndex, int characterIndex)
+        {
+            PlayerState playerState = LobbyPlayerStates[playerIndex];
+            playerState.CharacterIndex = characterIndex;
+            LobbyPlayerStates[playerIndex] = playerState;
+        }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (lobbyPlayerManager == null)
+                lobbyPlayerManager = GetComponent<LobbyPlayerManager>();
+            
+            if (lobbyUI == null)
+                lobbyUI = GetComponent<LobbyUI>();
+            
+            if (lobbyCharacterRegistry == null)
+                lobbyCharacterRegistry = GetComponent<LobbyCharacterRegistry>();
+        }
+#endif
     }
 }

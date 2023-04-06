@@ -1,4 +1,5 @@
 using System;
+using Lobby;
 using UnityEngine;
 
 namespace Player
@@ -27,26 +28,27 @@ namespace Player
         [SerializeField] private int maxBonusNumber = 9;
 
 
+        private PlayerInputHandler _playerInputHandler;
         private Vector3 lookAtPosition = Vector3.zero;
         
         private float _speed;
         private Vector2 _inputVector = Vector2.zero;
-        private GameInputController _gameInputController;
-
-        private void OnEnable()
-        {
-            _gameInputController = new GameInputController();
-            _gameInputController.Player.Move.Enable();
-        }
-
-        private void OnDisable()
-        {
-            _gameInputController.Player.Move.Disable();
-        }
 
         private void Start()
         {
             ComputeSpeed();
+        }
+        
+        public void Initialize(PlayerInputHandler playerInputHandler)
+        {
+            Debug.Log("Initialize PlayerMovement");
+            _playerInputHandler = playerInputHandler;
+            _playerInputHandler.OnMove += UpdateInputVector;
+        }
+
+        private void OnDestroy()
+        {
+            _playerInputHandler.OnMove -= UpdateInputVector;
         }
 
         public void AddSpeedBonus()
@@ -65,6 +67,7 @@ namespace Player
 
         public void UpdateInputVector(Vector2 inputVector)
         {
+            Debug.Log("UpdateInputVector");
             _inputVector = inputVector;
         }
 
@@ -100,24 +103,5 @@ namespace Player
             bonusNumber = Mathf.Clamp(bonusNumber, minBonusNumber, maxBonusNumber);
             ComputeSpeed();
         }
-
-        // private void OnGUI()
-        // {
-        //     if (GUI.Button(new Rect(new Vector2(10, 80), new Vector2(120, 25)), "Add Bonus"))
-        //     {
-        //         AddSpeedBonus();
-        //     }
-        //     
-        //     if (GUI.Button(new Rect(new Vector2(140, 80), new Vector2(120, 25)), "Remove Bonus"))
-        //     {
-        //         RemoveSpeedBonus();
-        //     }
-        //     
-        //     if (GUI.Button(new Rect(new Vector2(270, 80), new Vector2(120, 25)), "Set Max Bonus"))
-        //     {
-        //         bonusNumber = maxBonusNumber;
-        //         ComputeSpeed();
-        //     }
-        // }
     }
 }

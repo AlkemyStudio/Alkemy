@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Character;
 using Lobby;
 using Player;
 using Terrain;
 using UnityEngine;
+using PlayerState = Lobby.PlayerState;
 
 namespace Game
 {
@@ -14,6 +16,7 @@ namespace Game
         public static PlayerManager Instance { get; private set; }
 
         [SerializeField] private GameManager gameManager;
+        [SerializeField] private PlayerGameObjectRegistry playerGameObjectRegistry;
         [SerializeField] private GameObject[] playerSpawns;
 
         private List<GameObject> _instantiatedPlayer;
@@ -43,20 +46,26 @@ namespace Game
         
         private void DoSpawnPlayers()
         {
-            SelectableCharacterRegister selectableCharacterRegister = SelectableCharacterRegister.Instance;
-            List<PlayerConfiguration> playerConfigurations = PlayerConfigurationManager.Instance.PlayerConfigurations;
+            List<PlayerState> playerStates = LobbyController.Instance.LobbyPlayerStates
+                .Select(state => state.Value)
+                .ToList();
             
-            for (int i = 0; i < playerConfigurations.Count; i++)
+            for (int i = 0; i < playerStates.Count; i++)
             {
-                PlayerConfiguration playerConfiguration = playerConfigurations[i];
-                GameObject playerConfigurationGameObject = playerConfiguration.Input.gameObject;
+                Debug.Log("Instantiating player");
                 
-                GameObject characterPrefab = selectableCharacterRegister[playerConfigurations[i].CharacterIndex].prefab;
+                PlayerState playerState = playerStates[i];
+
+                GameObject characterPrefab = playerGameObjectRegistry.GetOneWithIndex(playerState.CharacterIndex);
                 int spawnIndex = i % playerSpawns.Length;
                 GameObject player = Instantiate(characterPrefab, playerSpawns[spawnIndex].transform.position, Quaternion.identity);
                 
+                PlayerInputHandler playerInputHandler = playerState.PlayerInput.gameObject.GetComponent<PlayerInputHandler>();
+                playerInputHandler.EnableInput();
+                playerInputHandler.UsePlayerControls();
+                player.GetComponent<PlayerMovement>().Initialize(playerInputHandler);
+                player.GetComponent<PlayerBombController>().Initialize(playerInputHandler);
                 player.GetComponent<EntityHealth>().OnDeath += OnPlayerDeath;
-                playerConfigurationGameObject.GetComponent<PlayerInputHandler>().InitializePlayer(playerConfiguration, player);
                 
                 _instantiatedPlayer.Add(player);
             }
@@ -121,10 +130,13 @@ namespace Game
             yield return new WaitForSeconds(3);
             gameManager.ReloadGame();
         }
-        
+
+#if UNITY_EDITOR
         private void OnValidate()
         {
             if (gameManager == null) gameManager = GetComponent<GameManager>();
-        }
+            if (playerGameObjectRegistry == null) playerGameObjectRegistry = GetComponent<PlayerGameObjectRegistry>();
+        }  
+#endif
     }
 }
