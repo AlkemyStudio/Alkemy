@@ -235,7 +235,7 @@ public struct VoxelMeshJob : IJob {
         if (z < 0 || z >= depth) return true;
 
         // Extract the Alpha channel from the color, if the alpha is 0 then the voxel is empty
-        if ((voxels[GetIndex(x, y, z)] & 0xFF) == 0) return true;
+        if (((voxels[GetIndex(x, y, z)] >> 24) & 0xFF) == 0) return true;
         return false;
     }
 
@@ -250,10 +250,10 @@ public struct VoxelMeshJob : IJob {
     private void PushFace(float x, float y, float z, int color, FaceDirection dir, float w = 1, float h = 1, float d = 1) {
         int start = vertices.Length;
 
-        byte A = (byte)(color & 0xFF);
-        byte R = (byte)((color >> 8) & 0xFF);
-        byte G = (byte)((color >> 16) & 0xFF);
-        byte B = (byte)((color >> 24) & 0xFF);
+        byte R = (byte)((color) & 0xFF);
+        byte G = (byte)((color >> 8) & 0xFF);
+        byte B = (byte)((color >> 16) & 0xFF);
+        byte A = (byte)((color >> 24) & 0xFF);
 
         switch (dir) {
             case FaceDirection.UP:
