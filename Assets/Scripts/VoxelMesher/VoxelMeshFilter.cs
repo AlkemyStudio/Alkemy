@@ -40,6 +40,7 @@ public class VoxelMeshFilter : MonoBehaviour
             meshJob.algorithm = MeshingAlgorithm.NAIVE;
             meshJob.voxels = new NativeArray<int>(voxelData.voxels, Allocator.Persistent);
             meshJob.origin = voxelData.origin;
+            meshJob.scale = voxelData.scale;
             meshJob.width = voxelData.width;
             meshJob.height = voxelData.height;
             meshJob.depth = voxelData.depth;
@@ -66,6 +67,7 @@ public class VoxelMeshFilter : MonoBehaviour
             meshJob.algorithm = (MeshingAlgorithm)voxelMesh.optimizationLevel; // Select the proper algorithm based on the optimisation level
             meshJob.voxels = new NativeArray<int>(parser.voxelData.voxels, Allocator.Persistent);
             meshJob.origin = parser.voxelData.origin;
+            meshJob.scale = parser.voxelData.scale;
             meshJob.width = parser.voxelData.width;
             meshJob.height = parser.voxelData.height;
             meshJob.depth = parser.voxelData.depth;

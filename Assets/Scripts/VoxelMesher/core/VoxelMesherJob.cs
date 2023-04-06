@@ -25,6 +25,9 @@ public struct VoxelMeshJob : IJob {
     [ReadOnly]
     public Vector3 origin;
 
+    [ReadOnly] 
+    public Vector3 scale;
+
     [ReadOnly]
     public int width;
 
@@ -60,12 +63,12 @@ public struct VoxelMeshJob : IJob {
 
                     // Only create a face if the adjacent voxel is empty
                     // otherwise the face will be hidden under the adjacent voxel
-                    if (IsVoxelEmpty(x, y + 1, z)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.UP);
-                    if (IsVoxelEmpty(x, y - 1, z)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.DOWN);
-                    if (IsVoxelEmpty(x - 1, y, z)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.LEFT);
-                    if (IsVoxelEmpty(x + 1, y, z)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.RIGHT);
-                    if (IsVoxelEmpty(x, y, z - 1)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.BACK);
-                    if (IsVoxelEmpty(x, y, z + 1)) PushFace(x - origin.x, y - origin.y, z - origin.z, color, FaceDirection.FRONT);
+                    if (IsVoxelEmpty(x, y + 1, z)) PushFace((x - origin.x) * scale.x, (y - origin.y) * scale.y, (z - origin.z) * scale.z, color, FaceDirection.UP, scale.x, scale.z, scale.y);
+                    if (IsVoxelEmpty(x, y - 1, z)) PushFace((x - origin.x) * scale.x, (y - origin.y) * scale.y, (z - origin.z) * scale.z, color, FaceDirection.DOWN, scale.x, scale.z, scale.y);
+                    if (IsVoxelEmpty(x - 1, y, z)) PushFace((x - origin.x) * scale.x, (y - origin.y) * scale.y, (z - origin.z) * scale.z, color, FaceDirection.LEFT, scale.z, scale.y, scale.x);
+                    if (IsVoxelEmpty(x + 1, y, z)) PushFace((x - origin.x) * scale.x, (y - origin.y) * scale.y, (z - origin.z) * scale.z, color, FaceDirection.RIGHT, scale.z, scale.y, scale.x);
+                    if (IsVoxelEmpty(x, y, z - 1)) PushFace((x - origin.x) * scale.x, (y - origin.y) * scale.y, (z - origin.z) * scale.z, color, FaceDirection.BACK, scale.x, scale.y, scale.z);
+                    if (IsVoxelEmpty(x, y, z + 1)) PushFace((x - origin.x) * scale.x, (y - origin.y) * scale.y, (z - origin.z) * scale.z, color, FaceDirection.FRONT, scale.x, scale.y, scale.z);
                 }
             }
         }
@@ -93,6 +96,23 @@ public struct VoxelMeshJob : IJob {
                 return new Vector3Int(x, y, z);
             default:
                 return Vector3Int.zero;
+        }
+    }
+
+    Vector3 ConvertToFaceCoordinate(Vector3 vector, FaceDirection direction)
+    {
+        switch (direction) {
+            case FaceDirection.UP:
+            case FaceDirection.DOWN:
+                return new Vector3(vector.x, vector.z, vector.y);
+            case FaceDirection.LEFT:
+            case FaceDirection.RIGHT:
+                return new Vector3(vector.z, vector.y, vector.x);
+            case FaceDirection.BACK:
+            case FaceDirection.FRONT:
+                return vector;
+            default:
+                return Vector3.zero;
         }
     }
 
@@ -183,7 +203,17 @@ public struct VoxelMeshJob : IJob {
                          */
                         if (faceWidth > 0 && faceHeight > 0) {
                             Vector3Int npos = ConvertToFaceCoordinate(x, y, z, direction);
-                            PushFace(npos.x - origin.x, npos.y - origin.y, npos.z - origin.z, color, direction, faceWidth, faceHeight);
+                            Vector3 nscale = ConvertToFaceCoordinate(scale, direction);
+                            PushFace(
+                                (npos.x - origin.x) * scale.x, 
+                                (npos.y - origin.y) * scale.y, 
+                                (npos.z - origin.z) * scale.z, 
+                                color, 
+                                direction, 
+                                faceWidth * nscale.x, 
+                                faceHeight * nscale.y,
+                                nscale.z
+                            );
                             for (int nx = x; nx < x + faceWidth; nx++) {
                                 for (int ny = y; ny < y + faceHeight; ny++) {
                                     int nindex = nx + ny * size.x;
@@ -217,7 +247,7 @@ public struct VoxelMeshJob : IJob {
      * Push a face into the mesh
      * Creates 4 vertices and 6 indices and 4 colors (one for each vertex)
      */
-    private void PushFace(float x, float y, float z, int color, FaceDirection dir, int w = 1, int h = 1) {
+    private void PushFace(float x, float y, float z, int color, FaceDirection dir, float w = 1, float h = 1, float d = 1) {
         int start = vertices.Length;
 
         byte A = (byte)(color & 0xFF);
@@ -227,10 +257,10 @@ public struct VoxelMeshJob : IJob {
 
         switch (dir) {
             case FaceDirection.UP:
-                vertices.Add(new Vector3(x, y + 1, z));
-                vertices.Add(new Vector3(x + w, y + 1, z));
-                vertices.Add(new Vector3(x, y + 1, z + h));
-                vertices.Add(new Vector3(x + w, y + 1, z + h));
+                vertices.Add(new Vector3(x, y + d, z));
+                vertices.Add(new Vector3(x + w, y + d, z));
+                vertices.Add(new Vector3(x, y + d, z + h));
+                vertices.Add(new Vector3(x + w, y + d, z + h));
                 break;
             case FaceDirection.DOWN:
                 vertices.Add(new Vector3(x, y, z + h));
@@ -245,10 +275,10 @@ public struct VoxelMeshJob : IJob {
                 vertices.Add(new Vector3(x, y, z + w));
                 break;
             case FaceDirection.RIGHT:
-                vertices.Add(new Vector3(x + 1, y + h, z + w));
-                vertices.Add(new Vector3(x + 1, y + h, z));
-                vertices.Add(new Vector3(x + 1, y, z + w));
-                vertices.Add(new Vector3(x + 1, y, z));
+                vertices.Add(new Vector3(x + d, y + h, z + w));
+                vertices.Add(new Vector3(x + d, y + h, z));
+                vertices.Add(new Vector3(x + d, y, z + w));
+                vertices.Add(new Vector3(x + d, y, z));
                 break;
             case FaceDirection.BACK:
                 vertices.Add(new Vector3(x + w, y + h, z));
@@ -257,12 +287,10 @@ public struct VoxelMeshJob : IJob {
                 vertices.Add(new Vector3(x, y, z));
                 break;
             case FaceDirection.FRONT:
-                vertices.Add(new Vector3(x, y + h, z + 1));
-                vertices.Add(new Vector3(x + w, y + h, z + 1));
-                vertices.Add(new Vector3(x, y, z + 1));
-                vertices.Add(new Vector3(x + w, y, z + 1));
-                break;
-            default:
+                vertices.Add(new Vector3(x, y + h, z + d));
+                vertices.Add(new Vector3(x + w, y + h, z + d));
+                vertices.Add(new Vector3(x, y, z + d));
+                vertices.Add(new Vector3(x + w, y, z + d));
                 break;
         }
 

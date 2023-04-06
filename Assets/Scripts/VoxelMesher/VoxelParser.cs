@@ -13,8 +13,6 @@ public class VoxelParser : MonoBehaviour
 
     [System.NonSerialized]
     public JobHandle parserJobHandle;
-
-    private bool parserRunning = false;
     private PlyVoxelParseJob parseJob;
 
     // Start is called before the first frame update
@@ -35,18 +33,17 @@ public class VoxelParser : MonoBehaviour
                 parseJob.voxelData = new NativeArray<JobVoxelData>(1, Allocator.Persistent);
                 parseJob.voxels = new NativeList<int>(Allocator.Persistent);
                 parserJobHandle = parseJob.Schedule();
-                parserRunning = true;
             }
         }
     }
 
     void LateUpdate() {
-        if (parserRunning && parserJobHandle.IsCompleted) {
+        if (parserJobHandle.IsCompleted) {
             parserJobHandle.Complete();
-            parserRunning = false;
 
             voxelData.canExplode = parseJob.voxelData[0].canExplode;
             voxelData.origin = parseJob.voxelData[0].origin;
+            voxelData.scale = parseJob.voxelData[0].scale;
             voxelData.width = parseJob.voxelData[0].width;
             voxelData.height = parseJob.voxelData[0].height;
             voxelData.depth = parseJob.voxelData[0].depth;
@@ -57,6 +54,9 @@ public class VoxelParser : MonoBehaviour
             parseJob.voxels.Dispose();
 
             voxelData.MarkReady();
+            
+            // Stop the script
+            enabled = false;
         }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028465, g: 0.22571501, b: 0.30692363, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028463, g: 0.22571494, b: 0.3069235, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -690,8 +690,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3fff6d09af4437a87fa496d18160c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallPrefab: {fileID: 4967157756374902407, guid: ce6bfbc38e67fbb4694fc9bd2512b1ca,
+  wallPrefabs:
+  - {fileID: 4967157756374902407, guid: ce6bfbc38e67fbb4694fc9bd2512b1ca, type: 3}
+  - {fileID: 4967157756374902407, guid: df96a4f4640ea134d85cddb15c54f953, type: 3}
+  - {fileID: 4967157756374902407, guid: b5aecb58e773bc04bb9c60cb6cf2fab6, type: 3}
+  - {fileID: 4967157756374902407, guid: c05a267d16481514bacf23db3926e0c3, type: 3}
+  - {fileID: 4967157756374902407, guid: 63f2a7b2b16e43245aed4aa4b0e452bb, type: 3}
+  - {fileID: 4967157756374902407, guid: dc3bbb48188078c4fa310f324d7bafa3, type: 3}
+  - {fileID: 4967157756374902407, guid: 54d3b0b0804365e4d91f93a60b97780b, type: 3}
+  - {fileID: 4967157756374902407, guid: 36c17f3eb5efbd14ea391efe9e561739, type: 3}
+  - {fileID: 4967157756374902407, guid: 8c436cf154a0df14bbc23519e7e3a62d, type: 3}
+  - {fileID: 4967157756374902407, guid: e1bec5c9edf113d46956b9841349dc73, type: 3}
+  - {fileID: 4967157756374902407, guid: 192b3957edf17af47911d3adba54c9b8, type: 3}
+  indestructibleWallPrefab: {fileID: 4967157756374902407, guid: 3101dba754fe57144a478dde812f30f7,
     type: 3}
+  floor: {fileID: 4967157756374902407, guid: 3f87bdd8a0875ee4c873a3016975f053, type: 3}
 --- !u!114 &1540729335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +758,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28768
+  m_Name: pb_Mesh71380
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -923,7 +936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1831617375
 MeshCollider:
   m_ObjectHideFlags: 0

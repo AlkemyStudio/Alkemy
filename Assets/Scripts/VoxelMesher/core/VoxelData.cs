@@ -7,6 +7,7 @@ public class VoxelData {
     public int height;
     public int depth;
     public Vector3 origin;
+    public Vector3 scale;
     public bool canExplode;
 
     private bool _ready = false;
@@ -14,11 +15,11 @@ public class VoxelData {
     public delegate void VoxelDataReady(VoxelData self);
     public event VoxelDataReady OnVoxelDataReady;
 
-    public void MarkReady() {
-        if (!_ready) {
-            _ready = true;
-            OnVoxelDataReady.Invoke(this);
-        }
+    public void MarkReady()
+    {
+        if (_ready) return;
+        _ready = true;
+        OnVoxelDataReady?.Invoke(this);
     }
 
     public bool IsReady() {
@@ -31,5 +32,6 @@ public struct JobVoxelData {
     public int height;
     public int depth;
     public Vector3 origin;
+    public Vector3 scale;
     public bool canExplode;
 }
