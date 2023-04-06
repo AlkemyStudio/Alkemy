@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Bonus
 {
-    public class SpeedBonus : BaseBonus
+    public class IncreaseSpeedBonus : BaseBonus
     {
         protected override void OnPlayerTakeBonus(GameObject player)
         {
