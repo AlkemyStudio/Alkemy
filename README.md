@@ -1,3 +1,3 @@
 # Alkemy
 
-Alkemy is a bomberman game made in Unity that uses a rendering system based on Voxels. This allows us to have dynamic, in real time effects like explosions which use the Voxels to create a collapsing effect when buildings are destroyed.
+Alkemy is a voxel-based Bomberman-style game where players navigate through destructible environments while laying bombs to eliminate enemies. With multiplayer support and various power-ups, players compete to be the last one standing. The game's voxel rendering system provides a unique visual style, allowing for dynamic destruction and manipulation of the game's environment.
