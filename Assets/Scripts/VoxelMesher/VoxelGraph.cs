@@ -8,6 +8,7 @@ using UnityEngine.VFX;
 public class VoxelGraph : MonoBehaviour
 {
     public VoxelParser voxelParser;
+    public Camera depthCamera;
     private Texture3D texture3D;
     private VisualEffect visualEffect;
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class VoxelGraph : MonoBehaviour
         visualEffect.SetVector3("Size", new Vector3(voxelData.width, voxelData.height, voxelData.depth));
         visualEffect.SetVector3("Voxel Scale", voxelData.scale);
         visualEffect.SetVector3("Voxel Origin", voxelData.origin);
+        
         visualEffect.Play();
     }
 
