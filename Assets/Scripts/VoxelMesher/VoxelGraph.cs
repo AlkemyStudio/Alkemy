@@ -8,11 +8,18 @@ using UnityEngine.VFX;
 public class VoxelGraph : MonoBehaviour
 {
     public VoxelParser voxelParser;
+    public bool autoDestroy = true;
+    public int destroyThreshold = 100;
     private Texture3D texture3D;
     private VisualEffect visualEffect;
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    private bool playing = false;
+    private bool particleSpawned = false;
+
+    public delegate void AnimationEnd();
+    public event AnimationEnd OnAnimationEnd;
+
+    void OnEnable() {
         visualEffect = GetComponent<VisualEffect>();
         if (voxelParser.voxelData.IsReady()) {
             generateTexture3D(voxelParser.voxelData);
@@ -34,11 +41,21 @@ public class VoxelGraph : MonoBehaviour
         visualEffect.SetVector3("Voxel Origin", voxelData.origin);
         
         visualEffect.Play();
+        playing = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (autoDestroy) {
+            if (playing && particleSpawned && visualEffect.aliveParticleCount <= destroyThreshold) {
+                OnAnimationEnd?.Invoke();
+                Destroy(gameObject);
+            }
+
+            if (!particleSpawned && visualEffect.aliveParticleCount >= destroyThreshold) {
+                particleSpawned = true;
+            }
+        }
     }
 }

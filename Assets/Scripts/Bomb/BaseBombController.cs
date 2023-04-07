@@ -4,6 +4,7 @@ using Game;
 using Player;
 using Terrain;
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace Bomb
 {
@@ -61,9 +62,6 @@ namespace Bomb
             _hasAlreadyExploded = true;
             Vector3 bombPosition = TerrainUtils.GetTerrainPosition(transform.position);
             
-            Explosion baseExplosion = Instantiate(explosionPrefabs, bombPosition, Quaternion.identity);
-            baseExplosion.DestroyAfter(BombData.ExplosionDuration);
-            
             Explode(bombPosition, Vector3.back, _bombPower);
             Explode(bombPosition, Vector3.right, _bombPower);
             Explode(bombPosition, Vector3.forward, _bombPower);
@@ -81,39 +79,64 @@ namespace Bomb
         {
             if (length <= 0) return;
 
-            position += direction;
+            float computedLength = 0;
+            bool earlyExit = false;
+            bool isBuilding = false;
 
-            Collider[] colliders = Physics.OverlapBox(position, new Vector3(0.49f, 0.49f, 0.49f), Quaternion.identity);
+            for (int i = 0; i < length; i++) {
+                Vector3 newPosition = position + direction * (i+1);
+                computedLength = i+1;
 
-            foreach (Collider c in colliders)
-            {
-                if (c.CompareTag("Terrain"))
+                Collider[] colliders = Physics.OverlapBox(newPosition, new Vector3(0.49f, 0.49f, 0.49f), Quaternion.identity);
+
+                foreach (Collider c in colliders)
                 {
-                    return;
-                }
-                
-                if (c.CompareTag("Bomb"))
-                {
-                    BaseBombController bombController = c.GetComponent<BaseBombController>();
-                    if (bombController.HasAlreadyExploded()) return;
-                    bombController.CancelTimer();
-                    bombController.StartExplode();
-                    return;
+                    if (c.CompareTag("Terrain"))
+                    {
+                        earlyExit = true;
+                        break;
+                    }
+                    
+                    if (c.CompareTag("Bomb"))
+                    {
+                        BaseBombController bombController = c.GetComponent<BaseBombController>();
+                        if (bombController.HasAlreadyExploded())
+                            continue;
+                        bombController.CancelTimer();
+                        bombController.StartExplode();
+                        break;
+                    }
+
+                    if (c.CompareTag("Destructible"))
+                    {
+                        EntityHealth entityHealth = c.GetComponent<EntityHealth>();
+                        entityHealth.PerformDamage();
+                        earlyExit = true;
+                        isBuilding = true;
+                        break;
+                    }
                 }
 
-                if (c.CompareTag("Destructible"))
-                {
-                    EntityHealth entityHealth = c.GetComponent<EntityHealth>();
-                    entityHealth.PerformDamage();
-                    length = 0;
-                    break;
-                }
+                if (earlyExit) break;
             }
-            
+
             Explosion explosion = Instantiate(explosionPrefabs, position, Quaternion.identity);
-            explosion.DestroyAfter(BombData.ExplosionDuration);
-            
-            Explode(position, direction, length - 1);
+            VisualEffect vfx = explosion.GetComponent<VisualEffect>();
+            explosion.SetupExplosionBoundingBox(computedLength, direction);
+            VoxelDeflagrationController deflagrationController = explosion.GetComponent<VoxelDeflagrationController>();
+            vfx.SetVector3("Direction", direction);
+            if (earlyExit && !isBuilding) {
+                // If the explosion is not on a destructible wall, we need to reduce the length by 0.5f
+                // to avoid the explosion to go through the wall
+                computedLength -= 0.5f;
+            }
+            if (!earlyExit) {
+                // If the explosion is not on a destructible wall or a terrain, we need to increase the length by 0.5f
+                // to avoid the explosion to stop before the end of the wall
+                computedLength += 0.5f;
+            }
+            vfx.SetFloat("Max Distance", (float)computedLength);
+            deflagrationController.Play();
         }
 
         private void OnDestroy()

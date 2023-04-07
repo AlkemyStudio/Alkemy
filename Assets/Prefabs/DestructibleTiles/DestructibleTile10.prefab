@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8198921004737263836}
   - component: {fileID: 4039086430676084427}
   m_Layer: 8
-  m_Name: DestructibleTile0
+  m_Name: DestructibleTile10
   m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,6 +71,8 @@ MonoBehaviour:
   - {fileID: 6246498869493565027, guid: 28c563472ddcb91afb51e920d1e07e70, type: 3}
   - {fileID: 3428231013816836945, guid: ebdf3c51fbc9ed0c8a61be7d027b1ca9, type: 3}
   - {fileID: 2853522301849194315, guid: 3dcaf2d9e59cb90a2b8cf4aae0330094, type: 3}
+  explosionPrefab: {fileID: 1919633667859114561, guid: a1e9d3b01c209c943a98ee4bdb764ea9,
+    type: 3}
 --- !u!65 &310815641447267074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -158,4 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a11b0efbe48460bb016a50723468ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  file: {fileID: 4900000, guid: c4032f56b98cb5a4897bf2e699ed03d0, type: 3}
+  file: {fileID: 4900000, guid: 478054c6d0092f24e80453a5fa2c892d, type: 3}

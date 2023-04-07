@@ -674,7 +674,7 @@ MonoBehaviour:
   lobbyPlayerManager: {fileID: 136714556}
   lobbyUI: {fileID: 136714555}
   lobbyCharacterRegistry: {fileID: 136714554}
-  minPlayerCountToStart: 2
+  minPlayerCountToStart: 1
   sceneBuildIndexToLoad: 2
   delayBetweenCharacterSwitch: 0.5
 --- !u!114 &136714554
