@@ -64,7 +64,9 @@ namespace Lobby
         
         public void SetSelectable(int index, bool isSelectable)
         {
-            lobbyCharacters[index].isSelectable = isSelectable;
+            LobbyCharacter lobbyCharacter = lobbyCharacters[index];
+            lobbyCharacter.isSelectable = isSelectable;
+            lobbyCharacters[index] = lobbyCharacter;
         }
     }
 }

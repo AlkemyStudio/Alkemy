@@ -11,24 +11,40 @@ namespace Lobby
         public event Action<int> OnRemoveButtonClicked;
         
         [SerializeField] private GameObject characterRenderer;
+        [SerializeField] private GameObject characterGameObjectPosition;
         [SerializeField] private Button nextButton;
         [SerializeField] private Button previousButton;
         [SerializeField] private Button removeButton;
         [SerializeField] private GameObject readyMark;
-        
+
         private int _playerIndex;
+        private LobbyCharacterRegistry _lobbyCharacterRegistry;
+        private GameObject _characterGameObject;
 
         public bool IsDisable => _playerIndex == -1;
         
         public void UpdateUI(PlayerState playerState)
         {
             readyMark.SetActive(playerState.IsReady);
-            // TODO: Update character renderer
+            UpdateCharacterRenderer(playerState.CharacterIndex);
             // TODO: Update player connection state
         }
-        
+
+        private void UpdateCharacterRenderer(int characterIndex)
+        {
+            if (_characterGameObject != null)
+            {
+                Destroy(_characterGameObject);
+            }
+            
+            GameObject prefab = _lobbyCharacterRegistry.GetPrefabWithIndex(characterIndex);
+            GameObject newGameObject = Instantiate(prefab, characterGameObjectPosition.transform);
+            _characterGameObject = newGameObject;
+        }
+
         public void EnableSlotUI(int playerIndex)
         {
+            _lobbyCharacterRegistry = LobbyController.Instance.GetComponent<LobbyCharacterRegistry>();
             _playerIndex = playerIndex;
             EnableCharacterRenderer();
             EnableNextButton();
