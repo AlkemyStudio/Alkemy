@@ -86,7 +86,6 @@ namespace Bomb
             for (int i = 0; i < length; i++) {
                 Vector3 newPosition = position + direction * (i+1);
                 computedLength = i+1;
-
                 Collider[] colliders = Physics.OverlapBox(newPosition, new Vector3(0.49f, 0.49f, 0.49f), Quaternion.identity);
 
                 foreach (Collider c in colliders)
@@ -122,7 +121,7 @@ namespace Bomb
 
             Explosion explosion = Instantiate(explosionPrefabs, position, Quaternion.identity);
             VisualEffect vfx = explosion.GetComponent<VisualEffect>();
-            explosion.SetupExplosionBoundingBox(computedLength, direction);
+            explosion.SetupExplosionBoundingBox(computedLength - (earlyExit ? 1 : 0), direction);
             VoxelDeflagrationController deflagrationController = explosion.GetComponent<VoxelDeflagrationController>();
             vfx.SetVector3("Direction", direction);
             if (earlyExit && !isBuilding) {
