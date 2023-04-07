@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Character;
 using Lobby;
 using Player;
+using PlayerInputs;
 using Terrain;
 using UnityEngine;
 using PlayerState = Lobby.PlayerState;
@@ -14,18 +16,20 @@ namespace Game
     public class PlayerManager : MonoBehaviour
     {
         public static PlayerManager Instance { get; private set; }
-
+        
         [SerializeField] private GameManager gameManager;
         [SerializeField] private PlayerGameObjectRegistry playerGameObjectRegistry;
         [SerializeField] private GameObject[] playerSpawns;
 
         private List<GameObject> _instantiatedPlayer;
+        private List<PlayerInputHandler> _playerInputHandlers;
         private int _alivePlayerCount;
 
         private void Awake()
         {
             Instance = this;
             _instantiatedPlayer = new List<GameObject>();
+            _playerInputHandlers = new List<PlayerInputHandler>();
         }
 
         private void GeneratePlayers()
@@ -36,21 +40,18 @@ namespace Game
 
         private void ClearOldPlayer()
         {
-            foreach (GameObject player in _instantiatedPlayer)
-            {
+            _playerInputHandlers.Clear();
+            foreach (GameObject player in _instantiatedPlayer) {
                 Destroy(player);
             }
-            
             _instantiatedPlayer.Clear();
         }
         
         private void DoSpawnPlayers()
         {
-            List<PlayerState> playerStates = LobbyController.Instance.LobbyPlayerStates
-                .Select(state => state.Value)
-                .ToList();
+            PlayerState[] playerStates = PlayerInputRegistry.Instance.GetPlayerStates();
             
-            for (int i = 0; i < playerStates.Count; i++)
+            for (int i = 0; i < playerStates.Length; i++)
             {
                 PlayerState playerState = playerStates[i];
 
@@ -59,13 +60,13 @@ namespace Game
                 GameObject player = Instantiate(characterPrefab, playerSpawns[spawnIndex].transform.position, Quaternion.identity);
                 
                 PlayerInputHandler playerInputHandler = playerState.PlayerInput.gameObject.GetComponent<PlayerInputHandler>();
-                playerInputHandler.EnableInput();
                 playerInputHandler.UsePlayerControls();
                 player.GetComponent<PlayerMovement>().Initialize(playerInputHandler);
                 player.GetComponent<PlayerBombController>().Initialize(playerInputHandler);
                 player.GetComponent<EntityHealth>().OnDeath += OnPlayerDeath;
                 
                 _instantiatedPlayer.Add(player);
+                _playerInputHandlers.Add(playerInputHandler);
             }
             
             _alivePlayerCount = _instantiatedPlayer.Count;
@@ -84,8 +85,7 @@ namespace Game
         
         private bool ShouldEndTheGame()
         {
-            if (_alivePlayerCount > 1) return false;
-            return true;
+            return _alivePlayerCount <= 1;
         }
         
         private void OnEnable()
@@ -105,9 +105,19 @@ namespace Game
                 case GameState.TerrainGenerated:
                     OnTerrainGenerated();
                     break;
+                case GameState.Playing:
+                    OnGameStatePlaying();
+                    break;
                 case GameState.Ended:
                     OnGameEnded();
                     break;
+                case GameState.Initialization:
+                case GameState.Paused:
+                case GameState.Resumed:
+                case GameState.Ready:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(state), state, null);
             }
         }
         
@@ -115,11 +125,16 @@ namespace Game
         {
             GeneratePlayers();
             gameManager.SetGameState(GameState.Ready);
-            gameManager.SetGameState(GameState.Playing);
         }
 
+        private void OnGameStatePlaying()
+        {
+            EnablePlayerInputs();
+        }
+        
         private void OnGameEnded()
         {
+            DisablePlayerInputs();
             StartCoroutine(Restart());
         }
 
@@ -127,6 +142,22 @@ namespace Game
         {
             yield return new WaitForSeconds(3);
             gameManager.ReloadGame();
+        }
+        
+        private IEnumerator StartPlaying()
+        {
+            yield return new WaitForSeconds(3);
+            gameManager.SetGameState(GameState.Playing);
+        }
+        
+        private void EnablePlayerInputs()
+        {
+            _playerInputHandlers.ForEach(playerInputHandler => playerInputHandler.EnableInput());
+        }
+        
+        private void DisablePlayerInputs()
+        {
+            _playerInputHandlers.ForEach(playerInputHandler => playerInputHandler.DisableInput());
         }
 
 #if UNITY_EDITOR

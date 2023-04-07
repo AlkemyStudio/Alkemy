@@ -1,22 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PlayerInputs;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Lobby
 {
     [RequireComponent(
-        typeof(LobbyPlayerManager), 
         typeof(LobbyUI), 
         typeof(LobbyCharacterRegistry)
     )]
-    public class LobbyController : MonoBehaviour
+    public class LobbyController : MonoBehaviour, IPlayerHandler
     {
         public static LobbyController Instance { get; private set; }
         
+        [FormerlySerializedAs("playerInputManager")]
         [Header("References")]
-        [SerializeField] private LobbyPlayerManager lobbyPlayerManager;
+        [SerializeField] private GamePlayerInputManager gamePlayerInputManager;
         [SerializeField] private LobbyUI lobbyUI;
         [SerializeField] private LobbyCharacterRegistry lobbyCharacterRegistry;
         
@@ -27,7 +29,7 @@ namespace Lobby
         [Header("Input Settings")]
         [SerializeField] private float delayBetweenCharacterSwitch = 0.5f;
 
-        public Dictionary<int, PlayerState> LobbyPlayerStates { get; private set; }
+        private Dictionary<int, PlayerState> LobbyPlayerStates { get; set; }
 
         private int _firstPlayerIndex = -1;
         private float _lastCharacterSwitchTime;
@@ -46,9 +48,10 @@ namespace Lobby
         private void Start()
         {
             LobbyPlayerStates = new Dictionary<int, PlayerState>();
+            gamePlayerInputManager.SetPlayerHandler(this);
         }
 
-        public void PlayerJoinedHandler(PlayerInput playerInput)
+        public void HandlePlayerJoined(PlayerInput playerInput)
         {
             if (LobbyPlayerStates.ContainsKey(playerInput.playerIndex))
             {
@@ -85,7 +88,7 @@ namespace Lobby
             playerInputHandler.OnCancel += OnCancelHandler;
         }
         
-        public void PlayerDisconnectHandler(PlayerInput playerInput)
+        public void HandlePlayerLeft(PlayerInput playerInput)
         {
             if (!LobbyPlayerStates.ContainsKey(playerInput.playerIndex)) return;
             SetIsConnected(playerInput.playerIndex, false);
@@ -101,14 +104,27 @@ namespace Lobby
 
             if (_firstPlayerIndex == playerIndex)
             {
-                if (lobbyPlayerManager.GetPlayerCount() > 0)
-                    _firstPlayerIndex = lobbyPlayerManager.GetFirstPlayerIndex();
+                if (gamePlayerInputManager.GetPlayerCount() > 0)
+                    _firstPlayerIndex = GetFirstConnectedPlayerIndex();
                 else
                     _firstPlayerIndex = -1;
             }
 
             lobbyUI.DisableSlotUI(playerIndex);
-            lobbyPlayerManager.RemovePlayer(playerIndex);
+            gamePlayerInputManager.RemovePlayer(playerIndex);
+        }
+
+        private int GetFirstConnectedPlayerIndex()
+        {
+            foreach (PlayerState playerState in LobbyPlayerStates.Values)
+            {
+                if (playerState.IsConnected)
+                {
+                    return playerState.PlayerIndex;
+                }
+            }
+            
+            return -1;
         }
         
         private void OnConfirmHandler(int playerIndex)
@@ -129,9 +145,15 @@ namespace Lobby
             }
 
             if (_firstPlayerIndex != playerIndex || !IsAllPlayersReady()) return;
-            
-            lobbyUI.NoMoreUpdateUI();
+
+            StartGame();
+        }
+
+        private void StartGame()
+        {
+            gamePlayerInputManager.UnsetPlayerHandler();
             DisableAllPlayerInputControls();
+            PlayerInputRegistry.Instance.RegisterAll(LobbyPlayerStates.Values.ToArray());
             SceneManager.LoadScene(sceneBuildIndexToLoad);
         }
 
@@ -146,6 +168,12 @@ namespace Lobby
                 
                 playerInputHandler.DisableInput();
             }
+        }
+        
+        public void ReturnToMainMenu()
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(0);
         }
         
         public void OnSelectLeftCharacterHandler(int playerIndex)
@@ -221,9 +249,6 @@ namespace Lobby
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            if (lobbyPlayerManager == null)
-                lobbyPlayerManager = GetComponent<LobbyPlayerManager>();
-            
             if (lobbyUI == null)
                 lobbyUI = GetComponent<LobbyUI>();
             
