@@ -1,6 +1,7 @@
 using System;
 using Bomb;
 using Lobby;
+using PlayerInputs;
 using Terrain;
 using UnityEngine;
 

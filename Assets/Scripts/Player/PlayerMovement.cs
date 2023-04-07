@@ -1,5 +1,6 @@
 using System;
 using Lobby;
+using PlayerInputs;
 using UnityEngine;
 
 namespace Player

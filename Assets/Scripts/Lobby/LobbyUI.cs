@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Lobby
 {
@@ -12,12 +13,6 @@ namespace Lobby
         
 
         private Dictionary<int, LobbyPlayerSlotUI> _bindSlots;
-        private bool _shouldUpdateUI = true;
-        
-        public void NoMoreUpdateUI()
-        {
-            _shouldUpdateUI = false;
-        }
 
         private void Start()
         {
@@ -27,7 +22,6 @@ namespace Lobby
         
         private void DisableAllSlots()
         {
-            if (!_shouldUpdateUI) return;
             startGameText.SetActive(false);
             foreach (LobbyPlayerSlotUI playerSlot in playerSlots)
             {
@@ -37,19 +31,16 @@ namespace Lobby
         
         public void ShowStartGameText()
         {
-            if (!_shouldUpdateUI) return;
             startGameText.SetActive(true);
         }
         
         public void HideStartGameText()
         {
-            if (!_shouldUpdateUI) return;
             startGameText.SetActive(false);
         }
         
         public void EnableSlotUI(int playerIndex)
         {
-            if (!_shouldUpdateUI) return;
             LobbyPlayerSlotUI slot = GetFirstSlotDisable();
             slot.OnPreviousButtonClicked += lobbyController.OnSelectLeftCharacterHandler;
             slot.OnNextButtonClicked += lobbyController.OnSelectRightCharacterHandler;
@@ -60,7 +51,6 @@ namespace Lobby
         
         public void DisableSlotUI(int playerIndex)
         {
-            if (!_shouldUpdateUI) return;
             LobbyPlayerSlotUI slot = _bindSlots[playerIndex];
             slot.DisableSlotUI();
             slot.OnPreviousButtonClicked -= lobbyController.OnSelectLeftCharacterHandler;
@@ -71,7 +61,6 @@ namespace Lobby
         
         public void UpdateSlotUI(PlayerState playerState)
         {
-            if (!_shouldUpdateUI) return;
             _bindSlots[playerState.PlayerIndex].UpdateUI(playerState);
         }
         
