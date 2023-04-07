@@ -58,7 +58,7 @@ namespace Lobby
             }
             
             int characterIndex = lobbyCharacterRegistry.GetFirstSelectableCharacterIndex();
-            lobbyCharacterRegistry.SetSelectable(characterIndex, true);
+            lobbyCharacterRegistry.SetSelectable(characterIndex, false);
             
             PlayerState playerState = new()
             {
@@ -73,6 +73,7 @@ namespace Lobby
             
             LobbyPlayerStates.Add(playerInput.playerIndex, playerState);
             lobbyUI.EnableSlotUI(playerInput.playerIndex);
+            lobbyUI.UpdateSlotUI(playerState);
             CreateInputBindings(playerInput);
         }
 
@@ -170,17 +171,14 @@ namespace Lobby
             if (_lastCharacterSwitchTime + delayBetweenCharacterSwitch > Time.time) return;
             _lastCharacterSwitchTime = Time.time;
             
-            switch (direction.x)
-            {
-                case > 0:
-                    lobbyCharacterRegistry.GetPreviousSelectableCharacterIndex(currentCharacterIndex);
-                    break;
-                case < 0:
-                    lobbyCharacterRegistry.GetNextSelectableCharacterIndex(currentCharacterIndex);
-                    break;
-            }
+            int nextCharacterIndex = direction.x > 0
+                ? lobbyCharacterRegistry.GetNextSelectableCharacterIndex(currentCharacterIndex)
+                : lobbyCharacterRegistry.GetPreviousSelectableCharacterIndex(currentCharacterIndex);
             
-            SetPlayerCharacterIndex(playerIndex, currentCharacterIndex);
+            lobbyCharacterRegistry.SetSelectable(currentCharacterIndex, true);
+            lobbyCharacterRegistry.SetSelectable(nextCharacterIndex, false);
+            
+            SetPlayerCharacterIndex(playerIndex, nextCharacterIndex);
             lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerIndex]);
         }
 
