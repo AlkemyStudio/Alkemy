@@ -14,9 +14,10 @@ public class VoxelParser : MonoBehaviour
     [System.NonSerialized]
     public JobHandle parserJobHandle;
     private PlyVoxelParseJob parseJob;
+    private bool isParsing = false;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         if (file == null) return;
 
@@ -33,30 +34,34 @@ public class VoxelParser : MonoBehaviour
                 parseJob.voxelData = new NativeArray<JobVoxelData>(1, Allocator.Persistent);
                 parseJob.voxels = new NativeList<int>(Allocator.Persistent);
                 parserJobHandle = parseJob.Schedule();
+                
+                isParsing = true;
             }
         }
     }
 
-    void LateUpdate() {
-        if (parserJobHandle.IsCompleted) {
-            parserJobHandle.Complete();
+    private void LateUpdate()
+    {
+        if (!isParsing || !parserJobHandle.IsCompleted) return;
+        
+        parserJobHandle.Complete();
+        isParsing = false;
 
-            voxelData.canExplode = parseJob.voxelData[0].canExplode;
-            voxelData.origin = parseJob.voxelData[0].origin;
-            voxelData.scale = parseJob.voxelData[0].scale;
-            voxelData.width = parseJob.voxelData[0].width;
-            voxelData.height = parseJob.voxelData[0].height;
-            voxelData.depth = parseJob.voxelData[0].depth;
-            voxelData.voxels = parseJob.voxels.ToArray();
+        voxelData.canExplode = parseJob.voxelData[0].canExplode;
+        voxelData.origin = parseJob.voxelData[0].origin;
+        voxelData.scale = parseJob.voxelData[0].scale;
+        voxelData.width = parseJob.voxelData[0].width;
+        voxelData.height = parseJob.voxelData[0].height;
+        voxelData.depth = parseJob.voxelData[0].depth;
+        voxelData.voxels = parseJob.voxels.ToArray();
 
-            parseJob.fileData.Dispose();
-            parseJob.voxelData.Dispose();
-            parseJob.voxels.Dispose();
+        parseJob.fileData.Dispose();
+        parseJob.voxelData.Dispose();
+        parseJob.voxels.Dispose();
 
-            voxelData.MarkReady();
+        voxelData.MarkReady();
             
-            // Stop the script
-            enabled = false;
-        }
+        // Stop the script
+        enabled = false;
     }
 }

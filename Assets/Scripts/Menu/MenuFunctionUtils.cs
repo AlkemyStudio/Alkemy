@@ -9,6 +9,11 @@ namespace Menu
         {
             SceneManager.LoadScene(sceneName);
         }
+        
+        public void LoadScene(int sceneBuildIndex)
+        {
+            SceneManager.LoadScene(sceneBuildIndex);
+        }
 
         public void ExitGame()
         {
