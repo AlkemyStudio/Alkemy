@@ -41,7 +41,6 @@ namespace Player
         
         public void Initialize(PlayerInputHandler playerInputHandler)
         {
-            Debug.Log("Initialize PlayerMovement");
             _playerInputHandler = playerInputHandler;
             _playerInputHandler.OnMove += UpdateInputVector;
         }
@@ -67,7 +66,6 @@ namespace Player
 
         public void UpdateInputVector(Vector2 inputVector)
         {
-            Debug.Log("UpdateInputVector");
             _inputVector = inputVector;
         }
 

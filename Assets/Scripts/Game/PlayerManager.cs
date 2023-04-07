@@ -52,8 +52,6 @@ namespace Game
             
             for (int i = 0; i < playerStates.Count; i++)
             {
-                Debug.Log("Instantiating player");
-                
                 PlayerState playerState = playerStates[i];
 
                 GameObject characterPrefab = playerGameObjectRegistry.GetOneWithIndex(playerState.CharacterIndex);

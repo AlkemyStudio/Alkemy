@@ -31,7 +31,6 @@ namespace Player
         
         public void Initialize(PlayerInputHandler playerInputHandler)
         {
-            Debug.Log("Initialize PlayerMovement");
             _playerInputHandler = playerInputHandler;
             _playerInputHandler.OnPlaceBomb += TryPlaceBomb;
         }
@@ -43,7 +42,6 @@ namespace Player
 
         public void TryPlaceBomb()
         {
-            Debug.Log("TryPlaceBomb");
             if (_remainingBombs <= 0) return;
 
             Vector3 playerTilePosition = TerrainUtils.GetTerrainPosition(transform.position);

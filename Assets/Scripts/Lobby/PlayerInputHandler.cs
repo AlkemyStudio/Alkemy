@@ -60,7 +60,6 @@ namespace Lobby
             if (playerInput.devices[0].deviceId != context.control.device.deviceId) return;
 
             string actionName = context.action.name;
-            Debug.Log($"actionName: {actionName}");
 
             if (actionName == _controls.Menu.Direction.name) {
                 OnDirection?.Invoke(context.ReadValue<Vector2>(), playerInput.playerIndex);
@@ -71,10 +70,8 @@ namespace Lobby
                 if (context.performed) 
                     OnCancel?.Invoke(playerInput.playerIndex);
             } else if (actionName == _controls.Player.Move.name) {
-                Debug.Log("Invoke Move");
                 OnMove?.Invoke(context.ReadValue<Vector2>());
             } else if (actionName == _controls.Player.PlaceBomb.name) {
-                Debug.Log("Invoke Place bomb");
                 if (context.performed) 
                     OnPlaceBomb?.Invoke();
             }

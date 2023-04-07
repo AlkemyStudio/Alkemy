@@ -18,9 +18,6 @@ namespace Lobby
 
         public void HandlePlayerJoined(PlayerInput playerInput)
         {
-            Debug.Log("A player joined!");
-            
-            // Set the parent of the referenced PlayerInput's GameObject to this object.
             playerInput.transform.SetParent(transform);
             _playerInputs.Add(playerInput);
             
@@ -29,8 +26,6 @@ namespace Lobby
         
         public void HandlePlayerLeft(PlayerInput playerInput)
         {
-            Debug.Log("A player left!");
-            
             _playerInputs.Remove(playerInput);
             lobbyController.PlayerDisconnectHandler(playerInput);
         }
