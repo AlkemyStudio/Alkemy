@@ -77,7 +77,6 @@ namespace Game
             }
             
             string countdownMessage = countdownMessages[lastDisplayedCountdownMessageIndex];
-            Debug.Log($"Countdown: {countdownMessage}");
             textMeshPro.text = countdownMessage;
         }
 
@@ -86,7 +85,6 @@ namespace Game
             CancelInvoke(nameof(OnCountdownTick));
             textMeshProGameObject.SetActive(false);
             gameManager.SetGameState(GameState.Playing);
-            enabled = false;
         }
     }
 }
