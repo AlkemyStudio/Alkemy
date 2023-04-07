@@ -732,12 +732,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefabs:
-  - {fileID: 4189541259374453874, guid: 9b649390e6556e0498b6794e96f15c4d, type: 3}
-  - {fileID: 4189541259374453874, guid: 1fe28e9ad22df0646b1f3c1aab7fe98d, type: 3}
+  - {fileID: 4189541259374453874, guid: 7f01c432f001b8e499a9054fdd94d143, type: 3}
+  - {fileID: 4189541259374453874, guid: 7816f9fbe9c0f9747b3059c724c3c54c, type: 3}
   - {fileID: 4189541259374453874, guid: 34a912414cd2ef7fc94c15a6a1310596, type: 3}
   - {fileID: 4189541259374453874, guid: ed3fe7b188fa3444fb9d0e89be19d496, type: 3}
-  - {fileID: 4189541259374453874, guid: 9b649390e6556e0498b6794e96f15c4d, type: 3}
-  - {fileID: 4189541259374453874, guid: 1fe28e9ad22df0646b1f3c1aab7fe98d, type: 3}
+  - {fileID: 4189541259374453874, guid: 7f01c432f001b8e499a9054fdd94d143, type: 3}
+  - {fileID: 4189541259374453874, guid: 7816f9fbe9c0f9747b3059c724c3c54c, type: 3}
   - {fileID: 4189541259374453874, guid: 34a912414cd2ef7fc94c15a6a1310596, type: 3}
   - {fileID: 4189541259374453874, guid: ed3fe7b188fa3444fb9d0e89be19d496, type: 3}
 --- !u!1 &1731400397

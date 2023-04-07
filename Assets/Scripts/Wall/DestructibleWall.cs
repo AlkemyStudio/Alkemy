@@ -6,35 +6,64 @@ using UnityEngine;
 
 namespace Wall
 {
-    [RequireComponent(typeof(EntityHealth))]
+    [RequireComponent(typeof(EntityHealth), typeof(VoxelParser))]
     public class DestructibleWall : MonoBehaviour
     {
         [SerializeField] private EntityHealth entityHealth;
         [SerializeField] private float percentageToDropBonus;
         [SerializeField] private List<BaseBonus> bonusPrefabs;
 
+        [SerializeField] private GameObject explosionPrefab;
+
+        private VoxelParser voxelParser;
+        private MeshRenderer meshRenderer;
+
+        private bool dead = false;
+
         private void Start()
         {
+            meshRenderer = GetComponent<MeshRenderer>();
             entityHealth = entityHealth.GetComponent<EntityHealth>();
             entityHealth.OnDeath += OnDeath;
+            voxelParser = GetComponent<VoxelParser>();
         }
 
         private void OnDeath(GameObject go)
         { 
+            if (dead) return;
+            dead = true;
+
             Vector2Int tilePos = TerrainUtils.GetTilePosition(transform.position);
             TerrainManager.Instance.InstantiateFloor(tilePos.x, tilePos.y);
             
-            if (ShouldSpawnBonus())
-            {
-                BaseBonus bonus = Instantiate(
-                    original: bonusPrefabs[Random.Range(0, bonusPrefabs.Count)], 
-                    position: transform.position + new Vector3(0, 0.5f, 0), 
-                    rotation: Quaternion.Euler(0, 90, 90)
-                );
-                bonus.SetupBonus();
-            }
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
-            Destroy(go);
+            meshRenderer.enabled = false;
+
+            VoxelGraph voxelGraph = explosion.GetComponent<VoxelGraph>();
+            voxelGraph.voxelParser = voxelParser;
+            voxelGraph.OnAnimationEnd += () => {
+                if (ShouldSpawnBonus())
+                {
+                    try {
+                        BaseBonus bonus = Instantiate(
+                            original: bonusPrefabs[Random.Range(0, bonusPrefabs.Count)], 
+                            position: transform.position + new Vector3(0, 0.5f, 0), 
+                            rotation: Quaternion.Euler(0, 90, 90)
+                        );
+                        bonus.SetupBonus();
+                    } catch {
+
+                    }
+                }
+
+                try {
+                    Destroy(go);
+                } catch {
+
+                }
+            };
+            voxelGraph.enabled = true;
         }
         
         private bool ShouldSpawnBonus()

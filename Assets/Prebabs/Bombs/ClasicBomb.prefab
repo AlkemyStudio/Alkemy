@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d6892914b44dab9cde9d82bc02db96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefabs: {fileID: 5517185967437083734, guid: ef88a393401bec3898c85436d92a3ac1,
+  explosionPrefabs: {fileID: -2314515648993753340, guid: 89c488aadad5415439a68864be4ee67a,
     type: 3}
   meshRenderer: {fileID: 5084051704965509663}
 --- !u!95 &6467959094289768541
