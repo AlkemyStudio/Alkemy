@@ -27,6 +27,13 @@ namespace Wall
             entityHealth.OnDeath += OnDeath;
             voxelParser = GetComponent<VoxelParser>();
         }
+        
+        public void DestroyWallWithoutEffect()
+        {
+            Vector2Int tilePos = TerrainUtils.GetTilePosition(transform.position);
+            TerrainManager.Instance.InstantiateFloor(tilePos.x, tilePos.y);
+            Destroy(gameObject);
+        }
 
         private void OnDeath(GameObject go)
         { 

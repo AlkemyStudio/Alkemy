@@ -1,16 +1,18 @@
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
 {
 
-    public class GameManager : MonoBehaviour
+    public class GameStateManager : MonoBehaviour
     {
         public delegate void GameStateEvent(GameState state);
-        public event GameStateEvent GameStateChanged;
+        public event GameStateEvent OnGameStateChanged;
+        public event Action<GameEndedEvent> OnGameEnded;
 
-        public static GameManager Instance;
+        public static GameStateManager Instance;
 
         private GameState _currentGameState = GameState.Initialization;
 
@@ -29,9 +31,14 @@ namespace Game
             SetGameState(GameState.Initialization);
         }
         
-        public void EndTheGame()
+        public void EndTheGame(string[] winnerNames, string[] lastPlayerNamesDeadAtTheSameTime)
         {
             SetGameState(GameState.Ended);
+            OnGameEnded?.Invoke(new GameEndedEvent {
+                WinnerNames = winnerNames,
+                LastPlayerNamesDeadAtTheSameTime = lastPlayerNamesDeadAtTheSameTime,
+                GameEndTime = Time.time
+            });
         }
 
         public void PauseGame()
@@ -47,7 +54,7 @@ namespace Game
         public void SetGameState(GameState state)
         {
             _currentGameState = state;
-            GameStateChanged?.Invoke(state);
+            OnGameStateChanged?.Invoke(state);
         }
     }
 }

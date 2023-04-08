@@ -195,7 +195,7 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""daa4e8bd-2100-45db-bf56-07106ae37861"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -228,7 +228,7 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e738a9ec-47be-4128-ab5f-231e760985f8"",
-                    ""path"": ""<SwitchProControllerHID>/buttonEast"",
+                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -239,7 +239,7 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""197b6ec8-a8e3-4607-a386-6563e3394edc"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -272,7 +272,7 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4420bab6-3424-4738-a76f-0270436c6f27"",
-                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
+                    ""path"": ""<SwitchProControllerHID>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
