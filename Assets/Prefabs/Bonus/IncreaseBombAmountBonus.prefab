@@ -79,6 +79,7 @@ MonoBehaviour:
   bonusCollider: {fileID: 8169420319039015480}
   modelTransform: {fileID: 1254934932502287890}
   rotationSpeed: 125
+  bonusSound: {fileID: 8300000, guid: 9e94c3344f3377e429eb8a6cc1cbf5a7, type: 3}
 --- !u!1 &6230758996933132049
 GameObject:
   m_ObjectHideFlags: 0

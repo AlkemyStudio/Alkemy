@@ -10,6 +10,7 @@ namespace Bonus
         [SerializeField] private Collider bonusCollider;
         [SerializeField] private Transform modelTransform;
         [SerializeField] private float rotationSpeed = 125.0f;
+        [SerializeField] private AudioClip bonusSound;
 
         public void SetupBonus()
         {
@@ -26,6 +27,7 @@ namespace Bonus
         {
             if (other.CompareTag("Player"))
             {
+                PlaySound();
                 OnPlayerTakeBonus(other.gameObject);
             }
             
@@ -38,6 +40,14 @@ namespace Bonus
         }
 
         protected abstract void OnPlayerTakeBonus(GameObject player);
+        
+        protected virtual void PlaySound()
+        {
+            if (bonusSound != null)
+            {
+                AudioSource.PlayClipAtPoint(bonusSound, transform.position);
+            }
+        }
 
         private void OnValidate()
         {

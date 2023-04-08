@@ -12,6 +12,7 @@ namespace Bomb
     {
         [SerializeField] protected Explosion explosionPrefabs;
         [SerializeField] protected MeshRenderer meshRenderer;
+        [SerializeField] protected AudioClip[] bombExplosionSounds;
 
         protected PlayerBombController _playerBombController;
         protected int _bombPower;
@@ -77,6 +78,7 @@ namespace Bomb
                 _playerBombController.OnBombExplode();
             }
             
+            PlaySound();
             Destroy(gameObject);
         }
 
@@ -141,6 +143,13 @@ namespace Bomb
             }
             vfx.SetFloat("Max Distance", (float)computedLength);
             deflagrationController.Play();
+        }
+
+        protected virtual void PlaySound()
+        {
+            if (bombExplosionSounds.Length == 0) return;
+            int randomIndex = Random.Range(0, bombExplosionSounds.Length);
+            AudioSource.PlayClipAtPoint(bombExplosionSounds[randomIndex], transform.position);
         }
 
         private void OnDestroy()

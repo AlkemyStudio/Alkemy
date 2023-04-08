@@ -16,7 +16,10 @@ namespace Menu
         [SerializeField] private GameStateManager gameStateManager;
         [SerializeField] private GameObject endGameCanvas;
         [SerializeField] private TextMeshProUGUI winnerText;
-    
+        [SerializeField] private AudioSource mainAudioSource;
+        [SerializeField] private AudioClip endGameSound;
+        private AudioClip _mainAudioClip;
+
         [Header("Messages Settings")]
         [Tooltip("Use {0} to display the winner name")]
         [SerializeField] private string winnerMessage = "Player {0} Won";
@@ -24,6 +27,7 @@ namespace Menu
 
         public void Awake()
         {
+            _mainAudioClip = mainAudioSource.clip;
             endGameCanvas.SetActive(false);
         }
 
@@ -40,12 +44,18 @@ namespace Menu
         private void OnGameEnded(GameEndedEvent e)
         {
             endGameCanvas.SetActive(true);
+            mainAudioSource.Stop();
+            mainAudioSource.clip = endGameSound;
+            mainAudioSource.Play();
             winnerText.text = GetWinnerMessage(e.WinnerNames);
         }
         
         public void OnRestartButtonClicked()
         {
             endGameCanvas.SetActive(false);
+            mainAudioSource.Stop();
+            mainAudioSource.clip = _mainAudioClip;
+            mainAudioSource.Play();
             gameStateManager.ReloadGame();
         }
         

@@ -172,6 +172,11 @@ MonoBehaviour:
   explosionPrefabs: {fileID: -2314515648993753340, guid: 89c488aadad5415439a68864be4ee67a,
     type: 3}
   meshRenderer: {fileID: 5084051704965509663}
+  bombExplosionSounds:
+  - {fileID: 8300000, guid: ac18a1b1c7bb8ed4098fef5e349fd60b, type: 3}
+  - {fileID: 8300000, guid: d4bea5cbfd2d0bc45b197c8720198e9b, type: 3}
+  - {fileID: 8300000, guid: cff54b0a15f25634ea64d23a3a9710b3, type: 3}
+  - {fileID: 8300000, guid: 776df856f64732a4a90d42cfd971d8cf, type: 3}
   flickeringCurve:
     serializedVersion: 2
     m_Curve:
