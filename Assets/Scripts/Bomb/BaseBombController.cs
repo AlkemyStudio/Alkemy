@@ -121,7 +121,7 @@ namespace Bomb
                     }
                 }
 
-                if (earlyExit) break;
+                // if (earlyExit) break;
             }
 
             Explosion explosion = Instantiate(explosionPrefabs, position, Quaternion.identity);

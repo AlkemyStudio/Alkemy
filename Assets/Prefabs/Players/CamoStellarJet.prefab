@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefab: {fileID: 8028605745407525638, guid: fde0c308cecebd9579845b0a21fdf0f3,
     type: 3}
-  bombPower: 1
+  bombPower: 20
   minBombPower: 1
   maxBombPower: 20
   bombAmount: 1

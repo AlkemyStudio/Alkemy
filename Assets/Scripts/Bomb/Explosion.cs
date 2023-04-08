@@ -12,7 +12,7 @@ namespace Bomb
         
         public void SetupExplosionBoundingBox(float distance, Vector3 direction) {
             Vector3 newSize = distance * direction;
-            boxCollider.size = new Vector3(Math.Abs(newSize.x), Math.Abs(newSize.y), Math.Abs(newSize.z)) + Vector3.one;
+            boxCollider.size = new Vector3(Math.Abs(newSize.x), Math.Abs(newSize.y), Math.Abs(newSize.z)) + new Vector3(0.7f, 1f, 0.7f);
             boxCollider.center = newSize / 2;
         }
 
