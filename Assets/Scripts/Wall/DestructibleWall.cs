@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Bonus;
-using Character;
+using Core;
 using Terrain;
 using UnityEngine;
 

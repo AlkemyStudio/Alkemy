@@ -1,5 +1,6 @@
 using System.Collections;
-using Character;
+using Audio;
+using Core;
 using Game;
 using Player;
 using Terrain;
@@ -149,7 +150,7 @@ namespace Bomb
         {
             if (bombExplosionSounds.Length == 0) return;
             int randomIndex = Random.Range(0, bombExplosionSounds.Length);
-            AudioSource.PlayClipAtPoint(bombExplosionSounds[randomIndex], transform.position);
+            AudioSourcePool.Instance.PlayClipAtPoint(bombExplosionSounds[randomIndex], transform.position);
         }
 
         private void OnDestroy()

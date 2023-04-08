@@ -14,6 +14,8 @@ TagManager:
   - UI
   - RenderTextures
   - TerrainFloor
+  - Undefined
+  - PoolAudioSource
   layers:
   - Default
   - TransparentFX

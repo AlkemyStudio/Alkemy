@@ -1,37 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerModelAnimation : MonoBehaviour
+namespace Player
 {
-
-    private float movementDelta = 0;
-    [SerializeField] private float movementSpeed = 0.2f;
-    private float actualMovementSpeed = 0.2f;
-    [SerializeField] private float movementThreshold = 0.1f;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerModelAnimation : MonoBehaviour
     {
-        actualMovementSpeed = movementSpeed;
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        movementDelta += Time.deltaTime * actualMovementSpeed;
+        private float movementDelta = 0;
+        [SerializeField] private float movementSpeed = 0.2f;
+        private float actualMovementSpeed = 0.2f;
+        [SerializeField] private float movementThreshold = 0.1f;
 
-        if ((actualMovementSpeed > 0 && movementDelta > movementThreshold) || (actualMovementSpeed < 0 && movementDelta < -movementThreshold))
+
+        // Start is called before the first frame update
+        void Start()
         {
-            actualMovementSpeed = -actualMovementSpeed;
+            actualMovementSpeed = movementSpeed;
         }
 
-        transform.Translate(new Vector3(0, Time.deltaTime * actualMovementSpeed, 0));
-    }
+        // Update is called once per frame
+        void FixedUpdate()
+        {
+            movementDelta += Time.deltaTime * actualMovementSpeed;
 
-    private void OnValidate()
-    {
-        actualMovementSpeed = actualMovementSpeed > 0 ? movementSpeed : -movementSpeed;
+            if ((actualMovementSpeed > 0 && movementDelta > movementThreshold) || (actualMovementSpeed < 0 && movementDelta < -movementThreshold))
+            {
+                actualMovementSpeed = -actualMovementSpeed;
+            }
+
+            transform.Translate(new Vector3(0, Time.deltaTime * actualMovementSpeed, 0));
+        }
+
+        private void OnValidate()
+        {
+            actualMovementSpeed = actualMovementSpeed > 0 ? movementSpeed : -movementSpeed;
+        }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using Audio;
 using Bomb;
 using UnityEngine;
 
@@ -45,7 +46,7 @@ namespace Bonus
         {
             if (bonusSound != null)
             {
-                AudioSource.PlayClipAtPoint(bonusSound, transform.position);
+                AudioSourcePool.Instance.PlayClipAtPoint(bonusSound, transform.position);
             }
         }
 

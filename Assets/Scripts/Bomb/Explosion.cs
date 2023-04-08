@@ -1,5 +1,5 @@
 using System;
-using Character;
+using Core;
 using Terrain;
 using UnityEngine;
 
