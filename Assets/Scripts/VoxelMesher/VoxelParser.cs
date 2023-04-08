@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Jobs;
 using Unity.Collections;
-
+using Unity.Collections.LowLevel.Unsafe;
 
 public class VoxelParser : MonoBehaviour
 {
@@ -19,6 +19,7 @@ public class VoxelParser : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        // UnsafeUtility.SetLeakDetectionMode(NativeLeakDetectionMode.EnabledWithStackTrace);
         if (file == null) return;
 
         voxelData = VoxelDataStore.GetVoxelData(file.name);
@@ -33,6 +34,9 @@ public class VoxelParser : MonoBehaviour
                 parseJob.fileData = new NativeArray<char>(file.text.ToCharArray(), Allocator.Persistent);
                 parseJob.voxelData = new NativeArray<JobVoxelData>(1, Allocator.Persistent);
                 parseJob.voxels = new NativeList<int>(Allocator.Persistent);
+                parseJob.voxelsShape = new NativeList<int>(Allocator.Persistent);
+                parseJob.voxelsCoordinates = new NativeList<int>(Allocator.Persistent);
+                parseJob.voxelsColors = new NativeList<int>(Allocator.Persistent);
                 parserJobHandle = parseJob.Schedule();
                 
                 isParsing = true;
@@ -54,10 +58,21 @@ public class VoxelParser : MonoBehaviour
         voxelData.height = parseJob.voxelData[0].height;
         voxelData.depth = parseJob.voxelData[0].depth;
         voxelData.voxels = parseJob.voxels.ToArray();
+        voxelData.voxelsColors = parseJob.voxelsColors.ToArray();
+        voxelData.voxelsCoordinates = parseJob.voxelsCoordinates.ToArray();
+
+        voxelData.voxelsColorBuffer = new GraphicsBuffer(GraphicsBuffer.Target.Structured, voxelData.voxelsColors.Length, 4);
+        voxelData.voxelsColorBuffer.SetData(voxelData.voxelsColors);
+
+        voxelData.voxelsCoordinateBuffer = new GraphicsBuffer(GraphicsBuffer.Target.Structured, voxelData.voxelsCoordinates.Length, 4);
+        voxelData.voxelsCoordinateBuffer.SetData(voxelData.voxelsCoordinates);
 
         parseJob.fileData.Dispose();
         parseJob.voxelData.Dispose();
         parseJob.voxels.Dispose();
+        parseJob.voxelsShape.Dispose();
+        parseJob.voxelsCoordinates.Dispose();
+        parseJob.voxelsColors.Dispose();
 
         voxelData.MarkReady();
             

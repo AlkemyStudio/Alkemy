@@ -10,7 +10,6 @@ public class VoxelGraph : MonoBehaviour
     public VoxelParser voxelParser;
     public bool autoDestroy = true;
     public int destroyThreshold = 100;
-    private Texture3D texture3D;
     private VisualEffect visualEffect;
 
     private bool playing = false;
@@ -19,8 +18,11 @@ public class VoxelGraph : MonoBehaviour
     public delegate void AnimationEnd();
     public event AnimationEnd OnAnimationEnd;
 
-    void OnEnable() {
+    public void Awake() {
         visualEffect = GetComponent<VisualEffect>();
+    }
+
+    void OnEnable() {
         if (voxelParser.voxelData.IsReady()) {
             generateTexture3D(voxelParser.voxelData);
         } else {
@@ -29,16 +31,12 @@ public class VoxelGraph : MonoBehaviour
     }
 
     void generateTexture3D(VoxelData voxelData) {
-        texture3D = new Texture3D(voxelData.width, voxelData.height, voxelData.depth, TextureFormat.RGBA32, false);
-        texture3D.filterMode = FilterMode.Point;
-        texture3D.wrapMode = TextureWrapMode.Clamp;
-        texture3D.SetPixelData(voxelData.voxels, 0, 0);
-        texture3D.Apply();
-
-        visualEffect.SetTexture("Voxel", texture3D);
         visualEffect.SetVector3("Size", new Vector3(voxelData.width, voxelData.height, voxelData.depth));
         visualEffect.SetVector3("Voxel Scale", voxelData.scale);
         visualEffect.SetVector3("Voxel Origin", voxelData.origin);
+        visualEffect.SetInt("Voxel Count", voxelData.voxelsCoordinates.Length);
+        visualEffect.SetGraphicsBuffer("Voxel Colors", voxelData.voxelsColorBuffer);
+        visualEffect.SetGraphicsBuffer("Voxel Coordinates", voxelData.voxelsCoordinateBuffer);
         
         visualEffect.Play();
         playing = true;

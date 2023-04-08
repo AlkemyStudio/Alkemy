@@ -1,14 +1,22 @@
 using UnityEngine;
+using UnityEngine.VFX;
+
+
 
 public class VoxelData {
     public string name;
     public int[] voxels;
+    public int[] voxelsColors;
+    public int[] voxelsCoordinates;
     public int width;
     public int height;
     public int depth;
     public Vector3 origin;
     public Vector3 scale;
     public bool canExplode;
+
+    public GraphicsBuffer voxelsColorBuffer;
+    public GraphicsBuffer voxelsCoordinateBuffer;
 
     private bool _ready = false;
 
@@ -24,6 +32,11 @@ public class VoxelData {
 
     public bool IsReady() {
         return _ready;
+    }
+
+    ~VoxelData() {
+        voxelsColorBuffer.Dispose();
+        voxelsCoordinateBuffer.Dispose();
     }
 }
 

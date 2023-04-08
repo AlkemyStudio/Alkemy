@@ -21,6 +21,10 @@ public struct PlyVoxelParseJob : IJob {
     public NativeArray<JobVoxelData> voxelData;
     public NativeList<int> voxels;
 
+    public NativeList<int> voxelsShape;
+    public NativeList<int> voxelsCoordinates;
+    public NativeList<int> voxelsColors;
+
     public void Execute() {
         string text = new string(fileData.ToArray());
         JobVoxelData voxelData = new JobVoxelData();
@@ -111,14 +115,62 @@ public struct PlyVoxelParseJob : IJob {
 
         // Resize the capacity of the voxel array to avoid reallocations
         voxels.Resize(voxelData.width * voxelData.height * voxelData.depth, NativeArrayOptions.ClearMemory);
+        voxelsShape.Resize(voxelData.width * voxelData.height * voxelData.depth, NativeArrayOptions.ClearMemory);
 
         for (int i = 0; i < voxelsInfo.Count; i++) {
             VoxelInfo voxelInfo = voxelsInfo[i];
             int index = (voxelInfo.x - minX) + (voxelInfo.y - minY) * voxelData.width + (voxelInfo.z - minZ) * voxelData.width * voxelData.height;
             // Encode the color in the voxel
-            voxels[index] =(voxelInfo.red) | (voxelInfo.green << 8) | (voxelInfo.blue << 16) | (voxelInfo.alpha << 24);
+            voxels[index] = (voxelInfo.red) | (voxelInfo.green << 8) | (voxelInfo.blue << 16) | (voxelInfo.alpha << 24);
         }
 
+        int voxelShapeCount = 0;
+        // Compute the shape of the voxel grid
+        for (int i = 0; i < voxelsInfo.Count; i++) {
+            VoxelInfo voxelInfo = voxelsInfo[i];
+            int index = (voxelInfo.x - minX) + (voxelInfo.y - minY) * voxelData.width + (voxelInfo.z - minZ) * voxelData.width * voxelData.height;
+
+            if (IsTransparent(voxels, voxelInfo.x - minX - 1, voxelInfo.y - minY, voxelInfo.z - minZ, voxelData.width, voxelData.height, voxelData.depth) ||
+                IsTransparent(voxels, voxelInfo.x - minX + 1, voxelInfo.y - minY, voxelInfo.z - minZ, voxelData.width, voxelData.height, voxelData.depth) ||
+                IsTransparent(voxels, voxelInfo.x - minX, voxelInfo.y - minY - 1, voxelInfo.z - minZ, voxelData.width, voxelData.height, voxelData.depth) ||
+                IsTransparent(voxels, voxelInfo.x - minX, voxelInfo.y - minY + 1, voxelInfo.z - minZ, voxelData.width, voxelData.height, voxelData.depth) ||
+                IsTransparent(voxels, voxelInfo.x - minX, voxelInfo.y - minY, voxelInfo.z - minZ - 1, voxelData.width, voxelData.height, voxelData.depth) ||
+                IsTransparent(voxels, voxelInfo.x - minX, voxelInfo.y - minY, voxelInfo.z - minZ + 1, voxelData.width, voxelData.height, voxelData.depth)
+                ) {
+                    voxelsShape[index] = (voxelInfo.red) | (voxelInfo.green << 8) | (voxelInfo.blue << 16) | (voxelInfo.alpha << 24);
+                    voxelShapeCount++;
+                }
+        }
+
+        voxelsCoordinates.Resize(voxelShapeCount, NativeArrayOptions.UninitializedMemory);
+        voxelsColors.Resize(voxelShapeCount, NativeArrayOptions.UninitializedMemory);
+
+        int voxelCoordinateIndex = 0;
+        for (int x = 0; x < voxelData.width; x++) {
+            for (int y = 0; y < voxelData.height; y++) {
+                for (int z = 0; z < voxelData.depth; z++) {
+                    int index = x + y * voxelData.width + z * voxelData.width * voxelData.height;
+                    if (voxelsShape[index] != 0) {
+                        int voxelIndex = voxelCoordinateIndex++;
+                        voxelsCoordinates[voxelIndex] = (x & 0xFF) | ((y & 0xFF) << 8) | ((z & 0xFF) << 16);
+                        voxelsColors[voxelIndex] = voxelsShape[index];
+                    }
+                }
+            }
+        }
+
+
         this.voxelData[0] = voxelData;
+    }
+
+    private bool IsTransparent(NativeList<int> voxels, int x, int y, int z, int width, int height, int depth) {
+        if (x < 0 || x >= width || y < 0 || y >= height || z < 0 || z >= depth) {
+            return true;
+        }
+
+        int index = x + y * width + z * width * height;
+        int color = voxels[index];
+
+        return ((color >> 24) & 0xFF) == 0;
     }
 }

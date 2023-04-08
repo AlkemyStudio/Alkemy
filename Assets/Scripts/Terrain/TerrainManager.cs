@@ -21,7 +21,7 @@ namespace Terrain
         private TerrainEntityType[] _filledTiles;
         private List<GameObject> _previouslyInstantiated;
         
-        private GameManager _gameManager;
+        [SerializeField] private GameManager _gameManager;
 
         private void Awake()
         {
