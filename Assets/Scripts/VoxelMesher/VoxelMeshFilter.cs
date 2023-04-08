@@ -34,6 +34,7 @@ public class VoxelMeshFilter : MonoBehaviour
             meshFilter.mesh = voxelMesh.mesh;
         } else {
             voxelMesh = VoxelMeshStore.SetVoxelMesh(voxelData.name, new VoxelMesh(1));
+            meshFilter.mesh = voxelMesh.mesh;
             voxelMesh.waitOptimization = true;
 
             meshJob = new VoxelMeshJob();
@@ -84,10 +85,8 @@ public class VoxelMeshFilter : MonoBehaviour
          * and then update the mesh information with the results of the job
          */
         if (meshJobRunning && meshJobHandle.IsCompleted) {
-            meshJobHandle.Complete();
-
-            voxelMesh.waitOptimization = false;
             meshJobRunning = false;
+            meshJobHandle.Complete();
 
             voxelMesh.mesh.Clear();
             voxelMesh.mesh.SetVertices(meshJob.vertices.ToArray());
@@ -97,13 +96,14 @@ public class VoxelMeshFilter : MonoBehaviour
             voxelMesh.mesh.RecalculateNormals();
             voxelMesh.mesh.RecalculateBounds();
 
-
-            meshFilter.mesh = voxelMesh.mesh;
+            voxelMesh.mesh.MarkModified();
 
             meshJob.voxels.Dispose();
             meshJob.vertices.Dispose();
             meshJob.colors.Dispose();
             meshJob.triangles.Dispose();
+
+            voxelMesh.waitOptimization = false;
         }
     }
 }

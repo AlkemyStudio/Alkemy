@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8981444476585555287}
   - component: {fileID: 5676855299895600864}
   - component: {fileID: 6661753904346600372}
+  - component: {fileID: 2330315861080915732}
   m_Layer: 9
   m_Name: Model
   m_TagString: Untagged
@@ -110,6 +111,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   file: {fileID: 4900000, guid: 8132d781bf0cb7f498a3fe656d13396c, type: 3}
+--- !u!114 &2330315861080915732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495577715301755001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a88db3a127d888438b8029f74eee854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0.2
+  movementThreshold: 0.1
 --- !u!1 &4189541259374453874
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +258,7 @@ GameObject:
   - component: {fileID: 8798643146589776541}
   - component: {fileID: 6969632422218828340}
   - component: {fileID: 4369413133153544177}
+  - component: {fileID: 2146447370662170281}
   m_Layer: 9
   m_Name: PositionCursor
   m_TagString: Untagged
@@ -340,3 +356,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   file: {fileID: 4900000, guid: 8c07d6949f482f2438422c1a82cfac3f, type: 3}
+--- !u!114 &2146447370662170281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392185194931336001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d446ed10aa7fbb740859ed6b27c01945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0.6
+  defaultHeight: 0.6
