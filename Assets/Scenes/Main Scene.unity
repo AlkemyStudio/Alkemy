@@ -984,6 +984,8 @@ MonoBehaviour:
   - {fileID: 8699335}
   - {fileID: 60787442}
   - {fileID: 2084920013}
+  explosionPrefab: {fileID: 1919633667859114561, guid: a1e9d3b01c209c943a98ee4bdb764ea9,
+    type: 3}
 --- !u!114 &1540729334
 MonoBehaviour:
   m_ObjectHideFlags: 0
