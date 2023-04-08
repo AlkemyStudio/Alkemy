@@ -29,7 +29,7 @@ namespace Bomb
         {
             _playerBombController = bombController;
             _bombPower = bombPower;
-            GameManager.Instance.GameStateChanged += OnGameStateChanged;
+            GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
             StartCoroutine(StartTimer());
         }
         
@@ -140,7 +140,7 @@ namespace Bomb
 
         private void OnDestroy()
         {
-            GameManager.Instance.GameStateChanged -= OnGameStateChanged;
+            GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
         }
     }
 }
