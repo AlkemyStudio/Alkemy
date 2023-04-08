@@ -25,8 +25,14 @@ namespace Lobby
         
         public void UpdateUI(PlayerState playerState)
         {
-            readyMark.SetActive(playerState.IsReady);
-            UpdateCharacterRenderer(playerState.CharacterIndex);
+            try {
+                if (readyMark != null) {
+                    readyMark.SetActive(playerState.IsReady);
+                }
+                UpdateCharacterRenderer(playerState.CharacterIndex);
+            } catch {
+
+            }
             // TODO: Update player connection state
         }
 

@@ -22,14 +22,14 @@ public class VoxelParser : MonoBehaviour
         // UnsafeUtility.SetLeakDetectionMode(NativeLeakDetectionMode.EnabledWithStackTrace);
         if (file == null) return;
 
-        voxelData = VoxelDataStore.GetVoxelData(file.name);
+        voxelData = VoxelDataStore.Instance.GetVoxelData(file.name);
 
         if (voxelData == null) {
             if (file.text.StartsWith("ply")) {
                 voxelData = new VoxelData();
                 voxelData.name = file.name;
 
-                VoxelDataStore.SetVoxelData(file.name, voxelData);
+                VoxelDataStore.Instance.SetVoxelData(file.name, voxelData);
                 parseJob = new PlyVoxelParseJob();
                 parseJob.fileData = new NativeArray<char>(file.text.ToCharArray(), Allocator.Persistent);
                 parseJob.voxelData = new NativeArray<JobVoxelData>(1, Allocator.Persistent);

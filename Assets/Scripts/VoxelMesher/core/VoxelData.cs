@@ -35,8 +35,14 @@ public class VoxelData {
     }
 
     ~VoxelData() {
-        voxelsColorBuffer.Dispose();
-        voxelsCoordinateBuffer.Dispose();
+        Dispose();
+    }
+
+    public void Dispose() {
+        if (voxelsColorBuffer != null)
+            voxelsColorBuffer.Dispose();
+        if (voxelsCoordinateBuffer != null)
+            voxelsCoordinateBuffer.Dispose();
     }
 }
 
