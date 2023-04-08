@@ -17,12 +17,17 @@ namespace Bomb
         protected int _bombPower;
         
         protected bool _hasAlreadyExploded = false;
+        protected float spawnTime;
+        
+        protected static readonly int FuseTime = Shader.PropertyToID("_FuseTime");
+        protected static readonly int SpawnTime = Shader.PropertyToID("_SpawnTime");
 
         private void Start()
         {
+            spawnTime = Time.time;
             meshRenderer.material = new Material(meshRenderer.material);
-            meshRenderer.sharedMaterial.SetFloat("_FuseTime", BombData.FuseTime);
-            meshRenderer.sharedMaterial.SetFloat("_SpawnTime", Time.time);
+            meshRenderer.sharedMaterial.SetFloat(FuseTime, BombData.FuseTime);
+            meshRenderer.sharedMaterial.SetFloat(SpawnTime, spawnTime);
         }
 
         public virtual void SetupBomb(PlayerBombController bombController, int bombPower)

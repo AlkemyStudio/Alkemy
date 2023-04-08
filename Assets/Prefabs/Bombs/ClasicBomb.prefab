@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1bdd3ac45f156df98bb3f3d1f2069e96, type: 2}
+  - {fileID: 2100000, guid: a7ab2110d1a0ac341a1f0685f638489c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 2398439904066613351}
   - component: {fileID: 3828910552177069616}
   - component: {fileID: 8028605745407525638}
-  - component: {fileID: 6467959094289768541}
   m_Layer: 7
   m_Name: ClasicBomb
   m_TagString: Bomb
@@ -173,23 +172,47 @@ MonoBehaviour:
   explosionPrefabs: {fileID: -2314515648993753340, guid: 89c488aadad5415439a68864be4ee67a,
     type: 3}
   meshRenderer: {fileID: 5084051704965509663}
---- !u!95 &6467959094289768541
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7726575602201243998}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e511bc3bb306bd327a1f85a789f5512e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  flickeringCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.35
+      value: 0
+      inSlope: -0
+      outSlope: -0.0073369737
+      tangentMode: 5
+      weightedMode: 2
+      inWeight: 0.33333334
+      outWeight: 0.32829303
+    - serializedVersion: 3
+      time: 0.8
+      value: 1
+      inSlope: 0.008702321
+      outSlope: 0
+      tangentMode: 65
+      weightedMode: 3
+      inWeight: 0.23610233
+      outWeight: 0.31418586
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 1
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  baseFlickeringSpeed: 1
+  finalFlickeringSpeed: 4
