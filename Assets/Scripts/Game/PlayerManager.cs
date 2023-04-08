@@ -25,6 +25,8 @@ namespace Game
         private List<PlayerInputHandler> _playerInputHandlers;
         private int _alivePlayerCount;
 
+        [SerializeField] private GameObject explosionPrefab;
+
         private void Awake()
         {
             Instance = this;
@@ -74,13 +76,40 @@ namespace Game
 
         private void OnPlayerDeath(GameObject player)
         {
-            Destroy(player);
-            _alivePlayerCount--;
-            
-            if (ShouldEndTheGame())
+            VoxelParser voxelParser = player.GetComponentInChildren<VoxelParser>();
+
+            if (voxelParser == null)
             {
-                gameManager.EndTheGame();
+                Debug.LogError("Player has no VoxelParser");
+                Destroy(player);
+
+                _alivePlayerCount--;
+            
+                if (ShouldEndTheGame())
+                {
+                    gameManager.EndTheGame();
+                }
+
+                return;
             }
+
+            GameObject explosion = Instantiate(explosionPrefab, player.transform.position, Quaternion.identity);
+
+            VoxelGraph voxelGraph = explosion.GetComponent<VoxelGraph>();
+            voxelGraph.voxelParser = voxelParser;
+            
+            Destroy(player);
+
+            voxelGraph.OnAnimationEnd += () => {
+                _alivePlayerCount--;
+            
+                if (ShouldEndTheGame())
+                {
+                    gameManager.EndTheGame();
+                }
+            };
+
+            voxelGraph.enabled = true;
         }
         
         private bool ShouldEndTheGame()
