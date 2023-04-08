@@ -8,27 +8,21 @@ namespace Lobby
     public class BackgroundTextureOffset : MonoBehaviour
     {
         [SerializeField] private Vector2 speedOffset;
-        private Vector2 materialOffset;
         [SerializeField] private Image image;
-        private CanvasRenderer canvasRenderer;
+        
         private static readonly int MainTex = Shader.PropertyToID("_MainTex");
 
         private void Start()
         {
-            canvasRenderer = GetComponent<CanvasRenderer>();
             image = GetComponent<Image>();
-            materialOffset = image.material.mainTextureOffset;
         }
 
         private void Update()
         {
-            Material material = canvasRenderer.GetMaterial();
-            if (material == null) return;
-            
+            Vector2 materialOffset = image.materialForRendering.GetTextureOffset(MainTex);
             materialOffset.x += Time.deltaTime * speedOffset.x;
             materialOffset.y += Time.deltaTime * speedOffset.y;
-
-            canvasRenderer.GetMaterial().SetTextureOffset(MainTex, materialOffset);
+            image.materialForRendering.SetTextureOffset(MainTex, materialOffset);
         }
 
         private void OnValidate()
