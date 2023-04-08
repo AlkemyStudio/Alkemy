@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 namespace Terrain
 {
-    [RequireComponent(typeof(GameManager))]
+    [RequireComponent(typeof(GameStateManager))]
     public class TerrainManager : MonoBehaviour
     {
         public static TerrainManager Instance;
@@ -21,7 +21,7 @@ namespace Terrain
         private TerrainEntityType[] _filledTiles;
         private List<GameObject> _previouslyInstantiated;
         
-        private GameManager _gameManager;
+        private GameStateManager gameStateManager;
 
         private void Awake()
         {
@@ -200,24 +200,24 @@ namespace Terrain
 
         private void OnEnable()
         {
-            _gameManager.GameStateChanged += OnGameStateChanged;
+            gameStateManager.OnGameStateChanged += OnOnGameStateStateChanged;
         }
 
         private void OnDisable()
         {
-            _gameManager.GameStateChanged -= OnGameStateChanged;
+            gameStateManager.OnGameStateChanged -= OnOnGameStateStateChanged;
         }
 
-        private void OnGameStateChanged(GameState state)
+        private void OnOnGameStateStateChanged(GameState state)
         {
             if (state != GameState.Initialization) return;
             GenerateTerrain();
-            _gameManager.SetGameState(GameState.TerrainGenerated);
+            gameStateManager.SetGameState(GameState.TerrainGenerated);
         }
         
         private void OnValidate()
         {
-            if (_gameManager == null) _gameManager = GetComponent<GameManager>();
+            if (gameStateManager == null) gameStateManager = GetComponent<GameStateManager>();
         }
     }
 }

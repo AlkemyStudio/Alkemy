@@ -7,8 +7,9 @@ namespace Game
 {
     public class ReadyCountdown : MonoBehaviour
     {
-        [SerializeField] private GameManager gameManager;
-        [SerializeField] private GameObject textMeshProGameObject;
+        [FormerlySerializedAs("gameManager")] [SerializeField] private GameStateManager gameStateManager;
+        [SerializeField] private GameObject startGameCanvas;
+        [SerializeField] private TextMeshProUGUI textMeshPro;
     
         [SerializeField] private float delayBetweenCountdowns = 1f;
     
@@ -21,26 +22,24 @@ namespace Game
             "FIGHT!"
         };
     
-        private TextMeshProUGUI textMeshPro;
         private int lastDisplayedCountdownMessageIndex = -1;
 
         private void Awake()
         {
-            textMeshPro = textMeshProGameObject.GetComponent<TextMeshProUGUI>();
-            textMeshProGameObject.SetActive(false);
+            startGameCanvas.SetActive(false);
         }
     
         private void OnEnable()
         {
-            gameManager.GameStateChanged += OnGameStateChanged;
+            gameStateManager.OnGameStateChanged += OnOnGameStateStateChanged;
         }
 
         private void OnDisable()
         {
-            gameManager.GameStateChanged -= OnGameStateChanged;
+            gameStateManager.OnGameStateChanged -= OnOnGameStateStateChanged;
         }
 
-        private void OnGameStateChanged(GameState state)
+        private void OnOnGameStateStateChanged(GameState state)
         {
             switch (state)
             {
@@ -63,7 +62,8 @@ namespace Game
 
         private void StartCountdown()
         {
-            textMeshProGameObject.SetActive(true);
+            startGameCanvas.SetActive(true);
+            lastDisplayedCountdownMessageIndex = -1;
             InvokeRepeating(nameof(OnCountdownTick), 0f, delayBetweenCountdowns);
         }
 
@@ -83,8 +83,8 @@ namespace Game
         private void StopCountdown()
         {
             CancelInvoke(nameof(OnCountdownTick));
-            textMeshProGameObject.SetActive(false);
-            gameManager.SetGameState(GameState.Playing);
+            startGameCanvas.SetActive(false);
+            gameStateManager.SetGameState(GameState.Playing);
         }
     }
 }

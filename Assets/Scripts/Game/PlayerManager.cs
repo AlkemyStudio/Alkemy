@@ -8,28 +8,39 @@ using Player;
 using PlayerInputs;
 using Terrain;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Utils;
 using PlayerState = Lobby.PlayerState;
 
 namespace Game
 {
-    [RequireComponent(typeof(TerrainManager), typeof(GameManager))]
+    [RequireComponent(typeof(TerrainManager), typeof(GameStateManager))]
     public class PlayerManager : MonoBehaviour
     {
         public static PlayerManager Instance { get; private set; }
         
-        [SerializeField] private GameManager gameManager;
+        [Header("References")]
+        [FormerlySerializedAs("gameManager")] [SerializeField] private GameStateManager gameStateManager;
         [SerializeField] private PlayerGameObjectRegistry playerGameObjectRegistry;
         [SerializeField] private GameObject[] playerSpawns;
 
+        [Header("Settings")]
+        [SerializeField] private float timeBeforeEndGame = 2f;
+        [SerializeField] private float equalityThreshold = 0.1f;
+        
         private List<GameObject> _instantiatedPlayer;
         private List<PlayerInputHandler> _playerInputHandlers;
         private int _alivePlayerCount;
+
+        private float _lastDeathTime;
+        private Dictionary<string, float> _playerDeathTimes;
 
         private void Awake()
         {
             Instance = this;
             _instantiatedPlayer = new List<GameObject>();
             _playerInputHandlers = new List<PlayerInputHandler>();
+            _playerDeathTimes = new Dictionary<string, float>();
         }
 
         private void GeneratePlayers()
@@ -49,6 +60,11 @@ namespace Game
         
         private void DoSpawnPlayers()
         {
+#if UNITY_EDITOR
+            // In the editor, we don't have a PlayerInputRegistry, so to avoid errors, we just return.
+            if (PlayerInputRegistry.Instance == null)
+                return;
+#endif
             PlayerState[] playerStates = PlayerInputRegistry.Instance.GetPlayerStates();
             
             for (int i = 0; i < playerStates.Length; i++)
@@ -58,6 +74,7 @@ namespace Game
                 GameObject characterPrefab = playerGameObjectRegistry.GetOneWithIndex(playerState.CharacterIndex);
                 int spawnIndex = i % playerSpawns.Length;
                 GameObject player = Instantiate(characterPrefab, playerSpawns[spawnIndex].transform.position, Quaternion.identity);
+                player.name = $"Player {playerState.PlayerInput.playerIndex.ToString()}";
                 
                 PlayerInputHandler playerInputHandler = playerState.PlayerInput.gameObject.GetComponent<PlayerInputHandler>();
                 playerInputHandler.UsePlayerControls();
@@ -71,18 +88,40 @@ namespace Game
             
             _alivePlayerCount = _instantiatedPlayer.Count;
         }
-
+        
         private void OnPlayerDeath(GameObject player)
         {
+            _lastDeathTime = Time.time;
+            _playerDeathTimes[player.name] = _lastDeathTime;
+            
             Destroy(player);
             _alivePlayerCount--;
+
+            if (!ShouldEndTheGame()) return;
             
-            if (ShouldEndTheGame())
-            {
-                gameManager.EndTheGame();
-            }
+            StartCoroutine(EndGame());
         }
         
+        private IEnumerator EndGame()
+        {
+            yield return new WaitForSeconds(timeBeforeEndGame);
+            
+            GameObject alivePlayer = GameObject.FindWithTag("Player");
+            string[] winnerNames = alivePlayer == null 
+                ? Array.Empty<string>() 
+                : new[] { alivePlayer.name };
+            
+            gameStateManager.EndTheGame(winnerNames, GetLastPlayerNamesDeadAtTheSameTime());
+        }
+        
+        private string[] GetLastPlayerNamesDeadAtTheSameTime()
+        {
+            return _playerDeathTimes
+                .Where(pair => _lastDeathTime - pair.Value < equalityThreshold)
+                .Select(pair => pair.Key)
+                .ToArray();
+        }
+
         private bool ShouldEndTheGame()
         {
             return _alivePlayerCount <= 1;
@@ -90,15 +129,15 @@ namespace Game
         
         private void OnEnable()
         {
-            gameManager.GameStateChanged += OnGameStateChanged;
+            gameStateManager.OnGameStateChanged += OnOnGameStateStateChanged;
         }
 
         private void OnDisable()
         {
-            gameManager.GameStateChanged -= OnGameStateChanged;
+            gameStateManager.OnGameStateChanged -= OnOnGameStateStateChanged;
         }
 
-        private void OnGameStateChanged(GameState state)
+        private void OnOnGameStateStateChanged(GameState state)
         {
             switch (state)
             {
@@ -124,7 +163,7 @@ namespace Game
         private void OnTerrainGenerated()
         {
             GeneratePlayers();
-            gameManager.SetGameState(GameState.Ready);
+            gameStateManager.SetGameState(GameState.Ready);
         }
 
         private void OnGameStatePlaying()
@@ -135,19 +174,12 @@ namespace Game
         private void OnGameEnded()
         {
             DisablePlayerInputs();
-            StartCoroutine(Restart());
-        }
-
-        private IEnumerator Restart()
-        {
-            yield return new WaitForSeconds(3);
-            gameManager.ReloadGame();
         }
         
         private IEnumerator StartPlaying()
         {
             yield return new WaitForSeconds(3);
-            gameManager.SetGameState(GameState.Playing);
+            gameStateManager.SetGameState(GameState.Playing);
         }
         
         private void EnablePlayerInputs()
@@ -163,7 +195,7 @@ namespace Game
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            if (gameManager == null) gameManager = GetComponent<GameManager>();
+            if (gameStateManager == null) gameStateManager = GetComponent<GameStateManager>();
             if (playerGameObjectRegistry == null) playerGameObjectRegistry = GetComponent<PlayerGameObjectRegistry>();
         }  
 #endif
