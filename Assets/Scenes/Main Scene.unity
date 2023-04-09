@@ -1891,6 +1891,7 @@ GameObject:
   - component: {fileID: 1540729334}
   - component: {fileID: 1540729333}
   - component: {fileID: 1540729336}
+  - component: {fileID: 1540729337}
   m_Layer: 0
   m_Name: Game Managers
   m_TagString: Untagged
@@ -1997,6 +1998,40 @@ MonoBehaviour:
   - {fileID: 4189541259374453874, guid: 7816f9fbe9c0f9747b3059c724c3c54c, type: 3}
   - {fileID: 4189541259374453874, guid: 34a912414cd2ef7fc94c15a6a1310596, type: 3}
   - {fileID: 4189541259374453874, guid: ed3fe7b188fa3444fb9d0e89be19d496, type: 3}
+--- !u!114 &1540729337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540729331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01186762ff7d3746ab543b8fccdf70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modifiersTable:
+  - prefab: {fileID: 5892150448060041458, guid: 0cd206ec04c394344a4a88e017189a41,
+      type: 3}
+    probability: 10
+  - prefab: {fileID: -8612497665540069671, guid: 300bdd15414f86849aaa20cca2e7af9a,
+      type: 3}
+    probability: 10
+  - prefab: {fileID: 5937428780689794411, guid: 44923381f69e4a14ba1057a79e884f49,
+      type: 3}
+    probability: 10
+  - prefab: {fileID: 6246498869493565027, guid: 28c563472ddcb91afb51e920d1e07e70,
+      type: 3}
+    probability: 40
+  - prefab: {fileID: 3428231013816836945, guid: ebdf3c51fbc9ed0c8a61be7d027b1ca9,
+      type: 3}
+    probability: 40
+  - prefab: {fileID: 2853522301849194315, guid: 3dcaf2d9e59cb90a2b8cf4aae0330094,
+      type: 3}
+    probability: 40
+  - prefab: {fileID: 1304533068539356726, guid: 71bbc5aa252389340b6e04af5773d5ce,
+      type: 3}
+    probability: 2
 --- !u!1 &1731400397
 GameObject:
   m_ObjectHideFlags: 0

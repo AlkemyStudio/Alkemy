@@ -12,7 +12,7 @@ namespace Bomb
 
         private void Update()
         {
-            float bombLifeTime = Mathf.Min(Time.time - spawnTime, BombData.FuseTime) / BombData.FuseTime;
+            float bombLifeTime = Mathf.Min(Time.time - spawnTime, fuseTime) / fuseTime;
             float curveValue = flickeringCurve.Evaluate(bombLifeTime);
             float flickerValue = Mathf.Lerp(baseFlickeringSpeed, finalFlickeringSpeed, curveValue);
 

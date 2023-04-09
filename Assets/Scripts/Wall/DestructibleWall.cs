@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Bonus;
 using Core;
+using Game;
 using Terrain;
 using UnityEngine;
 
@@ -11,14 +12,13 @@ namespace Wall
     {
         [SerializeField] private EntityHealth entityHealth;
         [SerializeField] private float percentageToDropBonus;
-        [SerializeField] private List<BaseBonus> bonusPrefabs;
 
         [SerializeField] private GameObject explosionPrefab;
 
         private VoxelParser voxelParser;
         private MeshRenderer meshRenderer;
 
-        private bool dead = false;
+        private bool isDead = false;
 
         private void Start()
         {
@@ -37,8 +37,8 @@ namespace Wall
 
         private void OnDeath(GameObject go)
         { 
-            if (dead) return;
-            dead = true;
+            if (isDead) return;
+            isDead = true;
 
             Vector2Int tilePos = TerrainUtils.GetTilePosition(transform.position);
             TerrainManager.Instance.InstantiateFloor(tilePos.x, tilePos.y);
@@ -53,14 +53,15 @@ namespace Wall
                 if (ShouldSpawnBonus())
                 {
                     try {
+                        BaseBonus bonusToSpawn = GameBonuses.Instance.GetRandomBonus();
+                        Debug.Log($"Spawning bonus : {bonusToSpawn}");
                         BaseBonus bonus = Instantiate(
-                            original: bonusPrefabs[Random.Range(0, bonusPrefabs.Count)], 
+                            original: bonusToSpawn, 
                             position: transform.position + new Vector3(0, 0.5f, 0), 
                             rotation: Quaternion.Euler(0, 90, 90)
                         );
                         bonus.SetupBonus();
                     } catch {
-
                     }
                 }
 
