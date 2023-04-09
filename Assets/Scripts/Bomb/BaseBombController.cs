@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Audio;
 using Core;
@@ -5,16 +6,25 @@ using Game;
 using Player;
 using Terrain;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.VFX;
+using Random = UnityEngine.Random;
 
 namespace Bomb
 {
     public abstract class BaseBombController : MonoBehaviour
     {
-        [SerializeField] protected Explosion explosionPrefabs;
+        [Header("References")]
+        [FormerlySerializedAs("colliderThatApplyForces")] [SerializeField] protected Collider mainCollider;
+        [SerializeField] protected Collider colliderThatBlockForces;
+        [SerializeField] protected Collider triggerCollider;
         [SerializeField] protected MeshRenderer meshRenderer;
+        [SerializeField] protected Explosion explosionPrefabs;
         [SerializeField] protected AudioClip[] bombExplosionSounds;
-
+        
+        [Header("Settings")]
+        [SerializeField] protected float fuseTime = 3.0f;
+        
         protected PlayerBombController _playerBombController;
         protected int _bombPower;
         
@@ -24,11 +34,18 @@ namespace Bomb
         protected static readonly int FuseTime = Shader.PropertyToID("_FuseTime");
         protected static readonly int SpawnTime = Shader.PropertyToID("_SpawnTime");
 
+        private void Awake()
+        {
+            Physics.IgnoreCollision(mainCollider, colliderThatBlockForces, true);
+            Physics.IgnoreCollision(mainCollider, triggerCollider, true);
+            Physics.IgnoreCollision(colliderThatBlockForces, triggerCollider, true);
+        }
+
         private void Start()
         {
             spawnTime = Time.time;
             meshRenderer.material = new Material(meshRenderer.material);
-            meshRenderer.sharedMaterial.SetFloat(FuseTime, BombData.FuseTime);
+            meshRenderer.sharedMaterial.SetFloat(FuseTime, fuseTime);
             meshRenderer.sharedMaterial.SetFloat(SpawnTime, spawnTime);
         }
 
@@ -50,7 +67,7 @@ namespace Bomb
 
         protected virtual IEnumerator StartTimer()
         {
-            yield return new WaitForSeconds(BombData.FuseTime);
+            yield return new WaitForSeconds(fuseTime);
             StartExplode();
         }
         
@@ -152,7 +169,14 @@ namespace Bomb
             int randomIndex = Random.Range(0, bombExplosionSounds.Length);
             AudioSourcePool.Instance.PlayClipAtPoint(bombExplosionSounds[randomIndex], transform.position);
         }
-
+        
+        public virtual void OnPlayerWalkOutsideTrigger()
+        {
+            mainCollider.isTrigger = false;
+            colliderThatBlockForces.isTrigger = false;
+            triggerCollider.enabled = true;
+        }
+        
         private void OnDestroy()
         {
             GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;

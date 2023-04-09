@@ -172,7 +172,7 @@ namespace Lobby
         
         public void ReturnToMainMenu()
         {
-            Destroy(gameObject);
+            Destroy(gamePlayerInputManager.gameObject);
             SceneManager.LoadScene(0);
         }
         

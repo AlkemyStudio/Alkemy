@@ -16,6 +16,7 @@ TagManager:
   - TerrainFloor
   - Undefined
   - PoolAudioSource
+  - BombBlocker
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - 
   - RenderTexutreObject
   - 
-  - 
+  - BlockBombForce
   - 
   - 
   - 
