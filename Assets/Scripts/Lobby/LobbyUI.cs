@@ -61,6 +61,11 @@ namespace Lobby
         
         public void UpdateSlotUI(PlayerState playerState)
         {
+            if (playerState.PlayerIndex == -1)
+            {
+                return;
+            }
+
             _bindSlots[playerState.PlayerIndex].UpdateUI(playerState);
         }
         

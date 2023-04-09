@@ -219,7 +219,12 @@ namespace Lobby
         
         private void OnCancelHandler(int playerIndex)
         {
-            if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
+            if (!LobbyPlayerStates.ContainsKey(playerIndex)) 
+                return;
+            
+            if (LobbyPlayerStates[playerIndex].IsReady == false)
+                ReturnToMainMenu();
+            
             SetPlayerReady(playerIndex, false);
             lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerIndex]);
             lobbyUI.HideStartGameText();

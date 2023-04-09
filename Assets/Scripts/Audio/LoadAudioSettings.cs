@@ -3,12 +3,18 @@ using UnityEngine.Audio;
 
 namespace Audio
 {
+    /// <summary>
+    /// This script is used to load the audio settings from the player prefs.
+    /// </summary>
     public class LoadAudioSettings : MonoBehaviour
     {
         [SerializeField] private AudioMixer audioMixer;
         [SerializeField] private float defaultVolume = 0.2F;
         [SerializeField] private float multiplier = 30;
 
+        /// <summary>
+        /// This method is called when the script instance is being loaded.
+        /// </summary>
         private void Start()
         {
             float masterVolume = PlayerPrefs.GetFloat("MasterVolume", defaultVolume);

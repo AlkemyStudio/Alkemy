@@ -13,17 +13,6 @@ namespace Bonus
         [SerializeField] private float rotationSpeed = 125.0f;
         [SerializeField] private AudioClip bonusSound;
 
-        public void SetupBonus()
-        {
-            StartCoroutine(EnableAfter(BombData.ExplosionDuration));
-        }
-
-        private IEnumerator EnableAfter(float duration)
-        {
-            yield return new WaitForSeconds(duration);
-            bonusCollider.enabled = true;
-        }
-        
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))

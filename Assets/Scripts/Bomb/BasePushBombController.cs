@@ -85,9 +85,8 @@ namespace Bomb
             
             Vector3 rgbVelocity = bombRigidbody.velocity;
             rgbVelocity.Normalize();
-
-            bool r = Mathf.RoundToInt(Vector3.Dot(rgbVelocity, direction)) == 1;
-            return r;
+            
+            return Vector3.Dot(rgbVelocity, direction) > 0.96;
         }
         
         private static Vector3 ComputeDirection(Vector3 position, Vector3 otherPosition)
@@ -109,7 +108,6 @@ namespace Bomb
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("[BaseBombController] OnTriggerEnter : " + other.gameObject.name);
             OnTouchSomething(other);
         }
     }

@@ -159,7 +159,7 @@ namespace Bomb
                 // to avoid the explosion to stop before the end of the wall
                 computedLength += 0.5f;
             }
-            vfx.SetFloat("Max Distance", (float)computedLength);
+            vfx.SetFloat("Max Distance", computedLength);
             deflagrationController.Play();
         }
 

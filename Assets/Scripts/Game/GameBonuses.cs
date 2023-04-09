@@ -36,9 +36,6 @@ namespace Game
                 _totalProbability += modifiersTable[i].probability;
                 _cumulativeProbabilities[i] = _totalProbability;
             }
-
-            DebugArray.LogArray(modifiersTable.Select(x => x.probability));
-            DebugArray.LogArray(_cumulativeProbabilities);
         }
         
         public BaseBonus GetRandomBonus()

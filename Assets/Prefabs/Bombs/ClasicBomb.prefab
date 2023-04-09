@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombRigidbody: {fileID: 5536002971256795176}
   delayAfterStoppingTheBomb: 0.3
-  bombPushingSpeed: 0.5
+  bombPushingSpeed: 5
 --- !u!1 &4912911846998055948
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d4bea5cbfd2d0bc45b197c8720198e9b, type: 3}
   - {fileID: 8300000, guid: cff54b0a15f25634ea64d23a3a9710b3, type: 3}
   - {fileID: 8300000, guid: 776df856f64732a4a90d42cfd971d8cf, type: 3}
-  fuseTime: 10
+  fuseTime: 3
   flickeringCurve:
     serializedVersion: 2
     m_Curve:

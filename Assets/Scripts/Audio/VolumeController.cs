@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 namespace Audio
 {
+    /// <summary>
+    /// This script is used to control the volume of an audio mixer parameter.
+    /// </summary>
     public class VolumeController : SettingEntry
     {
         [Header("References")]
@@ -22,6 +25,9 @@ namespace Audio
         private float tempSliderValue;
         private bool isUpdatingToggle;
         
+        /// <summary>
+        /// This method is called when the script instance is being loaded.
+        /// </summary>
         private void OnEnable()
         {
             slider.onValueChanged.AddListener(HandleSliderValueChange);

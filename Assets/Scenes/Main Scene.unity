@@ -457,7 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139431071}
   - component: {fileID: 139431070}
-  - component: {fileID: 139431069}
+  - component: {fileID: 139431072}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -465,26 +465,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &139431069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139431068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &139431070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 118993783}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &139431071
@@ -515,6 +495,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &139431072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139431068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 0
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &172343309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSourcePrefab: {fileID: 4267401673699323832, guid: ae50db8d238bf8e44b940f537630ac54,
     type: 3}
-  poolSize: 10
+  poolSize: 20
 --- !u!4 &1349628640
 Transform:
   m_ObjectHideFlags: 0
@@ -1991,13 +2012,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefabs:
   - {fileID: 4189541259374453874, guid: 7f01c432f001b8e499a9054fdd94d143, type: 3}
-  - {fileID: 4189541259374453874, guid: 7816f9fbe9c0f9747b3059c724c3c54c, type: 3}
+  - {fileID: 4189541259374453874, guid: e7b23ada8a5056b41807d45fc25712f6, type: 3}
   - {fileID: 4189541259374453874, guid: 34a912414cd2ef7fc94c15a6a1310596, type: 3}
-  - {fileID: 4189541259374453874, guid: ed3fe7b188fa3444fb9d0e89be19d496, type: 3}
-  - {fileID: 4189541259374453874, guid: 7f01c432f001b8e499a9054fdd94d143, type: 3}
   - {fileID: 4189541259374453874, guid: 7816f9fbe9c0f9747b3059c724c3c54c, type: 3}
-  - {fileID: 4189541259374453874, guid: 34a912414cd2ef7fc94c15a6a1310596, type: 3}
+  - {fileID: 4189541259374453874, guid: a436c8a706abd2b4a8379ec1d3f1a33d, type: 3}
   - {fileID: 4189541259374453874, guid: ed3fe7b188fa3444fb9d0e89be19d496, type: 3}
+  - {fileID: 4189541259374453874, guid: cc52485b4ff0bab459f289232a17541e, type: 3}
+  - {fileID: 4189541259374453874, guid: c62fa75b5d83cdb4f836818ed94e01b9, type: 3}
+  - {fileID: 4189541259374453874, guid: ff93f973a9d4ced47bbbdfc8a9504be6, type: 3}
+  - {fileID: 4189541259374453874, guid: 0a6992850a4ed324392e4ee7165aa0a3, type: 3}
 --- !u!114 &1540729337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2025,13 +2048,13 @@ MonoBehaviour:
     probability: 40
   - prefab: {fileID: 3428231013816836945, guid: ebdf3c51fbc9ed0c8a61be7d027b1ca9,
       type: 3}
-    probability: 40
+    probability: 50
   - prefab: {fileID: 2853522301849194315, guid: 3dcaf2d9e59cb90a2b8cf4aae0330094,
       type: 3}
-    probability: 40
+    probability: 25
   - prefab: {fileID: 1304533068539356726, guid: 71bbc5aa252389340b6e04af5773d5ce,
       type: 3}
-    probability: 2
+    probability: 7
 --- !u!1 &1731400397
 GameObject:
   m_ObjectHideFlags: 0

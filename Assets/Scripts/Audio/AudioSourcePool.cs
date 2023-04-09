@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Audio
 {
+    /// <summary>
+    /// A pool of AudioSources that can be used to play audio clips at a specific position.
+    /// </summary>
     public class AudioSourcePool : MonoBehaviour
     {
         [SerializeField] private AudioSource audioSourcePrefab;
@@ -12,6 +15,9 @@ namespace Audio
         public static AudioSourcePool Instance { get; private set; }
         private List<AudioSource> audioSources;
         
+        /// <summary>
+        /// Awake is called when the script instance is being loaded.
+        /// </summary>
         private void Awake()
         {
 #if UNITY_EDITOR
@@ -31,6 +37,11 @@ namespace Audio
             }
         }
 
+        /// <summary>
+        /// Plays the given clip at the given position.
+        /// </summary>
+        /// <param name="clip">The clip to play.</param>
+        /// <param name="position">The position to play the clip at.</param>
         public void PlayClipAtPoint(AudioClip clip, Vector3 position)
         {
             AudioSource audioSource = GetAudioSource();
@@ -40,6 +51,11 @@ namespace Audio
             StartCoroutine(Play(audioSource));
         }
 
+        /// <summary>
+        /// Plays the given clip at the given position.
+        /// </summary>
+        /// <param name="audioSource">The audio source to play.</param>
+        /// <returns></returns>
         private static IEnumerator Play(AudioSource audioSource)
         {
             audioSource.Play();
@@ -50,6 +66,10 @@ namespace Audio
             }
         }
 
+        /// <summary>
+        /// Gets an available audio source from the pool.
+        /// </summary>
+        /// <returns>An available audio source.</returns>
         private AudioSource GetAudioSource()
         {
             foreach (AudioSource audioSource in audioSources)

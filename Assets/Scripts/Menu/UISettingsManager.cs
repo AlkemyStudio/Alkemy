@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Menu
 {
@@ -7,6 +8,8 @@ namespace Menu
         [SerializeField] private GameObject previousMenuCanvas;
         [SerializeField] private GameObject settingsMenuCanvas;
         [SerializeField] private SettingEntry[] settingEntries;
+        [SerializeField] private Selectable firstSelectableInSettingsMenu;
+        [SerializeField] private Selectable settingsButtonInPreviousMenu;
         
         public void SaveSettings()
         {
@@ -22,12 +25,14 @@ namespace Menu
         {
             previousMenuCanvas.SetActive(false);
             settingsMenuCanvas.SetActive(true);
+            firstSelectableInSettingsMenu.Select();
         }
         
         public void ReturnToPreviousMenu()
         {
             previousMenuCanvas.SetActive(true);
             settingsMenuCanvas.SetActive(false);
+            settingsButtonInPreviousMenu.Select();
         }
     }
 }

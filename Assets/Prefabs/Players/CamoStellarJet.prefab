@@ -228,8 +228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRigidbody: {fileID: 264882209699561022}
   modelTransform: {fileID: 3249600307998156129}
-  baseSpeed: 140
-  speedPerBonus: 80
+  baseSpeed: 180
+  speedPerBonus: 40
   bonusNumber: 1
   minBonusNumber: 1
   maxBonusNumber: 12

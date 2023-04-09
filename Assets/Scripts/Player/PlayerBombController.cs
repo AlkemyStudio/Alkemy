@@ -109,11 +109,8 @@ namespace Player
         
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log($"other: {other.gameObject.name}");
-            
             if (other.gameObject.CompareTag("Bomb"))
             {
-                Debug.Log("Player left bomb trigger");
                 other.GetComponent<BaseBombController>().OnPlayerWalkOutsideTrigger();
             }
         }

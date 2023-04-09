@@ -752,7 +752,7 @@ MonoBehaviour:
   lobbyCharacterRegistry: {fileID: 136714554}
   minPlayerCountToStart: 1
   sceneBuildIndexToLoad: 2
-  delayBetweenCharacterSwitch: 0.5
+  delayBetweenCharacterSwitch: 0.25
 --- !u!114 &136714554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,25 +769,31 @@ MonoBehaviour:
   - prefab: {fileID: 4189541259374453874, guid: 80614b51218ce5c4ab7c3d68594f7b3b,
       type: 3}
     isSelectable: 1
-  - prefab: {fileID: 4189541259374453874, guid: 63694aa4bee6c1e4bbed521d3e7cba49,
+  - prefab: {fileID: 4189541259374453874, guid: d3235cbf1b900044ba26a31013b31f72,
       type: 3}
     isSelectable: 1
   - prefab: {fileID: 4189541259374453874, guid: 7cc044eb3658b8c4ab0bdfcf07d2476e,
       type: 3}
     isSelectable: 1
-  - prefab: {fileID: 4189541259374453874, guid: 35fa884d205535644bc84781122ced42,
-      type: 3}
-    isSelectable: 1
-  - prefab: {fileID: 4189541259374453874, guid: 80614b51218ce5c4ab7c3d68594f7b3b,
-      type: 3}
-    isSelectable: 1
   - prefab: {fileID: 4189541259374453874, guid: 63694aa4bee6c1e4bbed521d3e7cba49,
       type: 3}
     isSelectable: 1
-  - prefab: {fileID: 4189541259374453874, guid: 7cc044eb3658b8c4ab0bdfcf07d2476e,
+  - prefab: {fileID: 4189541259374453874, guid: fe524b0f3326f3245a93860706760272,
       type: 3}
     isSelectable: 1
   - prefab: {fileID: 4189541259374453874, guid: 35fa884d205535644bc84781122ced42,
+      type: 3}
+    isSelectable: 1
+  - prefab: {fileID: 4189541259374453874, guid: 8f04b6430af4c8e47a884644df6da1ef,
+      type: 3}
+    isSelectable: 1
+  - prefab: {fileID: 4189541259374453874, guid: 92b1f6aeaf2ad914999a36f24760cad9,
+      type: 3}
+    isSelectable: 1
+  - prefab: {fileID: 4189541259374453874, guid: 238f3840c7514584f9428ef16f27f029,
+      type: 3}
+    isSelectable: 1
+  - prefab: {fileID: 4189541259374453874, guid: d4dfb773deaf30443a8b724f52a2220c,
       type: 3}
     isSelectable: 1
 --- !u!114 &136714555

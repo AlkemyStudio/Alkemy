@@ -5,6 +5,9 @@ using UnityEngine.Serialization;
 
 namespace Game
 {
+    /// <summary>
+    /// A countdown that is displayed before the game starts.
+    /// </summary>
     public class ReadyCountdown : MonoBehaviour
     {
         [FormerlySerializedAs("gameManager")] [SerializeField] private GameStateManager gameStateManager;
@@ -24,21 +27,35 @@ namespace Game
     
         private int lastDisplayedCountdownMessageIndex = -1;
 
+        /// <summary>
+        /// Disable the countdown canvas on awake.
+        /// </summary>
         private void Awake()
         {
             startGameCanvas.SetActive(false);
         }
     
+        /// <summary>
+        /// Subscribe to the game state changed event.
+        /// </summary>
         private void OnEnable()
         {
             gameStateManager.OnGameStateChanged += OnOnGameStateStateChanged;
         }
 
+        /// <summary>
+        /// Unsubscribe from the game state changed event.
+        /// </summary>
         private void OnDisable()
         {
             gameStateManager.OnGameStateChanged -= OnOnGameStateStateChanged;
         }
 
+        /// <summary>
+        /// Start the countdown when the game state is ready.
+        /// </summary>
+        /// <param name="state"> The new game state. </param>
+        /// <exception cref="ArgumentOutOfRangeException"> Thrown when the game state is not handled. </exception>
         private void OnOnGameStateStateChanged(GameState state)
         {
             switch (state)
@@ -60,6 +77,9 @@ namespace Game
             }
         }
 
+        /// <summary>
+        /// Start the countdown.
+        /// </summary>
         private void StartCountdown()
         {
             startGameCanvas.SetActive(true);
@@ -67,6 +87,9 @@ namespace Game
             InvokeRepeating(nameof(OnCountdownTick), 0f, delayBetweenCountdowns);
         }
 
+        /// <summary>
+        /// Display the next countdown message.
+        /// </summary>
         private void OnCountdownTick()
         {
             lastDisplayedCountdownMessageIndex += 1;
@@ -80,6 +103,9 @@ namespace Game
             textMeshPro.text = countdownMessage;
         }
 
+        /// <summary>
+        /// Stop the countdown.
+        /// </summary>
         private void StopCountdown()
         {
             CancelInvoke(nameof(OnCountdownTick));

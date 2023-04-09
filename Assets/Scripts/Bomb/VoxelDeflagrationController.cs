@@ -24,12 +24,12 @@ public class VoxelDeflagrationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waitForEnd && particlesSpawned && visualEffect.aliveParticleCount <= 100)
+        if (waitForEnd && particlesSpawned && visualEffect.aliveParticleCount <= 500)
         {
             Destroy(gameObject);
         }
 
-        if (!particlesSpawned && visualEffect.aliveParticleCount >= 100)
+        if (!particlesSpawned && visualEffect.aliveParticleCount >= 500)
         {
             particlesSpawned = true;
         }

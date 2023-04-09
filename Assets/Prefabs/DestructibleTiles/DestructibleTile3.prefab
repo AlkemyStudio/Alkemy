@@ -64,14 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityHealth: {fileID: 2101697650601450446}
-  percentageToDropBonus: 100
-  bonusPrefabs:
-  - {fileID: 5892150448060041458, guid: 0cd206ec04c394344a4a88e017189a41, type: 3}
-  - {fileID: -8612497665540069671, guid: 300bdd15414f86849aaa20cca2e7af9a, type: 3}
-  - {fileID: 5937428780689794411, guid: 44923381f69e4a14ba1057a79e884f49, type: 3}
-  - {fileID: 6246498869493565027, guid: 28c563472ddcb91afb51e920d1e07e70, type: 3}
-  - {fileID: 3428231013816836945, guid: ebdf3c51fbc9ed0c8a61be7d027b1ca9, type: 3}
-  - {fileID: 2853522301849194315, guid: 3dcaf2d9e59cb90a2b8cf4aae0330094, type: 3}
+  percentageToDropBonus: 60
   explosionPrefab: {fileID: 1919633667859114561, guid: a1e9d3b01c209c943a98ee4bdb764ea9,
     type: 3}
 --- !u!65 &310815641447267074
@@ -81,7 +74,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4967157756374902407}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 73162a52799e4f584a18357886eb5518, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

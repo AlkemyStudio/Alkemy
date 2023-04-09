@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace Wall
 {
+    /// <summary>
+    /// This class is used to manage the destructible wall
+    /// </summary>
     [RequireComponent(typeof(EntityHealth), typeof(VoxelParser))]
     public class DestructibleWall : MonoBehaviour
     {
@@ -19,7 +22,7 @@ namespace Wall
         private MeshRenderer meshRenderer;
 
         private bool isDead = false;
-
+        
         private void Start()
         {
             meshRenderer = GetComponent<MeshRenderer>();
@@ -28,6 +31,9 @@ namespace Wall
             voxelParser = GetComponent<VoxelParser>();
         }
         
+        /// <summary>
+        /// This method is used to destroy the wall without any effect
+        /// </summary>
         public void DestroyWallWithoutEffect()
         {
             Vector2Int tilePos = TerrainUtils.GetTilePosition(transform.position);
@@ -35,6 +41,10 @@ namespace Wall
             Destroy(gameObject);
         }
 
+        /// <summary>
+        /// This method is used to destroy the wall with an explosion effect
+        /// </summary>
+        /// <param name="go"> The game object that will be destroyed </param>
         private void OnDeath(GameObject go)
         { 
             if (isDead) return;
@@ -54,13 +64,11 @@ namespace Wall
                 {
                     try {
                         BaseBonus bonusToSpawn = GameBonuses.Instance.GetRandomBonus();
-                        Debug.Log($"Spawning bonus : {bonusToSpawn}");
                         BaseBonus bonus = Instantiate(
                             original: bonusToSpawn, 
                             position: transform.position + new Vector3(0, 0.5f, 0), 
                             rotation: Quaternion.Euler(0, 90, 90)
                         );
-                        bonus.SetupBonus();
                     } catch {
                     }
                 }
@@ -74,16 +82,26 @@ namespace Wall
             voxelGraph.enabled = true;
         }
         
+        /// <summary>
+        /// This method is used to check if the wall should spawn a bonus
+        /// </summary>
+        /// <returns> True if the wall should spawn a bonus, false otherwise </returns>
         private bool ShouldSpawnBonus()
         {
             return Random.Range(0, 101) < percentageToDropBonus;
         }
 
+        /// <summary>
+        /// This method is used to unsubscribe from the OnDeath event
+        /// </summary>
         private void OnDestroy()
         {
             entityHealth.OnDeath -= OnDeath;
         }
 
+        /// <summary>
+        /// This method is used to validate the component
+        /// </summary>
         private void OnValidate()
         {
             entityHealth = GetComponent<EntityHealth>();
