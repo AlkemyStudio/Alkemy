@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace Player
 {
+    /// <summary>
+    /// PlayerController is used to control the bombs of the player.
+    /// </summary>
     public class PlayerBombController : MonoBehaviour
     {
         [SerializeField] private BaseBombController bombPrefab;
@@ -25,22 +28,35 @@ namespace Player
 
         public int BombPower => bombPower;
         
+        /// <summary>
+        /// Start is called before the first frame update.
+        /// </summary>
         private void Start()
         {
             _remainingBombs = bombAmount;
         }
         
+        /// <summary>
+        /// Initialize the player controller.
+        /// </summary>
+        /// <param name="playerInputHandler"> The player input handler. </param>
         public void Initialize(PlayerInputHandler playerInputHandler)
         {
             _playerInputHandler = playerInputHandler;
             _playerInputHandler.OnPlaceBomb += TryPlaceBomb;
         }
 
+        /// <summary>
+        /// OnDestroy is called when the script instance is being destroyed.
+        /// </summary>
         private void OnDestroy()
         {
             _playerInputHandler.OnPlaceBomb -= TryPlaceBomb;
         }
 
+        /// <summary>
+        /// Try to place a bomb.
+        /// </summary>
         public void TryPlaceBomb()
         {
             if (_remainingBombs <= 0) return;
@@ -53,11 +69,20 @@ namespace Player
             PlaceBombAt(playerTilePosition);
         }
         
+        /// <summary>
+        /// PlayerCanPlaceBombAt is used to check if the player can place a bomb at the given tile position.
+        /// </summary>
+        /// <param name="tilePosition"></param>
+        /// <returns></returns>
         private bool PlayerCanPlaceBombAt(Vector3 tilePosition)
         {
             return !Physics.CheckBox(tilePosition, new Vector3(0.3f, 0.3f, 0.3f), Quaternion.identity, bombLayerMask);
         }
 
+        /// <summary>
+        /// Place a bomb at the given tile position.
+        /// </summary>
+        /// <param name="tilePosition"> The tile position. </param>
         private void PlaceBombAt(Vector3 tilePosition)
         {
             Vector3 bombPosition = tilePosition;
@@ -68,11 +93,17 @@ namespace Player
             bombController.SetupBomb(this, bombPower);
         }
         
+        /// <summary>
+        /// OnBombExplode is called when a bomb explodes.
+        /// </summary>
         public void OnBombExplode()
         {
             _remainingBombs++;
         }
         
+        /// <summary>
+        /// Add bomb power.
+        /// </summary>
         public void AddBombPower()
         {
             if (bombPower < maxBombPower)
@@ -81,6 +112,9 @@ namespace Player
             }
         }
 
+        /// <summary>
+        /// Remove bomb power.
+        /// </summary>
         public void RemoveBombPower()
         {
             if (bombPower > minBombPower) {
@@ -88,12 +122,18 @@ namespace Player
             }
         }
         
+        /// <summary>
+        /// Add bomb amount.
+        /// </summary>
         public void AddBombAmount()
         {
             bombAmount++;
             _remainingBombs++;
         }
 
+        /// <summary>
+        /// Remove bomb amount.
+        /// </summary>
         public void RemoveBombAmount()
         {
             if (bombAmount > 1)
@@ -107,6 +147,10 @@ namespace Player
             }
         }
         
+        /// <summary>
+        /// OnTriggerEnter is called when the Collider other enters the trigger.
+        /// </summary>
+        /// <param name="other"></param>
         private void OnTriggerExit(Collider other)
         {
             if (other.gameObject.CompareTag("Bomb"))
@@ -123,6 +167,9 @@ namespace Player
             bombPower = Mathf.Clamp(bombPower, minBombPower, maxBombPower);
         }
         
+        /// <summary>
+        /// OnDrawGizmos is called when the script is loaded or a value is changed in the inspector (Called in the editor only).
+        /// </summary>
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;

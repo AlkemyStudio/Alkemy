@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 namespace Menu
 {
+    /// <summary>
+    /// UISettingsManager is used to manage the settings menu.
+    /// </summary>
     public class UISettingsManager : MonoBehaviour
     {
         [SerializeField] private GameObject previousMenuCanvas;
@@ -11,6 +14,7 @@ namespace Menu
         [SerializeField] private Selectable firstSelectableInSettingsMenu;
         [SerializeField] private Selectable settingsButtonInPreviousMenu;
         
+        // Save the settings and return to the previous menu.
         public void SaveSettings()
         {
             foreach (SettingEntry settingEntry in settingEntries)
@@ -21,6 +25,7 @@ namespace Menu
             ReturnToPreviousMenu();
         }
         
+        // Open the settings menu.
         public void OpenSettings()
         {
             previousMenuCanvas.SetActive(false);
@@ -28,6 +33,7 @@ namespace Menu
             firstSelectableInSettingsMenu.Select();
         }
         
+        // Return to the previous menu.
         public void ReturnToPreviousMenu()
         {
             previousMenuCanvas.SetActive(true);

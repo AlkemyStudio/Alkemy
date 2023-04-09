@@ -6,6 +6,9 @@ using static UnityEngine.InputSystem.InputAction;
 
 namespace PlayerInputs
 {
+    /// <summary>
+    /// PlayerInputHandler is used to handle the input of a player.
+    /// </summary>
     [RequireComponent(typeof(PlayerInput))]
     public class PlayerInputHandler : MonoBehaviour
     {
@@ -19,6 +22,9 @@ namespace PlayerInputs
         public event Action<Vector2> OnMove;
         public event Action OnPlaceBomb;
 
+        /// <summary>
+        /// Start is called when the script instance is being loaded.
+        /// </summary>
         private void Start()
         {
             _controls = new GameInputController();
@@ -31,6 +37,9 @@ namespace PlayerInputs
             playerInput.onActionTriggered += OnActionTriggered;
         }
         
+        /// <summary>
+        /// Use the player controls.
+        /// </summary>
         public void UsePlayerControls()
         {
             _controls.Player.Enable();
@@ -38,6 +47,9 @@ namespace PlayerInputs
             playerInput.SwitchCurrentActionMap("Player");
         }
         
+        /// <summary>
+        /// Use the menu controls.
+        /// </summary>
         public void UseMenuControls()
         {
             _controls.Menu.Enable();
@@ -45,16 +57,26 @@ namespace PlayerInputs
             playerInput.SwitchCurrentActionMap("Menu");
         }
 
+        /// <summary>
+        /// Enable the input.
+        /// </summary>
         public void EnableInput()
         {
             playerInput.ActivateInput();
         }
         
+        /// <summary>
+        /// Disable the input.
+        /// </summary>
         public void DisableInput()
         {
             playerInput.DeactivateInput();
         }
 
+        /// <summary>
+        /// OnActionTriggered is called when an input action is triggered.
+        /// </summary>
+        /// <param name="context"> The context of the input action </param>
         private void OnActionTriggered(CallbackContext context)
         {
             if (playerInput.devices[0].deviceId != context.control.device.deviceId) return;

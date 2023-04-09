@@ -9,6 +9,9 @@ using UnityEngine.Serialization;
 
 namespace Menu
 {
+    /// <summary>
+    /// EndGameMenu is used to display the end game menu.
+    /// </summary>
     public class EndGameMenu : MonoBehaviour
     {
         [FormerlySerializedAs("gameManager")]
@@ -41,6 +44,10 @@ namespace Menu
             gameStateManager.OnGameEnded -= OnGameEnded;
         }
     
+        /// <summary>
+        /// OnGameEnded is called when the game ended.
+        /// </summary>
+        /// <param name="e"></param>
         private void OnGameEnded(GameEndedEvent e)
         {
             endGameCanvas.SetActive(true);
@@ -50,6 +57,9 @@ namespace Menu
             winnerText.text = GetWinnerMessage(e.WinnerNames);
         }
         
+        /// <summary>
+        /// On restart button clicked.
+        /// </summary>
         public void OnRestartButtonClicked()
         {
             endGameCanvas.SetActive(false);
@@ -59,12 +69,20 @@ namespace Menu
             gameStateManager.ReloadGame();
         }
         
+        /// <summary>
+        /// On quit button clicked.
+        /// </summary>
         public void OnQuitButtonClicked()
         {
             Destroy(PlayerInputRegistry.Instance.gameObject);
             SceneManager.LoadScene(0);
         }
     
+        /// <summary>
+        /// Get the winner message.
+        /// </summary>
+        /// <param name="winnerNames"> The winner names </param>
+        /// <returns> The winner message </returns>
         private string GetWinnerMessage(IReadOnlyList<string> winnerNames)
         {
             return winnerNames.Count switch

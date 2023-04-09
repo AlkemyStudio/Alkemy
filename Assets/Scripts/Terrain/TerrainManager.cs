@@ -6,6 +6,9 @@ using Random = UnityEngine.Random;
 
 namespace Terrain
 {
+    /// <summary>
+    /// This class is used to manage the terrain
+    /// </summary>
     [RequireComponent(typeof(GameStateManager))]
     public class TerrainManager : MonoBehaviour
     {
@@ -29,6 +32,9 @@ namespace Terrain
             _previouslyInstantiated = new List<GameObject>();
         }
 
+        /// <summary>
+        /// This method is used to generate the terrain
+        /// </summary>
         public void GenerateTerrain()
         {
             ClearOldGeneration();
@@ -37,6 +43,9 @@ namespace Terrain
             GenerateTerrainEntities();
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor
+        /// </summary>
         private void ClearOldGeneration()
         {
             if (_previouslyInstantiated.Count == 0) return;
@@ -49,6 +58,9 @@ namespace Terrain
             _previouslyInstantiated.Clear();
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor
+        /// </summary>
         private void GenerateDefaultTerrainData()
         {
             int arraySize = Width * Height;
@@ -66,6 +78,9 @@ namespace Terrain
             }
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor
+        /// </summary>
         private void GenerateSpawnsData()
         {
             GenerateBottomLeftCornerSpawn();
@@ -75,6 +90,9 @@ namespace Terrain
             GenerateTerrainBounds();
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor
+        /// </summary>
         private void GenerateBottomLeftCornerSpawn()
         {
             SetValue(0, 0, TerrainEntityType.None);
@@ -82,6 +100,9 @@ namespace Terrain
             SetValue(0, 1, TerrainEntityType.None);
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor
+        /// </summary>
         private void GenerateBottomRightCornerSpawn()
         {
             SetValue(Width - 1, 0, TerrainEntityType.None);
@@ -89,6 +110,9 @@ namespace Terrain
             SetValue(Width - 1, 1, TerrainEntityType.None);
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor
+        /// </summary>
         private void GenerateTopLeftCornerSpawn()
         {
             SetValue(0, Height - 1, TerrainEntityType.None);
@@ -96,6 +120,9 @@ namespace Terrain
             SetValue(0, Height - 2, TerrainEntityType.None);
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor
+        /// </summary>
         private void GenerateTopRightCornerSpawn()
         {
             SetValue(Width - 1, Height - 1, TerrainEntityType.None);
@@ -103,12 +130,18 @@ namespace Terrain
             SetValue(Width - 1, Height - 2, TerrainEntityType.None);
         }
 
+        /// <summary>
+        /// Generate the bounds of the terrain
+        /// </summary>
         private void GenerateTerrainBounds()
         {
             GenerateHorizontalBounds();
             GenerateVerticalBounds();
         }
 
+        /// <summary>
+        /// Generate the horizontal bounds of the terrain
+        /// </summary>
         private void GenerateHorizontalBounds()
         {
             for (int x = -1; x < Width + 1; x++)
@@ -117,7 +150,10 @@ namespace Terrain
                 InstantiateIndestructibleWall(x, Height);
             }
         }
-        
+
+        /// <summary>
+        /// Generate the vertical bounds of the terrain
+        /// </summary>
         private void GenerateVerticalBounds()
         {
             for (int y = 0; y < Height; y++)
@@ -127,6 +163,9 @@ namespace Terrain
             }
         }
 
+        /// <summary>
+        /// This method is used to generate the terrain entities
+        /// </summary>
         private void GenerateTerrainEntities()
         {
             for (int y = 0; y < Height; y++)
@@ -151,48 +190,98 @@ namespace Terrain
             }
         }
 
+        /// <summary>
+        /// This method is used to instantiate a floor at the given position
+        /// </summary>
+        /// <param name="x">x position</param>
+        /// <param name="y">y position</param>
         public void InstantiateFloor(int x, int y)
         {
             InstantiateEntity(floor, x, y);
         }
 
+        /// <summary>
+        /// This method is used to instantiate a random wall at the given position
+        /// </summary>
+        /// <param name="x">x position</param>
+        /// <param name="y">y position</param>
         public void InstantiateRandomWall(int x, int y)
         {
             InstantiateEntity(wallPrefabs[Random.Range(0, wallPrefabs.Count)], x, y);
         }
 
+        /// <summary>
+        /// This method is used to instantiate an indestructible wall at the given position
+        /// </summary>
+        /// <param name="x">x position</param>
+        /// <param name="y">y position</param>
         public void InstantiateIndestructibleWall(int x, int y)
         {
             InstantiateEntity(indestructibleWallPrefab, x, y);
         }
 
+        /// <summary>
+        /// This method is used to instantiate an entity at the given position
+        /// </summary>
+        /// <param name="entity"> entity to instantiate</param>
+        /// <param name="x">x position</param>
+        /// <param name="y">y position</param>
         public void InstantiateEntity(GameObject entity, int x, int y)
         {
             GameObject instantiateGameObject = Instantiate(entity, new Vector3(x + 0.5F, 0, y + 0.5F), Quaternion.identity);
             _previouslyInstantiated.Add(instantiateGameObject);
         }
 
+        /// <summary>
+        /// Set the value of the given position
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="value"></param>
         public void SetValue(int x, int y, TerrainEntityType value)
         {
             _filledTiles[x + y * Width] = value;
         }
         
+        /// <summary>
+        /// Set the value of the given position
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="value"></param>
         public void SetValue(Vector2Int position, TerrainEntityType value)
         {
             _filledTiles[position.x + position.y * Width] = value;
         }
 
+        /// <summary>
+        /// Is the given position filled
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public bool IsFilled(int x, int y)
         {
             TerrainEntityType terrainEntityType = _filledTiles[x + y * Width];
             return terrainEntityType == TerrainEntityType.None;
         }
 
+        
+        /// <summary>
+        /// Is the given position filled
+        /// </summary>
+        /// <param name="gridPosition">the position to check</param>
+        /// <returns>if the given position is filled</returns>
         public bool IsFilled(Vector2Int gridPosition)
         {
             return IsFilled(gridPosition.x, gridPosition.y);
         }
         
+        /// <summary>
+        /// Get the terrain entity type at the given position
+        /// </summary>
+        /// <param name="x">x position</param>
+        /// <param name="y">y position</param>
+        /// <returns></returns>
         public TerrainEntityType GetTerrainEntityType(int x, int y)
         {
             return _filledTiles[x + y * Width];
@@ -208,6 +297,10 @@ namespace Terrain
             gameStateManager.OnGameStateChanged -= OnOnGameStateStateChanged;
         }
 
+        /// <summary>
+        /// On game state changed
+        /// </summary>
+        /// <param name="state">the new state of the game</param>
         private void OnOnGameStateStateChanged(GameState state)
         {
             if (state != GameState.Initialization) return;
@@ -215,6 +308,9 @@ namespace Terrain
             gameStateManager.SetGameState(GameState.TerrainGenerated);
         }
         
+        /// <summary>
+        /// This method is used to generate the terrain
+        /// </summary>
         private void OnValidate()
         {
             if (gameStateManager == null) gameStateManager = GetComponent<GameStateManager>();

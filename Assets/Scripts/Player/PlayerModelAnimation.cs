@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Player
 {
+    /// <summary>
+    /// PlayerModelAnimation is used to animate the player model.
+    /// </summary>
     public class PlayerModelAnimation : MonoBehaviour
     {
 
@@ -17,7 +20,9 @@ namespace Player
             actualMovementSpeed = movementSpeed;
         }
 
-        // Update is called once per frame
+        /// <summary>
+        /// Move the player during the fixed update to keep accurate physics detection.
+        /// </summary>
         void FixedUpdate()
         {
             movementDelta += Time.deltaTime * actualMovementSpeed;

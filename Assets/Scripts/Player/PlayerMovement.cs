@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace Player
 {
+    /// <summary>
+    /// PlayerHandler is used to handle the input of a player.
+    /// </summary>
     enum PlayerOrientation
     {
         Top,
@@ -13,6 +16,9 @@ namespace Player
         Left
     }
     
+    /// <summary>
+    /// PlayerHandler is used to handle the input of a player.
+    /// </summary>
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerMovement : MonoBehaviour
     {
@@ -40,17 +46,27 @@ namespace Player
             ComputeSpeed();
         }
         
+        /// <summary>
+        /// Initialize the player handler.
+        /// </summary>
+        /// <param name="playerInputHandler"></param>
         public void Initialize(PlayerInputHandler playerInputHandler)
         {
             _playerInputHandler = playerInputHandler;
             _playerInputHandler.OnMove += UpdateInputVector;
         }
 
+        /// <summary>
+        /// OnDestroy is called when the script instance is being destroyed.
+        /// </summary>
         private void OnDestroy()
         {
             _playerInputHandler.OnMove -= UpdateInputVector;
         }
 
+        /// <summary>
+        /// Add a speed bonus.
+        /// </summary>
         public void AddSpeedBonus()
         {
             if (maxBonusNumber == bonusNumber) return;
@@ -58,6 +74,9 @@ namespace Player
             ComputeSpeed();
         }
         
+        /// <summary>
+        /// Remove a speed bonus.
+        /// </summary>
         public void RemoveSpeedBonus()
         {
             if (bonusNumber <= minBonusNumber) return;
@@ -65,11 +84,18 @@ namespace Player
             ComputeSpeed();
         }
 
+        /// <summary>
+        /// Update the input vector.
+        /// </summary>
+        /// <param name="inputVector"></param>
         public void UpdateInputVector(Vector2 inputVector)
         {
             _inputVector = inputVector;
         }
 
+        /// <summary>
+        /// FixedUpdate is called every fixed framerate frame, if the MonoBehaviour is enabled.
+        /// </summary>
         public void FixedUpdate()
         {
             Vector3 translation = new Vector3(_inputVector.x, 0, _inputVector.y) * (_speed * Time.fixedDeltaTime);
@@ -88,11 +114,17 @@ namespace Player
             modelTransform.LookAt(lookAtPosition);
         }
 
+        /// <summary>
+        /// Compute the speed.
+        /// </summary>
         private void ComputeSpeed()
         {
             _speed = baseSpeed + speedPerBonus * bonusNumber;
         }
 
+        /// <summary>
+        /// OnValidate is called when the script is loaded or a value is changed in the inspector (Called in the editor only).
+        /// </summary>
         private void OnValidate()
         {
             if (playerRigidbody == null) playerRigidbody = GetComponent<Rigidbody>();

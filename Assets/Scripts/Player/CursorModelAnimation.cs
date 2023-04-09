@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Player
 {
+    /// <summary>
+    /// CursorModelAnimation is used to animate the cursor model.
+    /// </summary>
     public class CursorModelAnimation : MonoBehaviour
     {
 
