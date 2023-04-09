@@ -32,7 +32,7 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""0bc78cdc-ba25-4b83-a673-35d7943859f8"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone(min=0.4,max=0.925)"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
@@ -115,17 +115,6 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""57d8cdda-eed6-481c-8bef-58d084b90871"",
-                    ""path"": ""<SwitchProControllerHID>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""a2aa2d1a-ed49-42aa-9ba5-2a1a5782d6db"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
@@ -139,17 +128,6 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""0eed5984-c56c-4916-80e5-f8a06afb8fba"",
                     ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PlaceBomb"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9f328792-14dc-4b61-98ea-3bfbbf065916"",
-                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -227,17 +205,6 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e738a9ec-47be-4128-ab5f-231e760985f8"",
-                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Confirm"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""197b6ec8-a8e3-4607-a386-6563e3394edc"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
@@ -271,21 +238,10 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""4420bab6-3424-4738-a76f-0270436c6f27"",
-                    ""path"": ""<SwitchProControllerHID>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""d07eb26c-2f25-4b31-ba9e-288f168a61e7"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone(min=0.4,max=0.925)"",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Direction"",
                     ""isComposite"": false,
@@ -345,17 +301,6 @@ public partial class @GameInputController : IInputActionCollection2, IDisposable
                     ""action"": ""Direction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""212ed959-12c5-40ba-b014-26b972969d7d"",
-                    ""path"": ""<SwitchProControllerHID>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Direction"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
