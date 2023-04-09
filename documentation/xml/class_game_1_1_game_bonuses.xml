@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_game_1_1_game_bonuses" kind="class" language="C#" prot="public">
+    <compoundname>Game::GameBonuses</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_game_1_1_game_bonuses_1a505006cdaae4ba724df704c7738b9a61" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_game_1_1_game_bonuses" kindref="compound">GameBonuses</ref></type>
+        <definition>GameBonuses Game.GameBonuses.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>Game.GameBonuses.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonuses.cs" line="12" column="35" bodyfile="Game/GameBonuses.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_1_1_game_bonuses_1a2ebb16e70bc3efb720fb4db0734b42b2" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_game_1_1_game_bonus" kindref="compound">GameBonus</ref>[]</type>
+        <definition>GameBonus [] Game.GameBonuses.modifiersTable</definition>
+        <argsstring></argsstring>
+        <name>modifiersTable</name>
+        <qualifiedname>Game.GameBonuses.modifiersTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonuses.cs" line="14" column="28" bodyfile="Game/GameBonuses.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_game_bonuses_1ad84d1d0fca0f7856f0ab0b9f021801c9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game.GameBonuses._totalProbability</definition>
+        <argsstring></argsstring>
+        <name>_totalProbability</name>
+        <qualifiedname>Game.GameBonuses._totalProbability</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonuses.cs" line="16" column="21" bodyfile="Game/GameBonuses.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_game_bonuses_1a23cba427c43123b98a2e7d6f64da7938" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] Game.GameBonuses._cumulativeProbabilities</definition>
+        <argsstring></argsstring>
+        <name>_cumulativeProbabilities</name>
+        <qualifiedname>Game.GameBonuses._cumulativeProbabilities</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonuses.cs" line="17" column="21" bodyfile="Game/GameBonuses.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_1_1_game_bonuses_1aa2e40bc1cdce4fd64b6a630519676ac5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameBonuses.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Game.GameBonuses.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonuses.cs" line="19" column="22" bodyfile="Game/GameBonuses.cs" bodystart="19" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_game_bonuses_1a5ba11576de41a51e8611160b758589dc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameBonuses.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Game.GameBonuses.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonuses.cs" line="29" column="22" bodyfile="Game/GameBonuses.cs" bodystart="29" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_1_1_game_bonuses_1a270fb83619a1b0ffa57415b8ffab74fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_bonus_1_1_base_bonus" kindref="compound">BaseBonus</ref></type>
+        <definition>BaseBonus Game.GameBonuses.GetRandomBonus</definition>
+        <argsstring>()</argsstring>
+        <name>GetRandomBonus</name>
+        <qualifiedname>Game.GameBonuses.GetRandomBonus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonuses.cs" line="41" column="26" bodyfile="Game/GameBonuses.cs" bodystart="41" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Game.GameBonuses</label>
+        <link refid="class_game_1_1_game_bonuses"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Game.GameBonuses</label>
+        <link refid="class_game_1_1_game_bonuses"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="Game/GameBonuses.cs" line="10" column="11" bodyfile="Game/GameBonuses.cs" bodystart="11" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_game_1_1_game_bonuses_1a23cba427c43123b98a2e7d6f64da7938" prot="private" virt="non-virtual"><scope>Game::GameBonuses</scope><name>_cumulativeProbabilities</name></member>
+      <member refid="class_game_1_1_game_bonuses_1ad84d1d0fca0f7856f0ab0b9f021801c9" prot="private" virt="non-virtual"><scope>Game::GameBonuses</scope><name>_totalProbability</name></member>
+      <member refid="class_game_1_1_game_bonuses_1aa2e40bc1cdce4fd64b6a630519676ac5" prot="private" virt="non-virtual"><scope>Game::GameBonuses</scope><name>Awake</name></member>
+      <member refid="class_game_1_1_game_bonuses_1a270fb83619a1b0ffa57415b8ffab74fc" prot="public" virt="non-virtual"><scope>Game::GameBonuses</scope><name>GetRandomBonus</name></member>
+      <member refid="class_game_1_1_game_bonuses_1a505006cdaae4ba724df704c7738b9a61" prot="public" virt="non-virtual"><scope>Game::GameBonuses</scope><name>Instance</name></member>
+      <member refid="class_game_1_1_game_bonuses_1a2ebb16e70bc3efb720fb4db0734b42b2" prot="private" virt="non-virtual"><scope>Game::GameBonuses</scope><name>modifiersTable</name></member>
+      <member refid="class_game_1_1_game_bonuses_1a5ba11576de41a51e8611160b758589dc" prot="private" virt="non-virtual"><scope>Game::GameBonuses</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

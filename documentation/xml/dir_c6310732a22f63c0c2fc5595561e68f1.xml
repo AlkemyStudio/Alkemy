@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_c6310732a22f63c0c2fc5595561e68f1" kind="dir">
+    <compoundname>Core</compoundname>
+    <innerfile refid="_dont_destroy_this_game_object_on_load_8cs">DontDestroyThisGameObjectOnLoad.cs</innerfile>
+    <innerfile refid="_entity_health_8cs">EntityHealth.cs</innerfile>
+    <innerfile refid="_infinite_rotation_8cs">InfiniteRotation.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/"/>
+  </compounddef>
+</doxygen>

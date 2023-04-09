@@ -1,0 +1,129 @@
+\hypertarget{class_player_inputs_1_1_player_input_registry}{}\doxysection{Player\+Inputs.\+Player\+Input\+Registry Class Reference}
+\label{class_player_inputs_1_1_player_input_registry}\index{PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}}
+
+
+Player\+Input\+Registry is used to keep track of all the \mbox{\hyperlink{namespace_player_inputs}{Player\+Inputs}} in the scene.  
+
+
+Inheritance diagram for Player\+Inputs.\+Player\+Input\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_inputs_1_1_player_input_registry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Player\+Input\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_player_inputs_1_1_player_input_registry_abc838f7e9f309dd86867985524724996}{Get\+Player\+Inputs}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to get the Player\+Input of a player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_lobby_1_1_player_state}{Player\+State}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_player_inputs_1_1_player_input_registry_a0316b5aff6a3a176e4027d2229ffd302}{Get\+Player\+States}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to get the Player\+State of a player. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_inputs_1_1_player_input_registry_aeb69b71778470d57bbdbf6ab9c7211d6}{Get\+Player\+Count}} ()
+\begin{DoxyCompactList}\small\item\em This method is used to get the number of players. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_inputs_1_1_player_input_registry_ae1b589a7100d552109099814b9b01aba}{Register}} (\mbox{\hyperlink{struct_lobby_1_1_player_state}{Player\+State}} player\+State)
+\begin{DoxyCompactList}\small\item\em Register a new player state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_inputs_1_1_player_input_registry_ade6e244a5fa2a722ff14c2a189e37590}{Register\+All}} (IEnumerable$<$ \mbox{\hyperlink{struct_lobby_1_1_player_state}{Player\+State}} $>$ new\+Player\+States)
+\begin{DoxyCompactList}\small\item\em Register all player states contained in the given list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_inputs_1_1_player_input_registry_ac3a76cfb143069b88a26ac567a9ef40d}{Remove}} (int player\+Index)
+\begin{DoxyCompactList}\small\item\em Remove a player state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_inputs_1_1_player_input_registry_aaa649c32ae8e020e6c9408f6efdb0e16}\label{class_player_inputs_1_1_player_input_registry_aaa649c32ae8e020e6c9408f6efdb0e16}} 
+static \mbox{\hyperlink{class_player_inputs_1_1_player_input_registry}{Player\+Input\+Registry}} {\bfseries Instance}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Player\+Input\+Registry is used to keep track of all the \mbox{\hyperlink{namespace_player_inputs}{Player\+Inputs}} in the scene. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_inputs_1_1_player_input_registry_aeb69b71778470d57bbdbf6ab9c7211d6}\label{class_player_inputs_1_1_player_input_registry_aeb69b71778470d57bbdbf6ab9c7211d6}} 
+\index{PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}!GetPlayerCount@{GetPlayerCount}}
+\index{GetPlayerCount@{GetPlayerCount}!PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}}
+\doxysubsubsection{\texorpdfstring{GetPlayerCount()}{GetPlayerCount()}}
+{\footnotesize\ttfamily int Player\+Inputs.\+Player\+Input\+Registry.\+Get\+Player\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is used to get the number of players. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_inputs_1_1_player_input_registry_abc838f7e9f309dd86867985524724996}\label{class_player_inputs_1_1_player_input_registry_abc838f7e9f309dd86867985524724996}} 
+\index{PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}!GetPlayerInputs@{GetPlayerInputs}}
+\index{GetPlayerInputs@{GetPlayerInputs}!PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}}
+\doxysubsubsection{\texorpdfstring{GetPlayerInputs()}{GetPlayerInputs()}}
+{\footnotesize\ttfamily Player\+Input\mbox{[}$\,$\mbox{]} Player\+Inputs.\+Player\+Input\+Registry.\+Get\+Player\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is used to get the Player\+Input of a player. 
+
+\begin{DoxyReturn}{Returns}
+The Player\+Input of the player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_inputs_1_1_player_input_registry_a0316b5aff6a3a176e4027d2229ffd302}\label{class_player_inputs_1_1_player_input_registry_a0316b5aff6a3a176e4027d2229ffd302}} 
+\index{PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}!GetPlayerStates@{GetPlayerStates}}
+\index{GetPlayerStates@{GetPlayerStates}!PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}}
+\doxysubsubsection{\texorpdfstring{GetPlayerStates()}{GetPlayerStates()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_lobby_1_1_player_state}{Player\+State}}\mbox{[}$\,$\mbox{]} Player\+Inputs.\+Player\+Input\+Registry.\+Get\+Player\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method is used to get the Player\+State of a player. 
+
+\begin{DoxyReturn}{Returns}
+The Player\+State of the player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_inputs_1_1_player_input_registry_ae1b589a7100d552109099814b9b01aba}\label{class_player_inputs_1_1_player_input_registry_ae1b589a7100d552109099814b9b01aba}} 
+\index{PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}!Register@{Register}}
+\index{Register@{Register}!PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Player\+Inputs.\+Player\+Input\+Registry.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_lobby_1_1_player_state}{Player\+State}}}]{player\+State }\end{DoxyParamCaption})}
+
+
+
+Register a new player state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+State} & The player state to register \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_inputs_1_1_player_input_registry_ade6e244a5fa2a722ff14c2a189e37590}\label{class_player_inputs_1_1_player_input_registry_ade6e244a5fa2a722ff14c2a189e37590}} 
+\index{PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}!RegisterAll@{RegisterAll}}
+\index{RegisterAll@{RegisterAll}!PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}}
+\doxysubsubsection{\texorpdfstring{RegisterAll()}{RegisterAll()}}
+{\footnotesize\ttfamily void Player\+Inputs.\+Player\+Input\+Registry.\+Register\+All (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{struct_lobby_1_1_player_state}{Player\+State}} $>$}]{new\+Player\+States }\end{DoxyParamCaption})}
+
+
+
+Register all player states contained in the given list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Player\+States} & The list of player states to register \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_inputs_1_1_player_input_registry_ac3a76cfb143069b88a26ac567a9ef40d}\label{class_player_inputs_1_1_player_input_registry_ac3a76cfb143069b88a26ac567a9ef40d}} 
+\index{PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}!Remove@{Remove}}
+\index{Remove@{Remove}!PlayerInputs.PlayerInputRegistry@{PlayerInputs.PlayerInputRegistry}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void Player\+Inputs.\+Player\+Input\+Registry.\+Remove (\begin{DoxyParamCaption}\item[{int}]{player\+Index }\end{DoxyParamCaption})}
+
+
+
+Remove a player state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Index} & The player index of the player state to remove \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Player\+Inputs/Player\+Input\+Registry.\+cs\end{DoxyCompactItemize}

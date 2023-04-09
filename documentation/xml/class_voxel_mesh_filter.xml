@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_voxel_mesh_filter" kind="class" language="C#" prot="public">
+    <compoundname>VoxelMeshFilter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_voxel_mesh_filter_1af819c2ba52fffcdf8a5f5ec4b2d62f1a" prot="private" static="no" mutable="no">
+        <type>MeshFilter</type>
+        <definition>MeshFilter VoxelMeshFilter.meshFilter</definition>
+        <argsstring></argsstring>
+        <name>meshFilter</name>
+        <qualifiedname>VoxelMeshFilter.meshFilter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="11" column="24" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_mesh_filter_1a68eb2032cddee56461c25d43e65e1fe9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_voxel_parser" kindref="compound">VoxelParser</ref></type>
+        <definition>VoxelParser VoxelMeshFilter.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <qualifiedname>VoxelMeshFilter.parser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="12" column="25" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_mesh_filter_1a5d33a14dd147b055169c1d26e42c6d5c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_voxel_mesh" kindref="compound">VoxelMesh</ref></type>
+        <definition>VoxelMesh VoxelMeshFilter.voxelMesh</definition>
+        <argsstring></argsstring>
+        <name>voxelMesh</name>
+        <qualifiedname>VoxelMeshFilter.voxelMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="13" column="23" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_mesh_filter_1a076e6008c6e285e9b401bc567d9465d2" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_voxel_mesh_job" kindref="compound">VoxelMeshJob</ref></type>
+        <definition>VoxelMeshJob VoxelMeshFilter.meshJob</definition>
+        <argsstring></argsstring>
+        <name>meshJob</name>
+        <qualifiedname>VoxelMeshFilter.meshJob</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="14" column="26" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_mesh_filter_1a3b067671527b8d417c51bfd5790735b9" prot="private" static="no" mutable="no">
+        <type>JobHandle</type>
+        <definition>JobHandle VoxelMeshFilter.meshJobHandle</definition>
+        <argsstring></argsstring>
+        <name>meshJobHandle</name>
+        <qualifiedname>VoxelMeshFilter.meshJobHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="15" column="23" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_mesh_filter_1ad8e37a9acd57d37c702a3a373ba467d5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VoxelMeshFilter.meshJobRunning</definition>
+        <argsstring></argsstring>
+        <name>meshJobRunning</name>
+        <qualifiedname>VoxelMeshFilter.meshJobRunning</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="16" column="18" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_voxel_mesh_filter_1a7c8c1645ccdcacfc1cf08969406d9b1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshFilter.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>VoxelMeshFilter.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="17" column="10" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="17" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_mesh_filter_1accbcba62b2535d22e7bd412989fdd7c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshFilter.SetupVoxelMesh</definition>
+        <argsstring>(VoxelData voxelData)</argsstring>
+        <name>SetupVoxelMesh</name>
+        <qualifiedname>VoxelMeshFilter.SetupVoxelMesh</qualifiedname>
+        <param>
+          <type><ref refid="class_voxel_data" kindref="compound">VoxelData</ref></type>
+          <declname>voxelData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="29" column="18" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="29" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_mesh_filter_1a74456477d0186f9841ac09660c63086d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshFilter.LateUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>LateUpdate</name>
+        <qualifiedname>VoxelMeshFilter.LateUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>If no optimisation or meshing is currently running on the mesh we start the optimisation process by incrementing the algorithm level that is going to be used and creating a new job to optimise the mesh.</para>
+<para>Wait for the current running job to be done and then update the mesh information with the results of the job</para>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelMeshFilter.cs" line="57" column="10" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="57" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>VoxelMeshFilter</label>
+        <link refid="class_voxel_mesh_filter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>VoxelMeshFilter</label>
+        <link refid="class_voxel_mesh_filter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="VoxelMesher/VoxelMeshFilter.cs" line="9" column="7" bodyfile="VoxelMesher/VoxelMeshFilter.cs" bodystart="10" bodyend="109"/>
+    <listofallmembers>
+      <member refid="class_voxel_mesh_filter_1a74456477d0186f9841ac09660c63086d" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>LateUpdate</name></member>
+      <member refid="class_voxel_mesh_filter_1af819c2ba52fffcdf8a5f5ec4b2d62f1a" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>meshFilter</name></member>
+      <member refid="class_voxel_mesh_filter_1a076e6008c6e285e9b401bc567d9465d2" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>meshJob</name></member>
+      <member refid="class_voxel_mesh_filter_1a3b067671527b8d417c51bfd5790735b9" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>meshJobHandle</name></member>
+      <member refid="class_voxel_mesh_filter_1ad8e37a9acd57d37c702a3a373ba467d5" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>meshJobRunning</name></member>
+      <member refid="class_voxel_mesh_filter_1a68eb2032cddee56461c25d43e65e1fe9" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>parser</name></member>
+      <member refid="class_voxel_mesh_filter_1accbcba62b2535d22e7bd412989fdd7c8" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>SetupVoxelMesh</name></member>
+      <member refid="class_voxel_mesh_filter_1a7c8c1645ccdcacfc1cf08969406d9b1c" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>Start</name></member>
+      <member refid="class_voxel_mesh_filter_1a5d33a14dd147b055169c1d26e42c6d5c" prot="private" virt="non-virtual"><scope>VoxelMeshFilter</scope><name>voxelMesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

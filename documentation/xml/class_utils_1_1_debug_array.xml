@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_utils_1_1_debug_array" kind="class" language="C#" prot="public">
+    <compoundname>Utils::DebugArray</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_utils_1_1_debug_array_1a94bdf512a36f9de3c3e6c557c91a1517" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Utils.DebugArray.LogArray&lt; T &gt;</definition>
+        <argsstring>(IEnumerable&lt; T &gt; array)</argsstring>
+        <name>LogArray&lt; T &gt;</name>
+        <qualifiedname>Utils.DebugArray.LogArray&lt; T &gt;</qualifiedname>
+        <param>
+          <type>IEnumerable&lt; T &gt;</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+<para>Log array with indentation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array to log</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/DebugArray.cs" line="14" column="23" bodyfile="Utils/DebugArray.cs" bodystart="14" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Utils/DebugArray.cs" line="7" column="19" bodyfile="Utils/DebugArray.cs" bodystart="8" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_utils_1_1_debug_array_1a94bdf512a36f9de3c3e6c557c91a1517" prot="public" virt="non-virtual"><scope>Utils::DebugArray</scope><name>LogArray&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

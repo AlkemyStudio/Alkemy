@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_765fff2a260f0ca7868b33268536dd19" kind="dir">
+    <compoundname>Lobby</compoundname>
+    <innerfile refid="_background_texture_offset_8cs">BackgroundTextureOffset.cs</innerfile>
+    <innerfile refid="_lobby_character_registry_8cs">LobbyCharacterRegistry.cs</innerfile>
+    <innerfile refid="_lobby_controller_8cs">LobbyController.cs</innerfile>
+    <innerfile refid="_lobby_player_slot_u_i_8cs">LobbyPlayerSlotUI.cs</innerfile>
+    <innerfile refid="_lobby_u_i_8cs">LobbyUI.cs</innerfile>
+    <innerfile refid="_player_state_8cs">PlayerState.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Lobby/"/>
+  </compounddef>
+</doxygen>

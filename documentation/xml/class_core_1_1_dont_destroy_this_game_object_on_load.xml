@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_core_1_1_dont_destroy_this_game_object_on_load" kind="class" language="C#" prot="public">
+    <compoundname>Core::DontDestroyThisGameObjectOnLoad</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_core_1_1_dont_destroy_this_game_object_on_load_1aa2230829545e4d89a86952e325598f89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core.DontDestroyThisGameObjectOnLoad.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Core.DontDestroyThisGameObjectOnLoad.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/DontDestroyThisGameObjectOnLoad.cs" line="8" column="22" bodyfile="Core/DontDestroyThisGameObjectOnLoad.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Core.DontDestroyThisGameObjectOnLoad</label>
+        <link refid="class_core_1_1_dont_destroy_this_game_object_on_load"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Core.DontDestroyThisGameObjectOnLoad</label>
+        <link refid="class_core_1_1_dont_destroy_this_game_object_on_load"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Core/DontDestroyThisGameObjectOnLoad.cs" line="6" column="11" bodyfile="Core/DontDestroyThisGameObjectOnLoad.cs" bodystart="7" bodyend="12"/>
+    <listofallmembers>
+      <member refid="class_core_1_1_dont_destroy_this_game_object_on_load_1aa2230829545e4d89a86952e325598f89" prot="private" virt="non-virtual"><scope>Core::DontDestroyThisGameObjectOnLoad</scope><name>Awake</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

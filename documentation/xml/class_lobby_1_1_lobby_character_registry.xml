@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_lobby_1_1_lobby_character_registry" kind="class" language="C#" prot="public">
+    <compoundname>Lobby::LobbyCharacterRegistry</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_character_registry_1adad09b8f8e5d4eae991f2234d94b8a62" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_lobby_1_1_lobby_character" kindref="compound">LobbyCharacter</ref>[]</type>
+        <definition>LobbyCharacter [] Lobby.LobbyCharacterRegistry.lobbyCharacters</definition>
+        <argsstring></argsstring>
+        <name>lobbyCharacters</name>
+        <qualifiedname>Lobby.LobbyCharacterRegistry.lobbyCharacters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="15" column="33" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lobby_1_1_lobby_character_registry_1a51a4e43175a977801303546108c8bae4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Lobby.LobbyCharacterRegistry.GetFirstSelectableCharacterIndex</definition>
+        <argsstring>()</argsstring>
+        <name>GetFirstSelectableCharacterIndex</name>
+        <qualifiedname>Lobby.LobbyCharacterRegistry.GetFirstSelectableCharacterIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="17" column="20" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_character_registry_1a0844b18e2f793df7d2c23e494ea636ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Lobby.LobbyCharacterRegistry.GetNextSelectableCharacterIndex</definition>
+        <argsstring>(int currentIndex)</argsstring>
+        <name>GetNextSelectableCharacterIndex</name>
+        <qualifiedname>Lobby.LobbyCharacterRegistry.GetNextSelectableCharacterIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>currentIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="30" column="20" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="30" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_character_registry_1a8152f32c650c0c94725b2d6469d45c5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Lobby.LobbyCharacterRegistry.GetPreviousSelectableCharacterIndex</definition>
+        <argsstring>(int currentIndex)</argsstring>
+        <name>GetPreviousSelectableCharacterIndex</name>
+        <qualifiedname>Lobby.LobbyCharacterRegistry.GetPreviousSelectableCharacterIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>currentIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="45" column="20" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="45" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_character_registry_1ac67e33d308358fa6c585c065d1b3e42e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject</type>
+        <definition>GameObject Lobby.LobbyCharacterRegistry.GetPrefabWithIndex</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetPrefabWithIndex</name>
+        <qualifiedname>Lobby.LobbyCharacterRegistry.GetPrefabWithIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="60" column="27" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_character_registry_1af7155950f7c282b0006b8d1e9e5787cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyCharacterRegistry.SetSelectable</definition>
+        <argsstring>(int index, bool isSelectable)</argsstring>
+        <name>SetSelectable</name>
+        <qualifiedname>Lobby.LobbyCharacterRegistry.SetSelectable</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isSelectable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="65" column="21" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="65" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Lobby.LobbyCharacterRegistry</label>
+        <link refid="class_lobby_1_1_lobby_character_registry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Lobby.LobbyCharacterRegistry</label>
+        <link refid="class_lobby_1_1_lobby_character_registry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Lobby/LobbyCharacterRegistry.cs" line="13" column="11" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="14" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_lobby_1_1_lobby_character_registry_1a51a4e43175a977801303546108c8bae4" prot="public" virt="non-virtual"><scope>Lobby::LobbyCharacterRegistry</scope><name>GetFirstSelectableCharacterIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_character_registry_1a0844b18e2f793df7d2c23e494ea636ae" prot="public" virt="non-virtual"><scope>Lobby::LobbyCharacterRegistry</scope><name>GetNextSelectableCharacterIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_character_registry_1ac67e33d308358fa6c585c065d1b3e42e" prot="public" virt="non-virtual"><scope>Lobby::LobbyCharacterRegistry</scope><name>GetPrefabWithIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_character_registry_1a8152f32c650c0c94725b2d6469d45c5f" prot="public" virt="non-virtual"><scope>Lobby::LobbyCharacterRegistry</scope><name>GetPreviousSelectableCharacterIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_character_registry_1adad09b8f8e5d4eae991f2234d94b8a62" prot="private" virt="non-virtual"><scope>Lobby::LobbyCharacterRegistry</scope><name>lobbyCharacters</name></member>
+      <member refid="class_lobby_1_1_lobby_character_registry_1af7155950f7c282b0006b8d1e9e5787cd" prot="public" virt="non-virtual"><scope>Lobby::LobbyCharacterRegistry</scope><name>SetSelectable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

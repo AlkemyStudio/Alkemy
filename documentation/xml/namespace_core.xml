@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_core" kind="namespace" language="C#">
+    <compoundname>Core</compoundname>
+    <innerclass refid="class_core_1_1_dont_destroy_this_game_object_on_load" prot="public">Core::DontDestroyThisGameObjectOnLoad</innerclass>
+    <innerclass refid="class_core_1_1_entity_health" prot="public">Core::EntityHealth</innerclass>
+    <innerclass refid="class_core_1_1_infinite_rotation" prot="public">Core::InfiniteRotation</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/DontDestroyThisGameObjectOnLoad.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

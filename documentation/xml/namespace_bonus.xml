@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_bonus" kind="namespace" language="C#">
+    <compoundname>Bonus</compoundname>
+    <innerclass refid="class_bonus_1_1_base_bonus" prot="public">Bonus::BaseBonus</innerclass>
+    <innerclass refid="class_bonus_1_1_decrease_bomb_amount_bonus" prot="public">Bonus::DecreaseBombAmountBonus</innerclass>
+    <innerclass refid="class_bonus_1_1_decrease_bomb_power_bonus" prot="public">Bonus::DecreaseBombPowerBonus</innerclass>
+    <innerclass refid="class_bonus_1_1_decrease_speed_bonus" prot="public">Bonus::DecreaseSpeedBonus</innerclass>
+    <innerclass refid="class_bonus_1_1_increase_bomb_amount_bonus" prot="public">Bonus::IncreaseBombAmountBonus</innerclass>
+    <innerclass refid="class_bonus_1_1_increase_bomb_power_bonus" prot="public">Bonus::IncreaseBombPowerBonus</innerclass>
+    <innerclass refid="class_bonus_1_1_increase_speed_bonus" prot="public">Bonus::IncreaseSpeedBonus</innerclass>
+    <innerclass refid="class_bonus_1_1_push_bomb_bonus" prot="public">Bonus::PushBombBonus</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Bonus/BaseBonus.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

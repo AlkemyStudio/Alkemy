@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_654f178923b1444d84ee2a4d88be6b27" kind="dir">
+    <compoundname>Audio</compoundname>
+    <innerfile refid="_audio_source_pool_8cs">AudioSourcePool.cs</innerfile>
+    <innerfile refid="_load_audio_settings_8cs">LoadAudioSettings.cs</innerfile>
+    <innerfile refid="_play_music_queue_8cs">PlayMusicQueue.cs</innerfile>
+    <innerfile refid="_volume_controller_8cs">VolumeController.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Audio/"/>
+  </compounddef>
+</doxygen>

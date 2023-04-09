@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_game_1_1_game_bonus" kind="struct" language="C#" prot="public">
+    <compoundname>Game::GameBonus</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_game_1_1_game_bonus_1a8d4ceefd22aecf2302c2635538eb1295" prot="public" static="no" mutable="no">
+        <type><ref refid="class_bonus_1_1_base_bonus" kindref="compound">BaseBonus</ref></type>
+        <definition>BaseBonus Game.GameBonus.prefab</definition>
+        <argsstring></argsstring>
+        <name>prefab</name>
+        <qualifiedname>Game.GameBonus.prefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonus.cs" line="10" column="26" bodyfile="Game/GameBonus.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_game_1_1_game_bonus_1a8a1a90be108933f9fda32546f85296e2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game.GameBonus.probability</definition>
+        <argsstring></argsstring>
+        <name>probability</name>
+        <qualifiedname>Game.GameBonus.probability</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameBonus.cs" line="13" column="20" bodyfile="Game/GameBonus.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Bonus.BaseBonus</label>
+        <link refid="class_bonus_1_1_base_bonus"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Game.GameBonus</label>
+        <link refid="struct_game_1_1_game_bonus"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>prefab</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Game/GameBonus.cs" line="8" column="11" bodyfile="Game/GameBonus.cs" bodystart="9" bodyend="14"/>
+    <listofallmembers>
+      <member refid="struct_game_1_1_game_bonus_1a8d4ceefd22aecf2302c2635538eb1295" prot="public" virt="non-virtual"><scope>Game::GameBonus</scope><name>prefab</name></member>
+      <member refid="struct_game_1_1_game_bonus_1a8a1a90be108933f9fda32546f85296e2" prot="public" virt="non-virtual"><scope>Game::GameBonus</scope><name>probability</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

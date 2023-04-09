@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_audio" kind="namespace" language="C#">
+    <compoundname>Audio</compoundname>
+    <innerclass refid="class_audio_1_1_audio_source_pool" prot="public">Audio::AudioSourcePool</innerclass>
+    <innerclass refid="class_audio_1_1_load_audio_settings" prot="public">Audio::LoadAudioSettings</innerclass>
+    <innerclass refid="class_audio_1_1_play_music_queue" prot="public">Audio::PlayMusicQueue</innerclass>
+    <innerclass refid="class_audio_1_1_volume_controller" prot="public">Audio::VolumeController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Audio/AudioSourcePool.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

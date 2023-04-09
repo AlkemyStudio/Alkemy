@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_player_1_1_player_effects" kind="class" language="C#" prot="public">
+    <compoundname>Player::PlayerEffects</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_1_1_player_effects_1af23184ac2710dfb5d99d887ba4f61060" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Player.PlayerEffects.hasPushBombEffect</definition>
+        <argsstring></argsstring>
+        <name>hasPushBombEffect</name>
+        <qualifiedname>Player.PlayerEffects.hasPushBombEffect</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerEffects.cs" line="10" column="23" bodyfile="Player/PlayerEffects.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_player_1_1_player_effects_1aea9bf9d72ff90a792d267f124a544a30" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Player.PlayerEffects.HasPushBombEffect</definition>
+        <argsstring></argsstring>
+        <name>HasPushBombEffect</name>
+        <qualifiedname>Player.PlayerEffects.HasPushBombEffect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerEffects.cs" line="12" column="21" bodyfile="Player/PlayerEffects.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1_1_player_effects_1acd84c8f2a08293541d2be38bc10f0c50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerEffects.SetPushBombEffect</definition>
+        <argsstring>(bool hasPushBombEffect)</argsstring>
+        <name>SetPushBombEffect</name>
+        <qualifiedname>Player.PlayerEffects.SetPushBombEffect</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>hasPushBombEffect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerEffects.cs" line="14" column="21" bodyfile="Player/PlayerEffects.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PlayerEffects is used to store the effects of the player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerEffects</label>
+        <link refid="class_player_1_1_player_effects"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerEffects</label>
+        <link refid="class_player_1_1_player_effects"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Player/PlayerEffects.cs" line="8" column="11" bodyfile="Player/PlayerEffects.cs" bodystart="9" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_player_1_1_player_effects_1af23184ac2710dfb5d99d887ba4f61060" prot="private" virt="non-virtual"><scope>Player::PlayerEffects</scope><name>hasPushBombEffect</name></member>
+      <member refid="class_player_1_1_player_effects_1aea9bf9d72ff90a792d267f124a544a30" prot="public" virt="non-virtual"><scope>Player::PlayerEffects</scope><name>HasPushBombEffect</name></member>
+      <member refid="class_player_1_1_player_effects_1acd84c8f2a08293541d2be38bc10f0c50" prot="public" virt="non-virtual"><scope>Player::PlayerEffects</scope><name>SetPushBombEffect</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

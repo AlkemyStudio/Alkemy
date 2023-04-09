@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_88d2edaf798a49ca5e7e906c6f6e651b" kind="dir">
+    <compoundname>Bomb</compoundname>
+    <innerfile refid="_base_bomb_controller_8cs">BaseBombController.cs</innerfile>
+    <innerfile refid="_base_push_bomb_controller_8cs">BasePushBombController.cs</innerfile>
+    <innerfile refid="_bomb_data_8cs">BombData.cs</innerfile>
+    <innerfile refid="_classic_bomb_controller_8cs">ClassicBombController.cs</innerfile>
+    <innerfile refid="_explosion_8cs">Explosion.cs</innerfile>
+    <innerfile refid="_voxel_deflagration_controller_8cs">VoxelDeflagrationController.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Bomb/"/>
+  </compounddef>
+</doxygen>

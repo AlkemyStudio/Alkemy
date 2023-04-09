@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_bonus_1_1_decrease_speed_bonus" kind="class" language="C#" prot="public">
+    <compoundname>Bonus::DecreaseSpeedBonus</compoundname>
+    <basecompoundref refid="class_bonus_1_1_base_bonus" prot="public" virt="non-virtual">Bonus.BaseBonus</basecompoundref>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_bonus_1_1_decrease_speed_bonus_1a5c7a8e791acaaa4c1e97f33e16640b1c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Bonus.DecreaseSpeedBonus.OnPlayerTakeBonus</definition>
+        <argsstring>(GameObject player)</argsstring>
+        <name>OnPlayerTakeBonus</name>
+        <qualifiedname>Bonus.DecreaseSpeedBonus.OnPlayerTakeBonus</qualifiedname>
+        <reimplements refid="class_bonus_1_1_base_bonus_1a2a858cdfe632acb31677341b7106d59e">OnPlayerTakeBonus</reimplements>
+        <param>
+          <type>GameObject</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/DecreaseSpeedBonus.cs" line="8" column="33" bodyfile="Bonus/DecreaseSpeedBonus.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseBonus</label>
+        <link refid="class_bonus_1_1_base_bonus"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Bonus.DecreaseSpeedBonus</label>
+        <link refid="class_bonus_1_1_decrease_speed_bonus"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseBonus</label>
+        <link refid="class_bonus_1_1_base_bonus"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Bonus.DecreaseSpeedBonus</label>
+        <link refid="class_bonus_1_1_decrease_speed_bonus"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Bonus/DecreaseSpeedBonus.cs" line="6" column="11" bodyfile="Bonus/DecreaseSpeedBonus.cs" bodystart="7" bodyend="12"/>
+    <listofallmembers>
+      <member refid="class_bonus_1_1_decrease_speed_bonus_1a5c7a8e791acaaa4c1e97f33e16640b1c" prot="protected" virt="virtual"><scope>Bonus::DecreaseSpeedBonus</scope><name>OnPlayerTakeBonus</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1ac78cebb8d7ce4a1a006afbe506f1fb26" prot="protected" virt="virtual"><scope>Bonus::DecreaseSpeedBonus</scope><name>PlaySound</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

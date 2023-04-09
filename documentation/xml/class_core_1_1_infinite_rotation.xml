@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_core_1_1_infinite_rotation" kind="class" language="C#" prot="public">
+    <compoundname>Core::InfiniteRotation</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_core_1_1_infinite_rotation_1a3f163c439a994e87aeefb23d60163c2d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Core.InfiniteRotation.rotationSpeed</definition>
+        <argsstring></argsstring>
+        <name>rotationSpeed</name>
+        <qualifiedname>Core.InfiniteRotation.rotationSpeed</qualifiedname>
+        <initializer>= 1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/InfiniteRotation.cs" line="7" column="24" bodyfile="Core/InfiniteRotation.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1_1_infinite_rotation_1ad51bf37eee9523eda34ed310bd46c625" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Core.InfiniteRotation.rotationAxis</definition>
+        <argsstring></argsstring>
+        <name>rotationAxis</name>
+        <qualifiedname>Core.InfiniteRotation.rotationAxis</qualifiedname>
+        <initializer>= Vector3.up</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/InfiniteRotation.cs" line="8" column="26" bodyfile="Core/InfiniteRotation.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_core_1_1_infinite_rotation_1aa81b86b77c342978fb54b645aedd73fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core.InfiniteRotation.FixedUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>FixedUpdate</name>
+        <qualifiedname>Core.InfiniteRotation.FixedUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/InfiniteRotation.cs" line="10" column="22" bodyfile="Core/InfiniteRotation.cs" bodystart="10" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Core.InfiniteRotation</label>
+        <link refid="class_core_1_1_infinite_rotation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Core.InfiniteRotation</label>
+        <link refid="class_core_1_1_infinite_rotation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Core/InfiniteRotation.cs" line="5" column="11" bodyfile="Core/InfiniteRotation.cs" bodystart="6" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_core_1_1_infinite_rotation_1aa81b86b77c342978fb54b645aedd73fc" prot="private" virt="non-virtual"><scope>Core::InfiniteRotation</scope><name>FixedUpdate</name></member>
+      <member refid="class_core_1_1_infinite_rotation_1ad51bf37eee9523eda34ed310bd46c625" prot="private" virt="non-virtual"><scope>Core::InfiniteRotation</scope><name>rotationAxis</name></member>
+      <member refid="class_core_1_1_infinite_rotation_1a3f163c439a994e87aeefb23d60163c2d" prot="private" virt="non-virtual"><scope>Core::InfiniteRotation</scope><name>rotationSpeed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_dcd2436ec2e688a0b0cfadbd6fdd06b3" kind="dir">
+    <compoundname>Bonus</compoundname>
+    <innerfile refid="_base_bonus_8cs">BaseBonus.cs</innerfile>
+    <innerfile refid="_decrease_bomb_amount_bonus_8cs">DecreaseBombAmountBonus.cs</innerfile>
+    <innerfile refid="_decrease_bomb_power_bonus_8cs">DecreaseBombPowerBonus.cs</innerfile>
+    <innerfile refid="_decrease_speed_bonus_8cs">DecreaseSpeedBonus.cs</innerfile>
+    <innerfile refid="_increase_bomb_amount_bonus_8cs">IncreaseBombAmountBonus.cs</innerfile>
+    <innerfile refid="_increase_bomb_power_bonus_8cs">IncreaseBombPowerBonus.cs</innerfile>
+    <innerfile refid="_increase_speed_bonus_8cs">IncreaseSpeedBonus.cs</innerfile>
+    <innerfile refid="_push_bomb_bonus_8cs">PushBombBonus.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Bonus/"/>
+  </compounddef>
+</doxygen>

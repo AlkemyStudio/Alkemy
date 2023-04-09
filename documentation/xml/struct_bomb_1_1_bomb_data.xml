@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_bomb_1_1_bomb_data" kind="struct" language="C#" prot="public">
+    <compoundname>Bomb::BombData</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="struct_bomb_1_1_bomb_data_1a116ae0ac56ab7d308d5e2a37834c416e" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float Bomb.BombData.ExplosionDuration</definition>
+        <argsstring></argsstring>
+        <name>ExplosionDuration</name>
+        <qualifiedname>Bomb.BombData.ExplosionDuration</qualifiedname>
+        <initializer>= 0.8f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BombData.cs" line="9" column="28" bodyfile="Bomb/BombData.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_bomb_1_1_bomb_data_1adb2be40217657bdf52e2339054a3f63c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Bomb.BombData.power</definition>
+        <argsstring></argsstring>
+        <name>power</name>
+        <qualifiedname>Bomb.BombData.power</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BombData.cs" line="11" column="20" bodyfile="Bomb/BombData.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_bomb_1_1_bomb_data_1a07a6917e5ed7f2e0b372068c3c56d392" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Bomb.BombData.BombData</definition>
+        <argsstring>(int power)</argsstring>
+        <name>BombData</name>
+        <qualifiedname>Bomb.BombData.BombData</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>power</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BombData.cs" line="13" column="16" bodyfile="Bomb/BombData.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Bomb/BombData.cs" line="7" column="11" bodyfile="Bomb/BombData.cs" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="struct_bomb_1_1_bomb_data_1a07a6917e5ed7f2e0b372068c3c56d392" prot="public" virt="non-virtual"><scope>Bomb::BombData</scope><name>BombData</name></member>
+      <member refid="struct_bomb_1_1_bomb_data_1a116ae0ac56ab7d308d5e2a37834c416e" prot="public" virt="non-virtual"><scope>Bomb::BombData</scope><name>ExplosionDuration</name></member>
+      <member refid="struct_bomb_1_1_bomb_data_1adb2be40217657bdf52e2339054a3f63c" prot="public" virt="non-virtual"><scope>Bomb::BombData</scope><name>power</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

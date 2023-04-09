@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_lobby" kind="namespace" language="C#">
+    <compoundname>Lobby</compoundname>
+    <innerclass refid="class_lobby_1_1_background_texture_offset" prot="public">Lobby::BackgroundTextureOffset</innerclass>
+    <innerclass refid="struct_lobby_1_1_lobby_character" prot="public">Lobby::LobbyCharacter</innerclass>
+    <innerclass refid="class_lobby_1_1_lobby_character_registry" prot="public">Lobby::LobbyCharacterRegistry</innerclass>
+    <innerclass refid="class_lobby_1_1_lobby_controller" prot="public">Lobby::LobbyController</innerclass>
+    <innerclass refid="class_lobby_1_1_lobby_player_slot_u_i" prot="public">Lobby::LobbyPlayerSlotUI</innerclass>
+    <innerclass refid="class_lobby_1_1_lobby_u_i" prot="public">Lobby::LobbyUI</innerclass>
+    <innerclass refid="struct_lobby_1_1_player_state" prot="public">Lobby::PlayerState</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Lobby/BackgroundTextureOffset.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

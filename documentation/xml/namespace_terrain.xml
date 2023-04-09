@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_terrain" kind="namespace" language="C#">
+    <compoundname>Terrain</compoundname>
+    <innerclass refid="class_terrain_1_1_terrain_manager" prot="public">Terrain::TerrainManager</innerclass>
+    <innerclass refid="class_terrain_1_1_terrain_utils" prot="public">Terrain::TerrainUtils</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593ba" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TerrainEntityType</name>
+        <qualifiedname>Terrain.TerrainEntityType</qualifiedname>
+        <enumvalue id="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baa94e8a499539d1a472f3b5dbbb85508c0" prot="public">
+          <name>Wall</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baa888d7ede1e21f7579daf4d2a20054f56" prot="public">
+          <name>IndestructibleEntity</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baacd3abfc2f377a4c3fd9181f919d9de82" prot="public">
+          <name>Bomb</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baa6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>This enum is used to define the type of the terrain entity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainEntityType.cs" line="6" column="11" bodyfile="Terrain/TerrainEntityType.cs" bodystart="7" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Terrain/TerrainEntityType.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

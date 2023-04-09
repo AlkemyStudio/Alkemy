@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_c33286056d2acf479cd8641ef845fec1" kind="dir">
+    <compoundname>Game</compoundname>
+    <innerfile refid="_game_bonus_8cs">GameBonus.cs</innerfile>
+    <innerfile refid="_game_bonuses_8cs">GameBonuses.cs</innerfile>
+    <innerfile refid="_game_ended_event_8cs">GameEndedEvent.cs</innerfile>
+    <innerfile refid="_game_state_8cs">GameState.cs</innerfile>
+    <innerfile refid="_game_state_manager_8cs">GameStateManager.cs</innerfile>
+    <innerfile refid="_player_manager_8cs">PlayerManager.cs</innerfile>
+    <innerfile refid="_ready_countdown_8cs">ReadyCountdown.cs</innerfile>
+    <innerfile refid="_terrain_state_manager_8cs">TerrainStateManager.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Game/"/>
+  </compounddef>
+</doxygen>

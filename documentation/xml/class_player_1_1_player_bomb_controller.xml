@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_player_1_1_player_bomb_controller" kind="class" language="C#" prot="public">
+    <compoundname>Player::PlayerBombController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1a08fca42dd05c7e610fac7d456f0ce0a0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_bomb_1_1_base_bomb_controller" kindref="compound">BaseBombController</ref></type>
+        <definition>BaseBombController Player.PlayerBombController.bombPrefab</definition>
+        <argsstring></argsstring>
+        <name>bombPrefab</name>
+        <qualifiedname>Player.PlayerBombController.bombPrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="15" column="37" bodyfile="Player/PlayerBombController.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1a8c84d186ba1aa87dd150b2236cde014f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerBombController.bombPower</definition>
+        <argsstring></argsstring>
+        <name>bombPower</name>
+        <qualifiedname>Player.PlayerBombController.bombPower</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="17" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1a7bc8195bb6d9b89586031626602d1068" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerBombController.minBombPower</definition>
+        <argsstring></argsstring>
+        <name>minBombPower</name>
+        <qualifiedname>Player.PlayerBombController.minBombPower</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="18" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1a44a859a423edac5b8049bc0002b4bf7a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerBombController.maxBombPower</definition>
+        <argsstring></argsstring>
+        <name>maxBombPower</name>
+        <qualifiedname>Player.PlayerBombController.maxBombPower</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="19" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1a9ac6fd4f97837591b6fca41a48448be9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerBombController.bombAmount</definition>
+        <argsstring></argsstring>
+        <name>bombAmount</name>
+        <qualifiedname>Player.PlayerBombController.bombAmount</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="21" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1a0b7259bb83afb5e86808e009109e433e" prot="private" static="no" mutable="no">
+        <type>LayerMask</type>
+        <definition>LayerMask Player.PlayerBombController.bombLayerMask</definition>
+        <argsstring></argsstring>
+        <name>bombLayerMask</name>
+        <qualifiedname>Player.PlayerBombController.bombLayerMask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="24" column="28" bodyfile="Player/PlayerBombController.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1ae1af6c04210c677be1acd2fc23eb985b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerBombController._remainingBombs</definition>
+        <argsstring></argsstring>
+        <name>_remainingBombs</name>
+        <qualifiedname>Player.PlayerBombController._remainingBombs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="26" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_bomb_controller_1aa0e4c67313b5d5dfb0236dbfde3f899d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_inputs_1_1_player_input_handler" kindref="compound">PlayerInputHandler</ref></type>
+        <definition>PlayerInputHandler Player.PlayerBombController._playerInputHandler</definition>
+        <argsstring></argsstring>
+        <name>_playerInputHandler</name>
+        <qualifiedname>Player.PlayerBombController._playerInputHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="27" column="36" bodyfile="Player/PlayerBombController.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_player_1_1_player_bomb_controller_1a5796f8048e2a7674a489ba6e4eb14e4d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Player.PlayerBombController.BombPower</definition>
+        <argsstring></argsstring>
+        <name>BombPower</name>
+        <qualifiedname>Player.PlayerBombController.BombPower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="29" column="20" bodyfile="Player/PlayerBombController.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a3fa97ce0809d4a7dee7aaa295e06e9bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Player.PlayerBombController.Start</qualifiedname>
+        <briefdescription>
+<para>Start is called before the first frame update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="34" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a41932ceb65310a1bc3c9b08aa226c6cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>Player.PlayerBombController.OnDestroy</qualifiedname>
+        <briefdescription>
+<para>OnDestroy is called when the script instance is being destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="52" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a6bb7ae421006dfec6f8469d3b33d3853" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Player.PlayerBombController.PlayerCanPlaceBombAt</definition>
+        <argsstring>(Vector3 tilePosition)</argsstring>
+        <name>PlayerCanPlaceBombAt</name>
+        <qualifiedname>Player.PlayerBombController.PlayerCanPlaceBombAt</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>tilePosition</declname>
+        </param>
+        <briefdescription>
+<para>PlayerCanPlaceBombAt is used to check if the player can place a bomb at the given tile position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tilePosition</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="77" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a9bd4c3ead84c7a6bdbc460f2b4442ca7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.PlaceBombAt</definition>
+        <argsstring>(Vector3 tilePosition)</argsstring>
+        <name>PlaceBombAt</name>
+        <qualifiedname>Player.PlayerBombController.PlaceBombAt</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>tilePosition</declname>
+        </param>
+        <briefdescription>
+<para>Place a bomb at the given tile position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tilePosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tile position. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="86" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="86" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1ad94d588ff99c3b85c1ce2f8082d701f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.OnTriggerExit</definition>
+        <argsstring>(Collider other)</argsstring>
+        <name>OnTriggerExit</name>
+        <qualifiedname>Player.PlayerBombController.OnTriggerExit</qualifiedname>
+        <param>
+          <type>Collider</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>OnTriggerEnter is called when the Collider other enters the trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="154" column="22" bodyfile="Player/PlayerBombController.cs" bodystart="154" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1aff22dea0b43ce81f685dc137dff6a4b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.Initialize</definition>
+        <argsstring>(PlayerInputHandler playerInputHandler)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>Player.PlayerBombController.Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_player_inputs_1_1_player_input_handler" kindref="compound">PlayerInputHandler</ref></type>
+          <declname>playerInputHandler</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the player controller. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerInputHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player input handler. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="43" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a0b9f378a340210716a3f0038bb530801" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.TryPlaceBomb</definition>
+        <argsstring>()</argsstring>
+        <name>TryPlaceBomb</name>
+        <qualifiedname>Player.PlayerBombController.TryPlaceBomb</qualifiedname>
+        <briefdescription>
+<para>Try to place a bomb. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="60" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="60" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a739c33b4e38b2fc63a83f3990e886fd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.OnBombExplode</definition>
+        <argsstring>()</argsstring>
+        <name>OnBombExplode</name>
+        <qualifiedname>Player.PlayerBombController.OnBombExplode</qualifiedname>
+        <briefdescription>
+<para>OnBombExplode is called when a bomb explodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="99" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a51ff63b090b0011e8b0c180546ef1aee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.AddBombPower</definition>
+        <argsstring>()</argsstring>
+        <name>AddBombPower</name>
+        <qualifiedname>Player.PlayerBombController.AddBombPower</qualifiedname>
+        <briefdescription>
+<para>Add bomb power. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="107" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="107" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1ad3c804d253cc802fac8169fe0e683556" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.RemoveBombPower</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveBombPower</name>
+        <qualifiedname>Player.PlayerBombController.RemoveBombPower</qualifiedname>
+        <briefdescription>
+<para>Remove bomb power. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="118" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="118" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1a7bcbe1bd0fa65044f9a95e9bbccfab3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.AddBombAmount</definition>
+        <argsstring>()</argsstring>
+        <name>AddBombAmount</name>
+        <qualifiedname>Player.PlayerBombController.AddBombAmount</qualifiedname>
+        <briefdescription>
+<para>Add bomb amount. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="128" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="128" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_bomb_controller_1ac4528b03006301225d638de0df91b620" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerBombController.RemoveBombAmount</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveBombAmount</name>
+        <qualifiedname>Player.PlayerBombController.RemoveBombAmount</qualifiedname>
+        <briefdescription>
+<para>Remove bomb amount. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerBombController.cs" line="137" column="21" bodyfile="Player/PlayerBombController.cs" bodystart="137" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PlayerController is used to control the bombs of the player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerBombController</label>
+        <link refid="class_player_1_1_player_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerBombController</label>
+        <link refid="class_player_1_1_player_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Player/PlayerBombController.cs" line="13" column="11" bodyfile="Player/PlayerBombController.cs" bodystart="14" bodyend="179"/>
+    <listofallmembers>
+      <member refid="class_player_1_1_player_bomb_controller_1aa0e4c67313b5d5dfb0236dbfde3f899d" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>_playerInputHandler</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1ae1af6c04210c677be1acd2fc23eb985b" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>_remainingBombs</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a7bcbe1bd0fa65044f9a95e9bbccfab3b" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>AddBombAmount</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a51ff63b090b0011e8b0c180546ef1aee" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>AddBombPower</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a9ac6fd4f97837591b6fca41a48448be9" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>bombAmount</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a0b7259bb83afb5e86808e009109e433e" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>bombLayerMask</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a8c84d186ba1aa87dd150b2236cde014f" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>bombPower</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a5796f8048e2a7674a489ba6e4eb14e4d" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>BombPower</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a08fca42dd05c7e610fac7d456f0ce0a0" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>bombPrefab</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1aff22dea0b43ce81f685dc137dff6a4b8" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>Initialize</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a44a859a423edac5b8049bc0002b4bf7a" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>maxBombPower</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a7bc8195bb6d9b89586031626602d1068" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>minBombPower</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a739c33b4e38b2fc63a83f3990e886fd4" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>OnBombExplode</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a41932ceb65310a1bc3c9b08aa226c6cf" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>OnDestroy</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1ad94d588ff99c3b85c1ce2f8082d701f5" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>OnTriggerExit</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a9bd4c3ead84c7a6bdbc460f2b4442ca7" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>PlaceBombAt</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a6bb7ae421006dfec6f8469d3b33d3853" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>PlayerCanPlaceBombAt</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1ac4528b03006301225d638de0df91b620" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>RemoveBombAmount</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1ad3c804d253cc802fac8169fe0e683556" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>RemoveBombPower</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a3fa97ce0809d4a7dee7aaa295e06e9bd" prot="private" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>Start</name></member>
+      <member refid="class_player_1_1_player_bomb_controller_1a0b9f378a340210716a3f0038bb530801" prot="public" virt="non-virtual"><scope>Player::PlayerBombController</scope><name>TryPlaceBomb</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

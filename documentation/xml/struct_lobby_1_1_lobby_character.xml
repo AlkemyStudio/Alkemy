@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_lobby_1_1_lobby_character" kind="struct" language="C#" prot="public">
+    <compoundname>Lobby::LobbyCharacter</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_lobby_1_1_lobby_character_1aea67ff5a2bf5446ff19c403907112de8" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Lobby.LobbyCharacter.prefab</definition>
+        <argsstring></argsstring>
+        <name>prefab</name>
+        <qualifiedname>Lobby.LobbyCharacter.prefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="9" column="27" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_lobby_1_1_lobby_character_1a747a33e04a6bf4da692c79f7fb07bc33" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Lobby.LobbyCharacter.isSelectable</definition>
+        <argsstring></argsstring>
+        <name>isSelectable</name>
+        <qualifiedname>Lobby.LobbyCharacter.isSelectable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyCharacterRegistry.cs" line="10" column="21" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Lobby/LobbyCharacterRegistry.cs" line="7" column="11" bodyfile="Lobby/LobbyCharacterRegistry.cs" bodystart="8" bodyend="11"/>
+    <listofallmembers>
+      <member refid="struct_lobby_1_1_lobby_character_1a747a33e04a6bf4da692c79f7fb07bc33" prot="public" virt="non-virtual"><scope>Lobby::LobbyCharacter</scope><name>isSelectable</name></member>
+      <member refid="struct_lobby_1_1_lobby_character_1aea67ff5a2bf5446ff19c403907112de8" prot="public" virt="non-virtual"><scope>Lobby::LobbyCharacter</scope><name>prefab</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_voxel_graph" kind="class" language="C#" prot="public">
+    <compoundname>VoxelGraph</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_voxel_graph_1a5bec8475b19565ca4c0a4ad2999815a0" prot="public" static="no" mutable="no">
+        <type><ref refid="class_voxel_parser" kindref="compound">VoxelParser</ref></type>
+        <definition>VoxelParser VoxelGraph.voxelParser</definition>
+        <argsstring></argsstring>
+        <name>voxelParser</name>
+        <qualifiedname>VoxelGraph.voxelParser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="10" column="24" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_graph_1a8dd2aa145b7cef8dd3b64ba4d183ee58" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VoxelGraph.autoDestroy</definition>
+        <argsstring></argsstring>
+        <name>autoDestroy</name>
+        <qualifiedname>VoxelGraph.autoDestroy</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="11" column="17" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_graph_1acdeb1adf40176ebb6312a70c068a3790" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VoxelGraph.destroyThreshold</definition>
+        <argsstring></argsstring>
+        <name>destroyThreshold</name>
+        <qualifiedname>VoxelGraph.destroyThreshold</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="12" column="16" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_voxel_graph_1a11b569710da9689291f26c65422b2a4b" prot="private" static="no" mutable="no">
+        <type>VisualEffect</type>
+        <definition>VisualEffect VoxelGraph.visualEffect</definition>
+        <argsstring></argsstring>
+        <name>visualEffect</name>
+        <qualifiedname>VoxelGraph.visualEffect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="13" column="26" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_graph_1a5ca3834afe46caa2316e5f6c3e55f1e4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VoxelGraph.playing</definition>
+        <argsstring></argsstring>
+        <name>playing</name>
+        <qualifiedname>VoxelGraph.playing</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="15" column="18" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_graph_1a68a3bcd180905b2311f2be868da42be3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VoxelGraph.particleSpawned</definition>
+        <argsstring></argsstring>
+        <name>particleSpawned</name>
+        <qualifiedname>VoxelGraph.particleSpawned</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="16" column="18" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_voxel_graph_1a70778a366c4dee32b602526ff70fdaac" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>AnimationEnd</type>
+        <definition>AnimationEnd VoxelGraph.OnAnimationEnd</definition>
+        <argsstring></argsstring>
+        <name>OnAnimationEnd</name>
+        <qualifiedname>VoxelGraph.OnAnimationEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="19" column="31" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_voxel_graph_1acc516a6f9b564758a24cc1d3b4347843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void VoxelGraph.AnimationEnd</definition>
+        <argsstring>()</argsstring>
+        <name>AnimationEnd</name>
+        <qualifiedname>VoxelGraph.AnimationEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="18" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_graph_1ab275987167e93d063186bc0b45cdda9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelGraph.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>VoxelGraph.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="21" column="17" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="21" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_voxel_graph_1aa805dddf1996f5e9ea20f4d78b1e6020" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelGraph.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>VoxelGraph.OnEnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="25" column="10" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_graph_1a993a8f5dc388266b8ec5dd9cfd0559d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelGraph.generateTexture3D</definition>
+        <argsstring>(VoxelData voxelData)</argsstring>
+        <name>generateTexture3D</name>
+        <qualifiedname>VoxelGraph.generateTexture3D</qualifiedname>
+        <param>
+          <type><ref refid="class_voxel_data" kindref="compound">VoxelData</ref></type>
+          <declname>voxelData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="33" column="10" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="33" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_graph_1abc73fcbf9230ec8bd987d363dc1d15ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelGraph.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>VoxelGraph.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelGraph.cs" line="46" column="10" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="46" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>VoxelGraph</label>
+        <link refid="class_voxel_graph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="4">
+        <label>VoxelData</label>
+        <link refid="class_voxel_data"/>
+      </node>
+      <node id="1">
+        <label>VoxelGraph</label>
+        <link refid="class_voxel_graph"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>voxelParser</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>VoxelParser</label>
+        <link refid="class_voxel_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>voxelData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="VoxelMesher/VoxelGraph.cs" line="8" column="7" bodyfile="VoxelMesher/VoxelGraph.cs" bodystart="9" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_voxel_graph_1acc516a6f9b564758a24cc1d3b4347843" prot="public" virt="non-virtual"><scope>VoxelGraph</scope><name>AnimationEnd</name></member>
+      <member refid="class_voxel_graph_1a8dd2aa145b7cef8dd3b64ba4d183ee58" prot="public" virt="non-virtual"><scope>VoxelGraph</scope><name>autoDestroy</name></member>
+      <member refid="class_voxel_graph_1ab275987167e93d063186bc0b45cdda9f" prot="public" virt="non-virtual"><scope>VoxelGraph</scope><name>Awake</name></member>
+      <member refid="class_voxel_graph_1acdeb1adf40176ebb6312a70c068a3790" prot="public" virt="non-virtual"><scope>VoxelGraph</scope><name>destroyThreshold</name></member>
+      <member refid="class_voxel_graph_1a993a8f5dc388266b8ec5dd9cfd0559d4" prot="private" virt="non-virtual"><scope>VoxelGraph</scope><name>generateTexture3D</name></member>
+      <member refid="class_voxel_graph_1a70778a366c4dee32b602526ff70fdaac" prot="public" virt="non-virtual"><scope>VoxelGraph</scope><name>OnAnimationEnd</name></member>
+      <member refid="class_voxel_graph_1aa805dddf1996f5e9ea20f4d78b1e6020" prot="private" virt="non-virtual"><scope>VoxelGraph</scope><name>OnEnable</name></member>
+      <member refid="class_voxel_graph_1a68a3bcd180905b2311f2be868da42be3" prot="private" virt="non-virtual"><scope>VoxelGraph</scope><name>particleSpawned</name></member>
+      <member refid="class_voxel_graph_1a5ca3834afe46caa2316e5f6c3e55f1e4" prot="private" virt="non-virtual"><scope>VoxelGraph</scope><name>playing</name></member>
+      <member refid="class_voxel_graph_1abc73fcbf9230ec8bd987d363dc1d15ec" prot="private" virt="non-virtual"><scope>VoxelGraph</scope><name>Update</name></member>
+      <member refid="class_voxel_graph_1a11b569710da9689291f26c65422b2a4b" prot="private" virt="non-virtual"><scope>VoxelGraph</scope><name>visualEffect</name></member>
+      <member refid="class_voxel_graph_1a5bec8475b19565ca4c0a4ad2999815a0" prot="public" virt="non-virtual"><scope>VoxelGraph</scope><name>voxelParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

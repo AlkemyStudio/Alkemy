@@ -1,0 +1,53 @@
+.TH "Game.GameStateManager" 3 "Sun Apr 9 2023" "Alkemy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Game.GameStateManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "delegate void \fBGameStateEvent\fP (GameState state)"
+.br
+.ti -1c
+.RI "void \fBReloadGame\fP ()"
+.br
+.ti -1c
+.RI "void \fBEndTheGame\fP (string[] winnerNames, string[] lastPlayerNamesDeadAtTheSameTime)"
+.br
+.ti -1c
+.RI "void \fBPauseGame\fP ()"
+.br
+.ti -1c
+.RI "void \fBResumeGame\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetGameState\fP (GameState state)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBGameStateManager\fP \fBInstance\fP"
+.br
+.in -1c
+.SS "Events"
+
+.in +1c
+.ti -1c
+.RI "GameStateEvent \fBOnGameStateChanged\fP"
+.br
+.ti -1c
+.RI "Action< \fBGameEndedEvent\fP > \fBOnGameEnded\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alkemy from the source code\&.

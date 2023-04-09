@@ -1,0 +1,103 @@
+.TH "PlayerInputs.GamePlayerInputManager" 3 "Sun Apr 9 2023" "Alkemy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlayerInputs.GamePlayerInputManager \- GamePlayerInputManager is used to handle the input of the players\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSetPlayerHandler\fP (\fBIPlayerHandler\fP newPlayerHandler)"
+.br
+.RI "Set the player handler\&. "
+.ti -1c
+.RI "void \fBUnsetPlayerHandler\fP ()"
+.br
+.RI "Unset the player handler\&. "
+.ti -1c
+.RI "void \fBHandlePlayerJoined\fP (PlayerInput playerInput)"
+.br
+.RI "Handle the player joined event\&. "
+.ti -1c
+.RI "void \fBHandlePlayerLeft\fP (PlayerInput playerInput)"
+.br
+.RI "Handle the player left event\&. "
+.ti -1c
+.RI "int \fBGetPlayerCount\fP ()"
+.br
+.RI "Get the player count\&. "
+.ti -1c
+.RI "void \fBRemovePlayer\fP (int playerIndex)"
+.br
+.RI "Remove the player\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+GamePlayerInputManager is used to handle the input of the players\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int PlayerInputs\&.GamePlayerInputManager\&.GetPlayerCount ()"
+
+.PP
+Get the player count\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "void PlayerInputs\&.GamePlayerInputManager\&.HandlePlayerJoined (PlayerInput playerInput)"
+
+.PP
+Handle the player joined event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplayerInput\fP 
+.RE
+.PP
+
+.SS "void PlayerInputs\&.GamePlayerInputManager\&.HandlePlayerLeft (PlayerInput playerInput)"
+
+.PP
+Handle the player left event\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplayerInput\fP 
+.RE
+.PP
+
+.SS "void PlayerInputs\&.GamePlayerInputManager\&.RemovePlayer (int playerIndex)"
+
+.PP
+Remove the player\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplayerIndex\fP The player index\&.
+.RE
+.PP
+
+.SS "void PlayerInputs\&.GamePlayerInputManager\&.SetPlayerHandler (\fBIPlayerHandler\fP newPlayerHandler)"
+
+.PP
+Set the player handler\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewPlayerHandler\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alkemy from the source code\&.

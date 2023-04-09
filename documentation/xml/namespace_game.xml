@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_game" kind="namespace" language="C#">
+    <compoundname>Game</compoundname>
+    <innerclass refid="struct_game_1_1_game_bonus" prot="public">Game::GameBonus</innerclass>
+    <innerclass refid="class_game_1_1_game_bonuses" prot="public">Game::GameBonuses</innerclass>
+    <innerclass refid="struct_game_1_1_game_ended_event" prot="public">Game::GameEndedEvent</innerclass>
+    <innerclass refid="class_game_1_1_game_state_manager" prot="public">Game::GameStateManager</innerclass>
+    <innerclass refid="class_game_1_1_player_manager" prot="public">Game::PlayerManager</innerclass>
+    <innerclass refid="class_game_1_1_ready_countdown" prot="public">Game::ReadyCountdown</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>GameState</name>
+        <qualifiedname>Game.GameState</qualifiedname>
+        <enumvalue id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04a61bcd96a2c1f8026527cbf2019d6e9a4" prot="public">
+          <name>Initialization</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04aeb1aeea49ee3db8d998a1f299fcb97e2" prot="public">
+          <name>TerrainGenerated</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ae7d31fc0602fb2ede144d18cdffd816b" prot="public">
+          <name>Ready</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ac9dbb2b7c84159b632d71e512eba8428" prot="public">
+          <name>Playing</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ae99180abf47a8b3a856e0bcb2656990a" prot="public">
+          <name>Paused</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ab2a21932ddc3b1e41c012d711c7bd238" prot="public">
+          <name>Resumed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04a0157fbb99be9622bdaa6e544270c0622" prot="public">
+          <name>Ended</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameState.cs" line="3" column="11" bodyfile="Game/GameState.cs" bodystart="4" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Game/GameBonus.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_audio_1_1_audio_source_pool" kind="class" language="C#" prot="public">
+    <compoundname>Audio::AudioSourcePool</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_audio_1_1_audio_source_pool_1ae00380271ae31f3e92a9909951f3f2cf" prot="private" static="no" mutable="no">
+        <type>AudioSource</type>
+        <definition>AudioSource Audio.AudioSourcePool.audioSourcePrefab</definition>
+        <argsstring></argsstring>
+        <name>audioSourcePrefab</name>
+        <qualifiedname>Audio.AudioSourcePool.audioSourcePrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="12" column="30" bodyfile="Audio/AudioSourcePool.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_audio_source_pool_1a167561ffc2b9d0b02e6bd2d5932c9c0c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Audio.AudioSourcePool.poolSize</definition>
+        <argsstring></argsstring>
+        <name>poolSize</name>
+        <qualifiedname>Audio.AudioSourcePool.poolSize</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="13" column="22" bodyfile="Audio/AudioSourcePool.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_audio_source_pool_1afa4dc71fcfbd94e277f36bf0b74f9463" prot="private" static="no" mutable="no">
+        <type>List&lt; AudioSource &gt;</type>
+        <definition>List&lt;AudioSource&gt; Audio.AudioSourcePool.audioSources</definition>
+        <argsstring></argsstring>
+        <name>audioSources</name>
+        <qualifiedname>Audio.AudioSourcePool.audioSources</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="16" column="22" bodyfile="Audio/AudioSourcePool.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_audio_1_1_audio_source_pool_1ad553cbc317c59e15b858263f777e1b1d" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_audio_1_1_audio_source_pool" kindref="compound">AudioSourcePool</ref></type>
+        <definition>AudioSourcePool Audio.AudioSourcePool.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>Audio.AudioSourcePool.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="15" column="39" bodyfile="Audio/AudioSourcePool.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_audio_1_1_audio_source_pool_1aa92cdc5c3dbb95ad81f1c76926524ada" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.AudioSourcePool.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Audio.AudioSourcePool.Awake</qualifiedname>
+        <briefdescription>
+<para>Awake is called when the script instance is being loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="21" column="22" bodyfile="Audio/AudioSourcePool.cs" bodystart="21" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_1_1_audio_source_pool_1af3c7860ae879221fdaea8c5bc9c62cd9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>AudioSource</type>
+        <definition>AudioSource Audio.AudioSourcePool.GetAudioSource</definition>
+        <argsstring>()</argsstring>
+        <name>GetAudioSource</name>
+        <qualifiedname>Audio.AudioSourcePool.GetAudioSource</qualifiedname>
+        <briefdescription>
+<para>Gets an available audio source from the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An available audio source.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="73" column="29" bodyfile="Audio/AudioSourcePool.cs" bodystart="73" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_audio_1_1_audio_source_pool_1a43bcb37da8e7e33855a516b2531f3be0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.AudioSourcePool.PlayClipAtPoint</definition>
+        <argsstring>(AudioClip clip, Vector3 position)</argsstring>
+        <name>PlayClipAtPoint</name>
+        <qualifiedname>Audio.AudioSourcePool.PlayClipAtPoint</qualifiedname>
+        <param>
+          <type>AudioClip</type>
+          <declname>clip</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Plays the given clip at the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The clip to play.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position to play the clip at.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="45" column="21" bodyfile="Audio/AudioSourcePool.cs" bodystart="45" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_audio_1_1_audio_source_pool_1a5d937f5f829c27c0ffc3011b183d6139" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>static IEnumerator Audio.AudioSourcePool.Play</definition>
+        <argsstring>(AudioSource audioSource)</argsstring>
+        <name>Play</name>
+        <qualifiedname>Audio.AudioSourcePool.Play</qualifiedname>
+        <param>
+          <type>AudioSource</type>
+          <declname>audioSource</declname>
+        </param>
+        <briefdescription>
+<para>Plays the given clip at the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>audioSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The audio source to play.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/AudioSourcePool.cs" line="59" column="36" bodyfile="Audio/AudioSourcePool.cs" bodystart="59" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A pool of AudioSources that can be used to play audio clips at a specific position. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Audio.AudioSourcePool</label>
+        <link refid="class_audio_1_1_audio_source_pool"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Audio.AudioSourcePool</label>
+        <link refid="class_audio_1_1_audio_source_pool"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Audio/AudioSourcePool.cs" line="10" column="11" bodyfile="Audio/AudioSourcePool.cs" bodystart="11" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_audio_1_1_audio_source_pool_1ae00380271ae31f3e92a9909951f3f2cf" prot="private" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>audioSourcePrefab</name></member>
+      <member refid="class_audio_1_1_audio_source_pool_1afa4dc71fcfbd94e277f36bf0b74f9463" prot="private" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>audioSources</name></member>
+      <member refid="class_audio_1_1_audio_source_pool_1aa92cdc5c3dbb95ad81f1c76926524ada" prot="private" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>Awake</name></member>
+      <member refid="class_audio_1_1_audio_source_pool_1af3c7860ae879221fdaea8c5bc9c62cd9" prot="private" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>GetAudioSource</name></member>
+      <member refid="class_audio_1_1_audio_source_pool_1ad553cbc317c59e15b858263f777e1b1d" prot="public" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>Instance</name></member>
+      <member refid="class_audio_1_1_audio_source_pool_1a5d937f5f829c27c0ffc3011b183d6139" prot="private" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>Play</name></member>
+      <member refid="class_audio_1_1_audio_source_pool_1a43bcb37da8e7e33855a516b2531f3be0" prot="public" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>PlayClipAtPoint</name></member>
+      <member refid="class_audio_1_1_audio_source_pool_1a167561ffc2b9d0b02e6bd2d5932c9c0c" prot="private" virt="non-virtual"><scope>Audio::AudioSourcePool</scope><name>poolSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

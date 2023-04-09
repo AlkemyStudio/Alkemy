@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_utils" kind="namespace" language="C#">
+    <compoundname>Utils</compoundname>
+    <innerclass refid="class_utils_1_1_debug_array" prot="public">Utils::DebugArray</innerclass>
+    <innerclass refid="class_utils_1_1_player_configuration_debug_utils" prot="public">Utils::PlayerConfigurationDebugUtils</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Utils/DebugArray.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

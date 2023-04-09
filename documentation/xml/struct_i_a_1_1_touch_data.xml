@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_i_a_1_1_touch_data" kind="struct" language="C#" prot="public">
+    <compoundname>IA::TouchData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_i_a_1_1_touch_data_1a82048157cb0a71ec0126e139b7e65bd8" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 IA.TouchData.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <qualifiedname>IA.TouchData.Position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/TouchData.cs" line="7" column="24" bodyfile="IA/TouchData.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_a_1_1_touch_data_1a17cccffc5509b7dcc11181c47da79f65" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool IA.TouchData.IsBomb</definition>
+        <argsstring></argsstring>
+        <name>IsBomb</name>
+        <qualifiedname>IA.TouchData.IsBomb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/TouchData.cs" line="8" column="21" bodyfile="IA/TouchData.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_a_1_1_touch_data_1aea8e9d11619b48dfb5217b34cea91cee" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool IA.TouchData.IsWall</definition>
+        <argsstring></argsstring>
+        <name>IsWall</name>
+        <qualifiedname>IA.TouchData.IsWall</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/TouchData.cs" line="9" column="21" bodyfile="IA/TouchData.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_a_1_1_touch_data_1a0c76ace2a00d61d3fd777226780b3eb6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool IA.TouchData.IsTerrain</definition>
+        <argsstring></argsstring>
+        <name>IsTerrain</name>
+        <qualifiedname>IA.TouchData.IsTerrain</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/TouchData.cs" line="10" column="21" bodyfile="IA/TouchData.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="IA/TouchData.cs" line="5" column="11" bodyfile="IA/TouchData.cs" bodystart="6" bodyend="11"/>
+    <listofallmembers>
+      <member refid="struct_i_a_1_1_touch_data_1a17cccffc5509b7dcc11181c47da79f65" prot="public" virt="non-virtual"><scope>IA::TouchData</scope><name>IsBomb</name></member>
+      <member refid="struct_i_a_1_1_touch_data_1a0c76ace2a00d61d3fd777226780b3eb6" prot="public" virt="non-virtual"><scope>IA::TouchData</scope><name>IsTerrain</name></member>
+      <member refid="struct_i_a_1_1_touch_data_1aea8e9d11619b48dfb5217b34cea91cee" prot="public" virt="non-virtual"><scope>IA::TouchData</scope><name>IsWall</name></member>
+      <member refid="struct_i_a_1_1_touch_data_1a82048157cb0a71ec0126e139b7e65bd8" prot="public" virt="non-virtual"><scope>IA::TouchData</scope><name>Position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

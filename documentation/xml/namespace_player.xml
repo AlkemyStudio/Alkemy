@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_player" kind="namespace" language="C#">
+    <compoundname>Player</compoundname>
+    <innerclass refid="class_player_1_1_cursor_model_animation" prot="public">Player::CursorModelAnimation</innerclass>
+    <innerclass refid="class_player_1_1_player_bomb_controller" prot="public">Player::PlayerBombController</innerclass>
+    <innerclass refid="class_player_1_1_player_effects" prot="public">Player::PlayerEffects</innerclass>
+    <innerclass refid="class_player_1_1_player_game_object_registry" prot="public">Player::PlayerGameObjectRegistry</innerclass>
+    <innerclass refid="class_player_1_1_player_model_animation" prot="public">Player::PlayerModelAnimation</innerclass>
+    <innerclass refid="class_player_1_1_player_movement" prot="public">Player::PlayerMovement</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_player_1aebb32b45be262523a72672014806faaa" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PlayerOrientation</name>
+        <qualifiedname>Player.PlayerOrientation</qualifiedname>
+        <enumvalue id="namespace_player_1aebb32b45be262523a72672014806faaaaa4ffdcf0dc1f31b9acaf295d75b51d00" prot="public">
+          <name>Top</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_player_1aebb32b45be262523a72672014806faaaa92b09c7c48c520c3c55e497875da437c" prot="public">
+          <name>Right</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_player_1aebb32b45be262523a72672014806faaaa2ad9d63b69c4a10a5cc9cad923133bc4" prot="public">
+          <name>Bottom</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_player_1aebb32b45be262523a72672014806faaaa945d5e233cf7d6240f6b783b36a374ff" prot="public">
+          <name>Left</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>PlayerHandler is used to handle the input of a player. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="11" column="5" bodyfile="Player/PlayerMovement.cs" bodystart="12" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Player/CursorModelAnimation.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

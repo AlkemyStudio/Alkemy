@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_voxel_mesh_job" kind="struct" language="C#" prot="public">
+    <compoundname>VoxelMeshJob</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IJob</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a540321092e24404bcc52a90bdb5d0d95" prot="public" static="no" mutable="no">
+        <type>NativeArray&lt; int &gt;</type>
+        <definition>NativeArray&lt;int&gt; VoxelMeshJob.voxels</definition>
+        <argsstring></argsstring>
+        <name>voxels</name>
+        <qualifiedname>VoxelMeshJob.voxels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="23" column="24" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1ab208b9e3e6285728be9c855d95b87ae2" prot="public" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 VoxelMeshJob.origin</definition>
+        <argsstring></argsstring>
+        <name>origin</name>
+        <qualifiedname>VoxelMeshJob.origin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="26" column="20" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a0d1a3c24df3c3f3592552ac571f87e61" prot="public" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 VoxelMeshJob.scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>VoxelMeshJob.scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="29" column="20" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1abe44a5ad47b43e85bc3d1efb17440264" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VoxelMeshJob.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>VoxelMeshJob.width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="32" column="16" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a84e68585cfe29a8045317e007070aaca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VoxelMeshJob.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>VoxelMeshJob.height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="35" column="16" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a6488408b8424e6af5885468e8a67fdd8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int VoxelMeshJob.depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <qualifiedname>VoxelMeshJob.depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="38" column="16" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a57be18352de317b3c60b58f2fb442ac0" prot="public" static="no" mutable="no">
+        <type>MeshingAlgorithm</type>
+        <definition>MeshingAlgorithm VoxelMeshJob.algorithm</definition>
+        <argsstring></argsstring>
+        <name>algorithm</name>
+        <qualifiedname>VoxelMeshJob.algorithm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="41" column="29" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a855eb8ba44deebd08d125d95c8f4e839" prot="public" static="no" mutable="no">
+        <type>NativeList&lt; Vector3 &gt;</type>
+        <definition>NativeList&lt;Vector3&gt; VoxelMeshJob.vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <qualifiedname>VoxelMeshJob.vertices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="43" column="23" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a66218a53c606e0ab6b43997a7b159954" prot="public" static="no" mutable="no">
+        <type>NativeList&lt; int &gt;</type>
+        <definition>NativeList&lt;int&gt; VoxelMeshJob.triangles</definition>
+        <argsstring></argsstring>
+        <name>triangles</name>
+        <qualifiedname>VoxelMeshJob.triangles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="44" column="23" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_mesh_job_1a6d06b9ef7111c979bd548010f473c417" prot="public" static="no" mutable="no">
+        <type>NativeList&lt; Color32 &gt;</type>
+        <definition>NativeList&lt;Color32&gt; VoxelMeshJob.colors</definition>
+        <argsstring></argsstring>
+        <name>colors</name>
+        <qualifiedname>VoxelMeshJob.colors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="45" column="23" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_voxel_mesh_job_1ac1248e136a951d839d8a5290bd39c5b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshJob.Execute</definition>
+        <argsstring>()</argsstring>
+        <name>Execute</name>
+        <qualifiedname>VoxelMeshJob.Execute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="47" column="17" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1acf1cedeb7ee97116ba1ba98098ec84d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshJob.NaiveMeshing</definition>
+        <argsstring>()</argsstring>
+        <name>NaiveMeshing</name>
+        <qualifiedname>VoxelMeshJob.NaiveMeshing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="56" column="10" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="56" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1a14dea9d602a9a6d295356555de794f9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshJob.GreedyMeshing</definition>
+        <argsstring>()</argsstring>
+        <name>GreedyMeshing</name>
+        <qualifiedname>VoxelMeshJob.GreedyMeshing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="77" column="10" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="77" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1a1c34f484ceae6aa78024e978ee3a93f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3Int</type>
+        <definition>Vector3Int VoxelMeshJob.ConvertToFaceCoordinate</definition>
+        <argsstring>(int x, int y, int z, FaceDirection direction)</argsstring>
+        <name>ConvertToFaceCoordinate</name>
+        <qualifiedname>VoxelMeshJob.ConvertToFaceCoordinate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>FaceDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="86" column="16" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="86" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1a869afc9d4ce09d7570549e2424a0549f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 VoxelMeshJob.ConvertToFaceCoordinate</definition>
+        <argsstring>(Vector3 vector, FaceDirection direction)</argsstring>
+        <name>ConvertToFaceCoordinate</name>
+        <qualifiedname>VoxelMeshJob.ConvertToFaceCoordinate</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>FaceDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="102" column="13" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="102" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1a4aacb86d784967c1f56937a1a5b51fab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool VoxelMeshJob.IsVoxelOccluded</definition>
+        <argsstring>(int x, int y, int z, FaceDirection direction)</argsstring>
+        <name>IsVoxelOccluded</name>
+        <qualifiedname>VoxelMeshJob.IsVoxelOccluded</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>FaceDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="119" column="10" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="119" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1a8d7f07c6850b959e2c913c2d0cdd04cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshJob.GenerateSlicedVoxelMesh</definition>
+        <argsstring>(FaceDirection direction)</argsstring>
+        <name>GenerateSlicedVoxelMesh</name>
+        <qualifiedname>VoxelMeshJob.GenerateSlicedVoxelMesh</qualifiedname>
+        <param>
+          <type>FaceDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Slice the voxel data into 2D slices</para>
+<para>Find the first voxel that has not been visited yet and that is not empty and not occluded</para>
+<para>Expand along the Column as long as the voxel is not empty and has not been visited yet Compute the expanded height</para>
+<para>Expand along the Rows as long as all the voxel in the column have the same color and have not been visited yet</para>
+<para>Push the face to the mesh</para>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="138" column="10" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="138" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1a3fb4e92c383085a91d6b420996008fea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool VoxelMeshJob.IsVoxelEmpty</definition>
+        <argsstring>(int x, int y, int z)</argsstring>
+        <name>IsVoxelEmpty</name>
+        <qualifiedname>VoxelMeshJob.IsVoxelEmpty</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="231" column="10" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="231" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="struct_voxel_mesh_job_1ab0d2a84a001296c8fe7ee03c8c564e4f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int VoxelMeshJob.GetIndex</definition>
+        <argsstring>(int x, int y, int z)</argsstring>
+        <name>GetIndex</name>
+        <qualifiedname>VoxelMeshJob.GetIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="242" column="17" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="242" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_voxel_mesh_job_1a94c4008270cf3029cd5712b48dda83c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelMeshJob.PushFace</definition>
+        <argsstring>(float x, float y, float z, int color, FaceDirection dir, float w=1, float h=1, float d=1)</argsstring>
+        <name>PushFace</name>
+        <qualifiedname>VoxelMeshJob.PushFace</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>FaceDirection</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>h</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>d</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Push a face into the mesh Creates 4 vertices and 6 indices and 4 colors (one for each vertex) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMesherJob.cs" line="250" column="18" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="250" bodyend="308"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IJob</label>
+      </node>
+      <node id="1">
+        <label>VoxelMeshJob</label>
+        <link refid="struct_voxel_mesh_job"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IJob</label>
+      </node>
+      <node id="1">
+        <label>VoxelMeshJob</label>
+        <link refid="struct_voxel_mesh_job"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="VoxelMesher/core/VoxelMesherJob.cs" line="21" column="7" bodyfile="VoxelMesher/core/VoxelMesherJob.cs" bodystart="21" bodyend="309"/>
+    <listofallmembers>
+      <member refid="struct_voxel_mesh_job_1a57be18352de317b3c60b58f2fb442ac0" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>algorithm</name></member>
+      <member refid="struct_voxel_mesh_job_1a6d06b9ef7111c979bd548010f473c417" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>colors</name></member>
+      <member refid="struct_voxel_mesh_job_1a1c34f484ceae6aa78024e978ee3a93f5" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>ConvertToFaceCoordinate</name></member>
+      <member refid="struct_voxel_mesh_job_1a869afc9d4ce09d7570549e2424a0549f" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>ConvertToFaceCoordinate</name></member>
+      <member refid="struct_voxel_mesh_job_1a6488408b8424e6af5885468e8a67fdd8" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>depth</name></member>
+      <member refid="struct_voxel_mesh_job_1ac1248e136a951d839d8a5290bd39c5b0" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>Execute</name></member>
+      <member refid="struct_voxel_mesh_job_1a8d7f07c6850b959e2c913c2d0cdd04cb" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>GenerateSlicedVoxelMesh</name></member>
+      <member refid="struct_voxel_mesh_job_1ab0d2a84a001296c8fe7ee03c8c564e4f" prot="private" virt="non-virtual"><scope>VoxelMeshJob</scope><name>GetIndex</name></member>
+      <member refid="struct_voxel_mesh_job_1a14dea9d602a9a6d295356555de794f9d" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>GreedyMeshing</name></member>
+      <member refid="struct_voxel_mesh_job_1a84e68585cfe29a8045317e007070aaca" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>height</name></member>
+      <member refid="struct_voxel_mesh_job_1a3fb4e92c383085a91d6b420996008fea" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>IsVoxelEmpty</name></member>
+      <member refid="struct_voxel_mesh_job_1a4aacb86d784967c1f56937a1a5b51fab" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>IsVoxelOccluded</name></member>
+      <member refid="struct_voxel_mesh_job_1acf1cedeb7ee97116ba1ba98098ec84d9" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>NaiveMeshing</name></member>
+      <member refid="struct_voxel_mesh_job_1ab208b9e3e6285728be9c855d95b87ae2" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>origin</name></member>
+      <member refid="struct_voxel_mesh_job_1a94c4008270cf3029cd5712b48dda83c3" prot="private" virt="non-virtual"><scope>VoxelMeshJob</scope><name>PushFace</name></member>
+      <member refid="struct_voxel_mesh_job_1a0d1a3c24df3c3f3592552ac571f87e61" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>scale</name></member>
+      <member refid="struct_voxel_mesh_job_1a66218a53c606e0ab6b43997a7b159954" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>triangles</name></member>
+      <member refid="struct_voxel_mesh_job_1a855eb8ba44deebd08d125d95c8f4e839" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>vertices</name></member>
+      <member refid="struct_voxel_mesh_job_1a540321092e24404bcc52a90bdb5d0d95" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>voxels</name></member>
+      <member refid="struct_voxel_mesh_job_1abe44a5ad47b43e85bc3d1efb17440264" prot="public" virt="non-virtual"><scope>VoxelMeshJob</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_game_1_1_player_manager" kind="class" language="C#" prot="public">
+    <compoundname>Game::PlayerManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_game_1_1_player_manager_1a12f0629e9ea8dceff39dcb37980eae2d" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_game_1_1_player_manager" kindref="compound">PlayerManager</ref></type>
+        <definition>PlayerManager Game.PlayerManager.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>Game.PlayerManager.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="20" column="37" bodyfile="Game/PlayerManager.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1a2d952e1d087a149cedf85d23931cd723" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_1_1_game_state_manager" kindref="compound">GameStateManager</ref></type>
+        <definition>GameStateManager Game.PlayerManager.gameStateManager</definition>
+        <argsstring></argsstring>
+        <name>gameStateManager</name>
+        <qualifiedname>Game.PlayerManager.gameStateManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="23" column="36" bodyfile="Game/PlayerManager.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1a1f3587a7fa60a059ddd3dca4e178c688" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_1_1_player_game_object_registry" kindref="compound">PlayerGameObjectRegistry</ref></type>
+        <definition>PlayerGameObjectRegistry Game.PlayerManager.playerGameObjectRegistry</definition>
+        <argsstring></argsstring>
+        <name>playerGameObjectRegistry</name>
+        <qualifiedname>Game.PlayerManager.playerGameObjectRegistry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="24" column="43" bodyfile="Game/PlayerManager.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1a8b14d76767f0d1c967071f254035d559" prot="private" static="no" mutable="no">
+        <type>GameObject[]</type>
+        <definition>GameObject [] Game.PlayerManager.playerSpawns</definition>
+        <argsstring></argsstring>
+        <name>playerSpawns</name>
+        <qualifiedname>Game.PlayerManager.playerSpawns</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="25" column="29" bodyfile="Game/PlayerManager.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1ae5f1a2e5edf50abba81ff46adff7d090" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Game.PlayerManager.explosionPrefab</definition>
+        <argsstring></argsstring>
+        <name>explosionPrefab</name>
+        <qualifiedname>Game.PlayerManager.explosionPrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="26" column="29" bodyfile="Game/PlayerManager.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1ae86ae31c8e289db34a2a140a7aa1588d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Game.PlayerManager.timeBeforeEndGame</definition>
+        <argsstring></argsstring>
+        <name>timeBeforeEndGame</name>
+        <qualifiedname>Game.PlayerManager.timeBeforeEndGame</qualifiedname>
+        <initializer>= 2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="29" column="24" bodyfile="Game/PlayerManager.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1a8ff8c14336fcc52e0ec15eab7bc0492e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Game.PlayerManager.equalityThreshold</definition>
+        <argsstring></argsstring>
+        <name>equalityThreshold</name>
+        <qualifiedname>Game.PlayerManager.equalityThreshold</qualifiedname>
+        <initializer>= 0.1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="30" column="24" bodyfile="Game/PlayerManager.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1a8decf6708be84f3cc464d49d09a538e6" prot="private" static="no" mutable="no">
+        <type>List&lt; GameObject &gt;</type>
+        <definition>List&lt;GameObject&gt; Game.PlayerManager._instantiatedPlayer</definition>
+        <argsstring></argsstring>
+        <name>_instantiatedPlayer</name>
+        <qualifiedname>Game.PlayerManager._instantiatedPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="32" column="22" bodyfile="Game/PlayerManager.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1a31100c7bde73d3bb72b2c3bed19f9d95" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_player_inputs_1_1_player_input_handler" kindref="compound">PlayerInputHandler</ref> &gt;</type>
+        <definition>List&lt;PlayerInputHandler&gt; Game.PlayerManager._playerInputHandlers</definition>
+        <argsstring></argsstring>
+        <name>_playerInputHandlers</name>
+        <qualifiedname>Game.PlayerManager._playerInputHandlers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="33" column="22" bodyfile="Game/PlayerManager.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1ad156170f280fcf5516e3e9cc4a8e0d04" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game.PlayerManager._alivePlayerCount</definition>
+        <argsstring></argsstring>
+        <name>_alivePlayerCount</name>
+        <qualifiedname>Game.PlayerManager._alivePlayerCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="34" column="21" bodyfile="Game/PlayerManager.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1a165fb400ddcbd985ad603ab6bc7dbd3f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Game.PlayerManager._lastDeathTime</definition>
+        <argsstring></argsstring>
+        <name>_lastDeathTime</name>
+        <qualifiedname>Game.PlayerManager._lastDeathTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="36" column="23" bodyfile="Game/PlayerManager.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_player_manager_1ada624255d05b81f32c97dc77ecc69747" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, float &gt;</type>
+        <definition>Dictionary&lt;string, float&gt; Game.PlayerManager._playerDeathTimes</definition>
+        <argsstring></argsstring>
+        <name>_playerDeathTimes</name>
+        <qualifiedname>Game.PlayerManager._playerDeathTimes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="37" column="28" bodyfile="Game/PlayerManager.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a37aa1f90390570a2437f41d35644fe6e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Game.PlayerManager.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="39" column="22" bodyfile="Game/PlayerManager.cs" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1aab5ba31f11fb4e23425e530e877cfa73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.GeneratePlayers</definition>
+        <argsstring>()</argsstring>
+        <name>GeneratePlayers</name>
+        <qualifiedname>Game.PlayerManager.GeneratePlayers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="47" column="22" bodyfile="Game/PlayerManager.cs" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1ac5d42f121845e78babab74b766b1cb8c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.ClearOldPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>ClearOldPlayer</name>
+        <qualifiedname>Game.PlayerManager.ClearOldPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="53" column="22" bodyfile="Game/PlayerManager.cs" bodystart="53" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a44c552cd11159dc5612d1a851143a1fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.DoSpawnPlayers</definition>
+        <argsstring>()</argsstring>
+        <name>DoSpawnPlayers</name>
+        <qualifiedname>Game.PlayerManager.DoSpawnPlayers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="62" column="22" bodyfile="Game/PlayerManager.cs" bodystart="62" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a8359fac3b360b4bb2ded9ece3b448d05" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.OnPlayerDeath</definition>
+        <argsstring>(GameObject player)</argsstring>
+        <name>OnPlayerDeath</name>
+        <qualifiedname>Game.PlayerManager.OnPlayerDeath</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="93" column="22" bodyfile="Game/PlayerManager.cs" bodystart="93" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a71e49e020e2cde47622d9991ba743106" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Game.PlayerManager.EndGame</definition>
+        <argsstring>()</argsstring>
+        <name>EndGame</name>
+        <qualifiedname>Game.PlayerManager.EndGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="136" column="29" bodyfile="Game/PlayerManager.cs" bodystart="136" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1ae62e91370e6a3c26331b6b17d97c52ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string[]</type>
+        <definition>string[] Game.PlayerManager.GetLastPlayerNamesDeadAtTheSameTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetLastPlayerNamesDeadAtTheSameTime</name>
+        <qualifiedname>Game.PlayerManager.GetLastPlayerNamesDeadAtTheSameTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="148" column="24" bodyfile="Game/PlayerManager.cs" bodystart="148" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1abc1091925c8ec23b0e2173dd73cc7f3f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Game.PlayerManager.ShouldEndTheGame</definition>
+        <argsstring>()</argsstring>
+        <name>ShouldEndTheGame</name>
+        <qualifiedname>Game.PlayerManager.ShouldEndTheGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="156" column="22" bodyfile="Game/PlayerManager.cs" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a9f2dd30cfeebfd672c23c1e5bba67345" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>Game.PlayerManager.OnEnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="161" column="22" bodyfile="Game/PlayerManager.cs" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a2a20e80042bd4d9162b27b681716da43" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>Game.PlayerManager.OnDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="166" column="22" bodyfile="Game/PlayerManager.cs" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a06b38be66bfbfb1ded94696635a8621b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.OnOnGameStateStateChanged</definition>
+        <argsstring>(GameState state)</argsstring>
+        <name>OnOnGameStateStateChanged</name>
+        <qualifiedname>Game.PlayerManager.OnOnGameStateStateChanged</qualifiedname>
+        <param>
+          <type>GameState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="171" column="22" bodyfile="Game/PlayerManager.cs" bodystart="171" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a08c6ed10c4c736eae4d663f157aa095e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.OnTerrainGenerated</definition>
+        <argsstring>()</argsstring>
+        <name>OnTerrainGenerated</name>
+        <qualifiedname>Game.PlayerManager.OnTerrainGenerated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="194" column="22" bodyfile="Game/PlayerManager.cs" bodystart="194" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1ad76fb19a2779aa70c9233f9027efc54f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.OnGameStatePlaying</definition>
+        <argsstring>()</argsstring>
+        <name>OnGameStatePlaying</name>
+        <qualifiedname>Game.PlayerManager.OnGameStatePlaying</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="200" column="22" bodyfile="Game/PlayerManager.cs" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1af8aa6b9c3f41ce54654a02b5b643ba67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.OnGameEnded</definition>
+        <argsstring>()</argsstring>
+        <name>OnGameEnded</name>
+        <qualifiedname>Game.PlayerManager.OnGameEnded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="205" column="22" bodyfile="Game/PlayerManager.cs" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1aab252a4578803cdd537994ff9b1f17ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Game.PlayerManager.StartPlaying</definition>
+        <argsstring>()</argsstring>
+        <name>StartPlaying</name>
+        <qualifiedname>Game.PlayerManager.StartPlaying</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="210" column="29" bodyfile="Game/PlayerManager.cs" bodystart="210" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1af962e2ee82f97802b21b62f1b70dca42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.EnablePlayerInputs</definition>
+        <argsstring>()</argsstring>
+        <name>EnablePlayerInputs</name>
+        <qualifiedname>Game.PlayerManager.EnablePlayerInputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="216" column="22" bodyfile="Game/PlayerManager.cs" bodystart="216" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_player_manager_1a05aeb091ccf0937558a6fc49b02d1709" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.PlayerManager.DisablePlayerInputs</definition>
+        <argsstring>()</argsstring>
+        <name>DisablePlayerInputs</name>
+        <qualifiedname>Game.PlayerManager.DisablePlayerInputs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/PlayerManager.cs" line="221" column="22" bodyfile="Game/PlayerManager.cs" bodystart="221" bodyend="224"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Game.PlayerManager</label>
+        <link refid="class_game_1_1_player_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Game.PlayerManager</label>
+        <link refid="class_game_1_1_player_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Game/PlayerManager.cs" line="18" column="11" bodyfile="Game/PlayerManager.cs" bodystart="19" bodyend="233"/>
+    <listofallmembers>
+      <member refid="class_game_1_1_player_manager_1ad156170f280fcf5516e3e9cc4a8e0d04" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>_alivePlayerCount</name></member>
+      <member refid="class_game_1_1_player_manager_1a8decf6708be84f3cc464d49d09a538e6" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>_instantiatedPlayer</name></member>
+      <member refid="class_game_1_1_player_manager_1a165fb400ddcbd985ad603ab6bc7dbd3f" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>_lastDeathTime</name></member>
+      <member refid="class_game_1_1_player_manager_1ada624255d05b81f32c97dc77ecc69747" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>_playerDeathTimes</name></member>
+      <member refid="class_game_1_1_player_manager_1a31100c7bde73d3bb72b2c3bed19f9d95" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>_playerInputHandlers</name></member>
+      <member refid="class_game_1_1_player_manager_1a37aa1f90390570a2437f41d35644fe6e" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>Awake</name></member>
+      <member refid="class_game_1_1_player_manager_1ac5d42f121845e78babab74b766b1cb8c" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>ClearOldPlayer</name></member>
+      <member refid="class_game_1_1_player_manager_1a05aeb091ccf0937558a6fc49b02d1709" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>DisablePlayerInputs</name></member>
+      <member refid="class_game_1_1_player_manager_1a44c552cd11159dc5612d1a851143a1fd" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>DoSpawnPlayers</name></member>
+      <member refid="class_game_1_1_player_manager_1af962e2ee82f97802b21b62f1b70dca42" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>EnablePlayerInputs</name></member>
+      <member refid="class_game_1_1_player_manager_1a71e49e020e2cde47622d9991ba743106" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>EndGame</name></member>
+      <member refid="class_game_1_1_player_manager_1a8ff8c14336fcc52e0ec15eab7bc0492e" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>equalityThreshold</name></member>
+      <member refid="class_game_1_1_player_manager_1ae5f1a2e5edf50abba81ff46adff7d090" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>explosionPrefab</name></member>
+      <member refid="class_game_1_1_player_manager_1a2d952e1d087a149cedf85d23931cd723" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>gameStateManager</name></member>
+      <member refid="class_game_1_1_player_manager_1aab5ba31f11fb4e23425e530e877cfa73" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>GeneratePlayers</name></member>
+      <member refid="class_game_1_1_player_manager_1ae62e91370e6a3c26331b6b17d97c52ec" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>GetLastPlayerNamesDeadAtTheSameTime</name></member>
+      <member refid="class_game_1_1_player_manager_1a12f0629e9ea8dceff39dcb37980eae2d" prot="public" virt="non-virtual"><scope>Game::PlayerManager</scope><name>Instance</name></member>
+      <member refid="class_game_1_1_player_manager_1a2a20e80042bd4d9162b27b681716da43" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>OnDisable</name></member>
+      <member refid="class_game_1_1_player_manager_1a9f2dd30cfeebfd672c23c1e5bba67345" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>OnEnable</name></member>
+      <member refid="class_game_1_1_player_manager_1af8aa6b9c3f41ce54654a02b5b643ba67" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>OnGameEnded</name></member>
+      <member refid="class_game_1_1_player_manager_1ad76fb19a2779aa70c9233f9027efc54f" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>OnGameStatePlaying</name></member>
+      <member refid="class_game_1_1_player_manager_1a06b38be66bfbfb1ded94696635a8621b" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>OnOnGameStateStateChanged</name></member>
+      <member refid="class_game_1_1_player_manager_1a8359fac3b360b4bb2ded9ece3b448d05" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>OnPlayerDeath</name></member>
+      <member refid="class_game_1_1_player_manager_1a08c6ed10c4c736eae4d663f157aa095e" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>OnTerrainGenerated</name></member>
+      <member refid="class_game_1_1_player_manager_1a1f3587a7fa60a059ddd3dca4e178c688" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>playerGameObjectRegistry</name></member>
+      <member refid="class_game_1_1_player_manager_1a8b14d76767f0d1c967071f254035d559" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>playerSpawns</name></member>
+      <member refid="class_game_1_1_player_manager_1abc1091925c8ec23b0e2173dd73cc7f3f" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>ShouldEndTheGame</name></member>
+      <member refid="class_game_1_1_player_manager_1aab252a4578803cdd537994ff9b1f17ef" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>StartPlaying</name></member>
+      <member refid="class_game_1_1_player_manager_1ae86ae31c8e289db34a2a140a7aa1588d" prot="private" virt="non-virtual"><scope>Game::PlayerManager</scope><name>timeBeforeEndGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

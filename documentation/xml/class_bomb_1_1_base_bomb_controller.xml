@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_bomb_1_1_base_bomb_controller" kind="class" language="C#" prot="public">
+    <compoundname>Bomb::BaseBombController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <derivedcompoundref refid="class_bomb_1_1_classic_bomb_controller" prot="public" virt="non-virtual">Bomb.ClassicBombController</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a6ce5fecd080e02716c94cf3280cf0dc3" prot="protected" static="no" mutable="no">
+        <type>Collider</type>
+        <definition>Collider Bomb.BaseBombController.mainCollider</definition>
+        <argsstring></argsstring>
+        <name>mainCollider</name>
+        <qualifiedname>Bomb.BaseBombController.mainCollider</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="18" column="30" bodyfile="Bomb/BaseBombController.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a971952d85bfab773a904d45e38f697d7" prot="protected" static="no" mutable="no">
+        <type>Collider</type>
+        <definition>Collider Bomb.BaseBombController.colliderThatBlockForces</definition>
+        <argsstring></argsstring>
+        <name>colliderThatBlockForces</name>
+        <qualifiedname>Bomb.BaseBombController.colliderThatBlockForces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="19" column="29" bodyfile="Bomb/BaseBombController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a32dfe349d20be38155cd56f8e0b5bc6d" prot="protected" static="no" mutable="no">
+        <type>Collider</type>
+        <definition>Collider Bomb.BaseBombController.triggerCollider</definition>
+        <argsstring></argsstring>
+        <name>triggerCollider</name>
+        <qualifiedname>Bomb.BaseBombController.triggerCollider</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="20" column="29" bodyfile="Bomb/BaseBombController.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a5e09ac78c8b4db60665f4c57989e81d5" prot="protected" static="no" mutable="no">
+        <type>MeshRenderer</type>
+        <definition>MeshRenderer Bomb.BaseBombController.meshRenderer</definition>
+        <argsstring></argsstring>
+        <name>meshRenderer</name>
+        <qualifiedname>Bomb.BaseBombController.meshRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="21" column="33" bodyfile="Bomb/BaseBombController.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a875a14ee959214da64113987ea95baa4" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_bomb_1_1_explosion" kindref="compound">Explosion</ref></type>
+        <definition>Explosion Bomb.BaseBombController.explosionPrefabs</definition>
+        <argsstring></argsstring>
+        <name>explosionPrefabs</name>
+        <qualifiedname>Bomb.BaseBombController.explosionPrefabs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="22" column="30" bodyfile="Bomb/BaseBombController.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1ad93f65c6b446c17b9035a7cfd6df5021" prot="protected" static="no" mutable="no">
+        <type>AudioClip[]</type>
+        <definition>AudioClip [] Bomb.BaseBombController.bombExplosionSounds</definition>
+        <argsstring></argsstring>
+        <name>bombExplosionSounds</name>
+        <qualifiedname>Bomb.BaseBombController.bombExplosionSounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="23" column="30" bodyfile="Bomb/BaseBombController.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1aed56e768d05c423a747f892f190034b7" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bomb.BaseBombController.fuseTime</definition>
+        <argsstring></argsstring>
+        <name>fuseTime</name>
+        <qualifiedname>Bomb.BaseBombController.fuseTime</qualifiedname>
+        <initializer>= 3.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="26" column="26" bodyfile="Bomb/BaseBombController.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a9be0abb19531f3412830b88abad194f7" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_player_1_1_player_bomb_controller" kindref="compound">PlayerBombController</ref></type>
+        <definition>PlayerBombController Bomb.BaseBombController._playerBombController</definition>
+        <argsstring></argsstring>
+        <name>_playerBombController</name>
+        <qualifiedname>Bomb.BaseBombController._playerBombController</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="28" column="40" bodyfile="Bomb/BaseBombController.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a1d754776cb3847171f24349366a605be" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Bomb.BaseBombController._bombPower</definition>
+        <argsstring></argsstring>
+        <name>_bombPower</name>
+        <qualifiedname>Bomb.BaseBombController._bombPower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="29" column="23" bodyfile="Bomb/BaseBombController.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a86f96226f858bce0af84568758cf01a4" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Bomb.BaseBombController._hasAlreadyExploded</definition>
+        <argsstring></argsstring>
+        <name>_hasAlreadyExploded</name>
+        <qualifiedname>Bomb.BaseBombController._hasAlreadyExploded</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="31" column="24" bodyfile="Bomb/BaseBombController.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1ad78f26bbd5e3c7de86830add8a73ad89" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bomb.BaseBombController.spawnTime</definition>
+        <argsstring></argsstring>
+        <name>spawnTime</name>
+        <qualifiedname>Bomb.BaseBombController.spawnTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="32" column="25" bodyfile="Bomb/BaseBombController.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a6e65f5dd0d812c7804214a4491bba1e6" prot="protected" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int Bomb.BaseBombController.FuseTime</definition>
+        <argsstring></argsstring>
+        <name>FuseTime</name>
+        <qualifiedname>Bomb.BaseBombController.FuseTime</qualifiedname>
+        <initializer>= Shader.PropertyToID(&quot;_FuseTime&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="34" column="39" bodyfile="Bomb/BaseBombController.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_bomb_controller_1a487a5d1980e54c35b4f8b5f04c437675" prot="protected" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int Bomb.BaseBombController.SpawnTime</definition>
+        <argsstring></argsstring>
+        <name>SpawnTime</name>
+        <qualifiedname>Bomb.BaseBombController.SpawnTime</qualifiedname>
+        <initializer>= Shader.PropertyToID(&quot;_SpawnTime&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="35" column="39" bodyfile="Bomb/BaseBombController.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1a62b88cf5181028bd8a58708eea42519a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.BaseBombController.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Bomb.BaseBombController.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="37" column="22" bodyfile="Bomb/BaseBombController.cs" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1af38bda3a8ff5314fc5f43157a074166a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.BaseBombController.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Bomb.BaseBombController.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="44" column="22" bodyfile="Bomb/BaseBombController.cs" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1ab66484b5ed0cd7669cf28e415eb9c6d7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.BaseBombController.OnGameStateChanged</definition>
+        <argsstring>(GameState gameState)</argsstring>
+        <name>OnGameStateChanged</name>
+        <qualifiedname>Bomb.BaseBombController.OnGameStateChanged</qualifiedname>
+        <param>
+          <type>GameState</type>
+          <declname>gameState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="60" column="22" bodyfile="Bomb/BaseBombController.cs" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1a06b7eb19f51986e96c193a21cdac5e17" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.BaseBombController.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>Bomb.BaseBombController.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="180" column="22" bodyfile="Bomb/BaseBombController.cs" bodystart="180" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1a840895d32bfdb004172fc6ec0ebac97e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BaseBombController.SetupBomb</definition>
+        <argsstring>(PlayerBombController bombController, int bombPower)</argsstring>
+        <name>SetupBomb</name>
+        <qualifiedname>Bomb.BaseBombController.SetupBomb</qualifiedname>
+        <param>
+          <type><ref refid="class_player_1_1_player_bomb_controller" kindref="compound">PlayerBombController</ref></type>
+          <declname>bombController</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bombPower</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="52" column="29" bodyfile="Bomb/BaseBombController.cs" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1ac5ae943831d024fa77e0e25aa1702a78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BaseBombController.CancelTimer</definition>
+        <argsstring>()</argsstring>
+        <name>CancelTimer</name>
+        <qualifiedname>Bomb.BaseBombController.CancelTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="74" column="29" bodyfile="Bomb/BaseBombController.cs" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1a86e745a74d7f05ecbeb3f1190060a05b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool Bomb.BaseBombController.HasAlreadyExploded</definition>
+        <argsstring>()</argsstring>
+        <name>HasAlreadyExploded</name>
+        <qualifiedname>Bomb.BaseBombController.HasAlreadyExploded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="79" column="29" bodyfile="Bomb/BaseBombController.cs" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1a3e45337fb4a8f5f1ea5b3aca0558eead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BaseBombController.StartExplode</definition>
+        <argsstring>()</argsstring>
+        <name>StartExplode</name>
+        <qualifiedname>Bomb.BaseBombController.StartExplode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="84" column="29" bodyfile="Bomb/BaseBombController.cs" bodystart="84" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1ac7450e2298c7c82dac4993447a5a55b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BaseBombController.OnPlayerWalkOutsideTrigger</definition>
+        <argsstring>()</argsstring>
+        <name>OnPlayerWalkOutsideTrigger</name>
+        <qualifiedname>Bomb.BaseBombController.OnPlayerWalkOutsideTrigger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="173" column="29" bodyfile="Bomb/BaseBombController.cs" bodystart="173" bodyend="178"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1a01a03037a8ab9aa43099c9c9c84b1e04" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>IEnumerator</type>
+        <definition>virtual IEnumerator Bomb.BaseBombController.StartTimer</definition>
+        <argsstring>()</argsstring>
+        <name>StartTimer</name>
+        <qualifiedname>Bomb.BaseBombController.StartTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="68" column="39" bodyfile="Bomb/BaseBombController.cs" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1aa3ddf6c595ff700f8e89e9462fee57b5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BaseBombController.Explode</definition>
+        <argsstring>(Vector3 position, Vector3 direction, int length)</argsstring>
+        <name>Explode</name>
+        <qualifiedname>Bomb.BaseBombController.Explode</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="103" column="32" bodyfile="Bomb/BaseBombController.cs" bodystart="103" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_bomb_controller_1af836dfb540c98d151aa5d08ee5624323" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BaseBombController.PlaySound</definition>
+        <argsstring>()</argsstring>
+        <name>PlaySound</name>
+        <qualifiedname>Bomb.BaseBombController.PlaySound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BaseBombController.cs" line="166" column="32" bodyfile="Bomb/BaseBombController.cs" bodystart="166" bodyend="171"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Bomb.BaseBombController</label>
+        <link refid="class_bomb_1_1_base_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Bomb.ClassicBombController</label>
+        <link refid="class_bomb_1_1_classic_bomb_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Bomb.BaseBombController</label>
+        <link refid="class_bomb_1_1_base_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>explosionPrefabs</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_playerBombController</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>FuseTime</edgelabel>
+          <edgelabel>SpawnTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Bomb.Explosion</label>
+        <link refid="class_bomb_1_1_explosion"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="4">
+        <label>Player.PlayerBombController</label>
+        <link refid="class_player_1_1_player_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="Bomb/BaseBombController.cs" line="15" column="21" bodyfile="Bomb/BaseBombController.cs" bodystart="16" bodyend="184"/>
+    <listofallmembers>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a1d754776cb3847171f24349366a605be" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>_bombPower</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a86f96226f858bce0af84568758cf01a4" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>_hasAlreadyExploded</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a9be0abb19531f3412830b88abad194f7" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>_playerBombController</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a62b88cf5181028bd8a58708eea42519a" prot="private" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>Awake</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ad93f65c6b446c17b9035a7cfd6df5021" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>bombExplosionSounds</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ac5ae943831d024fa77e0e25aa1702a78" prot="public" virt="virtual"><scope>Bomb::BaseBombController</scope><name>CancelTimer</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a971952d85bfab773a904d45e38f697d7" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>colliderThatBlockForces</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1aa3ddf6c595ff700f8e89e9462fee57b5" prot="protected" virt="virtual"><scope>Bomb::BaseBombController</scope><name>Explode</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a875a14ee959214da64113987ea95baa4" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>explosionPrefabs</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1aed56e768d05c423a747f892f190034b7" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>fuseTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a6e65f5dd0d812c7804214a4491bba1e6" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>FuseTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a86e745a74d7f05ecbeb3f1190060a05b" prot="public" virt="virtual"><scope>Bomb::BaseBombController</scope><name>HasAlreadyExploded</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a6ce5fecd080e02716c94cf3280cf0dc3" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>mainCollider</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a5e09ac78c8b4db60665f4c57989e81d5" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>meshRenderer</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a06b7eb19f51986e96c193a21cdac5e17" prot="private" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>OnDestroy</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ab66484b5ed0cd7669cf28e415eb9c6d7" prot="private" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>OnGameStateChanged</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ac7450e2298c7c82dac4993447a5a55b1" prot="public" virt="virtual"><scope>Bomb::BaseBombController</scope><name>OnPlayerWalkOutsideTrigger</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1af836dfb540c98d151aa5d08ee5624323" prot="protected" virt="virtual"><scope>Bomb::BaseBombController</scope><name>PlaySound</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a840895d32bfdb004172fc6ec0ebac97e" prot="public" virt="virtual"><scope>Bomb::BaseBombController</scope><name>SetupBomb</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ad78f26bbd5e3c7de86830add8a73ad89" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>spawnTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a487a5d1980e54c35b4f8b5f04c437675" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>SpawnTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1af38bda3a8ff5314fc5f43157a074166a" prot="private" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>Start</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a3e45337fb4a8f5f1ea5b3aca0558eead" prot="public" virt="virtual"><scope>Bomb::BaseBombController</scope><name>StartExplode</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a01a03037a8ab9aa43099c9c9c84b1e04" prot="protected" virt="virtual"><scope>Bomb::BaseBombController</scope><name>StartTimer</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a32dfe349d20be38155cd56f8e0b5bc6d" prot="protected" virt="non-virtual"><scope>Bomb::BaseBombController</scope><name>triggerCollider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_76517f5f2507c458ebd15a0ec51ba293" kind="dir">
+    <compoundname>Menu</compoundname>
+    <innerfile refid="_end_game_menu_8cs">EndGameMenu.cs</innerfile>
+    <innerfile refid="_menu_function_utils_8cs">MenuFunctionUtils.cs</innerfile>
+    <innerfile refid="_setting_entry_8cs">SettingEntry.cs</innerfile>
+    <innerfile refid="_u_i_settings_manager_8cs">UISettingsManager.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Menu/"/>
+  </compounddef>
+</doxygen>

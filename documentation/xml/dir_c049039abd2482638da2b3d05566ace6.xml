@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_c049039abd2482638da2b3d05566ace6" kind="dir">
+    <compoundname>Player</compoundname>
+    <innerfile refid="_cursor_model_animation_8cs">CursorModelAnimation.cs</innerfile>
+    <innerfile refid="_player_bomb_controller_8cs">PlayerBombController.cs</innerfile>
+    <innerfile refid="_player_effects_8cs">PlayerEffects.cs</innerfile>
+    <innerfile refid="_player_game_object_registry_8cs">PlayerGameObjectRegistry.cs</innerfile>
+    <innerfile refid="_player_model_animation_8cs">PlayerModelAnimation.cs</innerfile>
+    <innerfile refid="_player_movement_8cs">PlayerMovement.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Player/"/>
+  </compounddef>
+</doxygen>

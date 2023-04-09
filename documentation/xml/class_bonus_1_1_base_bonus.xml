@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_bonus_1_1_base_bonus" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>Bonus::BaseBonus</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <derivedcompoundref refid="class_bonus_1_1_decrease_bomb_amount_bonus" prot="public" virt="non-virtual">Bonus.DecreaseBombAmountBonus</derivedcompoundref>
+    <derivedcompoundref refid="class_bonus_1_1_decrease_bomb_power_bonus" prot="public" virt="non-virtual">Bonus.DecreaseBombPowerBonus</derivedcompoundref>
+    <derivedcompoundref refid="class_bonus_1_1_decrease_speed_bonus" prot="public" virt="non-virtual">Bonus.DecreaseSpeedBonus</derivedcompoundref>
+    <derivedcompoundref refid="class_bonus_1_1_increase_bomb_amount_bonus" prot="public" virt="non-virtual">Bonus.IncreaseBombAmountBonus</derivedcompoundref>
+    <derivedcompoundref refid="class_bonus_1_1_increase_bomb_power_bonus" prot="public" virt="non-virtual">Bonus.IncreaseBombPowerBonus</derivedcompoundref>
+    <derivedcompoundref refid="class_bonus_1_1_increase_speed_bonus" prot="public" virt="non-virtual">Bonus.IncreaseSpeedBonus</derivedcompoundref>
+    <derivedcompoundref refid="class_bonus_1_1_push_bomb_bonus" prot="public" virt="non-virtual">Bonus.PushBombBonus</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bonus_1_1_base_bonus_1abffca39390436e4bfaaa7ca51e0a25a0" prot="private" static="no" mutable="no">
+        <type>Collider</type>
+        <definition>Collider Bonus.BaseBonus.bonusCollider</definition>
+        <argsstring></argsstring>
+        <name>bonusCollider</name>
+        <qualifiedname>Bonus.BaseBonus.bonusCollider</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="11" column="27" bodyfile="Bonus/BaseBonus.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bonus_1_1_base_bonus_1a177eece93cdb39332b312230650e76d4" prot="private" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform Bonus.BaseBonus.modelTransform</definition>
+        <argsstring></argsstring>
+        <name>modelTransform</name>
+        <qualifiedname>Bonus.BaseBonus.modelTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="12" column="28" bodyfile="Bonus/BaseBonus.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bonus_1_1_base_bonus_1aee2fc50653300b4838f4e890cf6da2a3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bonus.BaseBonus.rotationSpeed</definition>
+        <argsstring></argsstring>
+        <name>rotationSpeed</name>
+        <qualifiedname>Bonus.BaseBonus.rotationSpeed</qualifiedname>
+        <initializer>= 125.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="13" column="24" bodyfile="Bonus/BaseBonus.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bonus_1_1_base_bonus_1ad88f6abe8d0d8a9313a242da369ef869" prot="private" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip Bonus.BaseBonus.bonusSound</definition>
+        <argsstring></argsstring>
+        <name>bonusSound</name>
+        <qualifiedname>Bonus.BaseBonus.bonusSound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="14" column="28" bodyfile="Bonus/BaseBonus.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bonus_1_1_base_bonus_1a7ead39b0f4db9bf5584c9b9cc8072922" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bonus.BaseBonus.OnTriggerEnter</definition>
+        <argsstring>(Collider other)</argsstring>
+        <name>OnTriggerEnter</name>
+        <qualifiedname>Bonus.BaseBonus.OnTriggerEnter</qualifiedname>
+        <param>
+          <type>Collider</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="16" column="22" bodyfile="Bonus/BaseBonus.cs" bodystart="16" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bonus_1_1_base_bonus_1a1aac2f8b77acb7fce35cecf72ec57b72" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bonus.BaseBonus.FixedUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>FixedUpdate</name>
+        <qualifiedname>Bonus.BaseBonus.FixedUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="27" column="22" bodyfile="Bonus/BaseBonus.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bonus_1_1_base_bonus_1a4f0419d95ce952f34d3ae7534f549d31" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bonus.BaseBonus.OnValidate</definition>
+        <argsstring>()</argsstring>
+        <name>OnValidate</name>
+        <qualifiedname>Bonus.BaseBonus.OnValidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="42" column="22" bodyfile="Bonus/BaseBonus.cs" bodystart="42" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_bonus_1_1_base_bonus_1a2a858cdfe632acb31677341b7106d59e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void Bonus.BaseBonus.OnPlayerTakeBonus</definition>
+        <argsstring>(GameObject player)</argsstring>
+        <name>OnPlayerTakeBonus</name>
+        <qualifiedname>Bonus.BaseBonus.OnPlayerTakeBonus</qualifiedname>
+        <reimplementedby refid="class_bonus_1_1_decrease_bomb_amount_bonus_1aab8cfb70964eb4c6195e872f522561e3">OnPlayerTakeBonus</reimplementedby>
+        <reimplementedby refid="class_bonus_1_1_decrease_bomb_power_bonus_1a2930264cd56231aee1d7f442c4392dff">OnPlayerTakeBonus</reimplementedby>
+        <reimplementedby refid="class_bonus_1_1_decrease_speed_bonus_1a5c7a8e791acaaa4c1e97f33e16640b1c">OnPlayerTakeBonus</reimplementedby>
+        <reimplementedby refid="class_bonus_1_1_increase_bomb_amount_bonus_1a2daa90a226cf38236220d99cd863c4f7">OnPlayerTakeBonus</reimplementedby>
+        <reimplementedby refid="class_bonus_1_1_increase_bomb_power_bonus_1af1b3d8e3f748cd334eb9c28667b837d3">OnPlayerTakeBonus</reimplementedby>
+        <reimplementedby refid="class_bonus_1_1_increase_speed_bonus_1a0335e78e053064991c0e6293c5474198">OnPlayerTakeBonus</reimplementedby>
+        <reimplementedby refid="class_bonus_1_1_push_bomb_bonus_1acf1d1f16a89278ed7a16a5a434e0efab">OnPlayerTakeBonus</reimplementedby>
+        <param>
+          <type>GameObject</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="32" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bonus_1_1_base_bonus_1ac78cebb8d7ce4a1a006afbe506f1fb26" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bonus.BaseBonus.PlaySound</definition>
+        <argsstring>()</argsstring>
+        <name>PlaySound</name>
+        <qualifiedname>Bonus.BaseBonus.PlaySound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bonus/BaseBonus.cs" line="34" column="32" bodyfile="Bonus/BaseBonus.cs" bodystart="34" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Bonus.BaseBonus</label>
+        <link refid="class_bonus_1_1_base_bonus"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Bonus.DecreaseBombAmountBonus</label>
+        <link refid="class_bonus_1_1_decrease_bomb_amount_bonus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Bonus.DecreaseBombPowerBonus</label>
+        <link refid="class_bonus_1_1_decrease_bomb_power_bonus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Bonus.DecreaseSpeedBonus</label>
+        <link refid="class_bonus_1_1_decrease_speed_bonus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Bonus.IncreaseBombAmountBonus</label>
+        <link refid="class_bonus_1_1_increase_bomb_amount_bonus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Bonus.IncreaseBombPowerBonus</label>
+        <link refid="class_bonus_1_1_increase_bomb_power_bonus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Bonus.IncreaseSpeedBonus</label>
+        <link refid="class_bonus_1_1_increase_speed_bonus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Bonus.PushBombBonus</label>
+        <link refid="class_bonus_1_1_push_bomb_bonus"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Bonus.BaseBonus</label>
+        <link refid="class_bonus_1_1_base_bonus"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Bonus/BaseBonus.cs" line="9" column="21" bodyfile="Bonus/BaseBonus.cs" bodystart="10" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_bonus_1_1_base_bonus_1abffca39390436e4bfaaa7ca51e0a25a0" prot="private" virt="non-virtual"><scope>Bonus::BaseBonus</scope><name>bonusCollider</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1ad88f6abe8d0d8a9313a242da369ef869" prot="private" virt="non-virtual"><scope>Bonus::BaseBonus</scope><name>bonusSound</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1a1aac2f8b77acb7fce35cecf72ec57b72" prot="private" virt="non-virtual"><scope>Bonus::BaseBonus</scope><name>FixedUpdate</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1a177eece93cdb39332b312230650e76d4" prot="private" virt="non-virtual"><scope>Bonus::BaseBonus</scope><name>modelTransform</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1a2a858cdfe632acb31677341b7106d59e" prot="protected" virt="pure-virtual"><scope>Bonus::BaseBonus</scope><name>OnPlayerTakeBonus</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1a7ead39b0f4db9bf5584c9b9cc8072922" prot="private" virt="non-virtual"><scope>Bonus::BaseBonus</scope><name>OnTriggerEnter</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1a4f0419d95ce952f34d3ae7534f549d31" prot="private" virt="non-virtual"><scope>Bonus::BaseBonus</scope><name>OnValidate</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1ac78cebb8d7ce4a1a006afbe506f1fb26" prot="protected" virt="virtual"><scope>Bonus::BaseBonus</scope><name>PlaySound</name></member>
+      <member refid="class_bonus_1_1_base_bonus_1aee2fc50653300b4838f4e890cf6da2a3" prot="private" virt="non-virtual"><scope>Bonus::BaseBonus</scope><name>rotationSpeed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

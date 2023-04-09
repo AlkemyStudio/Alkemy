@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_player_inputs_1_1_player_input_handler" kind="class" language="C#" prot="public">
+    <compoundname>PlayerInputs::PlayerInputHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_inputs_1_1_player_input_handler_1af1384aa34ec0d95b06b28804eb9aa03a" prot="private" static="no" mutable="no">
+        <type>PlayerInput</type>
+        <definition>PlayerInput PlayerInputs.PlayerInputHandler.playerInput</definition>
+        <argsstring></argsstring>
+        <name>playerInput</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.playerInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="15" column="30" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_inputs_1_1_player_input_handler_1a47f671590c1fc2b62312eb1c7a9a380d" prot="private" static="no" mutable="no">
+        <type>GameInputController</type>
+        <definition>GameInputController PlayerInputs.PlayerInputHandler._controls</definition>
+        <argsstring></argsstring>
+        <name>_controls</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler._controls</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="16" column="37" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_player_inputs_1_1_player_input_handler_1af3658a9aac1c887d1e6f88eed98e05d5" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; Vector2, int &gt;</type>
+        <definition>Action&lt;Vector2, int&gt; PlayerInputs.PlayerInputHandler.OnDirection</definition>
+        <argsstring></argsstring>
+        <name>OnDirection</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.OnDirection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="18" column="29" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_inputs_1_1_player_input_handler_1a56f5f6851fdaa9e310ecab807cce8e6d" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; int &gt;</type>
+        <definition>Action&lt;int&gt; PlayerInputs.PlayerInputHandler.OnConfirm</definition>
+        <argsstring></argsstring>
+        <name>OnConfirm</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.OnConfirm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="19" column="29" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_inputs_1_1_player_input_handler_1a35dc64e5e71172dc0fea9ab59cb2489c" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; int &gt;</type>
+        <definition>Action&lt;int&gt; PlayerInputs.PlayerInputHandler.OnCancel</definition>
+        <argsstring></argsstring>
+        <name>OnCancel</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.OnCancel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="20" column="29" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_inputs_1_1_player_input_handler_1a6641e39b1b5ce9911d413cbddb36a0b2" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; Vector2 &gt;</type>
+        <definition>Action&lt;Vector2&gt; PlayerInputs.PlayerInputHandler.OnMove</definition>
+        <argsstring></argsstring>
+        <name>OnMove</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.OnMove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="22" column="29" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_inputs_1_1_player_input_handler_1a27b44524cafc029995f75bcb934c1eba" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action PlayerInputs.PlayerInputHandler.OnPlaceBomb</definition>
+        <argsstring></argsstring>
+        <name>OnPlaceBomb</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.OnPlaceBomb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="23" column="29" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_handler_1ab40451f40d450540a2198ed258b219fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputHandler.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.Start</qualifiedname>
+        <briefdescription>
+<para>Start is called when the script instance is being loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="28" column="22" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="28" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_handler_1a3930c67821aee9a3f1f4f28374527dbf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputHandler.OnActionTriggered</definition>
+        <argsstring>(CallbackContext context)</argsstring>
+        <name>OnActionTriggered</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.OnActionTriggered</qualifiedname>
+        <param>
+          <type>CallbackContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>OnActionTriggered is called when an input action is triggered. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context of the input action </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="80" column="22" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="80" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_handler_1a0b1118af87c7e5ab1e06fcfc385fb81c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputHandler.UsePlayerControls</definition>
+        <argsstring>()</argsstring>
+        <name>UsePlayerControls</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.UsePlayerControls</qualifiedname>
+        <briefdescription>
+<para>Use the player controls. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="43" column="21" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_handler_1a38dcec96336ad8c178b13447e8acf495" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputHandler.UseMenuControls</definition>
+        <argsstring>()</argsstring>
+        <name>UseMenuControls</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.UseMenuControls</qualifiedname>
+        <briefdescription>
+<para>Use the menu controls. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="53" column="21" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_handler_1a03e69906bba39656b084a91fbb0aa773" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputHandler.EnableInput</definition>
+        <argsstring>()</argsstring>
+        <name>EnableInput</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.EnableInput</qualifiedname>
+        <briefdescription>
+<para>Enable the input. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="63" column="21" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_handler_1a82fca128ceeebfc5aded2b3d0cad6abd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputHandler.DisableInput</definition>
+        <argsstring>()</argsstring>
+        <name>DisableInput</name>
+        <qualifiedname>PlayerInputs.PlayerInputHandler.DisableInput</qualifiedname>
+        <briefdescription>
+<para>Disable the input. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputHandler.cs" line="71" column="21" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="71" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PlayerInputHandler is used to handle the input of a player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerInputs.PlayerInputHandler</label>
+        <link refid="class_player_inputs_1_1_player_input_handler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerInputs.PlayerInputHandler</label>
+        <link refid="class_player_inputs_1_1_player_input_handler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="PlayerInputs/PlayerInputHandler.cs" line="13" column="11" bodyfile="PlayerInputs/PlayerInputHandler.cs" bodystart="14" bodyend="109"/>
+    <listofallmembers>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a47f671590c1fc2b62312eb1c7a9a380d" prot="private" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>_controls</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a82fca128ceeebfc5aded2b3d0cad6abd" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>DisableInput</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a03e69906bba39656b084a91fbb0aa773" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>EnableInput</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a3930c67821aee9a3f1f4f28374527dbf" prot="private" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>OnActionTriggered</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a35dc64e5e71172dc0fea9ab59cb2489c" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>OnCancel</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a56f5f6851fdaa9e310ecab807cce8e6d" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>OnConfirm</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1af3658a9aac1c887d1e6f88eed98e05d5" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>OnDirection</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a6641e39b1b5ce9911d413cbddb36a0b2" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>OnMove</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a27b44524cafc029995f75bcb934c1eba" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>OnPlaceBomb</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1af1384aa34ec0d95b06b28804eb9aa03a" prot="private" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>playerInput</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1ab40451f40d450540a2198ed258b219fd" prot="private" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>Start</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a38dcec96336ad8c178b13447e8acf495" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>UseMenuControls</name></member>
+      <member refid="class_player_inputs_1_1_player_input_handler_1a0b1118af87c7e5ab1e06fcfc385fb81c" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputHandler</scope><name>UsePlayerControls</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

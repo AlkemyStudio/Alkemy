@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_c35d8822243b4962c17aa786959091ad" kind="dir">
+    <compoundname>VoxelMesher/core</compoundname>
+    <innerfile refid="_voxel_data_8cs">VoxelData.cs</innerfile>
+    <innerfile refid="_voxel_data_store_8cs">VoxelDataStore.cs</innerfile>
+    <innerfile refid="_voxel_mesh_8cs">VoxelMesh.cs</innerfile>
+    <innerfile refid="_voxel_mesher_job_8cs">VoxelMesherJob.cs</innerfile>
+    <innerfile refid="_voxel_mesh_store_8cs">VoxelMeshStore.cs</innerfile>
+    <innerfile refid="_voxel_parser_job_8cs">VoxelParserJob.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VoxelMesher/core/"/>
+  </compounddef>
+</doxygen>

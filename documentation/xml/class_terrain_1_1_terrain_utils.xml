@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_terrain_1_1_terrain_utils" kind="class" language="C#" prot="public">
+    <compoundname>Terrain::TerrainUtils</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_terrain_1_1_terrain_utils_1a0dc690cd8992110e1b97093715450170" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 Terrain.TerrainUtils.GetTerrainPosition</definition>
+        <argsstring>(Vector3 worldPosition)</argsstring>
+        <name>GetTerrainPosition</name>
+        <qualifiedname>Terrain.TerrainUtils.GetTerrainPosition</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>worldPosition</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to get the position of the terrain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worldPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The world position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The position of the terrain </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainUtils.cs" line="15" column="31" bodyfile="Terrain/TerrainUtils.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_utils_1a2cd84b7d31acb5bd2032c30a37a9d233" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector2Int</type>
+        <definition>static Vector2Int Terrain.TerrainUtils.GetTilePosition</definition>
+        <argsstring>(Vector3 worldPosition)</argsstring>
+        <name>GetTilePosition</name>
+        <qualifiedname>Terrain.TerrainUtils.GetTilePosition</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>worldPosition</declname>
+        </param>
+        <briefdescription>
+<para>Get the tile position from a world position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>worldPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The world position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The tile position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainUtils.cs" line="25" column="34" bodyfile="Terrain/TerrainUtils.cs" bodystart="25" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to get the position of the terrain. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Terrain/TerrainUtils.cs" line="8" column="19" bodyfile="Terrain/TerrainUtils.cs" bodystart="9" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_terrain_1_1_terrain_utils_1a0dc690cd8992110e1b97093715450170" prot="public" virt="non-virtual"><scope>Terrain::TerrainUtils</scope><name>GetTerrainPosition</name></member>
+      <member refid="class_terrain_1_1_terrain_utils_1a2cd84b7d31acb5bd2032c30a37a9d233" prot="public" virt="non-virtual"><scope>Terrain::TerrainUtils</scope><name>GetTilePosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

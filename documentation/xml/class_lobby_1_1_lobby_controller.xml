@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_lobby_1_1_lobby_controller" kind="class" language="C#" prot="public">
+    <compoundname>Lobby::LobbyController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref refid="interface_player_inputs_1_1_i_player_handler" prot="public" virt="non-virtual">PlayerInputs.IPlayerHandler</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_lobby_1_1_lobby_controller_1a97044fdec3ab89bfd5882ee0d91164c4" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_lobby_1_1_lobby_controller" kindref="compound">LobbyController</ref></type>
+        <definition>LobbyController Lobby.LobbyController.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>Lobby.LobbyController.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="17" column="39" bodyfile="Lobby/LobbyController.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_lobby_1_1_lobby_controller_1a0c2f897d8ee618938bc949d7d9c2a91c" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; int, <ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref> &gt;</type>
+        <definition>Dictionary&lt;int, PlayerState&gt; Lobby.LobbyController.LobbyPlayerStates</definition>
+        <argsstring></argsstring>
+        <name>LobbyPlayerStates</name>
+        <qualifiedname>Lobby.LobbyController.LobbyPlayerStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="32" column="28" bodyfile="Lobby/LobbyController.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1a637d5e21999a22636d35a15af8f97782" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_inputs_1_1_game_player_input_manager" kindref="compound">GamePlayerInputManager</ref></type>
+        <definition>GamePlayerInputManager Lobby.LobbyController.gamePlayerInputManager</definition>
+        <argsstring></argsstring>
+        <name>gamePlayerInputManager</name>
+        <qualifiedname>Lobby.LobbyController.gamePlayerInputManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="21" column="41" bodyfile="Lobby/LobbyController.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1a80c88093dc4ced78e51be9705b167604" prot="private" static="no" mutable="no">
+        <type><ref refid="class_lobby_1_1_lobby_u_i" kindref="compound">LobbyUI</ref></type>
+        <definition>LobbyUI Lobby.LobbyController.lobbyUI</definition>
+        <argsstring></argsstring>
+        <name>lobbyUI</name>
+        <qualifiedname>Lobby.LobbyController.lobbyUI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="22" column="26" bodyfile="Lobby/LobbyController.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1a73f9a77b3dcf123871dde974115930f6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_lobby_1_1_lobby_character_registry" kindref="compound">LobbyCharacterRegistry</ref></type>
+        <definition>LobbyCharacterRegistry Lobby.LobbyController.lobbyCharacterRegistry</definition>
+        <argsstring></argsstring>
+        <name>lobbyCharacterRegistry</name>
+        <qualifiedname>Lobby.LobbyController.lobbyCharacterRegistry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="23" column="41" bodyfile="Lobby/LobbyController.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1ab8f571a067bc41b6b590f0c275bf401a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lobby.LobbyController.minPlayerCountToStart</definition>
+        <argsstring></argsstring>
+        <name>minPlayerCountToStart</name>
+        <qualifiedname>Lobby.LobbyController.minPlayerCountToStart</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="26" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1a85c868967d3497e7efc0f5d442a6a5f9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lobby.LobbyController.sceneBuildIndexToLoad</definition>
+        <argsstring></argsstring>
+        <name>sceneBuildIndexToLoad</name>
+        <qualifiedname>Lobby.LobbyController.sceneBuildIndexToLoad</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="27" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1a5db4209ca85fa4e6787337221c7f522c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lobby.LobbyController.delayBetweenCharacterSwitch</definition>
+        <argsstring></argsstring>
+        <name>delayBetweenCharacterSwitch</name>
+        <qualifiedname>Lobby.LobbyController.delayBetweenCharacterSwitch</qualifiedname>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="30" column="24" bodyfile="Lobby/LobbyController.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1ab1086670520205d259a34d8dfb0d6640" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lobby.LobbyController._firstPlayerIndex</definition>
+        <argsstring></argsstring>
+        <name>_firstPlayerIndex</name>
+        <qualifiedname>Lobby.LobbyController._firstPlayerIndex</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="34" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_controller_1a14f295690114a0981445548e022e66cc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Lobby.LobbyController._lastCharacterSwitchTime</definition>
+        <argsstring></argsstring>
+        <name>_lastCharacterSwitchTime</name>
+        <qualifiedname>Lobby.LobbyController._lastCharacterSwitchTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="35" column="23" bodyfile="Lobby/LobbyController.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1ac9750f1b4b6ac7cd6d1fbd7b6dac4b69" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Lobby.LobbyController.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="37" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a687f50afd6814b7410633fc4f9200c7c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Lobby.LobbyController.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="48" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1ac53b1ee1f208cdf49b93aba96f2ed3f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.CreateInputBindings</definition>
+        <argsstring>(PlayerInput playerInput)</argsstring>
+        <name>CreateInputBindings</name>
+        <qualifiedname>Lobby.LobbyController.CreateInputBindings</qualifiedname>
+        <param>
+          <type>PlayerInput</type>
+          <declname>playerInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="83" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="83" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1ad141242200a9af94303a65a9c080febb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Lobby.LobbyController.GetFirstConnectedPlayerIndex</definition>
+        <argsstring>()</argsstring>
+        <name>GetFirstConnectedPlayerIndex</name>
+        <qualifiedname>Lobby.LobbyController.GetFirstConnectedPlayerIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="117" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="117" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a80f490c3942ac8071ec79fbb658f5e9e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.OnConfirmHandler</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>OnConfirmHandler</name>
+        <qualifiedname>Lobby.LobbyController.OnConfirmHandler</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="130" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="130" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1adafab458723305d6d8e107d7c012ef6a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.StartGame</definition>
+        <argsstring>()</argsstring>
+        <name>StartGame</name>
+        <qualifiedname>Lobby.LobbyController.StartGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="152" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="152" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a0dbaf550d96a1ddd527bee277e6874b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.DisableAllPlayerInputControls</definition>
+        <argsstring>()</argsstring>
+        <name>DisableAllPlayerInputControls</name>
+        <qualifiedname>Lobby.LobbyController.DisableAllPlayerInputControls</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="160" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="160" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1ad3a64cebf02a099b08c9c94715577b43" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.OnDirectionHandler</definition>
+        <argsstring>(Vector2 direction, int playerIndex)</argsstring>
+        <name>OnDirectionHandler</name>
+        <qualifiedname>Lobby.LobbyController.OnDirectionHandler</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="189" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="189" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a92cecffcf305031e32bafd2f18e3a596" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Lobby.LobbyController.IsAllPlayersReady</definition>
+        <argsstring>()</argsstring>
+        <name>IsAllPlayersReady</name>
+        <qualifiedname>Lobby.LobbyController.IsAllPlayersReady</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="213" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="213" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1ae50686f00072a08e896a78e25274e97d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.OnCancelHandler</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>OnCancelHandler</name>
+        <qualifiedname>Lobby.LobbyController.OnCancelHandler</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="220" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="220" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1af8e688302d7cfed02cb8f1c0bd130e6b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.SetIsConnected</definition>
+        <argsstring>(int playerIndex, bool state)</argsstring>
+        <name>SetIsConnected</name>
+        <qualifiedname>Lobby.LobbyController.SetIsConnected</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="233" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="233" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a632b6118245dee4937d949053243cc20" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.SetPlayerReady</definition>
+        <argsstring>(int playerIndex, bool state)</argsstring>
+        <name>SetPlayerReady</name>
+        <qualifiedname>Lobby.LobbyController.SetPlayerReady</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="240" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="240" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a8bddf4241aaa9cdd4686a44e0a42be73" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.SetPlayerCharacterIndex</definition>
+        <argsstring>(int playerIndex, int characterIndex)</argsstring>
+        <name>SetPlayerCharacterIndex</name>
+        <qualifiedname>Lobby.LobbyController.SetPlayerCharacterIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>characterIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="247" column="22" bodyfile="Lobby/LobbyController.cs" bodystart="247" bodyend="252"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a147e95684ce3ec90f20e25a9922d85e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.HandlePlayerJoined</definition>
+        <argsstring>(PlayerInput playerInput)</argsstring>
+        <name>HandlePlayerJoined</name>
+        <qualifiedname>Lobby.LobbyController.HandlePlayerJoined</qualifiedname>
+        <reimplements refid="interface_player_inputs_1_1_i_player_handler_1aa83f9e8098181232d1a335b0a9d39c5c">HandlePlayerJoined</reimplements>
+        <param>
+          <type>PlayerInput</type>
+          <declname>playerInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="54" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="54" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1afe512eb23062d3bed42581795f466385" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.HandlePlayerLeft</definition>
+        <argsstring>(PlayerInput playerInput)</argsstring>
+        <name>HandlePlayerLeft</name>
+        <qualifiedname>Lobby.LobbyController.HandlePlayerLeft</qualifiedname>
+        <reimplements refid="interface_player_inputs_1_1_i_player_handler_1a91df51fd55a01199dfa8d55f9c98225a">HandlePlayerLeft</reimplements>
+        <param>
+          <type>PlayerInput</type>
+          <declname>playerInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="91" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1af359c067307e75ef7e086749d17ae817" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.OnPlayerRemoveHandler</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>OnPlayerRemoveHandler</name>
+        <qualifiedname>Lobby.LobbyController.OnPlayerRemoveHandler</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="99" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="99" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a996d2ee1f37fba48aa4328468a725db6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.ReturnToMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ReturnToMainMenu</name>
+        <qualifiedname>Lobby.LobbyController.ReturnToMainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="173" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="173" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1a7e02867d378348383d2184bb68f875e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.OnSelectLeftCharacterHandler</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>OnSelectLeftCharacterHandler</name>
+        <qualifiedname>Lobby.LobbyController.OnSelectLeftCharacterHandler</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="179" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_controller_1aaa3b8971eb8def4c19a793231f5f16f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyController.OnSelectRightCharacterHandler</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>OnSelectRightCharacterHandler</name>
+        <qualifiedname>Lobby.LobbyController.OnSelectRightCharacterHandler</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyController.cs" line="184" column="21" bodyfile="Lobby/LobbyController.cs" bodystart="184" bodyend="187"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IPlayerHandler</label>
+        <link refid="interface_player_inputs_1_1_i_player_handler"/>
+      </node>
+      <node id="1">
+        <label>Lobby.LobbyController</label>
+        <link refid="class_lobby_1_1_lobby_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IPlayerHandler</label>
+        <link refid="interface_player_inputs_1_1_i_player_handler"/>
+      </node>
+      <node id="1">
+        <label>Lobby.LobbyController</label>
+        <link refid="class_lobby_1_1_lobby_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Lobby/LobbyController.cs" line="15" column="11" bodyfile="Lobby/LobbyController.cs" bodystart="16" bodyend="264"/>
+    <listofallmembers>
+      <member refid="class_lobby_1_1_lobby_controller_1ab1086670520205d259a34d8dfb0d6640" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>_firstPlayerIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a14f295690114a0981445548e022e66cc" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>_lastCharacterSwitchTime</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1ac9750f1b4b6ac7cd6d1fbd7b6dac4b69" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>Awake</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1ac53b1ee1f208cdf49b93aba96f2ed3f3" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>CreateInputBindings</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a5db4209ca85fa4e6787337221c7f522c" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>delayBetweenCharacterSwitch</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a0dbaf550d96a1ddd527bee277e6874b8" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>DisableAllPlayerInputControls</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a637d5e21999a22636d35a15af8f97782" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>gamePlayerInputManager</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1ad141242200a9af94303a65a9c080febb" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>GetFirstConnectedPlayerIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a147e95684ce3ec90f20e25a9922d85e4" prot="public" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>HandlePlayerJoined</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1afe512eb23062d3bed42581795f466385" prot="public" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>HandlePlayerLeft</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a97044fdec3ab89bfd5882ee0d91164c4" prot="public" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>Instance</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a92cecffcf305031e32bafd2f18e3a596" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>IsAllPlayersReady</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a73f9a77b3dcf123871dde974115930f6" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>lobbyCharacterRegistry</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a0c2f897d8ee618938bc949d7d9c2a91c" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>LobbyPlayerStates</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a80c88093dc4ced78e51be9705b167604" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>lobbyUI</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1ab8f571a067bc41b6b590f0c275bf401a" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>minPlayerCountToStart</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1ae50686f00072a08e896a78e25274e97d" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>OnCancelHandler</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a80f490c3942ac8071ec79fbb658f5e9e" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>OnConfirmHandler</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1ad3a64cebf02a099b08c9c94715577b43" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>OnDirectionHandler</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1af359c067307e75ef7e086749d17ae817" prot="public" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>OnPlayerRemoveHandler</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a7e02867d378348383d2184bb68f875e6" prot="public" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>OnSelectLeftCharacterHandler</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1aaa3b8971eb8def4c19a793231f5f16f5" prot="public" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>OnSelectRightCharacterHandler</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a996d2ee1f37fba48aa4328468a725db6" prot="public" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>ReturnToMainMenu</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a85c868967d3497e7efc0f5d442a6a5f9" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>sceneBuildIndexToLoad</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1af8e688302d7cfed02cb8f1c0bd130e6b" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>SetIsConnected</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a8bddf4241aaa9cdd4686a44e0a42be73" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>SetPlayerCharacterIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a632b6118245dee4937d949053243cc20" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>SetPlayerReady</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1a687f50afd6814b7410633fc4f9200c7c" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>Start</name></member>
+      <member refid="class_lobby_1_1_lobby_controller_1adafab458723305d6d8e107d7c012ef6a" prot="private" virt="non-virtual"><scope>Lobby::LobbyController</scope><name>StartGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

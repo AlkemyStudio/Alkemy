@@ -1,0 +1,982 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="class_audio_1_1_audio_source_pool" kind="class"><name>Audio::AudioSourcePool</name>
+    <member refid="class_audio_1_1_audio_source_pool_1ae00380271ae31f3e92a9909951f3f2cf" kind="variable"><name>audioSourcePrefab</name></member>
+    <member refid="class_audio_1_1_audio_source_pool_1a167561ffc2b9d0b02e6bd2d5932c9c0c" kind="variable"><name>poolSize</name></member>
+    <member refid="class_audio_1_1_audio_source_pool_1afa4dc71fcfbd94e277f36bf0b74f9463" kind="variable"><name>audioSources</name></member>
+    <member refid="class_audio_1_1_audio_source_pool_1ad553cbc317c59e15b858263f777e1b1d" kind="property"><name>Instance</name></member>
+    <member refid="class_audio_1_1_audio_source_pool_1aa92cdc5c3dbb95ad81f1c76926524ada" kind="function"><name>Awake</name></member>
+    <member refid="class_audio_1_1_audio_source_pool_1af3c7860ae879221fdaea8c5bc9c62cd9" kind="function"><name>GetAudioSource</name></member>
+    <member refid="class_audio_1_1_audio_source_pool_1a43bcb37da8e7e33855a516b2531f3be0" kind="function"><name>PlayClipAtPoint</name></member>
+    <member refid="class_audio_1_1_audio_source_pool_1a5d937f5f829c27c0ffc3011b183d6139" kind="function"><name>Play</name></member>
+  </compound>
+  <compound refid="class_lobby_1_1_background_texture_offset" kind="class"><name>Lobby::BackgroundTextureOffset</name>
+    <member refid="class_lobby_1_1_background_texture_offset_1a843d28bfc1196ac47c9ab3b7b7996369" kind="variable"><name>speedOffset</name></member>
+    <member refid="class_lobby_1_1_background_texture_offset_1a12b49b0dbed8060ae630c01420debcf6" kind="variable"><name>image</name></member>
+    <member refid="class_lobby_1_1_background_texture_offset_1ad393b287ca400fd8233f8e5be38cd3aa" kind="variable"><name>MainTex</name></member>
+    <member refid="class_lobby_1_1_background_texture_offset_1aa0725be084ab5e0a65c65b6aecb5f211" kind="function"><name>Start</name></member>
+    <member refid="class_lobby_1_1_background_texture_offset_1ad1fed7dcd720be0451089f4a731c21ec" kind="function"><name>Update</name></member>
+    <member refid="class_lobby_1_1_background_texture_offset_1a3b25e2da8c2b89c3af31848e4ee7ca18" kind="function"><name>OnValidate</name></member>
+  </compound>
+  <compound refid="class_bomb_1_1_base_bomb_controller" kind="class"><name>Bomb::BaseBombController</name>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a6ce5fecd080e02716c94cf3280cf0dc3" kind="variable"><name>mainCollider</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a971952d85bfab773a904d45e38f697d7" kind="variable"><name>colliderThatBlockForces</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a32dfe349d20be38155cd56f8e0b5bc6d" kind="variable"><name>triggerCollider</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a5e09ac78c8b4db60665f4c57989e81d5" kind="variable"><name>meshRenderer</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a875a14ee959214da64113987ea95baa4" kind="variable"><name>explosionPrefabs</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1ad93f65c6b446c17b9035a7cfd6df5021" kind="variable"><name>bombExplosionSounds</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1aed56e768d05c423a747f892f190034b7" kind="variable"><name>fuseTime</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a9be0abb19531f3412830b88abad194f7" kind="variable"><name>_playerBombController</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a1d754776cb3847171f24349366a605be" kind="variable"><name>_bombPower</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a86f96226f858bce0af84568758cf01a4" kind="variable"><name>_hasAlreadyExploded</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1ad78f26bbd5e3c7de86830add8a73ad89" kind="variable"><name>spawnTime</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a6e65f5dd0d812c7804214a4491bba1e6" kind="variable"><name>FuseTime</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a487a5d1980e54c35b4f8b5f04c437675" kind="variable"><name>SpawnTime</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a62b88cf5181028bd8a58708eea42519a" kind="function"><name>Awake</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1af38bda3a8ff5314fc5f43157a074166a" kind="function"><name>Start</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1ab66484b5ed0cd7669cf28e415eb9c6d7" kind="function"><name>OnGameStateChanged</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a06b7eb19f51986e96c193a21cdac5e17" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a840895d32bfdb004172fc6ec0ebac97e" kind="function"><name>SetupBomb</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1ac5ae943831d024fa77e0e25aa1702a78" kind="function"><name>CancelTimer</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a86e745a74d7f05ecbeb3f1190060a05b" kind="function"><name>HasAlreadyExploded</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a3e45337fb4a8f5f1ea5b3aca0558eead" kind="function"><name>StartExplode</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1ac7450e2298c7c82dac4993447a5a55b1" kind="function"><name>OnPlayerWalkOutsideTrigger</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1a01a03037a8ab9aa43099c9c9c84b1e04" kind="function"><name>StartTimer</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1aa3ddf6c595ff700f8e89e9462fee57b5" kind="function"><name>Explode</name></member>
+    <member refid="class_bomb_1_1_base_bomb_controller_1af836dfb540c98d151aa5d08ee5624323" kind="function"><name>PlaySound</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_base_bonus" kind="class"><name>Bonus::BaseBonus</name>
+    <member refid="class_bonus_1_1_base_bonus_1abffca39390436e4bfaaa7ca51e0a25a0" kind="variable"><name>bonusCollider</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1a177eece93cdb39332b312230650e76d4" kind="variable"><name>modelTransform</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1aee2fc50653300b4838f4e890cf6da2a3" kind="variable"><name>rotationSpeed</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1ad88f6abe8d0d8a9313a242da369ef869" kind="variable"><name>bonusSound</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1a7ead39b0f4db9bf5584c9b9cc8072922" kind="function"><name>OnTriggerEnter</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1a1aac2f8b77acb7fce35cecf72ec57b72" kind="function"><name>FixedUpdate</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1a4f0419d95ce952f34d3ae7534f549d31" kind="function"><name>OnValidate</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1a2a858cdfe632acb31677341b7106d59e" kind="function"><name>OnPlayerTakeBonus</name></member>
+    <member refid="class_bonus_1_1_base_bonus_1ac78cebb8d7ce4a1a006afbe506f1fb26" kind="function"><name>PlaySound</name></member>
+  </compound>
+  <compound refid="class_bomb_1_1_base_push_bomb_controller" kind="class"><name>Bomb::BasePushBombController</name>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1ac5eeeafce9f944fc8b6b5835128d8cf6" kind="variable"><name>bombRigidbody</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1af5045661f033a8ef2a705eafde8bf8c4" kind="variable"><name>delayAfterStoppingTheBomb</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1a4ce824380f1b1fb1de6299ade8e872f1" kind="variable"><name>bombPushingSpeed</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1a40881f9b60b1c59453d0b0a83d6200ca" kind="variable"><name>_lastPushTime</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1a0ef217c392ce162f13c4189918f0ac7a" kind="variable"><name>_parentTransform</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1adce595960bafa7d3a4657564a644f297" kind="function"><name>Start</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1aae6e7e33f00a91e7cff8effd79c2d080" kind="function"><name>IsMovingInTheSameDirection</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1a6774355931845246a9029ae250e0c88d" kind="function"><name>OnTriggerEnter</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1a9acbf865923f160a0f354d64a9b2a485" kind="function"><name>IsMoving</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1af30fd16065cc3a423b045c02e975d673" kind="function"><name>Push</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1a256af1bc01cb37c3ef7bbc3bd428f322" kind="function"><name>StopMove</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1aab31fd72ed230530da895ec7802cfe55" kind="function"><name>OnTouchSomething</name></member>
+    <member refid="class_bomb_1_1_base_push_bomb_controller_1a489ccdd105c2997abea196682bb54da6" kind="function"><name>ComputeDirection</name></member>
+  </compound>
+  <compound refid="struct_bomb_1_1_bomb_data" kind="struct"><name>Bomb::BombData</name>
+    <member refid="struct_bomb_1_1_bomb_data_1a116ae0ac56ab7d308d5e2a37834c416e" kind="variable"><name>ExplosionDuration</name></member>
+    <member refid="struct_bomb_1_1_bomb_data_1adb2be40217657bdf52e2339054a3f63c" kind="variable"><name>power</name></member>
+    <member refid="struct_bomb_1_1_bomb_data_1a07a6917e5ed7f2e0b372068c3c56d392" kind="function"><name>BombData</name></member>
+  </compound>
+  <compound refid="class_bomb_1_1_classic_bomb_controller" kind="class"><name>Bomb::ClassicBombController</name>
+    <member refid="class_bomb_1_1_classic_bomb_controller_1a9d3219146b6b29e48ddbede6d7abcfb3" kind="variable"><name>flickeringCurve</name></member>
+    <member refid="class_bomb_1_1_classic_bomb_controller_1ab98a704da1322b72a5a1de031c08f2cd" kind="variable"><name>baseFlickeringSpeed</name></member>
+    <member refid="class_bomb_1_1_classic_bomb_controller_1ae84f1d9d99c070bd0f0aa77f65c55330" kind="variable"><name>finalFlickeringSpeed</name></member>
+    <member refid="class_bomb_1_1_classic_bomb_controller_1a51f1102bfd1e8dfced4cb59b7f8c8692" kind="variable"><name>FlickerSpeed</name></member>
+    <member refid="class_bomb_1_1_classic_bomb_controller_1a17ce20335ca47e2afd7ad7e0e64e0c98" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_player_1_1_cursor_model_animation" kind="class"><name>Player::CursorModelAnimation</name>
+    <member refid="class_player_1_1_cursor_model_animation_1ad7aca5257e1ae7724e0538cd1444e414" kind="variable"><name>movementDelta</name></member>
+    <member refid="class_player_1_1_cursor_model_animation_1ac770f519e33fd0e951e2c0506310aece" kind="variable"><name>movementSpeed</name></member>
+    <member refid="class_player_1_1_cursor_model_animation_1a1a03ce5ce5a4a5e9df54722f4c9d6238" kind="variable"><name>defaultHeight</name></member>
+    <member refid="class_player_1_1_cursor_model_animation_1a6fdeadbb7bba9724d123a41146350eff" kind="function"><name>Start</name></member>
+    <member refid="class_player_1_1_cursor_model_animation_1ab6a342211f7737455242aae0fca9b067" kind="function"><name>FixedUpdate</name></member>
+  </compound>
+  <compound refid="class_utils_1_1_debug_array" kind="class"><name>Utils::DebugArray</name>
+    <member refid="class_utils_1_1_debug_array_1a94bdf512a36f9de3c3e6c557c91a1517" kind="function"><name>LogArray&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_decrease_bomb_amount_bonus" kind="class"><name>Bonus::DecreaseBombAmountBonus</name>
+    <member refid="class_bonus_1_1_decrease_bomb_amount_bonus_1aab8cfb70964eb4c6195e872f522561e3" kind="function"><name>OnPlayerTakeBonus</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_decrease_bomb_power_bonus" kind="class"><name>Bonus::DecreaseBombPowerBonus</name>
+    <member refid="class_bonus_1_1_decrease_bomb_power_bonus_1a2930264cd56231aee1d7f442c4392dff" kind="function"><name>OnPlayerTakeBonus</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_decrease_speed_bonus" kind="class"><name>Bonus::DecreaseSpeedBonus</name>
+    <member refid="class_bonus_1_1_decrease_speed_bonus_1a5c7a8e791acaaa4c1e97f33e16640b1c" kind="function"><name>OnPlayerTakeBonus</name></member>
+  </compound>
+  <compound refid="class_wall_1_1_destructible_wall" kind="class"><name>Wall::DestructibleWall</name>
+    <member refid="class_wall_1_1_destructible_wall_1a7877f879762840de45cd71465d6a55cb" kind="variable"><name>entityHealth</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a70e90b70565f5c52e71517a83a2cb630" kind="variable"><name>percentageToDropBonus</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1abaee88b88d66fea6f31030d445faa949" kind="variable"><name>explosionPrefab</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a6879399bc6bc658e59c433b31a023d98" kind="variable"><name>voxelParser</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a08a61dbc79740759ecf373c24928bd6d" kind="variable"><name>meshRenderer</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a5eeac411713e4fb687ce0466a875b098" kind="variable"><name>isDead</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a94e5c6e2e3e3f6fafc30bcc7465000ab" kind="function"><name>Start</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a1f4ef4fb5995fd090269ad7d5df560dd" kind="function"><name>OnDeath</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a2c38db0b43b2e973bfa3c052326eed4c" kind="function"><name>ShouldSpawnBonus</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1abbbe3d88bfb83214bffa72076f47d951" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a1def6d51efb529ba61ae1a841fb59ee6" kind="function"><name>OnValidate</name></member>
+    <member refid="class_wall_1_1_destructible_wall_1a102c8ea8c1a354c122dcedf03e981f5e" kind="function"><name>DestroyWallWithoutEffect</name></member>
+  </compound>
+  <compound refid="class_core_1_1_dont_destroy_this_game_object_on_load" kind="class"><name>Core::DontDestroyThisGameObjectOnLoad</name>
+    <member refid="class_core_1_1_dont_destroy_this_game_object_on_load_1aa2230829545e4d89a86952e325598f89" kind="function"><name>Awake</name></member>
+  </compound>
+  <compound refid="class_menu_1_1_end_game_menu" kind="class"><name>Menu::EndGameMenu</name>
+    <member refid="class_menu_1_1_end_game_menu_1ad1f94787546db589bc6f8dc040d84e97" kind="variable"><name>gameStateManager</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1aaf14b16d5fa295ad75a1d3e43794bebc" kind="variable"><name>endGameCanvas</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a9f60933aa41c305036962a74f0c737ac" kind="variable"><name>winnerText</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a020bd60df07d3ab2c62d93e6561a140b" kind="variable"><name>mainAudioSource</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a64f2e86c0103b3227f6b8d69e8033326" kind="variable"><name>endGameSound</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a38002a59a1207f58479a8e4659272423" kind="variable"><name>_mainAudioClip</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a570a5b52c2e281b8e5619c2c3f6f0e12" kind="variable"><name>winnerMessage</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a8a09e7125d0e53edbeedfbc92879e487" kind="variable"><name>noWinnerMessage</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1ac92677a211f4f7d109c71ea3834fe0f5" kind="function"><name>Awake</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1aeab2ede31e12aef2b1ceb70e027f0a5a" kind="function"><name>OnRestartButtonClicked</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a4ee13c086c22ee1f8579b06cfe99ed17" kind="function"><name>OnQuitButtonClicked</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1ae0e837400feafa60de4463db4296ee1e" kind="function"><name>OnEnable</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a254243962ee4c66bf43dd38a3425a80d" kind="function"><name>OnDisable</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a3f65cc0df6db9164c4ceb25556b9a8ea" kind="function"><name>OnGameEnded</name></member>
+    <member refid="class_menu_1_1_end_game_menu_1a2cd140d19cd50704324a680062d08aba" kind="function"><name>GetWinnerMessage</name></member>
+  </compound>
+  <compound refid="class_core_1_1_entity_health" kind="class"><name>Core::EntityHealth</name>
+    <member refid="class_core_1_1_entity_health_1a89b3f299189c6db0a6238fb792820863" kind="variable"><name>deathSound</name></member>
+    <member refid="class_core_1_1_entity_health_1a6d6d7935114a01182489f7cc390c694c" kind="variable"><name>isDeathSoundNotNull</name></member>
+    <member refid="class_core_1_1_entity_health_1a596290c19a95ca59a15047acb61f66b9" kind="event"><name>OnDeath</name></member>
+    <member refid="class_core_1_1_entity_health_1aebd8b074d9ee48183268ac00df625139" kind="function"><name>HealthAction</name></member>
+    <member refid="class_core_1_1_entity_health_1ac26cfa4fdbc5c52611f97b94b8424c48" kind="function"><name>PerformDamage</name></member>
+    <member refid="class_core_1_1_entity_health_1a88daf2f2b05d3b4bcf3f8524a7131e25" kind="function"><name>Start</name></member>
+  </compound>
+  <compound refid="class_bomb_1_1_explosion" kind="class"><name>Bomb::Explosion</name>
+    <member refid="class_bomb_1_1_explosion_1aee6fd0c6a3941212a903b5209aa169e5" kind="variable"><name>boxCollider</name></member>
+    <member refid="class_bomb_1_1_explosion_1a3b01d507a1a3c5d11063e166bcfe13b5" kind="function"><name>SetupExplosionBoundingBox</name></member>
+    <member refid="class_bomb_1_1_explosion_1a54f4a57786a136fe9706c70c32bef48e" kind="function"><name>DestroyAfter</name></member>
+    <member refid="class_bomb_1_1_explosion_1ae963d1acb67df7cc124b00630cf4c16f" kind="function"><name>OnValidate</name></member>
+    <member refid="class_bomb_1_1_explosion_1aec8885a93e59bbd78382b750da91a956" kind="function"><name>OnTriggerEnter</name></member>
+  </compound>
+  <compound refid="struct_game_1_1_game_bonus" kind="struct"><name>Game::GameBonus</name>
+    <member refid="struct_game_1_1_game_bonus_1a8d4ceefd22aecf2302c2635538eb1295" kind="variable"><name>prefab</name></member>
+    <member refid="struct_game_1_1_game_bonus_1a8a1a90be108933f9fda32546f85296e2" kind="variable"><name>probability</name></member>
+  </compound>
+  <compound refid="class_game_1_1_game_bonuses" kind="class"><name>Game::GameBonuses</name>
+    <member refid="class_game_1_1_game_bonuses_1a505006cdaae4ba724df704c7738b9a61" kind="variable"><name>Instance</name></member>
+    <member refid="class_game_1_1_game_bonuses_1a2ebb16e70bc3efb720fb4db0734b42b2" kind="variable"><name>modifiersTable</name></member>
+    <member refid="class_game_1_1_game_bonuses_1ad84d1d0fca0f7856f0ab0b9f021801c9" kind="variable"><name>_totalProbability</name></member>
+    <member refid="class_game_1_1_game_bonuses_1a23cba427c43123b98a2e7d6f64da7938" kind="variable"><name>_cumulativeProbabilities</name></member>
+    <member refid="class_game_1_1_game_bonuses_1aa2e40bc1cdce4fd64b6a630519676ac5" kind="function"><name>Awake</name></member>
+    <member refid="class_game_1_1_game_bonuses_1a5ba11576de41a51e8611160b758589dc" kind="function"><name>Start</name></member>
+    <member refid="class_game_1_1_game_bonuses_1a270fb83619a1b0ffa57415b8ffab74fc" kind="function"><name>GetRandomBonus</name></member>
+  </compound>
+  <compound refid="struct_game_1_1_game_ended_event" kind="struct"><name>Game::GameEndedEvent</name>
+    <member refid="struct_game_1_1_game_ended_event_1ae616bf22181764cc3e556f449d6ea417" kind="variable"><name>WinnerNames</name></member>
+    <member refid="struct_game_1_1_game_ended_event_1a19b5ca80d6d40e8e1e9df1b040b562cb" kind="variable"><name>LastPlayerNamesDeadAtTheSameTime</name></member>
+    <member refid="struct_game_1_1_game_ended_event_1afb45c2f5d37be649d4cae4fc07d46b73" kind="variable"><name>GameEndTime</name></member>
+  </compound>
+  <compound refid="class_player_inputs_1_1_game_player_input_manager" kind="class"><name>PlayerInputs::GamePlayerInputManager</name>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1a56248eb8fdbdb1622a48b7f070e1e359" kind="variable"><name>playerHandler</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1a3df2ff11732f848cb0e423acc85d818d" kind="variable"><name>gamePlayerInputManager</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1a8b3e06d29ddf99005eeff158a5e02fc7" kind="variable"><name>playerInputRegistry</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1a4d99390ab58c70498b4a1e6aa88cbacc" kind="function"><name>SetPlayerHandler</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1ab6d4a37e4f1f6db532afee548fc57629" kind="function"><name>UnsetPlayerHandler</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1a27df1adeb094b64f9ade0c3bb16d8f45" kind="function"><name>HandlePlayerJoined</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1ae21bda4e83961ec9d3b7694cfe7d9c25" kind="function"><name>HandlePlayerLeft</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1a77988cb26d863e61759f955d42699070" kind="function"><name>GetPlayerCount</name></member>
+    <member refid="class_player_inputs_1_1_game_player_input_manager_1a0c2be63fc426bc85df4ba0f5430123df" kind="function"><name>RemovePlayer</name></member>
+  </compound>
+  <compound refid="class_game_1_1_game_state_manager" kind="class"><name>Game::GameStateManager</name>
+    <member refid="class_game_1_1_game_state_manager_1a114be9b0f349cffcd332847e25c61076" kind="event"><name>OnGameStateChanged</name></member>
+    <member refid="class_game_1_1_game_state_manager_1abf3faba4102aad33103941dc43513c7b" kind="event"><name>OnGameEnded</name></member>
+    <member refid="class_game_1_1_game_state_manager_1a7912d263968f3a40607b592d60884a52" kind="variable"><name>Instance</name></member>
+    <member refid="class_game_1_1_game_state_manager_1af9211254054db4e317a217afd745ca0b" kind="variable"><name>_currentGameState</name></member>
+    <member refid="class_game_1_1_game_state_manager_1a5518b0c783dc2f994fea32370f142aba" kind="function"><name>GameStateEvent</name></member>
+    <member refid="class_game_1_1_game_state_manager_1aca48a32299034716bf4fa9305e4cfe8c" kind="function"><name>ReloadGame</name></member>
+    <member refid="class_game_1_1_game_state_manager_1a2046917143b95388f3c803aafaa75d56" kind="function"><name>EndTheGame</name></member>
+    <member refid="class_game_1_1_game_state_manager_1a6b9a3fa30998fcab293a207aeccb0866" kind="function"><name>PauseGame</name></member>
+    <member refid="class_game_1_1_game_state_manager_1acca3a99452a9925467c086af3cff8317" kind="function"><name>ResumeGame</name></member>
+    <member refid="class_game_1_1_game_state_manager_1af6f5d889447c70b26cf99938eff4adcb" kind="function"><name>SetGameState</name></member>
+    <member refid="class_game_1_1_game_state_manager_1a3b6d23a991078c860236f9ec07105efa" kind="function"><name>Awake</name></member>
+    <member refid="class_game_1_1_game_state_manager_1a5af415bd7d52bbb59ccb78ef9787b703" kind="function"><name>Start</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_increase_bomb_amount_bonus" kind="class"><name>Bonus::IncreaseBombAmountBonus</name>
+    <member refid="class_bonus_1_1_increase_bomb_amount_bonus_1a2daa90a226cf38236220d99cd863c4f7" kind="function"><name>OnPlayerTakeBonus</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_increase_bomb_power_bonus" kind="class"><name>Bonus::IncreaseBombPowerBonus</name>
+    <member refid="class_bonus_1_1_increase_bomb_power_bonus_1af1b3d8e3f748cd334eb9c28667b837d3" kind="function"><name>OnPlayerTakeBonus</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_increase_speed_bonus" kind="class"><name>Bonus::IncreaseSpeedBonus</name>
+    <member refid="class_bonus_1_1_increase_speed_bonus_1a0335e78e053064991c0e6293c5474198" kind="function"><name>OnPlayerTakeBonus</name></member>
+  </compound>
+  <compound refid="class_core_1_1_infinite_rotation" kind="class"><name>Core::InfiniteRotation</name>
+    <member refid="class_core_1_1_infinite_rotation_1a3f163c439a994e87aeefb23d60163c2d" kind="variable"><name>rotationSpeed</name></member>
+    <member refid="class_core_1_1_infinite_rotation_1ad51bf37eee9523eda34ed310bd46c625" kind="variable"><name>rotationAxis</name></member>
+    <member refid="class_core_1_1_infinite_rotation_1aa81b86b77c342978fb54b645aedd73fc" kind="function"><name>FixedUpdate</name></member>
+  </compound>
+  <compound refid="interface_player_inputs_1_1_i_player_handler" kind="interface"><name>PlayerInputs::IPlayerHandler</name>
+    <member refid="interface_player_inputs_1_1_i_player_handler_1aa83f9e8098181232d1a335b0a9d39c5c" kind="function"><name>HandlePlayerJoined</name></member>
+    <member refid="interface_player_inputs_1_1_i_player_handler_1a91df51fd55a01199dfa8d55f9c98225a" kind="function"><name>HandlePlayerLeft</name></member>
+  </compound>
+  <compound refid="struct_job_voxel_data" kind="struct"><name>JobVoxelData</name>
+    <member refid="struct_job_voxel_data_1aa45d0cc777c9ccc09a538b1534c0cc81" kind="variable"><name>width</name></member>
+    <member refid="struct_job_voxel_data_1af6b51ac9f05cbf25f9779d5fc528f34e" kind="variable"><name>height</name></member>
+    <member refid="struct_job_voxel_data_1a85bf725682bfc6f58a2c69af71e05e15" kind="variable"><name>depth</name></member>
+    <member refid="struct_job_voxel_data_1a598895e465337245d9d857dd9598b048" kind="variable"><name>origin</name></member>
+    <member refid="struct_job_voxel_data_1a04a2af09917915a5199729e3952c1ef7" kind="variable"><name>scale</name></member>
+    <member refid="struct_job_voxel_data_1af94ea4b3d54862b651f6f4d61607373d" kind="variable"><name>canExplode</name></member>
+  </compound>
+  <compound refid="class_audio_1_1_load_audio_settings" kind="class"><name>Audio::LoadAudioSettings</name>
+    <member refid="class_audio_1_1_load_audio_settings_1abafd2e98e0c75898588aa736e0635ca3" kind="variable"><name>audioMixer</name></member>
+    <member refid="class_audio_1_1_load_audio_settings_1af7cfd4f84511b441d85d623d91851ae0" kind="variable"><name>defaultVolume</name></member>
+    <member refid="class_audio_1_1_load_audio_settings_1a553b9cf2a07e48d64ddf13e663ab5fa7" kind="variable"><name>multiplier</name></member>
+    <member refid="class_audio_1_1_load_audio_settings_1a6cce86b9a49dbdcfa3ea9d10d37ddef4" kind="function"><name>Start</name></member>
+  </compound>
+  <compound refid="struct_lobby_1_1_lobby_character" kind="struct"><name>Lobby::LobbyCharacter</name>
+    <member refid="struct_lobby_1_1_lobby_character_1aea67ff5a2bf5446ff19c403907112de8" kind="variable"><name>prefab</name></member>
+    <member refid="struct_lobby_1_1_lobby_character_1a747a33e04a6bf4da692c79f7fb07bc33" kind="variable"><name>isSelectable</name></member>
+  </compound>
+  <compound refid="class_lobby_1_1_lobby_character_registry" kind="class"><name>Lobby::LobbyCharacterRegistry</name>
+    <member refid="class_lobby_1_1_lobby_character_registry_1adad09b8f8e5d4eae991f2234d94b8a62" kind="variable"><name>lobbyCharacters</name></member>
+    <member refid="class_lobby_1_1_lobby_character_registry_1a51a4e43175a977801303546108c8bae4" kind="function"><name>GetFirstSelectableCharacterIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_character_registry_1a0844b18e2f793df7d2c23e494ea636ae" kind="function"><name>GetNextSelectableCharacterIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_character_registry_1a8152f32c650c0c94725b2d6469d45c5f" kind="function"><name>GetPreviousSelectableCharacterIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_character_registry_1ac67e33d308358fa6c585c065d1b3e42e" kind="function"><name>GetPrefabWithIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_character_registry_1af7155950f7c282b0006b8d1e9e5787cd" kind="function"><name>SetSelectable</name></member>
+  </compound>
+  <compound refid="class_lobby_1_1_lobby_controller" kind="class"><name>Lobby::LobbyController</name>
+    <member refid="class_lobby_1_1_lobby_controller_1a97044fdec3ab89bfd5882ee0d91164c4" kind="property"><name>Instance</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a0c2f897d8ee618938bc949d7d9c2a91c" kind="property"><name>LobbyPlayerStates</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a637d5e21999a22636d35a15af8f97782" kind="variable"><name>gamePlayerInputManager</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a80c88093dc4ced78e51be9705b167604" kind="variable"><name>lobbyUI</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a73f9a77b3dcf123871dde974115930f6" kind="variable"><name>lobbyCharacterRegistry</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1ab8f571a067bc41b6b590f0c275bf401a" kind="variable"><name>minPlayerCountToStart</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a85c868967d3497e7efc0f5d442a6a5f9" kind="variable"><name>sceneBuildIndexToLoad</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a5db4209ca85fa4e6787337221c7f522c" kind="variable"><name>delayBetweenCharacterSwitch</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1ab1086670520205d259a34d8dfb0d6640" kind="variable"><name>_firstPlayerIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a14f295690114a0981445548e022e66cc" kind="variable"><name>_lastCharacterSwitchTime</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1ac9750f1b4b6ac7cd6d1fbd7b6dac4b69" kind="function"><name>Awake</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a687f50afd6814b7410633fc4f9200c7c" kind="function"><name>Start</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1ac53b1ee1f208cdf49b93aba96f2ed3f3" kind="function"><name>CreateInputBindings</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1ad141242200a9af94303a65a9c080febb" kind="function"><name>GetFirstConnectedPlayerIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a80f490c3942ac8071ec79fbb658f5e9e" kind="function"><name>OnConfirmHandler</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1adafab458723305d6d8e107d7c012ef6a" kind="function"><name>StartGame</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a0dbaf550d96a1ddd527bee277e6874b8" kind="function"><name>DisableAllPlayerInputControls</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1ad3a64cebf02a099b08c9c94715577b43" kind="function"><name>OnDirectionHandler</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a92cecffcf305031e32bafd2f18e3a596" kind="function"><name>IsAllPlayersReady</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1ae50686f00072a08e896a78e25274e97d" kind="function"><name>OnCancelHandler</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1af8e688302d7cfed02cb8f1c0bd130e6b" kind="function"><name>SetIsConnected</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a632b6118245dee4937d949053243cc20" kind="function"><name>SetPlayerReady</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a8bddf4241aaa9cdd4686a44e0a42be73" kind="function"><name>SetPlayerCharacterIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a147e95684ce3ec90f20e25a9922d85e4" kind="function"><name>HandlePlayerJoined</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1afe512eb23062d3bed42581795f466385" kind="function"><name>HandlePlayerLeft</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1af359c067307e75ef7e086749d17ae817" kind="function"><name>OnPlayerRemoveHandler</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a996d2ee1f37fba48aa4328468a725db6" kind="function"><name>ReturnToMainMenu</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1a7e02867d378348383d2184bb68f875e6" kind="function"><name>OnSelectLeftCharacterHandler</name></member>
+    <member refid="class_lobby_1_1_lobby_controller_1aaa3b8971eb8def4c19a793231f5f16f5" kind="function"><name>OnSelectRightCharacterHandler</name></member>
+  </compound>
+  <compound refid="class_lobby_1_1_lobby_player_slot_u_i" kind="class"><name>Lobby::LobbyPlayerSlotUI</name>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a053b5f5e0c539300d917bd18814b28cf" kind="event"><name>OnNextButtonClicked</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a5aa0a93ac4e69a57367d4b1df40a5fb9" kind="event"><name>OnPreviousButtonClicked</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a1071a27d5bd5d1aa532c012b8ab07ea6" kind="event"><name>OnRemoveButtonClicked</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a5480bda4e68e084c1e9dae5eaf463392" kind="variable"><name>characterRenderer</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a8395955a311a5ecb472011a8e15b0364" kind="variable"><name>characterGameObjectPosition</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a2fd746654b4beb1facc541c5c5603941" kind="variable"><name>nextButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1adf8ad1bf4725fee89244b1450510f711" kind="variable"><name>previousButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a9844845fc837e15daa2ec54a42b168f2" kind="variable"><name>removeButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a3de1c927c521b81f6ab91bb06ed4078b" kind="variable"><name>readyMark</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1abf354a28fa576e3c755134273ecf3545" kind="variable"><name>_playerIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1ac09166e75703cb8b830c9e57ae1b8420" kind="variable"><name>_lobbyCharacterRegistry</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1af52efcf18428b7f50f8cc987e7b44b11" kind="variable"><name>_characterGameObject</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a838893a836137bdfff492f66cce1bf5e" kind="variable"><name>_previousCharacterIndex</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a9cda6a590e69b285a0f00ed08f669220" kind="property"><name>IsDisable</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a8da9aa01193b69d72bfb1c20d6953e14" kind="function"><name>UpdateUI</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1abb332573e7575f2fe34640692a36f375" kind="function"><name>EnableSlotUI</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a532afc1953d60d0e44aaaf47568988dd" kind="function"><name>DisableSlotUI</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1abaede24a9391776d28a99035d01c2ea2" kind="function"><name>UpdateCharacterRenderer</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a77be98c7087d01b93b0d9b2813c57caf" kind="function"><name>EnableCharacterRenderer</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a52e93c1538e30f8a44bce97d0b00380b" kind="function"><name>DisableCharacterRenderer</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1ae66b8113ed322b4c56b1fe4de4197719" kind="function"><name>EnableNextButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a182f289ae3b78be997f31bd83ec0c5f4" kind="function"><name>DisableNextButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1af134dd64d35da4a6aa6bd1ec329bf7e1" kind="function"><name>HandleNextButtonClicked</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a203825651cb43c3d943b9b2884332fa9" kind="function"><name>EnablePreviousButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a4b31feb715ddc10d7eac2584a664b63f" kind="function"><name>DisablePreviousButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a90dc71ec8995a111225355f2d32a8ea2" kind="function"><name>HandlePreviousButtonClicked</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1aa7b917c213f0fd7eb6aeb2740c747e51" kind="function"><name>EnableRemoveButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a678f0cdd4ea6a63c1eda631f65030fa9" kind="function"><name>DisableRemoveButton</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a110eb43e10e2c97e9fb9367376a5a22f" kind="function"><name>HandleRemoveButtonClicked</name></member>
+    <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a6c5ced27245211ad4372e271bc2723f0" kind="function"><name>DisableMarkReadyButton</name></member>
+  </compound>
+  <compound refid="class_lobby_1_1_lobby_u_i" kind="class"><name>Lobby::LobbyUI</name>
+    <member refid="class_lobby_1_1_lobby_u_i_1a61f52a10ea7b2b59ba9cac36631eaa9c" kind="variable"><name>lobbyController</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a5e90fb143344496e8baa8f07966c08e2" kind="variable"><name>startGameText</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1aef519f19f1e1335c78d1361daac5d008" kind="variable"><name>playerSlots</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a4b8d6f508624c79d4710a6d1642b08e1" kind="variable"><name>_bindSlots</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a773ca4e7506c31b6f2980be38f4f318a" kind="function"><name>Start</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a5b885c493551c543451c9493c508806a" kind="function"><name>DisableAllSlots</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a9af932b7eadaeea6efa06c30bbbfc257" kind="function"><name>GetFirstSlotDisable</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a1e6323e628fc04e3cfe55ccf428b7b09" kind="function"><name>ShowStartGameText</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1af7465c4e46cdbc0cda95077e00bfcfc2" kind="function"><name>HideStartGameText</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a9918021614c37399f9f645a3838177b8" kind="function"><name>EnableSlotUI</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1a55dd8d4197c8cef3a9ae3ef968f622e4" kind="function"><name>DisableSlotUI</name></member>
+    <member refid="class_lobby_1_1_lobby_u_i_1afe330e8bc0c22348e88f5deb08b6b917" kind="function"><name>UpdateSlotUI</name></member>
+  </compound>
+  <compound refid="class_menu_1_1_menu_function_utils" kind="class"><name>Menu::MenuFunctionUtils</name>
+    <member refid="class_menu_1_1_menu_function_utils_1a38b4df4ca37619940d1413c63f0f35ca" kind="function"><name>LoadScene</name></member>
+    <member refid="class_menu_1_1_menu_function_utils_1a6c0b3587466ffbc521ecc64e4a3d95b3" kind="function"><name>LoadScene</name></member>
+    <member refid="class_menu_1_1_menu_function_utils_1a558647d3218b08cf4e06776b559270ba" kind="function"><name>ExitGame</name></member>
+  </compound>
+  <compound refid="class_player_1_1_player_bomb_controller" kind="class"><name>Player::PlayerBombController</name>
+    <member refid="class_player_1_1_player_bomb_controller_1a08fca42dd05c7e610fac7d456f0ce0a0" kind="variable"><name>bombPrefab</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a8c84d186ba1aa87dd150b2236cde014f" kind="variable"><name>bombPower</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a7bc8195bb6d9b89586031626602d1068" kind="variable"><name>minBombPower</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a44a859a423edac5b8049bc0002b4bf7a" kind="variable"><name>maxBombPower</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a9ac6fd4f97837591b6fca41a48448be9" kind="variable"><name>bombAmount</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a0b7259bb83afb5e86808e009109e433e" kind="variable"><name>bombLayerMask</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1ae1af6c04210c677be1acd2fc23eb985b" kind="variable"><name>_remainingBombs</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1aa0e4c67313b5d5dfb0236dbfde3f899d" kind="variable"><name>_playerInputHandler</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a5796f8048e2a7674a489ba6e4eb14e4d" kind="property"><name>BombPower</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a3fa97ce0809d4a7dee7aaa295e06e9bd" kind="function"><name>Start</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a41932ceb65310a1bc3c9b08aa226c6cf" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a6bb7ae421006dfec6f8469d3b33d3853" kind="function"><name>PlayerCanPlaceBombAt</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a9bd4c3ead84c7a6bdbc460f2b4442ca7" kind="function"><name>PlaceBombAt</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1ad94d588ff99c3b85c1ce2f8082d701f5" kind="function"><name>OnTriggerExit</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1aff22dea0b43ce81f685dc137dff6a4b8" kind="function"><name>Initialize</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a0b9f378a340210716a3f0038bb530801" kind="function"><name>TryPlaceBomb</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a739c33b4e38b2fc63a83f3990e886fd4" kind="function"><name>OnBombExplode</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a51ff63b090b0011e8b0c180546ef1aee" kind="function"><name>AddBombPower</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1ad3c804d253cc802fac8169fe0e683556" kind="function"><name>RemoveBombPower</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1a7bcbe1bd0fa65044f9a95e9bbccfab3b" kind="function"><name>AddBombAmount</name></member>
+    <member refid="class_player_1_1_player_bomb_controller_1ac4528b03006301225d638de0df91b620" kind="function"><name>RemoveBombAmount</name></member>
+  </compound>
+  <compound refid="class_utils_1_1_player_configuration_debug_utils" kind="class"><name>Utils::PlayerConfigurationDebugUtils</name>
+    <member refid="class_utils_1_1_player_configuration_debug_utils_1aee2ae84cb6dd1c9111f14c11a765a1f9" kind="function"><name>PrintPlayerConfigurations</name></member>
+    <member refid="class_utils_1_1_player_configuration_debug_utils_1a60c84570fa18eb73a718d5066c7b6b87" kind="function"><name>FormatPlayerConfiguration</name></member>
+  </compound>
+  <compound refid="class_player_1_1_player_effects" kind="class"><name>Player::PlayerEffects</name>
+    <member refid="class_player_1_1_player_effects_1af23184ac2710dfb5d99d887ba4f61060" kind="variable"><name>hasPushBombEffect</name></member>
+    <member refid="class_player_1_1_player_effects_1aea9bf9d72ff90a792d267f124a544a30" kind="property"><name>HasPushBombEffect</name></member>
+    <member refid="class_player_1_1_player_effects_1acd84c8f2a08293541d2be38bc10f0c50" kind="function"><name>SetPushBombEffect</name></member>
+  </compound>
+  <compound refid="class_player_1_1_player_game_object_registry" kind="class"><name>Player::PlayerGameObjectRegistry</name>
+    <member refid="class_player_1_1_player_game_object_registry_1ac3c8261fd487f48c52d5b597439efc29" kind="variable"><name>playerPrefabs</name></member>
+    <member refid="class_player_1_1_player_game_object_registry_1a533bba8fbfe9cdf762e2f0e13339d56a" kind="function"><name>GetOneWithIndex</name></member>
+  </compound>
+  <compound refid="class_player_inputs_1_1_player_input_handler" kind="class"><name>PlayerInputs::PlayerInputHandler</name>
+    <member refid="class_player_inputs_1_1_player_input_handler_1af1384aa34ec0d95b06b28804eb9aa03a" kind="variable"><name>playerInput</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a47f671590c1fc2b62312eb1c7a9a380d" kind="variable"><name>_controls</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1af3658a9aac1c887d1e6f88eed98e05d5" kind="event"><name>OnDirection</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a56f5f6851fdaa9e310ecab807cce8e6d" kind="event"><name>OnConfirm</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a35dc64e5e71172dc0fea9ab59cb2489c" kind="event"><name>OnCancel</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a6641e39b1b5ce9911d413cbddb36a0b2" kind="event"><name>OnMove</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a27b44524cafc029995f75bcb934c1eba" kind="event"><name>OnPlaceBomb</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1ab40451f40d450540a2198ed258b219fd" kind="function"><name>Start</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a3930c67821aee9a3f1f4f28374527dbf" kind="function"><name>OnActionTriggered</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a0b1118af87c7e5ab1e06fcfc385fb81c" kind="function"><name>UsePlayerControls</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a38dcec96336ad8c178b13447e8acf495" kind="function"><name>UseMenuControls</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a03e69906bba39656b084a91fbb0aa773" kind="function"><name>EnableInput</name></member>
+    <member refid="class_player_inputs_1_1_player_input_handler_1a82fca128ceeebfc5aded2b3d0cad6abd" kind="function"><name>DisableInput</name></member>
+  </compound>
+  <compound refid="class_player_inputs_1_1_player_input_registry" kind="class"><name>PlayerInputs::PlayerInputRegistry</name>
+    <member refid="class_player_inputs_1_1_player_input_registry_1aaa649c32ae8e020e6c9408f6efdb0e16" kind="variable"><name>Instance</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1a3d5aa540e8dc46cd7a9ea5e60daa54e4" kind="variable"><name>playerInputs</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1a3bcccfd08e29c1871b9da9457bc9f23a" kind="variable"><name>playerStates</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1ae48d3cfafc98a2beccd3c324bae88dfe" kind="function"><name>Awake</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1abc838f7e9f309dd86867985524724996" kind="function"><name>GetPlayerInputs</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1a0316b5aff6a3a176e4027d2229ffd302" kind="function"><name>GetPlayerStates</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1aeb69b71778470d57bbdbf6ab9c7211d6" kind="function"><name>GetPlayerCount</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1ae1b589a7100d552109099814b9b01aba" kind="function"><name>Register</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1ade6e244a5fa2a722ff14c2a189e37590" kind="function"><name>RegisterAll</name></member>
+    <member refid="class_player_inputs_1_1_player_input_registry_1ac3a76cfb143069b88a26ac567a9ef40d" kind="function"><name>Remove</name></member>
+  </compound>
+  <compound refid="class_game_1_1_player_manager" kind="class"><name>Game::PlayerManager</name>
+    <member refid="class_game_1_1_player_manager_1a12f0629e9ea8dceff39dcb37980eae2d" kind="property"><name>Instance</name></member>
+    <member refid="class_game_1_1_player_manager_1a2d952e1d087a149cedf85d23931cd723" kind="variable"><name>gameStateManager</name></member>
+    <member refid="class_game_1_1_player_manager_1a1f3587a7fa60a059ddd3dca4e178c688" kind="variable"><name>playerGameObjectRegistry</name></member>
+    <member refid="class_game_1_1_player_manager_1a8b14d76767f0d1c967071f254035d559" kind="variable"><name>playerSpawns</name></member>
+    <member refid="class_game_1_1_player_manager_1ae5f1a2e5edf50abba81ff46adff7d090" kind="variable"><name>explosionPrefab</name></member>
+    <member refid="class_game_1_1_player_manager_1ae86ae31c8e289db34a2a140a7aa1588d" kind="variable"><name>timeBeforeEndGame</name></member>
+    <member refid="class_game_1_1_player_manager_1a8ff8c14336fcc52e0ec15eab7bc0492e" kind="variable"><name>equalityThreshold</name></member>
+    <member refid="class_game_1_1_player_manager_1a8decf6708be84f3cc464d49d09a538e6" kind="variable"><name>_instantiatedPlayer</name></member>
+    <member refid="class_game_1_1_player_manager_1a31100c7bde73d3bb72b2c3bed19f9d95" kind="variable"><name>_playerInputHandlers</name></member>
+    <member refid="class_game_1_1_player_manager_1ad156170f280fcf5516e3e9cc4a8e0d04" kind="variable"><name>_alivePlayerCount</name></member>
+    <member refid="class_game_1_1_player_manager_1a165fb400ddcbd985ad603ab6bc7dbd3f" kind="variable"><name>_lastDeathTime</name></member>
+    <member refid="class_game_1_1_player_manager_1ada624255d05b81f32c97dc77ecc69747" kind="variable"><name>_playerDeathTimes</name></member>
+    <member refid="class_game_1_1_player_manager_1a37aa1f90390570a2437f41d35644fe6e" kind="function"><name>Awake</name></member>
+    <member refid="class_game_1_1_player_manager_1aab5ba31f11fb4e23425e530e877cfa73" kind="function"><name>GeneratePlayers</name></member>
+    <member refid="class_game_1_1_player_manager_1ac5d42f121845e78babab74b766b1cb8c" kind="function"><name>ClearOldPlayer</name></member>
+    <member refid="class_game_1_1_player_manager_1a44c552cd11159dc5612d1a851143a1fd" kind="function"><name>DoSpawnPlayers</name></member>
+    <member refid="class_game_1_1_player_manager_1a8359fac3b360b4bb2ded9ece3b448d05" kind="function"><name>OnPlayerDeath</name></member>
+    <member refid="class_game_1_1_player_manager_1a71e49e020e2cde47622d9991ba743106" kind="function"><name>EndGame</name></member>
+    <member refid="class_game_1_1_player_manager_1ae62e91370e6a3c26331b6b17d97c52ec" kind="function"><name>GetLastPlayerNamesDeadAtTheSameTime</name></member>
+    <member refid="class_game_1_1_player_manager_1abc1091925c8ec23b0e2173dd73cc7f3f" kind="function"><name>ShouldEndTheGame</name></member>
+    <member refid="class_game_1_1_player_manager_1a9f2dd30cfeebfd672c23c1e5bba67345" kind="function"><name>OnEnable</name></member>
+    <member refid="class_game_1_1_player_manager_1a2a20e80042bd4d9162b27b681716da43" kind="function"><name>OnDisable</name></member>
+    <member refid="class_game_1_1_player_manager_1a06b38be66bfbfb1ded94696635a8621b" kind="function"><name>OnOnGameStateStateChanged</name></member>
+    <member refid="class_game_1_1_player_manager_1a08c6ed10c4c736eae4d663f157aa095e" kind="function"><name>OnTerrainGenerated</name></member>
+    <member refid="class_game_1_1_player_manager_1ad76fb19a2779aa70c9233f9027efc54f" kind="function"><name>OnGameStatePlaying</name></member>
+    <member refid="class_game_1_1_player_manager_1af8aa6b9c3f41ce54654a02b5b643ba67" kind="function"><name>OnGameEnded</name></member>
+    <member refid="class_game_1_1_player_manager_1aab252a4578803cdd537994ff9b1f17ef" kind="function"><name>StartPlaying</name></member>
+    <member refid="class_game_1_1_player_manager_1af962e2ee82f97802b21b62f1b70dca42" kind="function"><name>EnablePlayerInputs</name></member>
+    <member refid="class_game_1_1_player_manager_1a05aeb091ccf0937558a6fc49b02d1709" kind="function"><name>DisablePlayerInputs</name></member>
+  </compound>
+  <compound refid="class_player_1_1_player_model_animation" kind="class"><name>Player::PlayerModelAnimation</name>
+    <member refid="class_player_1_1_player_model_animation_1ae4001f86b36bcefb3c501b9da6ea6051" kind="variable"><name>movementDelta</name></member>
+    <member refid="class_player_1_1_player_model_animation_1acb69833469c597dc71066da1a6b02b01" kind="variable"><name>movementSpeed</name></member>
+    <member refid="class_player_1_1_player_model_animation_1a331277605c85903879021f9d3b56e574" kind="variable"><name>actualMovementSpeed</name></member>
+    <member refid="class_player_1_1_player_model_animation_1a4168fa3298b6a89c41b3f591e41c4c2b" kind="variable"><name>movementThreshold</name></member>
+    <member refid="class_player_1_1_player_model_animation_1aecafc3bb244339852630ced734188ba2" kind="function"><name>Start</name></member>
+    <member refid="class_player_1_1_player_model_animation_1a9e2b2224e5f2b4ece9a1df59180cd2e7" kind="function"><name>FixedUpdate</name></member>
+    <member refid="class_player_1_1_player_model_animation_1a252a29758ec3f915456a4cd1d41b2931" kind="function"><name>OnValidate</name></member>
+  </compound>
+  <compound refid="class_player_1_1_player_movement" kind="class"><name>Player::PlayerMovement</name>
+    <member refid="class_player_1_1_player_movement_1a8ef4ed7cb3619a5b20407a6979bee41a" kind="variable"><name>playerRigidbody</name></member>
+    <member refid="class_player_1_1_player_movement_1aade2a8185699891ee754bb2617ebbbaf" kind="variable"><name>modelTransform</name></member>
+    <member refid="class_player_1_1_player_movement_1a6975e98c7d3347621e47dbffcff188df" kind="variable"><name>baseSpeed</name></member>
+    <member refid="class_player_1_1_player_movement_1ad334915d0cd05dd67c3c4bad942a6170" kind="variable"><name>speedPerBonus</name></member>
+    <member refid="class_player_1_1_player_movement_1a3863796851886b1d3eef9fdd5bed07f1" kind="variable"><name>bonusNumber</name></member>
+    <member refid="class_player_1_1_player_movement_1a4afad51da3e7537211049e260f01e6db" kind="variable"><name>minBonusNumber</name></member>
+    <member refid="class_player_1_1_player_movement_1a8bd07730f877bfcecc25b367a33b3b5d" kind="variable"><name>maxBonusNumber</name></member>
+    <member refid="class_player_1_1_player_movement_1a6931f7fa13cd462c3ee13d3018037701" kind="variable"><name>_playerInputHandler</name></member>
+    <member refid="class_player_1_1_player_movement_1a6c1455f869f95688fc67191f0d9a8654" kind="variable"><name>lookAtPosition</name></member>
+    <member refid="class_player_1_1_player_movement_1a031dca37acd5ef74c82b0a655f7443ed" kind="variable"><name>_speed</name></member>
+    <member refid="class_player_1_1_player_movement_1a0629d650b7f04e7eac3d631eb80b5a9e" kind="variable"><name>_inputVector</name></member>
+    <member refid="class_player_1_1_player_movement_1abd0c1316863e0ad1c694c350b6d613bd" kind="function"><name>Start</name></member>
+    <member refid="class_player_1_1_player_movement_1a53ab4a051f5029053fec533cac5a2a74" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_player_1_1_player_movement_1afb0fd1fa0a40343f36a5ad42fb889ba9" kind="function"><name>ComputeSpeed</name></member>
+    <member refid="class_player_1_1_player_movement_1afbe20be8a8a3d62e4f5090b6970fea74" kind="function"><name>OnValidate</name></member>
+    <member refid="class_player_1_1_player_movement_1a39ef7316b8e4c835a0d345effd4e5619" kind="function"><name>Initialize</name></member>
+    <member refid="class_player_1_1_player_movement_1a24fb75853973786c964caab3d5f672c7" kind="function"><name>AddSpeedBonus</name></member>
+    <member refid="class_player_1_1_player_movement_1aa9926e07efe315c0e7dd1364578342f0" kind="function"><name>RemoveSpeedBonus</name></member>
+    <member refid="class_player_1_1_player_movement_1a655d0302cb663e00747dc3d8f6f5724f" kind="function"><name>UpdateInputVector</name></member>
+    <member refid="class_player_1_1_player_movement_1a868cbd054ff66f9671ba88adb6aa59b7" kind="function"><name>FixedUpdate</name></member>
+  </compound>
+  <compound refid="struct_lobby_1_1_player_state" kind="struct"><name>Lobby::PlayerState</name>
+    <member refid="struct_lobby_1_1_player_state_1a1910a98c7200ece3a36d3d8b535786af" kind="property"><name>PlayerIndex</name></member>
+    <member refid="struct_lobby_1_1_player_state_1a6cdf102cf96ad681891d6b7e7df8c092" kind="variable"><name>PlayerInput</name></member>
+    <member refid="struct_lobby_1_1_player_state_1ac5c653e81473783dc410b6e63f17dd87" kind="variable"><name>CharacterIndex</name></member>
+    <member refid="struct_lobby_1_1_player_state_1aeee9a95a5c1ac08f7431efc9886d1389" kind="variable"><name>IsReady</name></member>
+    <member refid="struct_lobby_1_1_player_state_1a26bf93ddc652a1f4b9fcf3c7f1acee36" kind="variable"><name>IsConnected</name></member>
+  </compound>
+  <compound refid="class_audio_1_1_play_music_queue" kind="class"><name>Audio::PlayMusicQueue</name>
+    <member refid="class_audio_1_1_play_music_queue_1afaa7ea6c4f8997931350c16d6d6a8f2c" kind="variable"><name>audioSource</name></member>
+    <member refid="class_audio_1_1_play_music_queue_1a4cb634313b5788a20259ac3b9b37e79b" kind="variable"><name>loopLastSong</name></member>
+    <member refid="class_audio_1_1_play_music_queue_1a6ec248bdcf3e714d909f5c21274f105e" kind="variable"><name>delayBetweenSongs</name></member>
+    <member refid="class_audio_1_1_play_music_queue_1a2b80e77681e6aebf01b7f63ae1d925f9" kind="variable"><name>musicQueue</name></member>
+    <member refid="class_audio_1_1_play_music_queue_1ad735e529da573ea958a899ac5389a68d" kind="function"><name>Start</name></member>
+    <member refid="class_audio_1_1_play_music_queue_1ae22b23d877a19e979e5da0344699b54f" kind="function"><name>PlaySong</name></member>
+    <member refid="class_audio_1_1_play_music_queue_1a1aa23de4ade0f64c10ff4f03e7aba4cb" kind="function"><name>IsLastSongAndShouldLoopLastSong</name></member>
+    <member refid="class_audio_1_1_play_music_queue_1a3a0b2772df7c89fbae245679ad70c978" kind="function"><name>PlayNextSong</name></member>
+  </compound>
+  <compound refid="struct_ply_voxel_parse_job" kind="struct"><name>PlyVoxelParseJob</name>
+    <member refid="struct_ply_voxel_parse_job_1a5a164f8ddb93ec6bd539a1269b49a02f" kind="variable"><name>fileData</name></member>
+    <member refid="struct_ply_voxel_parse_job_1a80f86e9b6e33213a39373821bd088189" kind="variable"><name>voxelData</name></member>
+    <member refid="struct_ply_voxel_parse_job_1ab4facfcbd54946f2187e095a5a11a48d" kind="variable"><name>voxels</name></member>
+    <member refid="struct_ply_voxel_parse_job_1acf7f7cfda4101c41b376398304595a6d" kind="variable"><name>voxelsShape</name></member>
+    <member refid="struct_ply_voxel_parse_job_1abcf55c45983c57b3abd4d8511bd2974a" kind="variable"><name>voxelsCoordinates</name></member>
+    <member refid="struct_ply_voxel_parse_job_1ad5eb5793841be7c7c938f2dd46de61bd" kind="variable"><name>voxelsColors</name></member>
+    <member refid="struct_ply_voxel_parse_job_1a24ef42138cfb218a9748be7eecf0dbef" kind="function"><name>Execute</name></member>
+    <member refid="struct_ply_voxel_parse_job_1a6463c2027d9a7d931ba0f54f03cd4f99" kind="function"><name>IsTransparent</name></member>
+  </compound>
+  <compound refid="class_bonus_1_1_push_bomb_bonus" kind="class"><name>Bonus::PushBombBonus</name>
+    <member refid="class_bonus_1_1_push_bomb_bonus_1acf1d1f16a89278ed7a16a5a434e0efab" kind="function"><name>OnPlayerTakeBonus</name></member>
+  </compound>
+  <compound refid="struct_i_a_1_1_raycast_result" kind="struct"><name>IA::RaycastResult</name>
+    <member refid="struct_i_a_1_1_raycast_result_1a3b953d866af94188bf7d0b2400d93140" kind="variable"><name>top</name></member>
+    <member refid="struct_i_a_1_1_raycast_result_1a9fed4a4634a0a259248ec6f42e495df1" kind="variable"><name>right</name></member>
+    <member refid="struct_i_a_1_1_raycast_result_1ae9f4242ad4fcfc04dc5945238ebe37be" kind="variable"><name>bottom</name></member>
+    <member refid="struct_i_a_1_1_raycast_result_1a6760313eb0b8ef0e2b531598c0c2ca61" kind="variable"><name>left</name></member>
+    <member refid="struct_i_a_1_1_raycast_result_1a69724d997decbbe11403648c6cf1d184" kind="function"><name>ContainsBomb</name></member>
+  </compound>
+  <compound refid="class_game_1_1_ready_countdown" kind="class"><name>Game::ReadyCountdown</name>
+    <member refid="class_game_1_1_ready_countdown_1acd6d6a68a486bb2faac115d127a5d621" kind="variable"><name>gameStateManager</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a641e77e17c45c74ed39ddee557d5cc25" kind="variable"><name>startGameCanvas</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a2a2ef697ce8ac46196478f29f2fe1d2b" kind="variable"><name>textMeshPro</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a86690cbe4fc130a14f5920135c1b06ca" kind="variable"><name>delayBetweenCountdowns</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a31bb5b6f3a44858f9dc0daefda7c7fc7" kind="variable"><name>countdownMessages</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a8bdd4623e6fdf7c7d082689096e8c709" kind="variable"><name>lastDisplayedCountdownMessageIndex</name></member>
+    <member refid="class_game_1_1_ready_countdown_1aad1cf3ce88e78e063cadca1240f24c50" kind="function"><name>Awake</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a22e339721ceafbf9eb6622641dfe9531" kind="function"><name>OnEnable</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a603e64c1be150bd553f88464e67911ca" kind="function"><name>OnDisable</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a7f677240dffdfdf2f9217b779414c003" kind="function"><name>OnOnGameStateStateChanged</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a1ce0d091078aebfbf36b88ae06939a45" kind="function"><name>StartCountdown</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a9e10199bc1aa05b889250bfed640af1d" kind="function"><name>OnCountdownTick</name></member>
+    <member refid="class_game_1_1_ready_countdown_1a5665a7b9724bee1fcfcabfe79d5f05a4" kind="function"><name>StopCountdown</name></member>
+  </compound>
+  <compound refid="class_menu_1_1_setting_entry" kind="class"><name>Menu::SettingEntry</name>
+    <member refid="class_menu_1_1_setting_entry_1ad4fee9309558a8b8f192a92f04be60a9" kind="function"><name>Save</name></member>
+  </compound>
+  <compound refid="class_terrain_1_1_terrain_manager" kind="class"><name>Terrain::TerrainManager</name>
+    <member refid="class_terrain_1_1_terrain_manager_1a2b69f7cad985ff6a5c5a696de81aed41" kind="variable"><name>Instance</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a7ce5a8c1332c8d6058fa88266ba1b796" kind="variable"><name>Width</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a6e0ab1b2aa96d8aa80855a756ae45a31" kind="variable"><name>Height</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1abb5ec7cf9dd472b0320141f5ad5f8423" kind="variable"><name>wallPrefabs</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a770212dde950e8b62d7904a13359a61a" kind="variable"><name>indestructibleWallPrefab</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a84130e228c429f6d128eb86ac855275d" kind="variable"><name>floor</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a538996191dbd98ff00491b66a1ef15ec" kind="variable"><name>_filledTiles</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1aefef1f37c0181b612f1b25148fdeeb86" kind="variable"><name>_previouslyInstantiated</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a494bd8298abb1a7dfc73ba68d536cd94" kind="variable"><name>gameStateManager</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a8046775695e227a7cc43048522e958f9" kind="function"><name>Awake</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a83fa3c53ae6b3dd14ec9d34e1ca35c6c" kind="function"><name>ClearOldGeneration</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1aafdd51fc88813b5d9199ca1dbb005e40" kind="function"><name>GenerateDefaultTerrainData</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a0cf66b3699f7fe78dee55ad035ddeec2" kind="function"><name>GenerateSpawnsData</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1afc105f66caddc7b66115acdf08dcd7d4" kind="function"><name>GenerateBottomLeftCornerSpawn</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a66a3a87e907025b1d4e4ac81018884b8" kind="function"><name>GenerateBottomRightCornerSpawn</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a1dc10c64e66cddaef65b585b32349546" kind="function"><name>GenerateTopLeftCornerSpawn</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a12151ae003157bc885574724807f6cc8" kind="function"><name>GenerateTopRightCornerSpawn</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1add9f118759fcd2c4f06b08f0a3ed934a" kind="function"><name>GenerateTerrainBounds</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1ab279516821803724c1336ac89a9e92a0" kind="function"><name>GenerateHorizontalBounds</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1ac537623a9ada0e20178bc43ad0df8bac" kind="function"><name>GenerateVerticalBounds</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1aae38fb054bf2d7ce75ab34958439b66f" kind="function"><name>GenerateTerrainEntities</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a3dff7af34612b0e4dc334c69223acc25" kind="function"><name>OnEnable</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1aa21563588fd08a14584879c4a3e1c087" kind="function"><name>OnDisable</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a06f4f24db3ddfc3092cb76f3a135d6c4" kind="function"><name>OnOnGameStateStateChanged</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1aadbadf809ded9668fa13edc2f1240bf9" kind="function"><name>OnValidate</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1aa60ae2e5a077b3c5fe5228cf81cd9ca4" kind="function"><name>GenerateTerrain</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a08abbe3fda23329f9287bf66ba557148" kind="function"><name>InstantiateFloor</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1abdda06ed67d9b27857c3c43096e9f1a6" kind="function"><name>InstantiateRandomWall</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a3abb4cf3926750bcf1878b2078fc49b1" kind="function"><name>InstantiateIndestructibleWall</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1ad2aab597538b0efa84e8c27a2486d5da" kind="function"><name>InstantiateEntity</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1ae0346f98683660df2d3610481d116e7d" kind="function"><name>SetValue</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1aab3bc69a6f86c9d403f4a815735977d6" kind="function"><name>SetValue</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1a88df5ab9fd1e20c40d7ec383a2b4dcb5" kind="function"><name>IsFilled</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1abafd802ba54e234947254451cad6d08d" kind="function"><name>IsFilled</name></member>
+    <member refid="class_terrain_1_1_terrain_manager_1ae68623ab272181d4dd759f183033c11b" kind="function"><name>GetTerrainEntityType</name></member>
+  </compound>
+  <compound refid="class_i_a_1_1_terrain_state_manager" kind="class"><name>IA::TerrainStateManager</name>
+    <member refid="class_i_a_1_1_terrain_state_manager_1a090ba515d268b5804cf9ca9d90ad0254" kind="variable"><name>_instance</name></member>
+    <member refid="class_i_a_1_1_terrain_state_manager_1ad1a6e365e358d79d9dfc95d3edcefc71" kind="variable"><name>Width</name></member>
+    <member refid="class_i_a_1_1_terrain_state_manager_1a6890b6d6c4ad40251a6e6a0f2d9b8fd8" kind="variable"><name>Height</name></member>
+    <member refid="class_i_a_1_1_terrain_state_manager_1abd0f08b0b1a87c9174d754d130bf9644" kind="variable"><name>terrainState</name></member>
+    <member refid="class_i_a_1_1_terrain_state_manager_1ac363f72d2d74d60fed1f8c544cd732d6" kind="function"><name>Init</name></member>
+    <member refid="class_i_a_1_1_terrain_state_manager_1aea27d64340387958be4254d78f4e87bb" kind="function"><name>SetTileState</name></member>
+    <member refid="class_i_a_1_1_terrain_state_manager_1a24762d8dfeb7aea4d9e3002553378005" kind="function"><name>RemoveTile</name></member>
+    <member refid="class_i_a_1_1_terrain_state_manager_1aaf9167952e709001c022efa9f202fc92" kind="function"><name>GetInstance</name></member>
+  </compound>
+  <compound refid="class_terrain_1_1_terrain_utils" kind="class"><name>Terrain::TerrainUtils</name>
+    <member refid="class_terrain_1_1_terrain_utils_1a0dc690cd8992110e1b97093715450170" kind="function"><name>GetTerrainPosition</name></member>
+    <member refid="class_terrain_1_1_terrain_utils_1a2cd84b7d31acb5bd2032c30a37a9d233" kind="function"><name>GetTilePosition</name></member>
+  </compound>
+  <compound refid="struct_i_a_1_1_touch_data" kind="struct"><name>IA::TouchData</name>
+    <member refid="struct_i_a_1_1_touch_data_1a82048157cb0a71ec0126e139b7e65bd8" kind="variable"><name>Position</name></member>
+    <member refid="struct_i_a_1_1_touch_data_1a17cccffc5509b7dcc11181c47da79f65" kind="variable"><name>IsBomb</name></member>
+    <member refid="struct_i_a_1_1_touch_data_1aea8e9d11619b48dfb5217b34cea91cee" kind="variable"><name>IsWall</name></member>
+    <member refid="struct_i_a_1_1_touch_data_1a0c76ace2a00d61d3fd777226780b3eb6" kind="variable"><name>IsTerrain</name></member>
+  </compound>
+  <compound refid="class_menu_1_1_u_i_settings_manager" kind="class"><name>Menu::UISettingsManager</name>
+    <member refid="class_menu_1_1_u_i_settings_manager_1a71b63d6c8115394a1b0f19283ce39434" kind="variable"><name>previousMenuCanvas</name></member>
+    <member refid="class_menu_1_1_u_i_settings_manager_1a923e4eb2bdcd3f25a1e9d46d343507c4" kind="variable"><name>settingsMenuCanvas</name></member>
+    <member refid="class_menu_1_1_u_i_settings_manager_1a0db3c9f48ed6713dc9983832877ee41a" kind="variable"><name>settingEntries</name></member>
+    <member refid="class_menu_1_1_u_i_settings_manager_1aa9cda74efecfe472f5762920b7cbba63" kind="variable"><name>firstSelectableInSettingsMenu</name></member>
+    <member refid="class_menu_1_1_u_i_settings_manager_1ac17553b89b91eefccb1f92f8dc2cc671" kind="variable"><name>settingsButtonInPreviousMenu</name></member>
+    <member refid="class_menu_1_1_u_i_settings_manager_1addefb316df0a1335546392acfd2c8584" kind="function"><name>SaveSettings</name></member>
+    <member refid="class_menu_1_1_u_i_settings_manager_1a02621b735e802429124946eaeda50b08" kind="function"><name>OpenSettings</name></member>
+    <member refid="class_menu_1_1_u_i_settings_manager_1a6f616ad593169499a8c3a2a14678f58a" kind="function"><name>ReturnToPreviousMenu</name></member>
+  </compound>
+  <compound refid="class_audio_1_1_volume_controller" kind="class"><name>Audio::VolumeController</name>
+    <member refid="class_audio_1_1_volume_controller_1ae01a8b6db6c914a8f89855cd223b5685" kind="variable"><name>audioMixer</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a471b48fb0dab810c8ea28649e6f21020" kind="variable"><name>slider</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a27f142b0e61390d308989c112aec6871" kind="variable"><name>toggle</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a5633e85d361c571c89c8c42d022859d1" kind="variable"><name>audioParameterName</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a8c2c19e91c7faf74be17f718b8f3e05a" kind="variable"><name>defaultVolume</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a0b89925c2f6acd3b6d2979a23a6da71c" kind="variable"><name>multiplier</name></member>
+    <member refid="class_audio_1_1_volume_controller_1af55004af54a311425a8d83aafdd1651b" kind="variable"><name>tempSliderValue</name></member>
+    <member refid="class_audio_1_1_volume_controller_1ac6bfe902a07c789fcd59b12204cec0ff" kind="variable"><name>isUpdatingToggle</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a61cd1cd3649cf452f71b16000d2f2182" kind="property"><name>AudioParameterToggleKey</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a4a6bbf19c2c6c305fe389c65cef649d0" kind="function"><name>OnEnable</name></member>
+    <member refid="class_audio_1_1_volume_controller_1acdf3bcbbeb0de819207c45718adc12d6" kind="function"><name>OnDisable</name></member>
+    <member refid="class_audio_1_1_volume_controller_1a1e0da1a8ceb800155fa25535af3d1e75" kind="function"><name>HandleSliderValueChange</name></member>
+    <member refid="class_audio_1_1_volume_controller_1aab5709d8e8032f3c9788c4f1368d767c" kind="function"><name>HandleToggleValueChanged</name></member>
+    <member refid="class_audio_1_1_volume_controller_1ae64a8579e31205e8afc8c30904e20194" kind="function"><name>Save</name></member>
+  </compound>
+  <compound refid="class_voxel_data" kind="class"><name>VoxelData</name>
+    <member refid="class_voxel_data_1aa5aec02e5a40adb3770b2da7bbaf4c2e" kind="variable"><name>name</name></member>
+    <member refid="class_voxel_data_1acd8b007082a657d53cc3c25f66085ba4" kind="variable"><name>voxels</name></member>
+    <member refid="class_voxel_data_1a4eed4322a7677ed1d140b97c5ff07dfb" kind="variable"><name>voxelsColors</name></member>
+    <member refid="class_voxel_data_1a09328e683e6ecf12581d83768d6d805f" kind="variable"><name>voxelsCoordinates</name></member>
+    <member refid="class_voxel_data_1afdb7ecda9804b1cd67af9b9a0d8e51eb" kind="variable"><name>width</name></member>
+    <member refid="class_voxel_data_1af4ac4a42c9339b2cfc17899fc5451f2d" kind="variable"><name>height</name></member>
+    <member refid="class_voxel_data_1a4ae9d921ad187d609ac5c464d178b5de" kind="variable"><name>depth</name></member>
+    <member refid="class_voxel_data_1a55ce3f3543ec07fcce004c28783644c6" kind="variable"><name>origin</name></member>
+    <member refid="class_voxel_data_1a816b78f5c39adaa36f38089201796478" kind="variable"><name>scale</name></member>
+    <member refid="class_voxel_data_1ac6496b68cce5d334d0e9c4ca0eaf5d86" kind="variable"><name>canExplode</name></member>
+    <member refid="class_voxel_data_1af083de0d75caeaddaad5101177187fc3" kind="variable"><name>voxelsColorBuffer</name></member>
+    <member refid="class_voxel_data_1ae11aba779ebd1d591f4240e613efa0cd" kind="variable"><name>voxelsCoordinateBuffer</name></member>
+    <member refid="class_voxel_data_1a16b80ec8e0a23a424ab43a7663737085" kind="variable"><name>_ready</name></member>
+    <member refid="class_voxel_data_1aa6b1e7c6d133d04a6f305adb0b283290" kind="event"><name>OnVoxelDataReady</name></member>
+    <member refid="class_voxel_data_1a2f73f3e4a512cec4d673b7d6e1f78274" kind="function"><name>VoxelDataReady</name></member>
+    <member refid="class_voxel_data_1af14bc11e4c7be01d09be954806304fe3" kind="function"><name>MarkReady</name></member>
+    <member refid="class_voxel_data_1a7857b891fce817af16078ff521fdc10f" kind="function"><name>IsReady</name></member>
+    <member refid="class_voxel_data_1ad751e379dd840856cb07b4b305fb1d22" kind="function"><name>Dispose</name></member>
+    <member refid="class_voxel_data_1ade8f5725dcb81aa3720e7be7e44e2ce9" kind="function"><name>~VoxelData</name></member>
+  </compound>
+  <compound refid="class_voxel_data_store" kind="class"><name>VoxelDataStore</name>
+    <member refid="class_voxel_data_store_1ad8ab68854ad533c2f12a72089d1eb0e7" kind="variable"><name>instance</name></member>
+    <member refid="class_voxel_data_store_1aff2972b2bc318371b54bef4741f19159" kind="variable"><name>store</name></member>
+    <member refid="class_voxel_data_store_1a17b1188d9006c4fa091a7e3b271b6839" kind="property"><name>Instance</name></member>
+    <member refid="class_voxel_data_store_1a1369570367a90ade40231bae03af058f" kind="function"><name>SetVoxelData</name></member>
+    <member refid="class_voxel_data_store_1acf6659c6a3b6ff58f78ddf45907b502a" kind="function"><name>GetVoxelData</name></member>
+    <member refid="class_voxel_data_store_1a248851fa5394771aef06210c9df5c507" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_voxel_deflagration_controller" kind="class"><name>VoxelDeflagrationController</name>
+    <member refid="class_voxel_deflagration_controller_1a65118d945b05596a820819aab83b01b3" kind="variable"><name>visualEffect</name></member>
+    <member refid="class_voxel_deflagration_controller_1a342523518f5a5951958ef59e67752cc3" kind="variable"><name>waitForEnd</name></member>
+    <member refid="class_voxel_deflagration_controller_1a23cfe99aa69289ed7ea9f8995cad899f" kind="variable"><name>particlesSpawned</name></member>
+    <member refid="class_voxel_deflagration_controller_1af64884828dc6d3d86697b26017d6154c" kind="function"><name>Awake</name></member>
+    <member refid="class_voxel_deflagration_controller_1aefbb543566e71c1c71ed4f4cf6eaf666" kind="function"><name>Update</name></member>
+    <member refid="class_voxel_deflagration_controller_1a34b1cbba745b7391b012b118a4dec947" kind="function"><name>Play</name></member>
+  </compound>
+  <compound refid="class_voxel_graph" kind="class"><name>VoxelGraph</name>
+    <member refid="class_voxel_graph_1a5bec8475b19565ca4c0a4ad2999815a0" kind="variable"><name>voxelParser</name></member>
+    <member refid="class_voxel_graph_1a8dd2aa145b7cef8dd3b64ba4d183ee58" kind="variable"><name>autoDestroy</name></member>
+    <member refid="class_voxel_graph_1acdeb1adf40176ebb6312a70c068a3790" kind="variable"><name>destroyThreshold</name></member>
+    <member refid="class_voxel_graph_1a11b569710da9689291f26c65422b2a4b" kind="variable"><name>visualEffect</name></member>
+    <member refid="class_voxel_graph_1a5ca3834afe46caa2316e5f6c3e55f1e4" kind="variable"><name>playing</name></member>
+    <member refid="class_voxel_graph_1a68a3bcd180905b2311f2be868da42be3" kind="variable"><name>particleSpawned</name></member>
+    <member refid="class_voxel_graph_1a70778a366c4dee32b602526ff70fdaac" kind="event"><name>OnAnimationEnd</name></member>
+    <member refid="class_voxel_graph_1acc516a6f9b564758a24cc1d3b4347843" kind="function"><name>AnimationEnd</name></member>
+    <member refid="class_voxel_graph_1ab275987167e93d063186bc0b45cdda9f" kind="function"><name>Awake</name></member>
+    <member refid="class_voxel_graph_1aa805dddf1996f5e9ea20f4d78b1e6020" kind="function"><name>OnEnable</name></member>
+    <member refid="class_voxel_graph_1a993a8f5dc388266b8ec5dd9cfd0559d4" kind="function"><name>generateTexture3D</name></member>
+    <member refid="class_voxel_graph_1abc73fcbf9230ec8bd987d363dc1d15ec" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="struct_voxel_info" kind="struct"><name>VoxelInfo</name>
+    <member refid="struct_voxel_info_1aefb5d403ef3c499eb41fb8708f2f3838" kind="variable"><name>x</name></member>
+    <member refid="struct_voxel_info_1aafaa489b8a5f3fe324260792c603901d" kind="variable"><name>y</name></member>
+    <member refid="struct_voxel_info_1a79f2305ebcee149433a5914a064e6187" kind="variable"><name>z</name></member>
+    <member refid="struct_voxel_info_1ab39cfdcfb9ec358787c1a9195454b35f" kind="variable"><name>red</name></member>
+    <member refid="struct_voxel_info_1adeba876a074d82e55e58a4ec1035d5e2" kind="variable"><name>green</name></member>
+    <member refid="struct_voxel_info_1a9daeeedf70c12ebeaebac9970a04c25f" kind="variable"><name>blue</name></member>
+    <member refid="struct_voxel_info_1a49dc7538d82e286ba8c5fd7635ebc969" kind="variable"><name>alpha</name></member>
+  </compound>
+  <compound refid="class_voxel_mesh" kind="class"><name>VoxelMesh</name>
+    <member refid="class_voxel_mesh_1ac310e86bfcf7f6709665b1b0730995b8" kind="variable"><name>mesh</name></member>
+    <member refid="class_voxel_mesh_1a87f266358bef904688a6dbebe2eff2ff" kind="variable"><name>optimizationLevel</name></member>
+    <member refid="class_voxel_mesh_1a67fbc26bc31187f8ca4521f90a2cd0c3" kind="variable"><name>waitOptimization</name></member>
+    <member refid="class_voxel_mesh_1ac59c840dd75d2cb8727adfe464b15afb" kind="function"><name>VoxelMesh</name></member>
+    <member refid="class_voxel_mesh_1adfcdd34625cb6296e97a8c2937cd8ca9" kind="function"><name>VoxelMesh</name></member>
+  </compound>
+  <compound refid="class_voxel_mesh_filter" kind="class"><name>VoxelMeshFilter</name>
+    <member refid="class_voxel_mesh_filter_1af819c2ba52fffcdf8a5f5ec4b2d62f1a" kind="variable"><name>meshFilter</name></member>
+    <member refid="class_voxel_mesh_filter_1a68eb2032cddee56461c25d43e65e1fe9" kind="variable"><name>parser</name></member>
+    <member refid="class_voxel_mesh_filter_1a5d33a14dd147b055169c1d26e42c6d5c" kind="variable"><name>voxelMesh</name></member>
+    <member refid="class_voxel_mesh_filter_1a076e6008c6e285e9b401bc567d9465d2" kind="variable"><name>meshJob</name></member>
+    <member refid="class_voxel_mesh_filter_1a3b067671527b8d417c51bfd5790735b9" kind="variable"><name>meshJobHandle</name></member>
+    <member refid="class_voxel_mesh_filter_1ad8e37a9acd57d37c702a3a373ba467d5" kind="variable"><name>meshJobRunning</name></member>
+    <member refid="class_voxel_mesh_filter_1a7c8c1645ccdcacfc1cf08969406d9b1c" kind="function"><name>Start</name></member>
+    <member refid="class_voxel_mesh_filter_1accbcba62b2535d22e7bd412989fdd7c8" kind="function"><name>SetupVoxelMesh</name></member>
+    <member refid="class_voxel_mesh_filter_1a74456477d0186f9841ac09660c63086d" kind="function"><name>LateUpdate</name></member>
+  </compound>
+  <compound refid="struct_voxel_mesh_job" kind="struct"><name>VoxelMeshJob</name>
+    <member refid="struct_voxel_mesh_job_1a540321092e24404bcc52a90bdb5d0d95" kind="variable"><name>voxels</name></member>
+    <member refid="struct_voxel_mesh_job_1ab208b9e3e6285728be9c855d95b87ae2" kind="variable"><name>origin</name></member>
+    <member refid="struct_voxel_mesh_job_1a0d1a3c24df3c3f3592552ac571f87e61" kind="variable"><name>scale</name></member>
+    <member refid="struct_voxel_mesh_job_1abe44a5ad47b43e85bc3d1efb17440264" kind="variable"><name>width</name></member>
+    <member refid="struct_voxel_mesh_job_1a84e68585cfe29a8045317e007070aaca" kind="variable"><name>height</name></member>
+    <member refid="struct_voxel_mesh_job_1a6488408b8424e6af5885468e8a67fdd8" kind="variable"><name>depth</name></member>
+    <member refid="struct_voxel_mesh_job_1a57be18352de317b3c60b58f2fb442ac0" kind="variable"><name>algorithm</name></member>
+    <member refid="struct_voxel_mesh_job_1a855eb8ba44deebd08d125d95c8f4e839" kind="variable"><name>vertices</name></member>
+    <member refid="struct_voxel_mesh_job_1a66218a53c606e0ab6b43997a7b159954" kind="variable"><name>triangles</name></member>
+    <member refid="struct_voxel_mesh_job_1a6d06b9ef7111c979bd548010f473c417" kind="variable"><name>colors</name></member>
+    <member refid="struct_voxel_mesh_job_1ac1248e136a951d839d8a5290bd39c5b0" kind="function"><name>Execute</name></member>
+    <member refid="struct_voxel_mesh_job_1acf1cedeb7ee97116ba1ba98098ec84d9" kind="function"><name>NaiveMeshing</name></member>
+    <member refid="struct_voxel_mesh_job_1a14dea9d602a9a6d295356555de794f9d" kind="function"><name>GreedyMeshing</name></member>
+    <member refid="struct_voxel_mesh_job_1a1c34f484ceae6aa78024e978ee3a93f5" kind="function"><name>ConvertToFaceCoordinate</name></member>
+    <member refid="struct_voxel_mesh_job_1a869afc9d4ce09d7570549e2424a0549f" kind="function"><name>ConvertToFaceCoordinate</name></member>
+    <member refid="struct_voxel_mesh_job_1a4aacb86d784967c1f56937a1a5b51fab" kind="function"><name>IsVoxelOccluded</name></member>
+    <member refid="struct_voxel_mesh_job_1a8d7f07c6850b959e2c913c2d0cdd04cb" kind="function"><name>GenerateSlicedVoxelMesh</name></member>
+    <member refid="struct_voxel_mesh_job_1a3fb4e92c383085a91d6b420996008fea" kind="function"><name>IsVoxelEmpty</name></member>
+    <member refid="struct_voxel_mesh_job_1ab0d2a84a001296c8fe7ee03c8c564e4f" kind="function"><name>GetIndex</name></member>
+    <member refid="struct_voxel_mesh_job_1a94c4008270cf3029cd5712b48dda83c3" kind="function"><name>PushFace</name></member>
+  </compound>
+  <compound refid="class_voxel_mesh_store" kind="class"><name>VoxelMeshStore</name>
+    <member refid="class_voxel_mesh_store_1a9b24b0d0321ebe446a78a26dc2c3af9f" kind="variable"><name>store</name></member>
+    <member refid="class_voxel_mesh_store_1a01b8e1d520c430aa7a53b8e1806aed58" kind="function"><name>SetVoxelMesh</name></member>
+    <member refid="class_voxel_mesh_store_1a33e031e182e117c7ea279c5208987967" kind="function"><name>GetVoxelMesh</name></member>
+  </compound>
+  <compound refid="class_voxel_parser" kind="class"><name>VoxelParser</name>
+    <member refid="class_voxel_parser_1a0a27f35e4e30390ce7ab6aaa1a19c363" kind="variable"><name>file</name></member>
+    <member refid="class_voxel_parser_1af1b45ef26b97e4ab98ad84e04b0499cc" kind="variable"><name>voxelData</name></member>
+    <member refid="class_voxel_parser_1a0562b7526fa1b854527217b257a40f56" kind="variable"><name>parserJobHandle</name></member>
+    <member refid="class_voxel_parser_1ade883f57cadbd77106c928eea607e555" kind="variable"><name>parseJob</name></member>
+    <member refid="class_voxel_parser_1a5a54e58b18219f8fb992c18370690533" kind="variable"><name>isParsing</name></member>
+    <member refid="class_voxel_parser_1af8cb98bc1eef8d08cc8ec811ee6b1826" kind="function"><name>Start</name></member>
+    <member refid="class_voxel_parser_1a5aa4d48158c25d45fc9695c6170ca539" kind="function"><name>LateUpdate</name></member>
+  </compound>
+  <compound refid="namespace_audio" kind="namespace"><name>Audio</name>
+  </compound>
+  <compound refid="namespace_bomb" kind="namespace"><name>Bomb</name>
+  </compound>
+  <compound refid="namespace_bonus" kind="namespace"><name>Bonus</name>
+  </compound>
+  <compound refid="namespace_core" kind="namespace"><name>Core</name>
+  </compound>
+  <compound refid="namespace_game" kind="namespace"><name>Game</name>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04" kind="enum"><name>GameState</name></member>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04a61bcd96a2c1f8026527cbf2019d6e9a4" kind="enumvalue"><name>Initialization</name></member>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04aeb1aeea49ee3db8d998a1f299fcb97e2" kind="enumvalue"><name>TerrainGenerated</name></member>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ae7d31fc0602fb2ede144d18cdffd816b" kind="enumvalue"><name>Ready</name></member>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ac9dbb2b7c84159b632d71e512eba8428" kind="enumvalue"><name>Playing</name></member>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ae99180abf47a8b3a856e0bcb2656990a" kind="enumvalue"><name>Paused</name></member>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04ab2a21932ddc3b1e41c012d711c7bd238" kind="enumvalue"><name>Resumed</name></member>
+    <member refid="namespace_game_1a7f57a7a8408e554d0a72882c287e1d04a0157fbb99be9622bdaa6e544270c0622" kind="enumvalue"><name>Ended</name></member>
+  </compound>
+  <compound refid="namespace_i_a" kind="namespace"><name>IA</name>
+    <member refid="namespace_i_a_1ada681592736518bb3cf380b49af13a52" kind="enum"><name>TerrainTileState</name></member>
+    <member refid="namespace_i_a_1ada681592736518bb3cf380b49af13a52a6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+    <member refid="namespace_i_a_1ada681592736518bb3cf380b49af13a52acd3abfc2f377a4c3fd9181f919d9de82" kind="enumvalue"><name>Bomb</name></member>
+    <member refid="namespace_i_a_1ada681592736518bb3cf380b49af13a52a5e26b7ef8cab8e58371e53c68f61b2d5" kind="enumvalue"><name>IndestructibleWall</name></member>
+    <member refid="namespace_i_a_1ada681592736518bb3cf380b49af13a52a94e8a499539d1a472f3b5dbbb85508c0" kind="enumvalue"><name>Wall</name></member>
+    <member refid="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674a" kind="enum"><name>MovementDirection</name></member>
+    <member refid="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aa601560b94fbb188919dd1d36c8ab70a4" kind="enumvalue"><name>North</name></member>
+    <member refid="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aabf495fc048d8d44b7f32536df5cf3930" kind="enumvalue"><name>West</name></member>
+    <member refid="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aa263d7b2cf53802c9ed127b718c0bf9fd" kind="enumvalue"><name>South</name></member>
+    <member refid="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aaa99dc62d017d04cf67266593f9c3761e" kind="enumvalue"><name>East</name></member>
+    <member refid="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aa6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+  </compound>
+  <compound refid="namespace_lobby" kind="namespace"><name>Lobby</name>
+  </compound>
+  <compound refid="namespace_menu" kind="namespace"><name>Menu</name>
+  </compound>
+  <compound refid="namespace_player" kind="namespace"><name>Player</name>
+    <member refid="namespace_player_1aebb32b45be262523a72672014806faaa" kind="enum"><name>PlayerOrientation</name></member>
+    <member refid="namespace_player_1aebb32b45be262523a72672014806faaaaa4ffdcf0dc1f31b9acaf295d75b51d00" kind="enumvalue"><name>Top</name></member>
+    <member refid="namespace_player_1aebb32b45be262523a72672014806faaaa92b09c7c48c520c3c55e497875da437c" kind="enumvalue"><name>Right</name></member>
+    <member refid="namespace_player_1aebb32b45be262523a72672014806faaaa2ad9d63b69c4a10a5cc9cad923133bc4" kind="enumvalue"><name>Bottom</name></member>
+    <member refid="namespace_player_1aebb32b45be262523a72672014806faaaa945d5e233cf7d6240f6b783b36a374ff" kind="enumvalue"><name>Left</name></member>
+  </compound>
+  <compound refid="namespace_player_inputs" kind="namespace"><name>PlayerInputs</name>
+  </compound>
+  <compound refid="namespace_player_state" kind="namespace"><name>PlayerState</name>
+  </compound>
+  <compound refid="namespace_random" kind="namespace"><name>Random</name>
+  </compound>
+  <compound refid="namespacestatic" kind="namespace"><name>static</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_terrain" kind="namespace"><name>Terrain</name>
+    <member refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593ba" kind="enum"><name>TerrainEntityType</name></member>
+    <member refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baa94e8a499539d1a472f3b5dbbb85508c0" kind="enumvalue"><name>Wall</name></member>
+    <member refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baa888d7ede1e21f7579daf4d2a20054f56" kind="enumvalue"><name>IndestructibleEntity</name></member>
+    <member refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baacd3abfc2f377a4c3fd9181f919d9de82" kind="enumvalue"><name>Bomb</name></member>
+    <member refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593baa6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+  </compound>
+  <compound refid="namespace_t_m_pro" kind="namespace"><name>TMPro</name>
+  </compound>
+  <compound refid="namespace_unity_1_1_collections" kind="namespace"><name>Unity::Collections</name>
+  </compound>
+  <compound refid="namespace_unity_1_1_collections_1_1_low_level_1_1_unsafe" kind="namespace"><name>Unity::Collections::LowLevel::Unsafe</name>
+  </compound>
+  <compound refid="namespace_unity_1_1_jobs" kind="namespace"><name>Unity::Jobs</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_audio" kind="namespace"><name>UnityEngine::Audio</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_input_system" kind="namespace"><name>UnityEngine::InputSystem</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_input_system_1_1_input_action" kind="namespace"><name>UnityEngine::InputSystem::InputAction</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_serialization" kind="namespace"><name>UnityEngine::Serialization</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_v_f_x" kind="namespace"><name>UnityEngine::VFX</name>
+  </compound>
+  <compound refid="namespace_utils" kind="namespace"><name>Utils</name>
+  </compound>
+  <compound refid="namespace_wall" kind="namespace"><name>Wall</name>
+  </compound>
+  <compound refid="_audio_source_pool_8cs" kind="file"><name>AudioSourcePool.cs</name>
+  </compound>
+  <compound refid="_load_audio_settings_8cs" kind="file"><name>LoadAudioSettings.cs</name>
+  </compound>
+  <compound refid="_play_music_queue_8cs" kind="file"><name>PlayMusicQueue.cs</name>
+  </compound>
+  <compound refid="_volume_controller_8cs" kind="file"><name>VolumeController.cs</name>
+  </compound>
+  <compound refid="_base_bomb_controller_8cs" kind="file"><name>BaseBombController.cs</name>
+    <member refid="_base_bomb_controller_8cs_1a832e8f52fca5a678819ec96269dcb532" kind="typedef"><name>Random</name></member>
+  </compound>
+  <compound refid="_base_push_bomb_controller_8cs" kind="file"><name>BasePushBombController.cs</name>
+  </compound>
+  <compound refid="_bomb_data_8cs" kind="file"><name>BombData.cs</name>
+  </compound>
+  <compound refid="_classic_bomb_controller_8cs" kind="file"><name>ClassicBombController.cs</name>
+  </compound>
+  <compound refid="_explosion_8cs" kind="file"><name>Explosion.cs</name>
+  </compound>
+  <compound refid="_voxel_deflagration_controller_8cs" kind="file"><name>VoxelDeflagrationController.cs</name>
+  </compound>
+  <compound refid="_base_bonus_8cs" kind="file"><name>BaseBonus.cs</name>
+  </compound>
+  <compound refid="_decrease_bomb_amount_bonus_8cs" kind="file"><name>DecreaseBombAmountBonus.cs</name>
+  </compound>
+  <compound refid="_decrease_bomb_power_bonus_8cs" kind="file"><name>DecreaseBombPowerBonus.cs</name>
+  </compound>
+  <compound refid="_decrease_speed_bonus_8cs" kind="file"><name>DecreaseSpeedBonus.cs</name>
+  </compound>
+  <compound refid="_increase_bomb_amount_bonus_8cs" kind="file"><name>IncreaseBombAmountBonus.cs</name>
+  </compound>
+  <compound refid="_increase_bomb_power_bonus_8cs" kind="file"><name>IncreaseBombPowerBonus.cs</name>
+  </compound>
+  <compound refid="_increase_speed_bonus_8cs" kind="file"><name>IncreaseSpeedBonus.cs</name>
+  </compound>
+  <compound refid="_push_bomb_bonus_8cs" kind="file"><name>PushBombBonus.cs</name>
+  </compound>
+  <compound refid="_dont_destroy_this_game_object_on_load_8cs" kind="file"><name>DontDestroyThisGameObjectOnLoad.cs</name>
+  </compound>
+  <compound refid="_entity_health_8cs" kind="file"><name>EntityHealth.cs</name>
+  </compound>
+  <compound refid="_infinite_rotation_8cs" kind="file"><name>InfiniteRotation.cs</name>
+  </compound>
+  <compound refid="_game_bonus_8cs" kind="file"><name>GameBonus.cs</name>
+  </compound>
+  <compound refid="_game_bonuses_8cs" kind="file"><name>GameBonuses.cs</name>
+    <member refid="_game_bonuses_8cs_1a832e8f52fca5a678819ec96269dcb532" kind="typedef"><name>Random</name></member>
+  </compound>
+  <compound refid="_game_ended_event_8cs" kind="file"><name>GameEndedEvent.cs</name>
+  </compound>
+  <compound refid="_game_state_8cs" kind="file"><name>GameState.cs</name>
+  </compound>
+  <compound refid="_game_state_manager_8cs" kind="file"><name>GameStateManager.cs</name>
+  </compound>
+  <compound refid="_player_manager_8cs" kind="file"><name>PlayerManager.cs</name>
+    <member refid="_player_manager_8cs_1a59a35d29f44141b87cc42e34b4c3407e" kind="typedef"><name>PlayerState</name></member>
+    <member refid="_player_manager_8cs_1a377f056f30c29a7cd63c68fc1cf2089b" kind="property"><name>Player</name></member>
+  </compound>
+  <compound refid="_ready_countdown_8cs" kind="file"><name>ReadyCountdown.cs</name>
+  </compound>
+  <compound refid="_terrain_state_manager_8cs" kind="file"><name>TerrainStateManager.cs</name>
+  </compound>
+  <compound refid="_i_a_controller_8cs" kind="file"><name>IAController.cs</name>
+  </compound>
+  <compound refid="_movement_direction_8cs" kind="file"><name>MovementDirection.cs</name>
+  </compound>
+  <compound refid="_raycast_result_8cs" kind="file"><name>RaycastResult.cs</name>
+  </compound>
+  <compound refid="_touch_data_8cs" kind="file"><name>TouchData.cs</name>
+  </compound>
+  <compound refid="_background_texture_offset_8cs" kind="file"><name>BackgroundTextureOffset.cs</name>
+  </compound>
+  <compound refid="_lobby_character_registry_8cs" kind="file"><name>LobbyCharacterRegistry.cs</name>
+  </compound>
+  <compound refid="_lobby_controller_8cs" kind="file"><name>LobbyController.cs</name>
+  </compound>
+  <compound refid="_lobby_player_slot_u_i_8cs" kind="file"><name>LobbyPlayerSlotUI.cs</name>
+  </compound>
+  <compound refid="_lobby_u_i_8cs" kind="file"><name>LobbyUI.cs</name>
+  </compound>
+  <compound refid="_player_state_8cs" kind="file"><name>PlayerState.cs</name>
+  </compound>
+  <compound refid="_end_game_menu_8cs" kind="file"><name>EndGameMenu.cs</name>
+  </compound>
+  <compound refid="_menu_function_utils_8cs" kind="file"><name>MenuFunctionUtils.cs</name>
+  </compound>
+  <compound refid="_setting_entry_8cs" kind="file"><name>SettingEntry.cs</name>
+  </compound>
+  <compound refid="_u_i_settings_manager_8cs" kind="file"><name>UISettingsManager.cs</name>
+  </compound>
+  <compound refid="_cursor_model_animation_8cs" kind="file"><name>CursorModelAnimation.cs</name>
+  </compound>
+  <compound refid="_player_bomb_controller_8cs" kind="file"><name>PlayerBombController.cs</name>
+  </compound>
+  <compound refid="_player_effects_8cs" kind="file"><name>PlayerEffects.cs</name>
+  </compound>
+  <compound refid="_player_game_object_registry_8cs" kind="file"><name>PlayerGameObjectRegistry.cs</name>
+  </compound>
+  <compound refid="_player_model_animation_8cs" kind="file"><name>PlayerModelAnimation.cs</name>
+  </compound>
+  <compound refid="_player_movement_8cs" kind="file"><name>PlayerMovement.cs</name>
+  </compound>
+  <compound refid="_game_player_input_manager_8cs" kind="file"><name>GamePlayerInputManager.cs</name>
+    <member refid="_game_player_input_manager_8cs_1ac5292a43c3ba3ffacbce20c77eb943b0" kind="property"><name>PlayerInput</name></member>
+  </compound>
+  <compound refid="_i_player_handler_8cs" kind="file"><name>IPlayerHandler.cs</name>
+  </compound>
+  <compound refid="_player_input_handler_8cs" kind="file"><name>PlayerInputHandler.cs</name>
+  </compound>
+  <compound refid="_player_input_registry_8cs" kind="file"><name>PlayerInputRegistry.cs</name>
+  </compound>
+  <compound refid="_terrain_entity_type_8cs" kind="file"><name>TerrainEntityType.cs</name>
+  </compound>
+  <compound refid="_terrain_manager_8cs" kind="file"><name>TerrainManager.cs</name>
+    <member refid="_terrain_manager_8cs_1a832e8f52fca5a678819ec96269dcb532" kind="typedef"><name>Random</name></member>
+  </compound>
+  <compound refid="_terrain_utils_8cs" kind="file"><name>TerrainUtils.cs</name>
+  </compound>
+  <compound refid="_debug_array_8cs" kind="file"><name>DebugArray.cs</name>
+  </compound>
+  <compound refid="_player_configuration_debug_utils_8cs" kind="file"><name>PlayerConfigurationDebugUtils.cs</name>
+  </compound>
+  <compound refid="_voxel_data_8cs" kind="file"><name>VoxelData.cs</name>
+  </compound>
+  <compound refid="_voxel_data_store_8cs" kind="file"><name>VoxelDataStore.cs</name>
+  </compound>
+  <compound refid="_voxel_mesh_8cs" kind="file"><name>VoxelMesh.cs</name>
+  </compound>
+  <compound refid="_voxel_mesher_job_8cs" kind="file"><name>VoxelMesherJob.cs</name>
+    <member refid="_voxel_mesher_job_8cs_1a3dca793ae022b329201d84c839f87de4" kind="enum"><name>FaceDirection</name></member>
+    <member refid="_voxel_mesher_job_8cs_1a3dca793ae022b329201d84c839f87de4afbaedde498cdead4f2780217646e9ba1" kind="enumvalue"><name>UP</name></member>
+    <member refid="_voxel_mesher_job_8cs_1a3dca793ae022b329201d84c839f87de4ac4e0e4e3118472beeb2ae75827450f1f" kind="enumvalue"><name>DOWN</name></member>
+    <member refid="_voxel_mesher_job_8cs_1a3dca793ae022b329201d84c839f87de4a684d325a7303f52e64011467ff5c5758" kind="enumvalue"><name>LEFT</name></member>
+    <member refid="_voxel_mesher_job_8cs_1a3dca793ae022b329201d84c839f87de4a21507b40c80068eda19865706fdc2403" kind="enumvalue"><name>RIGHT</name></member>
+    <member refid="_voxel_mesher_job_8cs_1a3dca793ae022b329201d84c839f87de4abb2fe5c916efb43aab8cbb68f997d2ee" kind="enumvalue"><name>FRONT</name></member>
+    <member refid="_voxel_mesher_job_8cs_1a3dca793ae022b329201d84c839f87de4a1dd26f1f1790f0b56d5752fb0fbecef0" kind="enumvalue"><name>BACK</name></member>
+    <member refid="_voxel_mesher_job_8cs_1ae49dcef943ee2cbcc62dc6055d881bc6" kind="enum"><name>MeshingAlgorithm</name></member>
+    <member refid="_voxel_mesher_job_8cs_1ae49dcef943ee2cbcc62dc6055d881bc6a33e8270128b994b16da5c9e367bb94cf" kind="enumvalue"><name>NAIVE</name></member>
+    <member refid="_voxel_mesher_job_8cs_1ae49dcef943ee2cbcc62dc6055d881bc6a349ab98a75758a304b172797510f0f06" kind="enumvalue"><name>GREEDY</name></member>
+    <member refid="_voxel_mesher_job_8cs_1ae49dcef943ee2cbcc62dc6055d881bc6a2ba22e58ca17bb728d522bba36cf8350" kind="enumvalue"><name>DONE</name></member>
+  </compound>
+  <compound refid="_voxel_mesh_store_8cs" kind="file"><name>VoxelMeshStore.cs</name>
+  </compound>
+  <compound refid="_voxel_parser_job_8cs" kind="file"><name>VoxelParserJob.cs</name>
+  </compound>
+  <compound refid="_multi_voxel_mesh_generator_8cs" kind="file"><name>MultiVoxelMeshGenerator.cs</name>
+  </compound>
+  <compound refid="_multi_voxel_parser_8cs" kind="file"><name>MultiVoxelParser.cs</name>
+  </compound>
+  <compound refid="_voxel_graph_8cs" kind="file"><name>VoxelGraph.cs</name>
+  </compound>
+  <compound refid="_voxel_mesh_filter_8cs" kind="file"><name>VoxelMeshFilter.cs</name>
+  </compound>
+  <compound refid="_voxel_parser_8cs" kind="file"><name>VoxelParser.cs</name>
+  </compound>
+  <compound refid="_destructible_wall_8cs" kind="file"><name>DestructibleWall.cs</name>
+  </compound>
+  <compound refid="dir_654f178923b1444d84ee2a4d88be6b27" kind="dir"><name>Audio</name>
+  </compound>
+  <compound refid="dir_88d2edaf798a49ca5e7e906c6f6e651b" kind="dir"><name>Bomb</name>
+  </compound>
+  <compound refid="dir_dcd2436ec2e688a0b0cfadbd6fdd06b3" kind="dir"><name>Bonus</name>
+  </compound>
+  <compound refid="dir_c6310732a22f63c0c2fc5595561e68f1" kind="dir"><name>Core</name>
+  </compound>
+  <compound refid="dir_c35d8822243b4962c17aa786959091ad" kind="dir"><name>VoxelMesher/core</name>
+  </compound>
+  <compound refid="dir_c33286056d2acf479cd8641ef845fec1" kind="dir"><name>Game</name>
+  </compound>
+  <compound refid="dir_6e00ce4071d9ddf226ab1e2b676adf94" kind="dir"><name>IA</name>
+  </compound>
+  <compound refid="dir_765fff2a260f0ca7868b33268536dd19" kind="dir"><name>Lobby</name>
+  </compound>
+  <compound refid="dir_76517f5f2507c458ebd15a0ec51ba293" kind="dir"><name>Menu</name>
+  </compound>
+  <compound refid="dir_c049039abd2482638da2b3d05566ace6" kind="dir"><name>Player</name>
+  </compound>
+  <compound refid="dir_011decac3049046805a0a603ed9d9492" kind="dir"><name>PlayerInputs</name>
+  </compound>
+  <compound refid="dir_add4754e415d257cb4c4e7691a9b30e0" kind="dir"><name>Terrain</name>
+  </compound>
+  <compound refid="dir_0a824aa1f70ce3b829ef378253b085da" kind="dir"><name>Utils</name>
+  </compound>
+  <compound refid="dir_2c56ce8104ec34f09ff7361d46438040" kind="dir"><name>VoxelMesher</name>
+  </compound>
+  <compound refid="dir_234b9aa9f9009526b26cf5d20be0ea66" kind="dir"><name>Wall</name>
+  </compound>
+</doxygenindex>

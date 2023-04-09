@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_voxel_mesh_store" kind="class" language="C#" prot="public">
+    <compoundname>VoxelMeshStore</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_voxel_mesh_store_1a9b24b0d0321ebe446a78a26dc2c3af9f" prot="private" static="yes" mutable="no">
+        <type>Dictionary&lt; string, <ref refid="class_voxel_mesh" kindref="compound">VoxelMesh</ref> &gt;</type>
+        <definition>Dictionary&lt;string, VoxelMesh&gt; VoxelMeshStore.store</definition>
+        <argsstring></argsstring>
+        <name>store</name>
+        <qualifiedname>VoxelMeshStore.store</qualifiedname>
+        <initializer>= new Dictionary&lt;string, <ref refid="class_voxel_mesh" kindref="compound">VoxelMesh</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMeshStore.cs" line="8" column="31" bodyfile="VoxelMesher/core/VoxelMeshStore.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_voxel_mesh_store_1a01b8e1d520c430aa7a53b8e1806aed58" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_voxel_mesh" kindref="compound">VoxelMesh</ref></type>
+        <definition>static VoxelMesh VoxelMeshStore.SetVoxelMesh</definition>
+        <argsstring>(string instanceID, VoxelMesh mesh)</argsstring>
+        <name>SetVoxelMesh</name>
+        <qualifiedname>VoxelMeshStore.SetVoxelMesh</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>instanceID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_voxel_mesh" kindref="compound">VoxelMesh</ref></type>
+          <declname>mesh</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMeshStore.cs" line="10" column="29" bodyfile="VoxelMesher/core/VoxelMeshStore.cs" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_mesh_store_1a33e031e182e117c7ea279c5208987967" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_voxel_mesh" kindref="compound">VoxelMesh</ref></type>
+        <definition>static VoxelMesh VoxelMeshStore.GetVoxelMesh</definition>
+        <argsstring>(string instanceID)</argsstring>
+        <name>GetVoxelMesh</name>
+        <qualifiedname>VoxelMeshStore.GetVoxelMesh</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>instanceID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelMeshStore.cs" line="15" column="29" bodyfile="VoxelMesher/core/VoxelMeshStore.cs" bodystart="15" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VoxelMesher/core/VoxelMeshStore.cs" line="7" column="7" bodyfile="VoxelMesher/core/VoxelMeshStore.cs" bodystart="7" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_voxel_mesh_store_1a33e031e182e117c7ea279c5208987967" prot="public" virt="non-virtual"><scope>VoxelMeshStore</scope><name>GetVoxelMesh</name></member>
+      <member refid="class_voxel_mesh_store_1a01b8e1d520c430aa7a53b8e1806aed58" prot="public" virt="non-virtual"><scope>VoxelMeshStore</scope><name>SetVoxelMesh</name></member>
+      <member refid="class_voxel_mesh_store_1a9b24b0d0321ebe446a78a26dc2c3af9f" prot="private" virt="non-virtual"><scope>VoxelMeshStore</scope><name>store</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

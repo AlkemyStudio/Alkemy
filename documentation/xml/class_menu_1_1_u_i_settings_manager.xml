@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_menu_1_1_u_i_settings_manager" kind="class" language="C#" prot="public">
+    <compoundname>Menu::UISettingsManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_menu_1_1_u_i_settings_manager_1a71b63d6c8115394a1b0f19283ce39434" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Menu.UISettingsManager.previousMenuCanvas</definition>
+        <argsstring></argsstring>
+        <name>previousMenuCanvas</name>
+        <qualifiedname>Menu.UISettingsManager.previousMenuCanvas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="11" column="29" bodyfile="Menu/UISettingsManager.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_u_i_settings_manager_1a923e4eb2bdcd3f25a1e9d46d343507c4" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Menu.UISettingsManager.settingsMenuCanvas</definition>
+        <argsstring></argsstring>
+        <name>settingsMenuCanvas</name>
+        <qualifiedname>Menu.UISettingsManager.settingsMenuCanvas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="12" column="29" bodyfile="Menu/UISettingsManager.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_u_i_settings_manager_1a0db3c9f48ed6713dc9983832877ee41a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_menu_1_1_setting_entry" kindref="compound">SettingEntry</ref>[]</type>
+        <definition>SettingEntry [] Menu.UISettingsManager.settingEntries</definition>
+        <argsstring></argsstring>
+        <name>settingEntries</name>
+        <qualifiedname>Menu.UISettingsManager.settingEntries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="13" column="31" bodyfile="Menu/UISettingsManager.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_u_i_settings_manager_1aa9cda74efecfe472f5762920b7cbba63" prot="private" static="no" mutable="no">
+        <type>Selectable</type>
+        <definition>Selectable Menu.UISettingsManager.firstSelectableInSettingsMenu</definition>
+        <argsstring></argsstring>
+        <name>firstSelectableInSettingsMenu</name>
+        <qualifiedname>Menu.UISettingsManager.firstSelectableInSettingsMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="14" column="29" bodyfile="Menu/UISettingsManager.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_u_i_settings_manager_1ac17553b89b91eefccb1f92f8dc2cc671" prot="private" static="no" mutable="no">
+        <type>Selectable</type>
+        <definition>Selectable Menu.UISettingsManager.settingsButtonInPreviousMenu</definition>
+        <argsstring></argsstring>
+        <name>settingsButtonInPreviousMenu</name>
+        <qualifiedname>Menu.UISettingsManager.settingsButtonInPreviousMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="15" column="29" bodyfile="Menu/UISettingsManager.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_menu_1_1_u_i_settings_manager_1addefb316df0a1335546392acfd2c8584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.UISettingsManager.SaveSettings</definition>
+        <argsstring>()</argsstring>
+        <name>SaveSettings</name>
+        <qualifiedname>Menu.UISettingsManager.SaveSettings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="18" column="21" bodyfile="Menu/UISettingsManager.cs" bodystart="18" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1_1_u_i_settings_manager_1a02621b735e802429124946eaeda50b08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.UISettingsManager.OpenSettings</definition>
+        <argsstring>()</argsstring>
+        <name>OpenSettings</name>
+        <qualifiedname>Menu.UISettingsManager.OpenSettings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="29" column="21" bodyfile="Menu/UISettingsManager.cs" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1_1_u_i_settings_manager_1a6f616ad593169499a8c3a2a14678f58a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.UISettingsManager.ReturnToPreviousMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ReturnToPreviousMenu</name>
+        <qualifiedname>Menu.UISettingsManager.ReturnToPreviousMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/UISettingsManager.cs" line="37" column="21" bodyfile="Menu/UISettingsManager.cs" bodystart="37" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>UISettingsManager is used to manage the settings menu. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Menu.UISettingsManager</label>
+        <link refid="class_menu_1_1_u_i_settings_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Menu.UISettingsManager</label>
+        <link refid="class_menu_1_1_u_i_settings_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Menu/UISettingsManager.cs" line="9" column="11" bodyfile="Menu/UISettingsManager.cs" bodystart="10" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_menu_1_1_u_i_settings_manager_1aa9cda74efecfe472f5762920b7cbba63" prot="private" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>firstSelectableInSettingsMenu</name></member>
+      <member refid="class_menu_1_1_u_i_settings_manager_1a02621b735e802429124946eaeda50b08" prot="public" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>OpenSettings</name></member>
+      <member refid="class_menu_1_1_u_i_settings_manager_1a71b63d6c8115394a1b0f19283ce39434" prot="private" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>previousMenuCanvas</name></member>
+      <member refid="class_menu_1_1_u_i_settings_manager_1a6f616ad593169499a8c3a2a14678f58a" prot="public" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>ReturnToPreviousMenu</name></member>
+      <member refid="class_menu_1_1_u_i_settings_manager_1addefb316df0a1335546392acfd2c8584" prot="public" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>SaveSettings</name></member>
+      <member refid="class_menu_1_1_u_i_settings_manager_1a0db3c9f48ed6713dc9983832877ee41a" prot="private" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>settingEntries</name></member>
+      <member refid="class_menu_1_1_u_i_settings_manager_1ac17553b89b91eefccb1f92f8dc2cc671" prot="private" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>settingsButtonInPreviousMenu</name></member>
+      <member refid="class_menu_1_1_u_i_settings_manager_1a923e4eb2bdcd3f25a1e9d46d343507c4" prot="private" virt="non-virtual"><scope>Menu::UISettingsManager</scope><name>settingsMenuCanvas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

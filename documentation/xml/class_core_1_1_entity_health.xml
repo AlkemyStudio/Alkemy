@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_core_1_1_entity_health" kind="class" language="C#" prot="public">
+    <compoundname>Core::EntityHealth</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_core_1_1_entity_health_1a89b3f299189c6db0a6238fb792820863" prot="private" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip Core.EntityHealth.deathSound</definition>
+        <argsstring></argsstring>
+        <name>deathSound</name>
+        <qualifiedname>Core.EntityHealth.deathSound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/EntityHealth.cs" line="8" column="28" bodyfile="Core/EntityHealth.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_core_1_1_entity_health_1a6d6d7935114a01182489f7cc390c694c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Core.EntityHealth.isDeathSoundNotNull</definition>
+        <argsstring></argsstring>
+        <name>isDeathSoundNotNull</name>
+        <qualifiedname>Core.EntityHealth.isDeathSoundNotNull</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/EntityHealth.cs" line="9" column="22" bodyfile="Core/EntityHealth.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_core_1_1_entity_health_1a596290c19a95ca59a15047acb61f66b9" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>HealthAction</type>
+        <definition>HealthAction Core.EntityHealth.OnDeath</definition>
+        <argsstring></argsstring>
+        <name>OnDeath</name>
+        <qualifiedname>Core.EntityHealth.OnDeath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/EntityHealth.cs" line="13" column="35" bodyfile="Core/EntityHealth.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_core_1_1_entity_health_1aebd8b074d9ee48183268ac00df625139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Core.EntityHealth.HealthAction</definition>
+        <argsstring>(GameObject go)</argsstring>
+        <name>HealthAction</name>
+        <qualifiedname>Core.EntityHealth.HealthAction</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>go</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/EntityHealth.cs" line="11" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_core_1_1_entity_health_1ac26cfa4fdbc5c52611f97b94b8424c48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core.EntityHealth.PerformDamage</definition>
+        <argsstring>()</argsstring>
+        <name>PerformDamage</name>
+        <qualifiedname>Core.EntityHealth.PerformDamage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/EntityHealth.cs" line="20" column="21" bodyfile="Core/EntityHealth.cs" bodystart="20" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_core_1_1_entity_health_1a88daf2f2b05d3b4bcf3f8524a7131e25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Core.EntityHealth.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Core.EntityHealth.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/EntityHealth.cs" line="15" column="22" bodyfile="Core/EntityHealth.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Core.EntityHealth</label>
+        <link refid="class_core_1_1_entity_health"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Core.EntityHealth</label>
+        <link refid="class_core_1_1_entity_health"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Core/EntityHealth.cs" line="6" column="11" bodyfile="Core/EntityHealth.cs" bodystart="7" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_core_1_1_entity_health_1a89b3f299189c6db0a6238fb792820863" prot="private" virt="non-virtual"><scope>Core::EntityHealth</scope><name>deathSound</name></member>
+      <member refid="class_core_1_1_entity_health_1aebd8b074d9ee48183268ac00df625139" prot="public" virt="non-virtual"><scope>Core::EntityHealth</scope><name>HealthAction</name></member>
+      <member refid="class_core_1_1_entity_health_1a6d6d7935114a01182489f7cc390c694c" prot="private" virt="non-virtual"><scope>Core::EntityHealth</scope><name>isDeathSoundNotNull</name></member>
+      <member refid="class_core_1_1_entity_health_1a596290c19a95ca59a15047acb61f66b9" prot="public" virt="non-virtual"><scope>Core::EntityHealth</scope><name>OnDeath</name></member>
+      <member refid="class_core_1_1_entity_health_1ac26cfa4fdbc5c52611f97b94b8424c48" prot="public" virt="non-virtual"><scope>Core::EntityHealth</scope><name>PerformDamage</name></member>
+      <member refid="class_core_1_1_entity_health_1a88daf2f2b05d3b4bcf3f8524a7131e25" prot="private" virt="non-virtual"><scope>Core::EntityHealth</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

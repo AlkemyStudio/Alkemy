@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_menu_1_1_setting_entry" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>Menu::SettingEntry</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <derivedcompoundref refid="class_audio_1_1_volume_controller" prot="public" virt="non-virtual">Audio.VolumeController</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_menu_1_1_setting_entry_1ad4fee9309558a8b8f192a92f04be60a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void Menu.SettingEntry.Save</definition>
+        <argsstring>()</argsstring>
+        <name>Save</name>
+        <qualifiedname>Menu.SettingEntry.Save</qualifiedname>
+        <reimplementedby refid="class_audio_1_1_volume_controller_1ae64a8579e31205e8afc8c30904e20194">Save</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/SettingEntry.cs" line="10" column="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SettingEntry is used to easily save the settings. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Audio.VolumeController</label>
+        <link refid="class_audio_1_1_volume_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Menu.SettingEntry</label>
+        <link refid="class_menu_1_1_setting_entry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Menu.SettingEntry</label>
+        <link refid="class_menu_1_1_setting_entry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Menu/SettingEntry.cs" line="8" column="21" bodyfile="Menu/SettingEntry.cs" bodystart="9" bodyend="11"/>
+    <listofallmembers>
+      <member refid="class_menu_1_1_setting_entry_1ad4fee9309558a8b8f192a92f04be60a9" prot="public" virt="pure-virtual"><scope>Menu::SettingEntry</scope><name>Save</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

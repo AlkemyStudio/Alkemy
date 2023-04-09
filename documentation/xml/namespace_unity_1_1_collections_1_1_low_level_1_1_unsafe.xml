@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_unity_1_1_collections_1_1_low_level_1_1_unsafe" kind="namespace" language="C#">
+    <compoundname>Unity::Collections::LowLevel::Unsafe</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VoxelMesher/VoxelParser.cs" line="6" column="40"/>
+  </compounddef>
+</doxygen>
