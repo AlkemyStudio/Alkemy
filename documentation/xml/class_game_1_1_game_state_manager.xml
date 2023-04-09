@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_game_1_1_game_state_manager" kind="class" language="C#" prot="public">
+    <compoundname>Game::GameStateManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_game_1_1_game_state_manager_1a114be9b0f349cffcd332847e25c61076" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>GameStateEvent</type>
+        <definition>GameStateEvent Game.GameStateManager.OnGameStateChanged</definition>
+        <argsstring></argsstring>
+        <name>OnGameStateChanged</name>
+        <qualifiedname>Game.GameStateManager.OnGameStateChanged</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="12" column="37" bodyfile="Game/GameStateManager.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_game_1_1_game_state_manager_1abf3faba4102aad33103941dc43513c7b" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; <ref refid="struct_game_1_1_game_ended_event" kindref="compound">GameEndedEvent</ref> &gt;</type>
+        <definition>Action&lt;GameEndedEvent&gt; Game.GameStateManager.OnGameEnded</definition>
+        <argsstring></argsstring>
+        <name>OnGameEnded</name>
+        <qualifiedname>Game.GameStateManager.OnGameEnded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="13" column="29" bodyfile="Game/GameStateManager.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_game_1_1_game_state_manager_1a7912d263968f3a40607b592d60884a52" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_game_1_1_game_state_manager" kindref="compound">GameStateManager</ref></type>
+        <definition>GameStateManager Game.GameStateManager.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>Game.GameStateManager.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="15" column="40" bodyfile="Game/GameStateManager.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_1_1_game_state_manager_1af9211254054db4e317a217afd745ca0b" prot="private" static="no" mutable="no">
+        <type>GameState</type>
+        <definition>GameState Game.GameStateManager._currentGameState</definition>
+        <argsstring></argsstring>
+        <name>_currentGameState</name>
+        <qualifiedname>Game.GameStateManager._currentGameState</qualifiedname>
+        <initializer>= GameState.Initialization</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="17" column="27" bodyfile="Game/GameStateManager.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1a5518b0c783dc2f994fea32370f142aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Game.GameStateManager.GameStateEvent</definition>
+        <argsstring>(GameState state)</argsstring>
+        <name>GameStateEvent</name>
+        <qualifiedname>Game.GameStateManager.GameStateEvent</qualifiedname>
+        <param>
+          <type>GameState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="11" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1aca48a32299034716bf4fa9305e4cfe8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameStateManager.ReloadGame</definition>
+        <argsstring>()</argsstring>
+        <name>ReloadGame</name>
+        <qualifiedname>Game.GameStateManager.ReloadGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="29" column="21" bodyfile="Game/GameStateManager.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1a2046917143b95388f3c803aafaa75d56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameStateManager.EndTheGame</definition>
+        <argsstring>(string[] winnerNames, string[] lastPlayerNamesDeadAtTheSameTime)</argsstring>
+        <name>EndTheGame</name>
+        <qualifiedname>Game.GameStateManager.EndTheGame</qualifiedname>
+        <param>
+          <type>string[]</type>
+          <declname>winnerNames</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>lastPlayerNamesDeadAtTheSameTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="34" column="21" bodyfile="Game/GameStateManager.cs" bodystart="34" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1a6b9a3fa30998fcab293a207aeccb0866" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameStateManager.PauseGame</definition>
+        <argsstring>()</argsstring>
+        <name>PauseGame</name>
+        <qualifiedname>Game.GameStateManager.PauseGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="44" column="21" bodyfile="Game/GameStateManager.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1acca3a99452a9925467c086af3cff8317" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameStateManager.ResumeGame</definition>
+        <argsstring>()</argsstring>
+        <name>ResumeGame</name>
+        <qualifiedname>Game.GameStateManager.ResumeGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="49" column="21" bodyfile="Game/GameStateManager.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1af6f5d889447c70b26cf99938eff4adcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameStateManager.SetGameState</definition>
+        <argsstring>(GameState state)</argsstring>
+        <name>SetGameState</name>
+        <qualifiedname>Game.GameStateManager.SetGameState</qualifiedname>
+        <param>
+          <type>GameState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="54" column="21" bodyfile="Game/GameStateManager.cs" bodystart="54" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1a3b6d23a991078c860236f9ec07105efa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameStateManager.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Game.GameStateManager.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="19" column="22" bodyfile="Game/GameStateManager.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_game_state_manager_1a5af415bd7d52bbb59ccb78ef9787b703" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.GameStateManager.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Game.GameStateManager.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameStateManager.cs" line="24" column="22" bodyfile="Game/GameStateManager.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Game.GameStateManager</label>
+        <link refid="class_game_1_1_game_state_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Game.GameStateManager</label>
+        <link refid="class_game_1_1_game_state_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="Game/GameStateManager.cs" line="9" column="11" bodyfile="Game/GameStateManager.cs" bodystart="10" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_game_1_1_game_state_manager_1af9211254054db4e317a217afd745ca0b" prot="private" virt="non-virtual"><scope>Game::GameStateManager</scope><name>_currentGameState</name></member>
+      <member refid="class_game_1_1_game_state_manager_1a3b6d23a991078c860236f9ec07105efa" prot="private" virt="non-virtual"><scope>Game::GameStateManager</scope><name>Awake</name></member>
+      <member refid="class_game_1_1_game_state_manager_1a2046917143b95388f3c803aafaa75d56" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>EndTheGame</name></member>
+      <member refid="class_game_1_1_game_state_manager_1a5518b0c783dc2f994fea32370f142aba" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>GameStateEvent</name></member>
+      <member refid="class_game_1_1_game_state_manager_1a7912d263968f3a40607b592d60884a52" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>Instance</name></member>
+      <member refid="class_game_1_1_game_state_manager_1abf3faba4102aad33103941dc43513c7b" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>OnGameEnded</name></member>
+      <member refid="class_game_1_1_game_state_manager_1a114be9b0f349cffcd332847e25c61076" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>OnGameStateChanged</name></member>
+      <member refid="class_game_1_1_game_state_manager_1a6b9a3fa30998fcab293a207aeccb0866" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>PauseGame</name></member>
+      <member refid="class_game_1_1_game_state_manager_1aca48a32299034716bf4fa9305e4cfe8c" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>ReloadGame</name></member>
+      <member refid="class_game_1_1_game_state_manager_1acca3a99452a9925467c086af3cff8317" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>ResumeGame</name></member>
+      <member refid="class_game_1_1_game_state_manager_1af6f5d889447c70b26cf99938eff4adcb" prot="public" virt="non-virtual"><scope>Game::GameStateManager</scope><name>SetGameState</name></member>
+      <member refid="class_game_1_1_game_state_manager_1a5af415bd7d52bbb59ccb78ef9787b703" prot="private" virt="non-virtual"><scope>Game::GameStateManager</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_player_1_1_player_movement" kind="class" language="C#" prot="public">
+    <compoundname>Player::PlayerMovement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a8ef4ed7cb3619a5b20407a6979bee41a" prot="private" static="no" mutable="no">
+        <type>Rigidbody</type>
+        <definition>Rigidbody Player.PlayerMovement.playerRigidbody</definition>
+        <argsstring></argsstring>
+        <name>playerRigidbody</name>
+        <qualifiedname>Player.PlayerMovement.playerRigidbody</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="25" column="28" bodyfile="Player/PlayerMovement.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1aade2a8185699891ee754bb2617ebbbaf" prot="private" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform Player.PlayerMovement.modelTransform</definition>
+        <argsstring></argsstring>
+        <name>modelTransform</name>
+        <qualifiedname>Player.PlayerMovement.modelTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="26" column="28" bodyfile="Player/PlayerMovement.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a6975e98c7d3347621e47dbffcff188df" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Player.PlayerMovement.baseSpeed</definition>
+        <argsstring></argsstring>
+        <name>baseSpeed</name>
+        <qualifiedname>Player.PlayerMovement.baseSpeed</qualifiedname>
+        <initializer>= 120.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="29" column="24" bodyfile="Player/PlayerMovement.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1ad334915d0cd05dd67c3c4bad942a6170" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Player.PlayerMovement.speedPerBonus</definition>
+        <argsstring></argsstring>
+        <name>speedPerBonus</name>
+        <qualifiedname>Player.PlayerMovement.speedPerBonus</qualifiedname>
+        <initializer>= 60.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="30" column="24" bodyfile="Player/PlayerMovement.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a3863796851886b1d3eef9fdd5bed07f1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerMovement.bonusNumber</definition>
+        <argsstring></argsstring>
+        <name>bonusNumber</name>
+        <qualifiedname>Player.PlayerMovement.bonusNumber</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="33" column="22" bodyfile="Player/PlayerMovement.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a4afad51da3e7537211049e260f01e6db" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerMovement.minBonusNumber</definition>
+        <argsstring></argsstring>
+        <name>minBonusNumber</name>
+        <qualifiedname>Player.PlayerMovement.minBonusNumber</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="34" column="22" bodyfile="Player/PlayerMovement.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a8bd07730f877bfcecc25b367a33b3b5d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player.PlayerMovement.maxBonusNumber</definition>
+        <argsstring></argsstring>
+        <name>maxBonusNumber</name>
+        <qualifiedname>Player.PlayerMovement.maxBonusNumber</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="35" column="22" bodyfile="Player/PlayerMovement.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a6931f7fa13cd462c3ee13d3018037701" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_inputs_1_1_player_input_handler" kindref="compound">PlayerInputHandler</ref></type>
+        <definition>PlayerInputHandler Player.PlayerMovement._playerInputHandler</definition>
+        <argsstring></argsstring>
+        <name>_playerInputHandler</name>
+        <qualifiedname>Player.PlayerMovement._playerInputHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="38" column="36" bodyfile="Player/PlayerMovement.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a6c1455f869f95688fc67191f0d9a8654" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Player.PlayerMovement.lookAtPosition</definition>
+        <argsstring></argsstring>
+        <name>lookAtPosition</name>
+        <qualifiedname>Player.PlayerMovement.lookAtPosition</qualifiedname>
+        <initializer>= Vector3.zero</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="39" column="25" bodyfile="Player/PlayerMovement.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a031dca37acd5ef74c82b0a655f7443ed" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Player.PlayerMovement._speed</definition>
+        <argsstring></argsstring>
+        <name>_speed</name>
+        <qualifiedname>Player.PlayerMovement._speed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="41" column="23" bodyfile="Player/PlayerMovement.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1_1_player_movement_1a0629d650b7f04e7eac3d631eb80b5a9e" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 Player.PlayerMovement._inputVector</definition>
+        <argsstring></argsstring>
+        <name>_inputVector</name>
+        <qualifiedname>Player.PlayerMovement._inputVector</qualifiedname>
+        <initializer>= Vector2.zero</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="42" column="25" bodyfile="Player/PlayerMovement.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_1_1_player_movement_1abd0c1316863e0ad1c694c350b6d613bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Player.PlayerMovement.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="44" column="22" bodyfile="Player/PlayerMovement.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_movement_1a53ab4a051f5029053fec533cac5a2a74" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>Player.PlayerMovement.OnDestroy</qualifiedname>
+        <briefdescription>
+<para>OnDestroy is called when the script instance is being destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="62" column="22" bodyfile="Player/PlayerMovement.cs" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_movement_1afb0fd1fa0a40343f36a5ad42fb889ba9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.ComputeSpeed</definition>
+        <argsstring>()</argsstring>
+        <name>ComputeSpeed</name>
+        <qualifiedname>Player.PlayerMovement.ComputeSpeed</qualifiedname>
+        <briefdescription>
+<para>Compute the speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="120" column="22" bodyfile="Player/PlayerMovement.cs" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_movement_1afbe20be8a8a3d62e4f5090b6970fea74" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.OnValidate</definition>
+        <argsstring>()</argsstring>
+        <name>OnValidate</name>
+        <qualifiedname>Player.PlayerMovement.OnValidate</qualifiedname>
+        <briefdescription>
+<para>OnValidate is called when the script is loaded or a value is changed in the inspector (Called in the editor only). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="128" column="22" bodyfile="Player/PlayerMovement.cs" bodystart="128" bodyend="136"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1_1_player_movement_1a39ef7316b8e4c835a0d345effd4e5619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.Initialize</definition>
+        <argsstring>(PlayerInputHandler playerInputHandler)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>Player.PlayerMovement.Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_player_inputs_1_1_player_input_handler" kindref="compound">PlayerInputHandler</ref></type>
+          <declname>playerInputHandler</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the player handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerInputHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="53" column="21" bodyfile="Player/PlayerMovement.cs" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_movement_1a24fb75853973786c964caab3d5f672c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.AddSpeedBonus</definition>
+        <argsstring>()</argsstring>
+        <name>AddSpeedBonus</name>
+        <qualifiedname>Player.PlayerMovement.AddSpeedBonus</qualifiedname>
+        <briefdescription>
+<para>Add a speed bonus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="70" column="21" bodyfile="Player/PlayerMovement.cs" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_movement_1aa9926e07efe315c0e7dd1364578342f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.RemoveSpeedBonus</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveSpeedBonus</name>
+        <qualifiedname>Player.PlayerMovement.RemoveSpeedBonus</qualifiedname>
+        <briefdescription>
+<para>Remove a speed bonus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="80" column="21" bodyfile="Player/PlayerMovement.cs" bodystart="80" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_movement_1a655d0302cb663e00747dc3d8f6f5724f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.UpdateInputVector</definition>
+        <argsstring>(Vector2 inputVector)</argsstring>
+        <name>UpdateInputVector</name>
+        <qualifiedname>Player.PlayerMovement.UpdateInputVector</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>inputVector</declname>
+        </param>
+        <briefdescription>
+<para>Update the input vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputVector</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="91" column="21" bodyfile="Player/PlayerMovement.cs" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1_1_player_movement_1a868cbd054ff66f9671ba88adb6aa59b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.PlayerMovement.FixedUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>FixedUpdate</name>
+        <qualifiedname>Player.PlayerMovement.FixedUpdate</qualifiedname>
+        <briefdescription>
+<para>FixedUpdate is called every fixed framerate frame, if the MonoBehaviour is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerMovement.cs" line="99" column="21" bodyfile="Player/PlayerMovement.cs" bodystart="99" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PlayerHandler is used to handle the input of a player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerMovement</label>
+        <link refid="class_player_1_1_player_movement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerMovement</label>
+        <link refid="class_player_1_1_player_movement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Player/PlayerMovement.cs" line="23" column="11" bodyfile="Player/PlayerMovement.cs" bodystart="24" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_player_1_1_player_movement_1a0629d650b7f04e7eac3d631eb80b5a9e" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>_inputVector</name></member>
+      <member refid="class_player_1_1_player_movement_1a6931f7fa13cd462c3ee13d3018037701" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>_playerInputHandler</name></member>
+      <member refid="class_player_1_1_player_movement_1a031dca37acd5ef74c82b0a655f7443ed" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>_speed</name></member>
+      <member refid="class_player_1_1_player_movement_1a24fb75853973786c964caab3d5f672c7" prot="public" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>AddSpeedBonus</name></member>
+      <member refid="class_player_1_1_player_movement_1a6975e98c7d3347621e47dbffcff188df" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>baseSpeed</name></member>
+      <member refid="class_player_1_1_player_movement_1a3863796851886b1d3eef9fdd5bed07f1" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>bonusNumber</name></member>
+      <member refid="class_player_1_1_player_movement_1afb0fd1fa0a40343f36a5ad42fb889ba9" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>ComputeSpeed</name></member>
+      <member refid="class_player_1_1_player_movement_1a868cbd054ff66f9671ba88adb6aa59b7" prot="public" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>FixedUpdate</name></member>
+      <member refid="class_player_1_1_player_movement_1a39ef7316b8e4c835a0d345effd4e5619" prot="public" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>Initialize</name></member>
+      <member refid="class_player_1_1_player_movement_1a6c1455f869f95688fc67191f0d9a8654" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>lookAtPosition</name></member>
+      <member refid="class_player_1_1_player_movement_1a8bd07730f877bfcecc25b367a33b3b5d" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>maxBonusNumber</name></member>
+      <member refid="class_player_1_1_player_movement_1a4afad51da3e7537211049e260f01e6db" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>minBonusNumber</name></member>
+      <member refid="class_player_1_1_player_movement_1aade2a8185699891ee754bb2617ebbbaf" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>modelTransform</name></member>
+      <member refid="class_player_1_1_player_movement_1a53ab4a051f5029053fec533cac5a2a74" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>OnDestroy</name></member>
+      <member refid="class_player_1_1_player_movement_1afbe20be8a8a3d62e4f5090b6970fea74" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>OnValidate</name></member>
+      <member refid="class_player_1_1_player_movement_1a8ef4ed7cb3619a5b20407a6979bee41a" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>playerRigidbody</name></member>
+      <member refid="class_player_1_1_player_movement_1aa9926e07efe315c0e7dd1364578342f0" prot="public" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>RemoveSpeedBonus</name></member>
+      <member refid="class_player_1_1_player_movement_1ad334915d0cd05dd67c3c4bad942a6170" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>speedPerBonus</name></member>
+      <member refid="class_player_1_1_player_movement_1abd0c1316863e0ad1c694c350b6d613bd" prot="private" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>Start</name></member>
+      <member refid="class_player_1_1_player_movement_1a655d0302cb663e00747dc3d8f6f5724f" prot="public" virt="non-virtual"><scope>Player::PlayerMovement</scope><name>UpdateInputVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

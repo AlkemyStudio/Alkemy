@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_audio_1_1_play_music_queue" kind="class" language="C#" prot="public">
+    <compoundname>Audio::PlayMusicQueue</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_audio_1_1_play_music_queue_1afaa7ea6c4f8997931350c16d6d6a8f2c" prot="private" static="no" mutable="no">
+        <type>AudioSource</type>
+        <definition>AudioSource Audio.PlayMusicQueue.audioSource</definition>
+        <argsstring></argsstring>
+        <name>audioSource</name>
+        <qualifiedname>Audio.PlayMusicQueue.audioSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="14" column="30" bodyfile="Audio/PlayMusicQueue.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_play_music_queue_1a4cb634313b5788a20259ac3b9b37e79b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Audio.PlayMusicQueue.loopLastSong</definition>
+        <argsstring></argsstring>
+        <name>loopLastSong</name>
+        <qualifiedname>Audio.PlayMusicQueue.loopLastSong</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="15" column="23" bodyfile="Audio/PlayMusicQueue.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_play_music_queue_1a6ec248bdcf3e714d909f5c21274f105e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Audio.PlayMusicQueue.delayBetweenSongs</definition>
+        <argsstring></argsstring>
+        <name>delayBetweenSongs</name>
+        <qualifiedname>Audio.PlayMusicQueue.delayBetweenSongs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="16" column="24" bodyfile="Audio/PlayMusicQueue.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_play_music_queue_1a2b80e77681e6aebf01b7f63ae1d925f9" prot="private" static="no" mutable="no">
+        <type>List&lt; AudioClip &gt;</type>
+        <definition>List&lt;AudioClip&gt; Audio.PlayMusicQueue.musicQueue</definition>
+        <argsstring></argsstring>
+        <name>musicQueue</name>
+        <qualifiedname>Audio.PlayMusicQueue.musicQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="17" column="23" bodyfile="Audio/PlayMusicQueue.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_audio_1_1_play_music_queue_1ad735e529da573ea958a899ac5389a68d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.PlayMusicQueue.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Audio.PlayMusicQueue.Start</qualifiedname>
+        <briefdescription>
+<para>This method is called when the script instance is being loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="22" column="22" bodyfile="Audio/PlayMusicQueue.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_1_1_play_music_queue_1ae22b23d877a19e979e5da0344699b54f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.PlayMusicQueue.PlaySong</definition>
+        <argsstring>()</argsstring>
+        <name>PlaySong</name>
+        <qualifiedname>Audio.PlayMusicQueue.PlaySong</qualifiedname>
+        <briefdescription>
+<para>This method is used to play the next song in the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="30" column="22" bodyfile="Audio/PlayMusicQueue.cs" bodystart="30" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_1_1_play_music_queue_1a1aa23de4ade0f64c10ff4f03e7aba4cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Audio.PlayMusicQueue.IsLastSongAndShouldLoopLastSong</definition>
+        <argsstring>()</argsstring>
+        <name>IsLastSongAndShouldLoopLastSong</name>
+        <qualifiedname>Audio.PlayMusicQueue.IsLastSongAndShouldLoopLastSong</qualifiedname>
+        <briefdescription>
+<para>This method is used to check if the last song should be looped. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="50" column="22" bodyfile="Audio/PlayMusicQueue.cs" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_1_1_play_music_queue_1a3a0b2772df7c89fbae245679ad70c978" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Audio.PlayMusicQueue.PlayNextSong</definition>
+        <argsstring>()</argsstring>
+        <name>PlayNextSong</name>
+        <qualifiedname>Audio.PlayMusicQueue.PlayNextSong</qualifiedname>
+        <briefdescription>
+<para>This method is used to play the next song in the queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/PlayMusicQueue.cs" line="59" column="29" bodyfile="Audio/PlayMusicQueue.cs" bodystart="59" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This script is used to play a queue of songs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Audio.PlayMusicQueue</label>
+        <link refid="class_audio_1_1_play_music_queue"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Audio.PlayMusicQueue</label>
+        <link refid="class_audio_1_1_play_music_queue"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Audio/PlayMusicQueue.cs" line="12" column="11" bodyfile="Audio/PlayMusicQueue.cs" bodystart="13" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_audio_1_1_play_music_queue_1afaa7ea6c4f8997931350c16d6d6a8f2c" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>audioSource</name></member>
+      <member refid="class_audio_1_1_play_music_queue_1a6ec248bdcf3e714d909f5c21274f105e" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>delayBetweenSongs</name></member>
+      <member refid="class_audio_1_1_play_music_queue_1a1aa23de4ade0f64c10ff4f03e7aba4cb" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>IsLastSongAndShouldLoopLastSong</name></member>
+      <member refid="class_audio_1_1_play_music_queue_1a4cb634313b5788a20259ac3b9b37e79b" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>loopLastSong</name></member>
+      <member refid="class_audio_1_1_play_music_queue_1a2b80e77681e6aebf01b7f63ae1d925f9" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>musicQueue</name></member>
+      <member refid="class_audio_1_1_play_music_queue_1a3a0b2772df7c89fbae245679ad70c978" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>PlayNextSong</name></member>
+      <member refid="class_audio_1_1_play_music_queue_1ae22b23d877a19e979e5da0344699b54f" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>PlaySong</name></member>
+      <member refid="class_audio_1_1_play_music_queue_1ad735e529da573ea958a899ac5389a68d" prot="private" virt="non-virtual"><scope>Audio::PlayMusicQueue</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

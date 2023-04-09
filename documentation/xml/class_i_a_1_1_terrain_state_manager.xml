@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_i_a_1_1_terrain_state_manager" kind="class" language="C#" prot="public">
+    <compoundname>IA::TerrainStateManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_i_a_1_1_terrain_state_manager_1a090ba515d268b5804cf9ca9d90ad0254" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_i_a_1_1_terrain_state_manager" kindref="compound">TerrainStateManager</ref></type>
+        <definition>TerrainStateManager IA.TerrainStateManager._instance</definition>
+        <argsstring></argsstring>
+        <name>_instance</name>
+        <qualifiedname>IA.TerrainStateManager._instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="13" column="36" bodyfile="Game/TerrainStateManager.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_i_a_1_1_terrain_state_manager_1ad1a6e365e358d79d9dfc95d3edcefc71" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int IA.TerrainStateManager.Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <qualifiedname>IA.TerrainStateManager.Width</qualifiedname>
+        <initializer>= 17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="15" column="18" bodyfile="Game/TerrainStateManager.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_i_a_1_1_terrain_state_manager_1a6890b6d6c4ad40251a6e6a0f2d9b8fd8" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int IA.TerrainStateManager.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <qualifiedname>IA.TerrainStateManager.Height</qualifiedname>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="16" column="18" bodyfile="Game/TerrainStateManager.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_i_a_1_1_terrain_state_manager_1abd0f08b0b1a87c9174d754d130bf9644" prot="private" static="no" mutable="no">
+        <type>TerrainTileState[]</type>
+        <definition>TerrainTileState [] IA.TerrainStateManager.terrainState</definition>
+        <argsstring></argsstring>
+        <name>terrainState</name>
+        <qualifiedname>IA.TerrainStateManager.terrainState</qualifiedname>
+        <initializer>= new TerrainTileState[(Width + 2) * (Height + 2)]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="18" column="26" bodyfile="Game/TerrainStateManager.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i_a_1_1_terrain_state_manager_1ac363f72d2d74d60fed1f8c544cd732d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IA.TerrainStateManager.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>IA.TerrainStateManager.Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="20" column="13" bodyfile="Game/TerrainStateManager.cs" bodystart="20" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_a_1_1_terrain_state_manager_1aea27d64340387958be4254d78f4e87bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IA.TerrainStateManager.SetTileState</definition>
+        <argsstring>(int x, int y, TerrainTileState state)</argsstring>
+        <name>SetTileState</name>
+        <qualifiedname>IA.TerrainStateManager.SetTileState</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>TerrainTileState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="71" column="13" bodyfile="Game/TerrainStateManager.cs" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i_a_1_1_terrain_state_manager_1a24762d8dfeb7aea4d9e3002553378005" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IA.TerrainStateManager.RemoveTile</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>RemoveTile</name>
+        <qualifiedname>IA.TerrainStateManager.RemoveTile</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="76" column="13" bodyfile="Game/TerrainStateManager.cs" bodystart="76" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_i_a_1_1_terrain_state_manager_1aaf9167952e709001c022efa9f202fc92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_i_a_1_1_terrain_state_manager" kindref="compound">TerrainStateManager</ref></type>
+        <definition>static TerrainStateManager IA.TerrainStateManager.GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>IA.TerrainStateManager.GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="61" column="35" bodyfile="Game/TerrainStateManager.cs" bodystart="61" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Game/TerrainStateManager.cs" line="11" column="7" bodyfile="Game/TerrainStateManager.cs" bodystart="12" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_i_a_1_1_terrain_state_manager_1a090ba515d268b5804cf9ca9d90ad0254" prot="private" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>_instance</name></member>
+      <member refid="class_i_a_1_1_terrain_state_manager_1aaf9167952e709001c022efa9f202fc92" prot="public" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>GetInstance</name></member>
+      <member refid="class_i_a_1_1_terrain_state_manager_1a6890b6d6c4ad40251a6e6a0f2d9b8fd8" prot="public" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>Height</name></member>
+      <member refid="class_i_a_1_1_terrain_state_manager_1ac363f72d2d74d60fed1f8c544cd732d6" prot="public" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>Init</name></member>
+      <member refid="class_i_a_1_1_terrain_state_manager_1a24762d8dfeb7aea4d9e3002553378005" prot="public" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>RemoveTile</name></member>
+      <member refid="class_i_a_1_1_terrain_state_manager_1aea27d64340387958be4254d78f4e87bb" prot="public" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>SetTileState</name></member>
+      <member refid="class_i_a_1_1_terrain_state_manager_1abd0f08b0b1a87c9174d754d130bf9644" prot="private" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>terrainState</name></member>
+      <member refid="class_i_a_1_1_terrain_state_manager_1ad1a6e365e358d79d9dfc95d3edcefc71" prot="public" virt="non-virtual"><scope>IA::TerrainStateManager</scope><name>Width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

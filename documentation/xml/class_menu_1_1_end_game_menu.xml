@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_menu_1_1_end_game_menu" kind="class" language="C#" prot="public">
+    <compoundname>Menu::EndGameMenu</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1ad1f94787546db589bc6f8dc040d84e97" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_1_1_game_state_manager" kindref="compound">GameStateManager</ref></type>
+        <definition>GameStateManager Menu.EndGameMenu.gameStateManager</definition>
+        <argsstring></argsstring>
+        <name>gameStateManager</name>
+        <qualifiedname>Menu.EndGameMenu.gameStateManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="19" column="35" bodyfile="Menu/EndGameMenu.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1aaf14b16d5fa295ad75a1d3e43794bebc" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Menu.EndGameMenu.endGameCanvas</definition>
+        <argsstring></argsstring>
+        <name>endGameCanvas</name>
+        <qualifiedname>Menu.EndGameMenu.endGameCanvas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="20" column="29" bodyfile="Menu/EndGameMenu.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1a9f60933aa41c305036962a74f0c737ac" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI Menu.EndGameMenu.winnerText</definition>
+        <argsstring></argsstring>
+        <name>winnerText</name>
+        <qualifiedname>Menu.EndGameMenu.winnerText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="21" column="34" bodyfile="Menu/EndGameMenu.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1a020bd60df07d3ab2c62d93e6561a140b" prot="private" static="no" mutable="no">
+        <type>AudioSource</type>
+        <definition>AudioSource Menu.EndGameMenu.mainAudioSource</definition>
+        <argsstring></argsstring>
+        <name>mainAudioSource</name>
+        <qualifiedname>Menu.EndGameMenu.mainAudioSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="22" column="30" bodyfile="Menu/EndGameMenu.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1a64f2e86c0103b3227f6b8d69e8033326" prot="private" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip Menu.EndGameMenu.endGameSound</definition>
+        <argsstring></argsstring>
+        <name>endGameSound</name>
+        <qualifiedname>Menu.EndGameMenu.endGameSound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="23" column="28" bodyfile="Menu/EndGameMenu.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1a38002a59a1207f58479a8e4659272423" prot="private" static="no" mutable="no">
+        <type>AudioClip</type>
+        <definition>AudioClip Menu.EndGameMenu._mainAudioClip</definition>
+        <argsstring></argsstring>
+        <name>_mainAudioClip</name>
+        <qualifiedname>Menu.EndGameMenu._mainAudioClip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="24" column="27" bodyfile="Menu/EndGameMenu.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1a570a5b52c2e281b8e5619c2c3f6f0e12" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Menu.EndGameMenu.winnerMessage</definition>
+        <argsstring></argsstring>
+        <name>winnerMessage</name>
+        <qualifiedname>Menu.EndGameMenu.winnerMessage</qualifiedname>
+        <initializer>= &quot;Player {0} Won&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="28" column="25" bodyfile="Menu/EndGameMenu.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1_1_end_game_menu_1a8a09e7125d0e53edbeedfbc92879e487" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Menu.EndGameMenu.noWinnerMessage</definition>
+        <argsstring></argsstring>
+        <name>noWinnerMessage</name>
+        <qualifiedname>Menu.EndGameMenu.noWinnerMessage</qualifiedname>
+        <initializer>= &quot;No Winner&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="29" column="25" bodyfile="Menu/EndGameMenu.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_menu_1_1_end_game_menu_1ac92677a211f4f7d109c71ea3834fe0f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.EndGameMenu.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Menu.EndGameMenu.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="31" column="21" bodyfile="Menu/EndGameMenu.cs" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1_1_end_game_menu_1aeab2ede31e12aef2b1ceb70e027f0a5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.EndGameMenu.OnRestartButtonClicked</definition>
+        <argsstring>()</argsstring>
+        <name>OnRestartButtonClicked</name>
+        <qualifiedname>Menu.EndGameMenu.OnRestartButtonClicked</qualifiedname>
+        <briefdescription>
+<para>On restart button clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="63" column="21" bodyfile="Menu/EndGameMenu.cs" bodystart="63" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1_1_end_game_menu_1a4ee13c086c22ee1f8579b06cfe99ed17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.EndGameMenu.OnQuitButtonClicked</definition>
+        <argsstring>()</argsstring>
+        <name>OnQuitButtonClicked</name>
+        <qualifiedname>Menu.EndGameMenu.OnQuitButtonClicked</qualifiedname>
+        <briefdescription>
+<para>On quit button clicked. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="75" column="21" bodyfile="Menu/EndGameMenu.cs" bodystart="75" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_menu_1_1_end_game_menu_1ae0e837400feafa60de4463db4296ee1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.EndGameMenu.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>Menu.EndGameMenu.OnEnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="37" column="22" bodyfile="Menu/EndGameMenu.cs" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1_1_end_game_menu_1a254243962ee4c66bf43dd38a3425a80d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.EndGameMenu.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>Menu.EndGameMenu.OnDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="42" column="22" bodyfile="Menu/EndGameMenu.cs" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1_1_end_game_menu_1a3f65cc0df6db9164c4ceb25556b9a8ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu.EndGameMenu.OnGameEnded</definition>
+        <argsstring>(GameEndedEvent e)</argsstring>
+        <name>OnGameEnded</name>
+        <qualifiedname>Menu.EndGameMenu.OnGameEnded</qualifiedname>
+        <param>
+          <type><ref refid="struct_game_1_1_game_ended_event" kindref="compound">GameEndedEvent</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>OnGameEnded is called when the game ended. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="51" column="22" bodyfile="Menu/EndGameMenu.cs" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1_1_end_game_menu_1a2cd140d19cd50704324a680062d08aba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Menu.EndGameMenu.GetWinnerMessage</definition>
+        <argsstring>(IReadOnlyList&lt; string &gt; winnerNames)</argsstring>
+        <name>GetWinnerMessage</name>
+        <qualifiedname>Menu.EndGameMenu.GetWinnerMessage</qualifiedname>
+        <param>
+          <type>IReadOnlyList&lt; string &gt;</type>
+          <declname>winnerNames</declname>
+        </param>
+        <briefdescription>
+<para>Get the winner message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>winnerNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The winner names </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The winner message </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menu/EndGameMenu.cs" line="86" column="24" bodyfile="Menu/EndGameMenu.cs" bodystart="86" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>EndGameMenu is used to display the end game menu. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Menu.EndGameMenu</label>
+        <link refid="class_menu_1_1_end_game_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Menu.EndGameMenu</label>
+        <link refid="class_menu_1_1_end_game_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Menu/EndGameMenu.cs" line="15" column="11" bodyfile="Menu/EndGameMenu.cs" bodystart="16" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_menu_1_1_end_game_menu_1a38002a59a1207f58479a8e4659272423" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>_mainAudioClip</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1ac92677a211f4f7d109c71ea3834fe0f5" prot="public" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>Awake</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1aaf14b16d5fa295ad75a1d3e43794bebc" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>endGameCanvas</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a64f2e86c0103b3227f6b8d69e8033326" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>endGameSound</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1ad1f94787546db589bc6f8dc040d84e97" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>gameStateManager</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a2cd140d19cd50704324a680062d08aba" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>GetWinnerMessage</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a020bd60df07d3ab2c62d93e6561a140b" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>mainAudioSource</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a8a09e7125d0e53edbeedfbc92879e487" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>noWinnerMessage</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a254243962ee4c66bf43dd38a3425a80d" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>OnDisable</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1ae0e837400feafa60de4463db4296ee1e" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>OnEnable</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a3f65cc0df6db9164c4ceb25556b9a8ea" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>OnGameEnded</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a4ee13c086c22ee1f8579b06cfe99ed17" prot="public" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>OnQuitButtonClicked</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1aeab2ede31e12aef2b1ceb70e027f0a5a" prot="public" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>OnRestartButtonClicked</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a570a5b52c2e281b8e5619c2c3f6f0e12" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>winnerMessage</name></member>
+      <member refid="class_menu_1_1_end_game_menu_1a9f60933aa41c305036962a74f0c737ac" prot="private" virt="non-virtual"><scope>Menu::EndGameMenu</scope><name>winnerText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

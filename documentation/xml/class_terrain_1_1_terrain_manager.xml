@@ -1,0 +1,860 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_terrain_1_1_terrain_manager" kind="class" language="C#" prot="public">
+    <compoundname>Terrain::TerrainManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1a2b69f7cad985ff6a5c5a696de81aed41" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_terrain_1_1_terrain_manager" kindref="compound">TerrainManager</ref></type>
+        <definition>TerrainManager Terrain.TerrainManager.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>Terrain.TerrainManager.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="15" column="38" bodyfile="Terrain/TerrainManager.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1a7ce5a8c1332c8d6058fa88266ba1b796" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Terrain.TerrainManager.Width</definition>
+        <argsstring></argsstring>
+        <name>Width</name>
+        <qualifiedname>Terrain.TerrainManager.Width</qualifiedname>
+        <initializer>= 17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="17" column="26" bodyfile="Terrain/TerrainManager.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1a6e0ab1b2aa96d8aa80855a756ae45a31" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Terrain.TerrainManager.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <qualifiedname>Terrain.TerrainManager.Height</qualifiedname>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="18" column="26" bodyfile="Terrain/TerrainManager.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1abb5ec7cf9dd472b0320141f5ad5f8423" prot="private" static="no" mutable="no">
+        <type>List&lt; GameObject &gt;</type>
+        <definition>List&lt;GameObject&gt; Terrain.TerrainManager.wallPrefabs</definition>
+        <argsstring></argsstring>
+        <name>wallPrefabs</name>
+        <qualifiedname>Terrain.TerrainManager.wallPrefabs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="20" column="23" bodyfile="Terrain/TerrainManager.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1a770212dde950e8b62d7904a13359a61a" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Terrain.TerrainManager.indestructibleWallPrefab</definition>
+        <argsstring></argsstring>
+        <name>indestructibleWallPrefab</name>
+        <qualifiedname>Terrain.TerrainManager.indestructibleWallPrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="21" column="29" bodyfile="Terrain/TerrainManager.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1a84130e228c429f6d128eb86ac855275d" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Terrain.TerrainManager.floor</definition>
+        <argsstring></argsstring>
+        <name>floor</name>
+        <qualifiedname>Terrain.TerrainManager.floor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="22" column="29" bodyfile="Terrain/TerrainManager.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1a538996191dbd98ff00491b66a1ef15ec" prot="private" static="no" mutable="no">
+        <type><ref refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593ba" kindref="member">TerrainEntityType</ref>[]</type>
+        <definition>TerrainEntityType [] Terrain.TerrainManager._filledTiles</definition>
+        <argsstring></argsstring>
+        <name>_filledTiles</name>
+        <qualifiedname>Terrain.TerrainManager._filledTiles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="24" column="35" bodyfile="Terrain/TerrainManager.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1aefef1f37c0181b612f1b25148fdeeb86" prot="private" static="no" mutable="no">
+        <type>List&lt; GameObject &gt;</type>
+        <definition>List&lt;GameObject&gt; Terrain.TerrainManager._previouslyInstantiated</definition>
+        <argsstring></argsstring>
+        <name>_previouslyInstantiated</name>
+        <qualifiedname>Terrain.TerrainManager._previouslyInstantiated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="25" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_terrain_1_1_terrain_manager_1a494bd8298abb1a7dfc73ba68d536cd94" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_1_1_game_state_manager" kindref="compound">GameStateManager</ref></type>
+        <definition>GameStateManager Terrain.TerrainManager.gameStateManager</definition>
+        <argsstring></argsstring>
+        <name>gameStateManager</name>
+        <qualifiedname>Terrain.TerrainManager.gameStateManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="27" column="35" bodyfile="Terrain/TerrainManager.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a8046775695e227a7cc43048522e958f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Terrain.TerrainManager.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="29" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a83fa3c53ae6b3dd14ec9d34e1ca35c6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.ClearOldGeneration</definition>
+        <argsstring>()</argsstring>
+        <name>ClearOldGeneration</name>
+        <qualifiedname>Terrain.TerrainManager.ClearOldGeneration</qualifiedname>
+        <briefdescription>
+<para>This method is used to instantiate a floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="49" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="49" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1aafdd51fc88813b5d9199ca1dbb005e40" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateDefaultTerrainData</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateDefaultTerrainData</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateDefaultTerrainData</qualifiedname>
+        <briefdescription>
+<para>This method is used to instantiate a floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="64" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="64" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a0cf66b3699f7fe78dee55ad035ddeec2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateSpawnsData</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateSpawnsData</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateSpawnsData</qualifiedname>
+        <briefdescription>
+<para>This method is used to instantiate a floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="84" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="84" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1afc105f66caddc7b66115acdf08dcd7d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateBottomLeftCornerSpawn</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateBottomLeftCornerSpawn</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateBottomLeftCornerSpawn</qualifiedname>
+        <briefdescription>
+<para>This method is used to instantiate a floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="96" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="96" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a66a3a87e907025b1d4e4ac81018884b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateBottomRightCornerSpawn</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateBottomRightCornerSpawn</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateBottomRightCornerSpawn</qualifiedname>
+        <briefdescription>
+<para>This method is used to instantiate a floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="106" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a1dc10c64e66cddaef65b585b32349546" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateTopLeftCornerSpawn</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateTopLeftCornerSpawn</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateTopLeftCornerSpawn</qualifiedname>
+        <briefdescription>
+<para>This method is used to instantiate a floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="116" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="116" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a12151ae003157bc885574724807f6cc8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateTopRightCornerSpawn</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateTopRightCornerSpawn</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateTopRightCornerSpawn</qualifiedname>
+        <briefdescription>
+<para>This method is used to instantiate a floor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="126" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1add9f118759fcd2c4f06b08f0a3ed934a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateTerrainBounds</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateTerrainBounds</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateTerrainBounds</qualifiedname>
+        <briefdescription>
+<para>Generate the bounds of the terrain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="136" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="136" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1ab279516821803724c1336ac89a9e92a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateHorizontalBounds</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateHorizontalBounds</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateHorizontalBounds</qualifiedname>
+        <briefdescription>
+<para>Generate the horizontal bounds of the terrain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="145" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="145" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1ac537623a9ada0e20178bc43ad0df8bac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateVerticalBounds</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateVerticalBounds</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateVerticalBounds</qualifiedname>
+        <briefdescription>
+<para>Generate the vertical bounds of the terrain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="157" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="157" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1aae38fb054bf2d7ce75ab34958439b66f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateTerrainEntities</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateTerrainEntities</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateTerrainEntities</qualifiedname>
+        <briefdescription>
+<para>This method is used to generate the terrain entities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="169" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="169" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a3dff7af34612b0e4dc334c69223acc25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>Terrain.TerrainManager.OnEnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="290" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="290" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1aa21563588fd08a14584879c4a3e1c087" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>Terrain.TerrainManager.OnDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="295" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="295" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a06f4f24db3ddfc3092cb76f3a135d6c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.OnOnGameStateStateChanged</definition>
+        <argsstring>(GameState state)</argsstring>
+        <name>OnOnGameStateStateChanged</name>
+        <qualifiedname>Terrain.TerrainManager.OnOnGameStateStateChanged</qualifiedname>
+        <param>
+          <type>GameState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>On game state changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new state of the game</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="304" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="304" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1aadbadf809ded9668fa13edc2f1240bf9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.OnValidate</definition>
+        <argsstring>()</argsstring>
+        <name>OnValidate</name>
+        <qualifiedname>Terrain.TerrainManager.OnValidate</qualifiedname>
+        <briefdescription>
+<para>This method is used to generate the terrain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="314" column="22" bodyfile="Terrain/TerrainManager.cs" bodystart="314" bodyend="317"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1aa60ae2e5a077b3c5fe5228cf81cd9ca4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.GenerateTerrain</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateTerrain</name>
+        <qualifiedname>Terrain.TerrainManager.GenerateTerrain</qualifiedname>
+        <briefdescription>
+<para>This method is used to generate the terrain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="38" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a08abbe3fda23329f9287bf66ba557148" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.InstantiateFloor</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>InstantiateFloor</name>
+        <qualifiedname>Terrain.TerrainManager.InstantiateFloor</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to instantiate a floor at the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x position</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="198" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1abdda06ed67d9b27857c3c43096e9f1a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.InstantiateRandomWall</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>InstantiateRandomWall</name>
+        <qualifiedname>Terrain.TerrainManager.InstantiateRandomWall</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to instantiate a random wall at the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x position</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="208" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="208" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a3abb4cf3926750bcf1878b2078fc49b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.InstantiateIndestructibleWall</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>InstantiateIndestructibleWall</name>
+        <qualifiedname>Terrain.TerrainManager.InstantiateIndestructibleWall</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to instantiate an indestructible wall at the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x position</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="218" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1ad2aab597538b0efa84e8c27a2486d5da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.InstantiateEntity</definition>
+        <argsstring>(GameObject entity, int x, int y)</argsstring>
+        <name>InstantiateEntity</name>
+        <qualifiedname>Terrain.TerrainManager.InstantiateEntity</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to instantiate an entity at the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity to instantiate</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x position</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="229" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="229" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1ae0346f98683660df2d3610481d116e7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.SetValue</definition>
+        <argsstring>(int x, int y, TerrainEntityType value)</argsstring>
+        <name>SetValue</name>
+        <qualifiedname>Terrain.TerrainManager.SetValue</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593ba" kindref="member">TerrainEntityType</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="241" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1aab3bc69a6f86c9d403f4a815735977d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Terrain.TerrainManager.SetValue</definition>
+        <argsstring>(Vector2Int position, TerrainEntityType value)</argsstring>
+        <name>SetValue</name>
+        <qualifiedname>Terrain.TerrainManager.SetValue</qualifiedname>
+        <param>
+          <type>Vector2Int</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593ba" kindref="member">TerrainEntityType</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="251" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1a88df5ab9fd1e20c40d7ec383a2b4dcb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Terrain.TerrainManager.IsFilled</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>IsFilled</name>
+        <qualifiedname>Terrain.TerrainManager.IsFilled</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Is the given position filled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="262" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="262" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1abafd802ba54e234947254451cad6d08d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Terrain.TerrainManager.IsFilled</definition>
+        <argsstring>(Vector2Int gridPosition)</argsstring>
+        <name>IsFilled</name>
+        <qualifiedname>Terrain.TerrainManager.IsFilled</qualifiedname>
+        <param>
+          <type>Vector2Int</type>
+          <declname>gridPosition</declname>
+        </param>
+        <briefdescription>
+<para>Is the given position filled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gridPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the position to check</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>if the given position is filled</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="274" column="21" bodyfile="Terrain/TerrainManager.cs" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_terrain_1_1_terrain_manager_1ae68623ab272181d4dd759f183033c11b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespace_terrain_1ad9719c4d4d5f99707a9b9aa1d1b593ba" kindref="member">TerrainEntityType</ref></type>
+        <definition>TerrainEntityType Terrain.TerrainManager.GetTerrainEntityType</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>GetTerrainEntityType</name>
+        <qualifiedname>Terrain.TerrainManager.GetTerrainEntityType</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Get the terrain entity type at the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x position</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y position</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Terrain/TerrainManager.cs" line="285" column="34" bodyfile="Terrain/TerrainManager.cs" bodystart="285" bodyend="288"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to manage the terrain. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Terrain.TerrainManager</label>
+        <link refid="class_terrain_1_1_terrain_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Terrain.TerrainManager</label>
+        <link refid="class_terrain_1_1_terrain_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="Terrain/TerrainManager.cs" line="13" column="11" bodyfile="Terrain/TerrainManager.cs" bodystart="14" bodyend="318"/>
+    <listofallmembers>
+      <member refid="class_terrain_1_1_terrain_manager_1a538996191dbd98ff00491b66a1ef15ec" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>_filledTiles</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1aefef1f37c0181b612f1b25148fdeeb86" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>_previouslyInstantiated</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a8046775695e227a7cc43048522e958f9" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>Awake</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a83fa3c53ae6b3dd14ec9d34e1ca35c6c" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>ClearOldGeneration</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a84130e228c429f6d128eb86ac855275d" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>floor</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a494bd8298abb1a7dfc73ba68d536cd94" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>gameStateManager</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1afc105f66caddc7b66115acdf08dcd7d4" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateBottomLeftCornerSpawn</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a66a3a87e907025b1d4e4ac81018884b8" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateBottomRightCornerSpawn</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1aafdd51fc88813b5d9199ca1dbb005e40" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateDefaultTerrainData</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1ab279516821803724c1336ac89a9e92a0" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateHorizontalBounds</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a0cf66b3699f7fe78dee55ad035ddeec2" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateSpawnsData</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1aa60ae2e5a077b3c5fe5228cf81cd9ca4" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateTerrain</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1add9f118759fcd2c4f06b08f0a3ed934a" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateTerrainBounds</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1aae38fb054bf2d7ce75ab34958439b66f" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateTerrainEntities</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a1dc10c64e66cddaef65b585b32349546" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateTopLeftCornerSpawn</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a12151ae003157bc885574724807f6cc8" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateTopRightCornerSpawn</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1ac537623a9ada0e20178bc43ad0df8bac" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GenerateVerticalBounds</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1ae68623ab272181d4dd759f183033c11b" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>GetTerrainEntityType</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a6e0ab1b2aa96d8aa80855a756ae45a31" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>Height</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a770212dde950e8b62d7904a13359a61a" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>indestructibleWallPrefab</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a2b69f7cad985ff6a5c5a696de81aed41" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>Instance</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1ad2aab597538b0efa84e8c27a2486d5da" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>InstantiateEntity</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a08abbe3fda23329f9287bf66ba557148" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>InstantiateFloor</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a3abb4cf3926750bcf1878b2078fc49b1" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>InstantiateIndestructibleWall</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1abdda06ed67d9b27857c3c43096e9f1a6" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>InstantiateRandomWall</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a88df5ab9fd1e20c40d7ec383a2b4dcb5" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>IsFilled</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1abafd802ba54e234947254451cad6d08d" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>IsFilled</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1aa21563588fd08a14584879c4a3e1c087" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>OnDisable</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a3dff7af34612b0e4dc334c69223acc25" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>OnEnable</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a06f4f24db3ddfc3092cb76f3a135d6c4" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>OnOnGameStateStateChanged</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1aadbadf809ded9668fa13edc2f1240bf9" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>OnValidate</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1ae0346f98683660df2d3610481d116e7d" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>SetValue</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1aab3bc69a6f86c9d403f4a815735977d6" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>SetValue</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1abb5ec7cf9dd472b0320141f5ad5f8423" prot="private" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>wallPrefabs</name></member>
+      <member refid="class_terrain_1_1_terrain_manager_1a7ce5a8c1332c8d6058fa88266ba1b796" prot="public" virt="non-virtual"><scope>Terrain::TerrainManager</scope><name>Width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

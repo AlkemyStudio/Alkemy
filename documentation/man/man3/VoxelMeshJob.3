@@ -1,0 +1,88 @@
+.TH "VoxelMeshJob" 3 "Sun Apr 9 2023" "Alkemy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+VoxelMeshJob
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits IJob\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBExecute\fP ()"
+.br
+.ti -1c
+.RI "void \fBNaiveMeshing\fP ()"
+.br
+.ti -1c
+.RI "void \fBGreedyMeshing\fP ()"
+.br
+.ti -1c
+.RI "Vector3Int \fBConvertToFaceCoordinate\fP (int x, int y, int z, FaceDirection direction)"
+.br
+.ti -1c
+.RI "Vector3 \fBConvertToFaceCoordinate\fP (Vector3 vector, FaceDirection direction)"
+.br
+.ti -1c
+.RI "bool \fBIsVoxelOccluded\fP (int x, int y, int z, FaceDirection direction)"
+.br
+.ti -1c
+.RI "void \fBGenerateSlicedVoxelMesh\fP (FaceDirection direction)"
+.br
+.ti -1c
+.RI "bool \fBIsVoxelEmpty\fP (int x, int y, int z)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "NativeArray< int > \fBvoxels\fP"
+.br
+.ti -1c
+.RI "Vector3 \fBorigin\fP"
+.br
+.ti -1c
+.RI "Vector3 \fBscale\fP"
+.br
+.ti -1c
+.RI "int \fBwidth\fP"
+.br
+.ti -1c
+.RI "int \fBheight\fP"
+.br
+.ti -1c
+.RI "int \fBdepth\fP"
+.br
+.ti -1c
+.RI "MeshingAlgorithm \fBalgorithm\fP"
+.br
+.ti -1c
+.RI "NativeList< Vector3 > \fBvertices\fP"
+.br
+.ti -1c
+.RI "NativeList< int > \fBtriangles\fP"
+.br
+.ti -1c
+.RI "NativeList< Color32 > \fBcolors\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void VoxelMeshJob\&.GenerateSlicedVoxelMesh (FaceDirection direction)"
+Slice the voxel data into 2D slices
+.PP
+Find the first voxel that has not been visited yet and that is not empty and not occluded
+.PP
+Expand along the Column as long as the voxel is not empty and has not been visited yet Compute the expanded height
+.PP
+Expand along the Rows as long as all the voxel in the column have the same color and have not been visited yet
+.PP
+Push the face to the mesh
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alkemy from the source code\&.

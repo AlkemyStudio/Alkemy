@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_voxel_info" kind="struct" language="C#" prot="public">
+    <compoundname>VoxelInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_voxel_info_1aefb5d403ef3c499eb41fb8708f2f3838" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short VoxelInfo.x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>VoxelInfo.x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="8" column="18" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_info_1aafaa489b8a5f3fe324260792c603901d" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short VoxelInfo.y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>VoxelInfo.y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="9" column="18" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_info_1a79f2305ebcee149433a5914a064e6187" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short VoxelInfo.z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>VoxelInfo.z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="10" column="18" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_info_1ab39cfdcfb9ec358787c1a9195454b35f" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte VoxelInfo.red</definition>
+        <argsstring></argsstring>
+        <name>red</name>
+        <qualifiedname>VoxelInfo.red</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="11" column="17" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_info_1adeba876a074d82e55e58a4ec1035d5e2" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte VoxelInfo.green</definition>
+        <argsstring></argsstring>
+        <name>green</name>
+        <qualifiedname>VoxelInfo.green</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="12" column="17" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_info_1a9daeeedf70c12ebeaebac9970a04c25f" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte VoxelInfo.blue</definition>
+        <argsstring></argsstring>
+        <name>blue</name>
+        <qualifiedname>VoxelInfo.blue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="13" column="17" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_voxel_info_1a49dc7538d82e286ba8c5fd7635ebc969" prot="public" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte VoxelInfo.alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <qualifiedname>VoxelInfo.alpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="14" column="17" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VoxelMesher/core/VoxelParserJob.cs" line="7" column="1" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="7" bodyend="15"/>
+    <listofallmembers>
+      <member refid="struct_voxel_info_1a49dc7538d82e286ba8c5fd7635ebc969" prot="public" virt="non-virtual"><scope>VoxelInfo</scope><name>alpha</name></member>
+      <member refid="struct_voxel_info_1a9daeeedf70c12ebeaebac9970a04c25f" prot="public" virt="non-virtual"><scope>VoxelInfo</scope><name>blue</name></member>
+      <member refid="struct_voxel_info_1adeba876a074d82e55e58a4ec1035d5e2" prot="public" virt="non-virtual"><scope>VoxelInfo</scope><name>green</name></member>
+      <member refid="struct_voxel_info_1ab39cfdcfb9ec358787c1a9195454b35f" prot="public" virt="non-virtual"><scope>VoxelInfo</scope><name>red</name></member>
+      <member refid="struct_voxel_info_1aefb5d403ef3c499eb41fb8708f2f3838" prot="public" virt="non-virtual"><scope>VoxelInfo</scope><name>x</name></member>
+      <member refid="struct_voxel_info_1aafaa489b8a5f3fe324260792c603901d" prot="public" virt="non-virtual"><scope>VoxelInfo</scope><name>y</name></member>
+      <member refid="struct_voxel_info_1a79f2305ebcee149433a5914a064e6187" prot="public" virt="non-virtual"><scope>VoxelInfo</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

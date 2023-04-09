@@ -1,0 +1,209 @@
+.TH "Terrain.TerrainManager" 3 "Sun Apr 9 2023" "Alkemy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Terrain.TerrainManager \- This class is used to manage the terrain\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBGenerateTerrain\fP ()"
+.br
+.RI "This method is used to generate the terrain\&. "
+.ti -1c
+.RI "void \fBInstantiateFloor\fP (int x, int y)"
+.br
+.RI "This method is used to instantiate a floor at the given position\&. "
+.ti -1c
+.RI "void \fBInstantiateRandomWall\fP (int x, int y)"
+.br
+.RI "This method is used to instantiate a random wall at the given position\&. "
+.ti -1c
+.RI "void \fBInstantiateIndestructibleWall\fP (int x, int y)"
+.br
+.RI "This method is used to instantiate an indestructible wall at the given position\&. "
+.ti -1c
+.RI "void \fBInstantiateEntity\fP (GameObject entity, int x, int y)"
+.br
+.RI "This method is used to instantiate an entity at the given position\&. "
+.ti -1c
+.RI "void \fBSetValue\fP (int x, int y, \fBTerrainEntityType\fP value)"
+.br
+.RI "Set the value of the given position\&. "
+.ti -1c
+.RI "void \fBSetValue\fP (Vector2Int position, \fBTerrainEntityType\fP value)"
+.br
+.RI "Set the value of the given position\&. "
+.ti -1c
+.RI "bool \fBIsFilled\fP (int x, int y)"
+.br
+.RI "Is the given position filled\&. "
+.ti -1c
+.RI "bool \fBIsFilled\fP (Vector2Int gridPosition)"
+.br
+.RI "Is the given position filled\&. "
+.ti -1c
+.RI "\fBTerrainEntityType\fP \fBGetTerrainEntityType\fP (int x, int y)"
+.br
+.RI "Get the terrain entity type at the given position\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBTerrainManager\fP \fBInstance\fP"
+.br
+.ti -1c
+.RI "const int \fBWidth\fP = 17"
+.br
+.ti -1c
+.RI "const int \fBHeight\fP = 11"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is used to manage the terrain\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBTerrainEntityType\fP Terrain\&.TerrainManager\&.GetTerrainEntityType (int x, int y)"
+
+.PP
+Get the terrain entity type at the given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP x position
+.br
+\fIy\fP y position
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void Terrain\&.TerrainManager\&.InstantiateEntity (GameObject entity, int x, int y)"
+
+.PP
+This method is used to instantiate an entity at the given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIentity\fP entity to instantiate
+.br
+\fIx\fP x position
+.br
+\fIy\fP y position
+.RE
+.PP
+
+.SS "void Terrain\&.TerrainManager\&.InstantiateFloor (int x, int y)"
+
+.PP
+This method is used to instantiate a floor at the given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP x position
+.br
+\fIy\fP y position
+.RE
+.PP
+
+.SS "void Terrain\&.TerrainManager\&.InstantiateIndestructibleWall (int x, int y)"
+
+.PP
+This method is used to instantiate an indestructible wall at the given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP x position
+.br
+\fIy\fP y position
+.RE
+.PP
+
+.SS "void Terrain\&.TerrainManager\&.InstantiateRandomWall (int x, int y)"
+
+.PP
+This method is used to instantiate a random wall at the given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP x position
+.br
+\fIy\fP y position
+.RE
+.PP
+
+.SS "bool Terrain\&.TerrainManager\&.IsFilled (int x, int y)"
+
+.PP
+Is the given position filled\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool Terrain\&.TerrainManager\&.IsFilled (Vector2Int gridPosition)"
+
+.PP
+Is the given position filled\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIgridPosition\fP the position to check
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+if the given position is filled
+.RE
+.PP
+
+.SS "void Terrain\&.TerrainManager\&.SetValue (int x, int y, \fBTerrainEntityType\fP value)"
+
+.PP
+Set the value of the given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP 
+.br
+\fIy\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+
+.SS "void Terrain\&.TerrainManager\&.SetValue (Vector2Int position, \fBTerrainEntityType\fP value)"
+
+.PP
+Set the value of the given position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP 
+.br
+\fIvalue\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alkemy from the source code\&.

@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_lobby_1_1_lobby_player_slot_u_i" kind="class" language="C#" prot="public">
+    <compoundname>Lobby::LobbyPlayerSlotUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="event">
+      <memberdef kind="event" id="class_lobby_1_1_lobby_player_slot_u_i_1a053b5f5e0c539300d917bd18814b28cf" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; int &gt;</type>
+        <definition>Action&lt;int&gt; Lobby.LobbyPlayerSlotUI.OnNextButtonClicked</definition>
+        <argsstring></argsstring>
+        <name>OnNextButtonClicked</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.OnNextButtonClicked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="9" column="29" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_lobby_1_1_lobby_player_slot_u_i_1a5aa0a93ac4e69a57367d4b1df40a5fb9" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; int &gt;</type>
+        <definition>Action&lt;int&gt; Lobby.LobbyPlayerSlotUI.OnPreviousButtonClicked</definition>
+        <argsstring></argsstring>
+        <name>OnPreviousButtonClicked</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.OnPreviousButtonClicked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="10" column="29" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_lobby_1_1_lobby_player_slot_u_i_1a1071a27d5bd5d1aa532c012b8ab07ea6" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action&lt; int &gt;</type>
+        <definition>Action&lt;int&gt; Lobby.LobbyPlayerSlotUI.OnRemoveButtonClicked</definition>
+        <argsstring></argsstring>
+        <name>OnRemoveButtonClicked</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.OnRemoveButtonClicked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="11" column="29" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1a5480bda4e68e084c1e9dae5eaf463392" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Lobby.LobbyPlayerSlotUI.characterRenderer</definition>
+        <argsstring></argsstring>
+        <name>characterRenderer</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.characterRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="13" column="29" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1a8395955a311a5ecb472011a8e15b0364" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Lobby.LobbyPlayerSlotUI.characterGameObjectPosition</definition>
+        <argsstring></argsstring>
+        <name>characterGameObjectPosition</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.characterGameObjectPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="14" column="29" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1a2fd746654b4beb1facc541c5c5603941" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button Lobby.LobbyPlayerSlotUI.nextButton</definition>
+        <argsstring></argsstring>
+        <name>nextButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.nextButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="15" column="25" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1adf8ad1bf4725fee89244b1450510f711" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button Lobby.LobbyPlayerSlotUI.previousButton</definition>
+        <argsstring></argsstring>
+        <name>previousButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.previousButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="16" column="25" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1a9844845fc837e15daa2ec54a42b168f2" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button Lobby.LobbyPlayerSlotUI.removeButton</definition>
+        <argsstring></argsstring>
+        <name>removeButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.removeButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="17" column="25" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1a3de1c927c521b81f6ab91bb06ed4078b" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Lobby.LobbyPlayerSlotUI.readyMark</definition>
+        <argsstring></argsstring>
+        <name>readyMark</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.readyMark</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="18" column="29" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1abf354a28fa576e3c755134273ecf3545" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lobby.LobbyPlayerSlotUI._playerIndex</definition>
+        <argsstring></argsstring>
+        <name>_playerIndex</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI._playerIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="20" column="21" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1ac09166e75703cb8b830c9e57ae1b8420" prot="private" static="no" mutable="no">
+        <type><ref refid="class_lobby_1_1_lobby_character_registry" kindref="compound">LobbyCharacterRegistry</ref></type>
+        <definition>LobbyCharacterRegistry Lobby.LobbyPlayerSlotUI._lobbyCharacterRegistry</definition>
+        <argsstring></argsstring>
+        <name>_lobbyCharacterRegistry</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI._lobbyCharacterRegistry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="21" column="40" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1af52efcf18428b7f50f8cc987e7b44b11" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Lobby.LobbyPlayerSlotUI._characterGameObject</definition>
+        <argsstring></argsstring>
+        <name>_characterGameObject</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI._characterGameObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="22" column="28" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_lobby_1_1_lobby_player_slot_u_i_1a838893a836137bdfff492f66cce1bf5e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lobby.LobbyPlayerSlotUI._previousCharacterIndex</definition>
+        <argsstring></argsstring>
+        <name>_previousCharacterIndex</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI._previousCharacterIndex</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="23" column="21" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_lobby_1_1_lobby_player_slot_u_i_1a9cda6a590e69b285a0f00ed08f669220" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Lobby.LobbyPlayerSlotUI.IsDisable</definition>
+        <argsstring></argsstring>
+        <name>IsDisable</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.IsDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="25" column="21" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a8da9aa01193b69d72bfb1c20d6953e14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.UpdateUI</definition>
+        <argsstring>(PlayerState playerState)</argsstring>
+        <name>UpdateUI</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.UpdateUI</qualifiedname>
+        <param>
+          <type><ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref></type>
+          <declname>playerState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="27" column="21" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1abb332573e7575f2fe34640692a36f375" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.EnableSlotUI</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>EnableSlotUI</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.EnableSlotUI</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="55" column="21" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="55" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a532afc1953d60d0e44aaaf47568988dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.DisableSlotUI</definition>
+        <argsstring>()</argsstring>
+        <name>DisableSlotUI</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.DisableSlotUI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="65" column="21" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="65" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1abaede24a9391776d28a99035d01c2ea2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.UpdateCharacterRenderer</definition>
+        <argsstring>(int characterIndex)</argsstring>
+        <name>UpdateCharacterRenderer</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.UpdateCharacterRenderer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>characterIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="42" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="42" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a77be98c7087d01b93b0d9b2813c57caf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.EnableCharacterRenderer</definition>
+        <argsstring>()</argsstring>
+        <name>EnableCharacterRenderer</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.EnableCharacterRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="75" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a52e93c1538e30f8a44bce97d0b00380b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.DisableCharacterRenderer</definition>
+        <argsstring>()</argsstring>
+        <name>DisableCharacterRenderer</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.DisableCharacterRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="80" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1ae66b8113ed322b4c56b1fe4de4197719" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.EnableNextButton</definition>
+        <argsstring>()</argsstring>
+        <name>EnableNextButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.EnableNextButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="85" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a182f289ae3b78be997f31bd83ec0c5f4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.DisableNextButton</definition>
+        <argsstring>()</argsstring>
+        <name>DisableNextButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.DisableNextButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="91" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="91" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1af134dd64d35da4a6aa6bd1ec329bf7e1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.HandleNextButtonClicked</definition>
+        <argsstring>()</argsstring>
+        <name>HandleNextButtonClicked</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.HandleNextButtonClicked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="97" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a203825651cb43c3d943b9b2884332fa9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.EnablePreviousButton</definition>
+        <argsstring>()</argsstring>
+        <name>EnablePreviousButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.EnablePreviousButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="102" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="102" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a4b31feb715ddc10d7eac2584a664b63f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.DisablePreviousButton</definition>
+        <argsstring>()</argsstring>
+        <name>DisablePreviousButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.DisablePreviousButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="108" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="108" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a90dc71ec8995a111225355f2d32a8ea2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.HandlePreviousButtonClicked</definition>
+        <argsstring>()</argsstring>
+        <name>HandlePreviousButtonClicked</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.HandlePreviousButtonClicked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="114" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1aa7b917c213f0fd7eb6aeb2740c747e51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.EnableRemoveButton</definition>
+        <argsstring>()</argsstring>
+        <name>EnableRemoveButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.EnableRemoveButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="119" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="119" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a678f0cdd4ea6a63c1eda631f65030fa9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.DisableRemoveButton</definition>
+        <argsstring>()</argsstring>
+        <name>DisableRemoveButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.DisableRemoveButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="125" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="125" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a110eb43e10e2c97e9fb9367376a5a22f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.HandleRemoveButtonClicked</definition>
+        <argsstring>()</argsstring>
+        <name>HandleRemoveButtonClicked</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.HandleRemoveButtonClicked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="131" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_lobby_1_1_lobby_player_slot_u_i_1a6c5ced27245211ad4372e271bc2723f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Lobby.LobbyPlayerSlotUI.DisableMarkReadyButton</definition>
+        <argsstring>()</argsstring>
+        <name>DisableMarkReadyButton</name>
+        <qualifiedname>Lobby.LobbyPlayerSlotUI.DisableMarkReadyButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/LobbyPlayerSlotUI.cs" line="136" column="22" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="136" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Lobby.LobbyPlayerSlotUI</label>
+        <link refid="class_lobby_1_1_lobby_player_slot_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Lobby.LobbyPlayerSlotUI</label>
+        <link refid="class_lobby_1_1_lobby_player_slot_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Lobby/LobbyPlayerSlotUI.cs" line="7" column="11" bodyfile="Lobby/LobbyPlayerSlotUI.cs" bodystart="8" bodyend="140"/>
+    <listofallmembers>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1af52efcf18428b7f50f8cc987e7b44b11" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>_characterGameObject</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1ac09166e75703cb8b830c9e57ae1b8420" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>_lobbyCharacterRegistry</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1abf354a28fa576e3c755134273ecf3545" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>_playerIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a838893a836137bdfff492f66cce1bf5e" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>_previousCharacterIndex</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a8395955a311a5ecb472011a8e15b0364" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>characterGameObjectPosition</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a5480bda4e68e084c1e9dae5eaf463392" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>characterRenderer</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a52e93c1538e30f8a44bce97d0b00380b" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>DisableCharacterRenderer</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a6c5ced27245211ad4372e271bc2723f0" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>DisableMarkReadyButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a182f289ae3b78be997f31bd83ec0c5f4" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>DisableNextButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a4b31feb715ddc10d7eac2584a664b63f" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>DisablePreviousButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a678f0cdd4ea6a63c1eda631f65030fa9" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>DisableRemoveButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a532afc1953d60d0e44aaaf47568988dd" prot="public" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>DisableSlotUI</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a77be98c7087d01b93b0d9b2813c57caf" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>EnableCharacterRenderer</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1ae66b8113ed322b4c56b1fe4de4197719" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>EnableNextButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a203825651cb43c3d943b9b2884332fa9" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>EnablePreviousButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1aa7b917c213f0fd7eb6aeb2740c747e51" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>EnableRemoveButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1abb332573e7575f2fe34640692a36f375" prot="public" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>EnableSlotUI</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1af134dd64d35da4a6aa6bd1ec329bf7e1" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>HandleNextButtonClicked</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a90dc71ec8995a111225355f2d32a8ea2" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>HandlePreviousButtonClicked</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a110eb43e10e2c97e9fb9367376a5a22f" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>HandleRemoveButtonClicked</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a9cda6a590e69b285a0f00ed08f669220" prot="public" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>IsDisable</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a2fd746654b4beb1facc541c5c5603941" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>nextButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a053b5f5e0c539300d917bd18814b28cf" prot="public" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>OnNextButtonClicked</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a5aa0a93ac4e69a57367d4b1df40a5fb9" prot="public" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>OnPreviousButtonClicked</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a1071a27d5bd5d1aa532c012b8ab07ea6" prot="public" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>OnRemoveButtonClicked</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1adf8ad1bf4725fee89244b1450510f711" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>previousButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a3de1c927c521b81f6ab91bb06ed4078b" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>readyMark</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a9844845fc837e15daa2ec54a42b168f2" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>removeButton</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1abaede24a9391776d28a99035d01c2ea2" prot="private" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>UpdateCharacterRenderer</name></member>
+      <member refid="class_lobby_1_1_lobby_player_slot_u_i_1a8da9aa01193b69d72bfb1c20d6953e14" prot="public" virt="non-virtual"><scope>Lobby::LobbyPlayerSlotUI</scope><name>UpdateUI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

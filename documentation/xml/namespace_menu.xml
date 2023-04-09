@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_menu" kind="namespace" language="C#">
+    <compoundname>Menu</compoundname>
+    <innerclass refid="class_menu_1_1_end_game_menu" prot="public">Menu::EndGameMenu</innerclass>
+    <innerclass refid="class_menu_1_1_menu_function_utils" prot="public">Menu::MenuFunctionUtils</innerclass>
+    <innerclass refid="class_menu_1_1_setting_entry" prot="public">Menu::SettingEntry</innerclass>
+    <innerclass refid="class_menu_1_1_u_i_settings_manager" prot="public">Menu::UISettingsManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Menu/EndGameMenu.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

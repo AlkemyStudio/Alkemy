@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_utils_1_1_player_configuration_debug_utils" kind="class" language="C#" prot="public">
+    <compoundname>Utils::PlayerConfigurationDebugUtils</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_utils_1_1_player_configuration_debug_utils_1aee2ae84cb6dd1c9111f14c11a765a1f9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Utils.PlayerConfigurationDebugUtils.PrintPlayerConfigurations</definition>
+        <argsstring>(List&lt; PlayerState &gt; playerConfigurations)</argsstring>
+        <name>PrintPlayerConfigurations</name>
+        <qualifiedname>Utils.PlayerConfigurationDebugUtils.PrintPlayerConfigurations</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref> &gt;</type>
+          <declname>playerConfigurations</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to print player configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerConfigurations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player configurations to print </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/PlayerConfigurationDebugUtils.cs" line="18" column="28" bodyfile="Utils/PlayerConfigurationDebugUtils.cs" bodystart="18" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utils_1_1_player_configuration_debug_utils_1a60c84570fa18eb73a718d5066c7b6b87" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Utils.PlayerConfigurationDebugUtils.FormatPlayerConfiguration</definition>
+        <argsstring>(PlayerState playerState)</argsstring>
+        <name>FormatPlayerConfiguration</name>
+        <qualifiedname>Utils.PlayerConfigurationDebugUtils.FormatPlayerConfiguration</qualifiedname>
+        <param>
+          <type><ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref></type>
+          <declname>playerState</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to format a player configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player configuration to format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The formatted player configuration </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Utils/PlayerConfigurationDebugUtils.cs" line="34" column="30" bodyfile="Utils/PlayerConfigurationDebugUtils.cs" bodystart="34" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to print player configurations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Utils/PlayerConfigurationDebugUtils.cs" line="12" column="11" bodyfile="Utils/PlayerConfigurationDebugUtils.cs" bodystart="13" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_utils_1_1_player_configuration_debug_utils_1a60c84570fa18eb73a718d5066c7b6b87" prot="public" virt="non-virtual"><scope>Utils::PlayerConfigurationDebugUtils</scope><name>FormatPlayerConfiguration</name></member>
+      <member refid="class_utils_1_1_player_configuration_debug_utils_1aee2ae84cb6dd1c9111f14c11a765a1f9" prot="public" virt="non-virtual"><scope>Utils::PlayerConfigurationDebugUtils</scope><name>PrintPlayerConfigurations</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_player_inputs_1_1_player_input_registry" kind="class" language="C#" prot="public">
+    <compoundname>PlayerInputs::PlayerInputRegistry</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_player_inputs_1_1_player_input_registry_1aaa649c32ae8e020e6c9408f6efdb0e16" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_player_inputs_1_1_player_input_registry" kindref="compound">PlayerInputRegistry</ref></type>
+        <definition>PlayerInputRegistry PlayerInputs.PlayerInputRegistry.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="14" column="43" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_inputs_1_1_player_input_registry_1a3d5aa540e8dc46cd7a9ea5e60daa54e4" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; int, PlayerInput &gt;</type>
+        <definition>Dictionary&lt;int, PlayerInput&gt; PlayerInputs.PlayerInputRegistry.playerInputs</definition>
+        <argsstring></argsstring>
+        <name>playerInputs</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.playerInputs</qualifiedname>
+        <initializer>= new Dictionary&lt;int, PlayerInput&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="16" column="28" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_inputs_1_1_player_input_registry_1a3bcccfd08e29c1871b9da9457bc9f23a" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; int, <ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref> &gt;</type>
+        <definition>Dictionary&lt;int, PlayerState&gt; PlayerInputs.PlayerInputRegistry.playerStates</definition>
+        <argsstring></argsstring>
+        <name>playerStates</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.playerStates</qualifiedname>
+        <initializer>= new Dictionary&lt;int, <ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="17" column="28" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_registry_1ae48d3cfafc98a2beccd3c324bae88dfe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputRegistry.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.Awake</qualifiedname>
+        <briefdescription>
+<para>Awake is called when the script instance is being loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="22" column="22" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="22" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_registry_1abc838f7e9f309dd86867985524724996" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PlayerInput[]</type>
+        <definition>PlayerInput[] PlayerInputs.PlayerInputRegistry.GetPlayerInputs</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayerInputs</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.GetPlayerInputs</qualifiedname>
+        <briefdescription>
+<para>This method is used to get the PlayerInput of a player. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The PlayerInput of the player </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="37" column="28" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_registry_1a0316b5aff6a3a176e4027d2229ffd302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref>[]</type>
+        <definition>PlayerState[] PlayerInputs.PlayerInputRegistry.GetPlayerStates</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayerStates</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.GetPlayerStates</qualifiedname>
+        <briefdescription>
+<para>This method is used to get the PlayerState of a player. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The PlayerState of the player </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="46" column="28" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_registry_1aeb69b71778470d57bbdbf6ab9c7211d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int PlayerInputs.PlayerInputRegistry.GetPlayerCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayerCount</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.GetPlayerCount</qualifiedname>
+        <briefdescription>
+<para>This method is used to get the number of players. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="55" column="20" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_registry_1ae1b589a7100d552109099814b9b01aba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputRegistry.Register</definition>
+        <argsstring>(PlayerState playerState)</argsstring>
+        <name>Register</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.Register</qualifiedname>
+        <param>
+          <type><ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref></type>
+          <declname>playerState</declname>
+        </param>
+        <briefdescription>
+<para>Register a new player state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player state to register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="64" column="21" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_registry_1ade6e244a5fa2a722ff14c2a189e37590" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputRegistry.RegisterAll</definition>
+        <argsstring>(IEnumerable&lt; PlayerState &gt; newPlayerStates)</argsstring>
+        <name>RegisterAll</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.RegisterAll</qualifiedname>
+        <param>
+          <type>IEnumerable&lt; <ref refid="struct_lobby_1_1_player_state" kindref="compound">PlayerState</ref> &gt;</type>
+          <declname>newPlayerStates</declname>
+        </param>
+        <briefdescription>
+<para>Register all player states contained in the given list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newPlayerStates</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of player states to register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="74" column="21" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="74" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_player_input_registry_1ac3a76cfb143069b88a26ac567a9ef40d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.PlayerInputRegistry.Remove</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>Remove</name>
+        <qualifiedname>PlayerInputs.PlayerInputRegistry.Remove</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+<para>Remove a player state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player index of the player state to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/PlayerInputRegistry.cs" line="86" column="21" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="86" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PlayerInputRegistry is used to keep track of all the <ref refid="namespace_player_inputs" kindref="compound">PlayerInputs</ref> in the scene. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerInputs.PlayerInputRegistry</label>
+        <link refid="class_player_inputs_1_1_player_input_registry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerInputs.PlayerInputRegistry</label>
+        <link refid="class_player_inputs_1_1_player_input_registry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="PlayerInputs/PlayerInputRegistry.cs" line="12" column="11" bodyfile="PlayerInputs/PlayerInputRegistry.cs" bodystart="13" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_player_inputs_1_1_player_input_registry_1ae48d3cfafc98a2beccd3c324bae88dfe" prot="private" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>Awake</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1aeb69b71778470d57bbdbf6ab9c7211d6" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>GetPlayerCount</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1abc838f7e9f309dd86867985524724996" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>GetPlayerInputs</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1a0316b5aff6a3a176e4027d2229ffd302" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>GetPlayerStates</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1aaa649c32ae8e020e6c9408f6efdb0e16" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>Instance</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1a3d5aa540e8dc46cd7a9ea5e60daa54e4" prot="private" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>playerInputs</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1a3bcccfd08e29c1871b9da9457bc9f23a" prot="private" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>playerStates</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1ae1b589a7100d552109099814b9b01aba" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>Register</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1ade6e244a5fa2a722ff14c2a189e37590" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>RegisterAll</name></member>
+      <member refid="class_player_inputs_1_1_player_input_registry_1ac3a76cfb143069b88a26ac567a9ef40d" prot="public" virt="non-virtual"><scope>PlayerInputs::PlayerInputRegistry</scope><name>Remove</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

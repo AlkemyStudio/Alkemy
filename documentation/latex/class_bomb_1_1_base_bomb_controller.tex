@@ -1,0 +1,88 @@
+\hypertarget{class_bomb_1_1_base_bomb_controller}{}\doxysection{Bomb.\+Base\+Bomb\+Controller Class Reference}
+\label{class_bomb_1_1_base_bomb_controller}\index{Bomb.BaseBombController@{Bomb.BaseBombController}}
+Inheritance diagram for Bomb.\+Base\+Bomb\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_bomb_1_1_base_bomb_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a840895d32bfdb004172fc6ec0ebac97e}\label{class_bomb_1_1_base_bomb_controller_a840895d32bfdb004172fc6ec0ebac97e}} 
+virtual void {\bfseries Setup\+Bomb} (\mbox{\hyperlink{class_player_1_1_player_bomb_controller}{Player\+Bomb\+Controller}} bomb\+Controller, int bomb\+Power)
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_ac5ae943831d024fa77e0e25aa1702a78}\label{class_bomb_1_1_base_bomb_controller_ac5ae943831d024fa77e0e25aa1702a78}} 
+virtual void {\bfseries Cancel\+Timer} ()
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a86e745a74d7f05ecbeb3f1190060a05b}\label{class_bomb_1_1_base_bomb_controller_a86e745a74d7f05ecbeb3f1190060a05b}} 
+virtual bool {\bfseries Has\+Already\+Exploded} ()
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a3e45337fb4a8f5f1ea5b3aca0558eead}\label{class_bomb_1_1_base_bomb_controller_a3e45337fb4a8f5f1ea5b3aca0558eead}} 
+virtual void {\bfseries Start\+Explode} ()
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_ac7450e2298c7c82dac4993447a5a55b1}\label{class_bomb_1_1_base_bomb_controller_ac7450e2298c7c82dac4993447a5a55b1}} 
+virtual void {\bfseries On\+Player\+Walk\+Outside\+Trigger} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a01a03037a8ab9aa43099c9c9c84b1e04}\label{class_bomb_1_1_base_bomb_controller_a01a03037a8ab9aa43099c9c9c84b1e04}} 
+virtual IEnumerator {\bfseries Start\+Timer} ()
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_aa3ddf6c595ff700f8e89e9462fee57b5}\label{class_bomb_1_1_base_bomb_controller_aa3ddf6c595ff700f8e89e9462fee57b5}} 
+virtual void {\bfseries Explode} (Vector3 position, Vector3 direction, int length)
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_af836dfb540c98d151aa5d08ee5624323}\label{class_bomb_1_1_base_bomb_controller_af836dfb540c98d151aa5d08ee5624323}} 
+virtual void {\bfseries Play\+Sound} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a6ce5fecd080e02716c94cf3280cf0dc3}\label{class_bomb_1_1_base_bomb_controller_a6ce5fecd080e02716c94cf3280cf0dc3}} 
+Collider {\bfseries main\+Collider}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a971952d85bfab773a904d45e38f697d7}\label{class_bomb_1_1_base_bomb_controller_a971952d85bfab773a904d45e38f697d7}} 
+Collider {\bfseries collider\+That\+Block\+Forces}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a32dfe349d20be38155cd56f8e0b5bc6d}\label{class_bomb_1_1_base_bomb_controller_a32dfe349d20be38155cd56f8e0b5bc6d}} 
+Collider {\bfseries trigger\+Collider}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a5e09ac78c8b4db60665f4c57989e81d5}\label{class_bomb_1_1_base_bomb_controller_a5e09ac78c8b4db60665f4c57989e81d5}} 
+Mesh\+Renderer {\bfseries mesh\+Renderer}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a875a14ee959214da64113987ea95baa4}\label{class_bomb_1_1_base_bomb_controller_a875a14ee959214da64113987ea95baa4}} 
+\mbox{\hyperlink{class_bomb_1_1_explosion}{Explosion}} {\bfseries explosion\+Prefabs}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_ad93f65c6b446c17b9035a7cfd6df5021}\label{class_bomb_1_1_base_bomb_controller_ad93f65c6b446c17b9035a7cfd6df5021}} 
+Audio\+Clip\mbox{[}$\,$\mbox{]} {\bfseries bomb\+Explosion\+Sounds}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_aed56e768d05c423a747f892f190034b7}\label{class_bomb_1_1_base_bomb_controller_aed56e768d05c423a747f892f190034b7}} 
+float {\bfseries fuse\+Time} = 3.\+0f
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a9be0abb19531f3412830b88abad194f7}\label{class_bomb_1_1_base_bomb_controller_a9be0abb19531f3412830b88abad194f7}} 
+\mbox{\hyperlink{class_player_1_1_player_bomb_controller}{Player\+Bomb\+Controller}} {\bfseries \+\_\+player\+Bomb\+Controller}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a1d754776cb3847171f24349366a605be}\label{class_bomb_1_1_base_bomb_controller_a1d754776cb3847171f24349366a605be}} 
+int {\bfseries \+\_\+bomb\+Power}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a86f96226f858bce0af84568758cf01a4}\label{class_bomb_1_1_base_bomb_controller_a86f96226f858bce0af84568758cf01a4}} 
+bool {\bfseries \+\_\+has\+Already\+Exploded} = false
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_ad78f26bbd5e3c7de86830add8a73ad89}\label{class_bomb_1_1_base_bomb_controller_ad78f26bbd5e3c7de86830add8a73ad89}} 
+float {\bfseries spawn\+Time}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a6e65f5dd0d812c7804214a4491bba1e6}\label{class_bomb_1_1_base_bomb_controller_a6e65f5dd0d812c7804214a4491bba1e6}} 
+static readonly int {\bfseries Fuse\+Time} = Shader.\+Property\+To\+ID(\char`\"{}\+\_\+\+Fuse\+Time\char`\"{})
+\item 
+\mbox{\Hypertarget{class_bomb_1_1_base_bomb_controller_a487a5d1980e54c35b4f8b5f04c437675}\label{class_bomb_1_1_base_bomb_controller_a487a5d1980e54c35b4f8b5f04c437675}} 
+static readonly int {\bfseries Spawn\+Time} = Shader.\+Property\+To\+ID(\char`\"{}\+\_\+\+Spawn\+Time\char`\"{})
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bomb/Base\+Bomb\+Controller.\+cs\end{DoxyCompactItemize}

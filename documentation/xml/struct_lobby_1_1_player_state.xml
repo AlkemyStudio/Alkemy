@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_lobby_1_1_player_state" kind="struct" language="C#" prot="public">
+    <compoundname>Lobby::PlayerState</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="struct_lobby_1_1_player_state_1a1910a98c7200ece3a36d3d8b535786af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Lobby.PlayerState.PlayerIndex</definition>
+        <argsstring></argsstring>
+        <name>PlayerIndex</name>
+        <qualifiedname>Lobby.PlayerState.PlayerIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/PlayerState.cs" line="7" column="20" bodyfile="Lobby/PlayerState.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_lobby_1_1_player_state_1a6cdf102cf96ad681891d6b7e7df8c092" prot="public" static="no" mutable="no">
+        <type>PlayerInput</type>
+        <definition>PlayerInput Lobby.PlayerState.PlayerInput</definition>
+        <argsstring></argsstring>
+        <name>PlayerInput</name>
+        <qualifiedname>Lobby.PlayerState.PlayerInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/PlayerState.cs" line="8" column="28" bodyfile="Lobby/PlayerState.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_lobby_1_1_player_state_1ac5c653e81473783dc410b6e63f17dd87" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Lobby.PlayerState.CharacterIndex</definition>
+        <argsstring></argsstring>
+        <name>CharacterIndex</name>
+        <qualifiedname>Lobby.PlayerState.CharacterIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/PlayerState.cs" line="9" column="20" bodyfile="Lobby/PlayerState.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_lobby_1_1_player_state_1aeee9a95a5c1ac08f7431efc9886d1389" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Lobby.PlayerState.IsReady</definition>
+        <argsstring></argsstring>
+        <name>IsReady</name>
+        <qualifiedname>Lobby.PlayerState.IsReady</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/PlayerState.cs" line="10" column="21" bodyfile="Lobby/PlayerState.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_lobby_1_1_player_state_1a26bf93ddc652a1f4b9fcf3c7f1acee36" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Lobby.PlayerState.IsConnected</definition>
+        <argsstring></argsstring>
+        <name>IsConnected</name>
+        <qualifiedname>Lobby.PlayerState.IsConnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lobby/PlayerState.cs" line="11" column="21" bodyfile="Lobby/PlayerState.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Lobby/PlayerState.cs" line="5" column="11" bodyfile="Lobby/PlayerState.cs" bodystart="6" bodyend="12"/>
+    <listofallmembers>
+      <member refid="struct_lobby_1_1_player_state_1ac5c653e81473783dc410b6e63f17dd87" prot="public" virt="non-virtual"><scope>Lobby::PlayerState</scope><name>CharacterIndex</name></member>
+      <member refid="struct_lobby_1_1_player_state_1a26bf93ddc652a1f4b9fcf3c7f1acee36" prot="public" virt="non-virtual"><scope>Lobby::PlayerState</scope><name>IsConnected</name></member>
+      <member refid="struct_lobby_1_1_player_state_1aeee9a95a5c1ac08f7431efc9886d1389" prot="public" virt="non-virtual"><scope>Lobby::PlayerState</scope><name>IsReady</name></member>
+      <member refid="struct_lobby_1_1_player_state_1a1910a98c7200ece3a36d3d8b535786af" prot="public" virt="non-virtual"><scope>Lobby::PlayerState</scope><name>PlayerIndex</name></member>
+      <member refid="struct_lobby_1_1_player_state_1a6cdf102cf96ad681891d6b7e7df8c092" prot="public" virt="non-virtual"><scope>Lobby::PlayerState</scope><name>PlayerInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

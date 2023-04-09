@@ -1,0 +1,49 @@
+.TH "Bomb.BasePushBombController" 3 "Sun Apr 9 2023" "Alkemy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bomb.BasePushBombController
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBIsMoving\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBPush\fP (Vector3 playerDirection)"
+.br
+.ti -1c
+.RI "void \fBStopMove\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBOnTouchSomething\fP (Collider collision)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "Rigidbody \fBbombRigidbody\fP"
+.br
+.ti -1c
+.RI "float \fBdelayAfterStoppingTheBomb\fP = 0\&.1f"
+.br
+.ti -1c
+.RI "float \fBbombPushingSpeed\fP = 10\&.0f"
+.br
+.ti -1c
+.RI "float \fB_lastPushTime\fP"
+.br
+.ti -1c
+.RI "Transform \fB_parentTransform\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alkemy from the source code\&.

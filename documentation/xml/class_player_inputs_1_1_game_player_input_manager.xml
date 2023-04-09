@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_player_inputs_1_1_game_player_input_manager" kind="class" language="C#" prot="public">
+    <compoundname>PlayerInputs::GamePlayerInputManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_inputs_1_1_game_player_input_manager_1a56248eb8fdbdb1622a48b7f070e1e359" prot="private" static="no" mutable="no">
+        <type><ref refid="interface_player_inputs_1_1_i_player_handler" kindref="compound">IPlayerHandler</ref></type>
+        <definition>IPlayerHandler PlayerInputs.GamePlayerInputManager.playerHandler</definition>
+        <argsstring></argsstring>
+        <name>playerHandler</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.playerHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="14" column="33" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_inputs_1_1_game_player_input_manager_1a3df2ff11732f848cb0e423acc85d818d" prot="private" static="no" mutable="no">
+        <type>PlayerInputManager</type>
+        <definition>PlayerInputManager PlayerInputs.GamePlayerInputManager.gamePlayerInputManager</definition>
+        <argsstring></argsstring>
+        <name>gamePlayerInputManager</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.gamePlayerInputManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="15" column="37" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_inputs_1_1_game_player_input_manager_1a8b3e06d29ddf99005eeff158a5e02fc7" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_inputs_1_1_player_input_registry" kindref="compound">PlayerInputRegistry</ref></type>
+        <definition>PlayerInputRegistry PlayerInputs.GamePlayerInputManager.playerInputRegistry</definition>
+        <argsstring></argsstring>
+        <name>playerInputRegistry</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.playerInputRegistry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="16" column="38" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_inputs_1_1_game_player_input_manager_1a4d99390ab58c70498b4a1e6aa88cbacc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.GamePlayerInputManager.SetPlayerHandler</definition>
+        <argsstring>(IPlayerHandler newPlayerHandler)</argsstring>
+        <name>SetPlayerHandler</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.SetPlayerHandler</qualifiedname>
+        <param>
+          <type><ref refid="interface_player_inputs_1_1_i_player_handler" kindref="compound">IPlayerHandler</ref></type>
+          <declname>newPlayerHandler</declname>
+        </param>
+        <briefdescription>
+<para>Set the player handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newPlayerHandler</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="22" column="21" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_game_player_input_manager_1ab6d4a37e4f1f6db532afee548fc57629" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.GamePlayerInputManager.UnsetPlayerHandler</definition>
+        <argsstring>()</argsstring>
+        <name>UnsetPlayerHandler</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.UnsetPlayerHandler</qualifiedname>
+        <briefdescription>
+<para>Unset the player handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="30" column="21" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_game_player_input_manager_1a27df1adeb094b64f9ade0c3bb16d8f45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.GamePlayerInputManager.HandlePlayerJoined</definition>
+        <argsstring>(PlayerInput playerInput)</argsstring>
+        <name>HandlePlayerJoined</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.HandlePlayerJoined</qualifiedname>
+        <param>
+          <type>PlayerInput</type>
+          <declname>playerInput</declname>
+        </param>
+        <briefdescription>
+<para>Handle the player joined event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerInput</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="39" column="21" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_game_player_input_manager_1ae21bda4e83961ec9d3b7694cfe7d9c25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.GamePlayerInputManager.HandlePlayerLeft</definition>
+        <argsstring>(PlayerInput playerInput)</argsstring>
+        <name>HandlePlayerLeft</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.HandlePlayerLeft</qualifiedname>
+        <param>
+          <type>PlayerInput</type>
+          <declname>playerInput</declname>
+        </param>
+        <briefdescription>
+<para>Handle the player left event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerInput</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="52" column="21" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_game_player_input_manager_1a77988cb26d863e61759f955d42699070" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int PlayerInputs.GamePlayerInputManager.GetPlayerCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayerCount</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.GetPlayerCount</qualifiedname>
+        <briefdescription>
+<para>Get the player count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="61" column="20" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_inputs_1_1_game_player_input_manager_1a0c2be63fc426bc85df4ba0f5430123df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerInputs.GamePlayerInputManager.RemovePlayer</definition>
+        <argsstring>(int playerIndex)</argsstring>
+        <name>RemovePlayer</name>
+        <qualifiedname>PlayerInputs.GamePlayerInputManager.RemovePlayer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>playerIndex</declname>
+        </param>
+        <briefdescription>
+<para>Remove the player. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playerIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerInputs/GamePlayerInputManager.cs" line="70" column="21" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="70" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>GamePlayerInputManager is used to handle the input of the players. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerInputs.GamePlayerInputManager</label>
+        <link refid="class_player_inputs_1_1_game_player_input_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>PlayerInputs.GamePlayerInputManager</label>
+        <link refid="class_player_inputs_1_1_game_player_input_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="PlayerInputs/GamePlayerInputManager.cs" line="12" column="11" bodyfile="PlayerInputs/GamePlayerInputManager.cs" bodystart="13" bodyend="89"/>
+    <listofallmembers>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1a3df2ff11732f848cb0e423acc85d818d" prot="private" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>gamePlayerInputManager</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1a77988cb26d863e61759f955d42699070" prot="public" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>GetPlayerCount</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1a27df1adeb094b64f9ade0c3bb16d8f45" prot="public" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>HandlePlayerJoined</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1ae21bda4e83961ec9d3b7694cfe7d9c25" prot="public" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>HandlePlayerLeft</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1a56248eb8fdbdb1622a48b7f070e1e359" prot="private" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>playerHandler</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1a8b3e06d29ddf99005eeff158a5e02fc7" prot="private" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>playerInputRegistry</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1a0c2be63fc426bc85df4ba0f5430123df" prot="public" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>RemovePlayer</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1a4d99390ab58c70498b4a1e6aa88cbacc" prot="public" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>SetPlayerHandler</name></member>
+      <member refid="class_player_inputs_1_1_game_player_input_manager_1ab6d4a37e4f1f6db532afee548fc57629" prot="public" virt="non-virtual"><scope>PlayerInputs::GamePlayerInputManager</scope><name>UnsetPlayerHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

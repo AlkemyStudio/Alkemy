@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_ply_voxel_parse_job" kind="struct" language="C#" prot="public">
+    <compoundname>PlyVoxelParseJob</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IJob</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_ply_voxel_parse_job_1a5a164f8ddb93ec6bd539a1269b49a02f" prot="public" static="no" mutable="no">
+        <type>NativeArray&lt; char &gt;</type>
+        <definition>NativeArray&lt;char&gt; PlyVoxelParseJob.fileData</definition>
+        <argsstring></argsstring>
+        <name>fileData</name>
+        <qualifiedname>PlyVoxelParseJob.fileData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="19" column="24" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ply_voxel_parse_job_1a80f86e9b6e33213a39373821bd088189" prot="public" static="no" mutable="no">
+        <type>NativeArray&lt; <ref refid="struct_job_voxel_data" kindref="compound">JobVoxelData</ref> &gt;</type>
+        <definition>NativeArray&lt;JobVoxelData&gt; PlyVoxelParseJob.voxelData</definition>
+        <argsstring></argsstring>
+        <name>voxelData</name>
+        <qualifiedname>PlyVoxelParseJob.voxelData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="21" column="24" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ply_voxel_parse_job_1ab4facfcbd54946f2187e095a5a11a48d" prot="public" static="no" mutable="no">
+        <type>NativeList&lt; int &gt;</type>
+        <definition>NativeList&lt;int&gt; PlyVoxelParseJob.voxels</definition>
+        <argsstring></argsstring>
+        <name>voxels</name>
+        <qualifiedname>PlyVoxelParseJob.voxels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="22" column="23" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ply_voxel_parse_job_1acf7f7cfda4101c41b376398304595a6d" prot="public" static="no" mutable="no">
+        <type>NativeList&lt; int &gt;</type>
+        <definition>NativeList&lt;int&gt; PlyVoxelParseJob.voxelsShape</definition>
+        <argsstring></argsstring>
+        <name>voxelsShape</name>
+        <qualifiedname>PlyVoxelParseJob.voxelsShape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="24" column="23" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ply_voxel_parse_job_1abcf55c45983c57b3abd4d8511bd2974a" prot="public" static="no" mutable="no">
+        <type>NativeList&lt; int &gt;</type>
+        <definition>NativeList&lt;int&gt; PlyVoxelParseJob.voxelsCoordinates</definition>
+        <argsstring></argsstring>
+        <name>voxelsCoordinates</name>
+        <qualifiedname>PlyVoxelParseJob.voxelsCoordinates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="25" column="23" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_ply_voxel_parse_job_1ad5eb5793841be7c7c938f2dd46de61bd" prot="public" static="no" mutable="no">
+        <type>NativeList&lt; int &gt;</type>
+        <definition>NativeList&lt;int&gt; PlyVoxelParseJob.voxelsColors</definition>
+        <argsstring></argsstring>
+        <name>voxelsColors</name>
+        <qualifiedname>PlyVoxelParseJob.voxelsColors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="26" column="23" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_ply_voxel_parse_job_1a24ef42138cfb218a9748be7eecf0dbef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlyVoxelParseJob.Execute</definition>
+        <argsstring>()</argsstring>
+        <name>Execute</name>
+        <qualifiedname>PlyVoxelParseJob.Execute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="28" column="17" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="28" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="struct_ply_voxel_parse_job_1a6463c2027d9a7d931ba0f54f03cd4f99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PlyVoxelParseJob.IsTransparent</definition>
+        <argsstring>(NativeList&lt; int &gt; voxels, int x, int y, int z, int width, int height, int depth)</argsstring>
+        <name>IsTransparent</name>
+        <qualifiedname>PlyVoxelParseJob.IsTransparent</qualifiedname>
+        <param>
+          <type>NativeList&lt; int &gt;</type>
+          <declname>voxels</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelParserJob.cs" line="166" column="18" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="166" bodyend="175"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IJob</label>
+      </node>
+      <node id="1">
+        <label>PlyVoxelParseJob</label>
+        <link refid="struct_ply_voxel_parse_job"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IJob</label>
+      </node>
+      <node id="1">
+        <label>PlyVoxelParseJob</label>
+        <link refid="struct_ply_voxel_parse_job"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="VoxelMesher/core/VoxelParserJob.cs" line="17" column="7" bodyfile="VoxelMesher/core/VoxelParserJob.cs" bodystart="17" bodyend="176"/>
+    <listofallmembers>
+      <member refid="struct_ply_voxel_parse_job_1a24ef42138cfb218a9748be7eecf0dbef" prot="public" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>Execute</name></member>
+      <member refid="struct_ply_voxel_parse_job_1a5a164f8ddb93ec6bd539a1269b49a02f" prot="public" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>fileData</name></member>
+      <member refid="struct_ply_voxel_parse_job_1a6463c2027d9a7d931ba0f54f03cd4f99" prot="private" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>IsTransparent</name></member>
+      <member refid="struct_ply_voxel_parse_job_1a80f86e9b6e33213a39373821bd088189" prot="public" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>voxelData</name></member>
+      <member refid="struct_ply_voxel_parse_job_1ab4facfcbd54946f2187e095a5a11a48d" prot="public" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>voxels</name></member>
+      <member refid="struct_ply_voxel_parse_job_1ad5eb5793841be7c7c938f2dd46de61bd" prot="public" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>voxelsColors</name></member>
+      <member refid="struct_ply_voxel_parse_job_1abcf55c45983c57b3abd4d8511bd2974a" prot="public" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>voxelsCoordinates</name></member>
+      <member refid="struct_ply_voxel_parse_job_1acf7f7cfda4101c41b376398304595a6d" prot="public" virt="non-virtual"><scope>PlyVoxelParseJob</scope><name>voxelsShape</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

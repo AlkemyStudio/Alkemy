@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_6e00ce4071d9ddf226ab1e2b676adf94" kind="dir">
+    <compoundname>IA</compoundname>
+    <innerfile refid="_i_a_controller_8cs">IAController.cs</innerfile>
+    <innerfile refid="_movement_direction_8cs">MovementDirection.cs</innerfile>
+    <innerfile refid="_raycast_result_8cs">RaycastResult.cs</innerfile>
+    <innerfile refid="_touch_data_8cs">TouchData.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="IA/"/>
+  </compounddef>
+</doxygen>

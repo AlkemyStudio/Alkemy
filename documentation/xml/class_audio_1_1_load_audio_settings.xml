@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_audio_1_1_load_audio_settings" kind="class" language="C#" prot="public">
+    <compoundname>Audio::LoadAudioSettings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_audio_1_1_load_audio_settings_1abafd2e98e0c75898588aa736e0635ca3" prot="private" static="no" mutable="no">
+        <type>AudioMixer</type>
+        <definition>AudioMixer Audio.LoadAudioSettings.audioMixer</definition>
+        <argsstring></argsstring>
+        <name>audioMixer</name>
+        <qualifiedname>Audio.LoadAudioSettings.audioMixer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/LoadAudioSettings.cs" line="11" column="29" bodyfile="Audio/LoadAudioSettings.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_load_audio_settings_1af7cfd4f84511b441d85d623d91851ae0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Audio.LoadAudioSettings.defaultVolume</definition>
+        <argsstring></argsstring>
+        <name>defaultVolume</name>
+        <qualifiedname>Audio.LoadAudioSettings.defaultVolume</qualifiedname>
+        <initializer>= 0.2F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/LoadAudioSettings.cs" line="12" column="24" bodyfile="Audio/LoadAudioSettings.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_load_audio_settings_1a553b9cf2a07e48d64ddf13e663ab5fa7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Audio.LoadAudioSettings.multiplier</definition>
+        <argsstring></argsstring>
+        <name>multiplier</name>
+        <qualifiedname>Audio.LoadAudioSettings.multiplier</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/LoadAudioSettings.cs" line="13" column="24" bodyfile="Audio/LoadAudioSettings.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_audio_1_1_load_audio_settings_1a6cce86b9a49dbdcfa3ea9d10d37ddef4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.LoadAudioSettings.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Audio.LoadAudioSettings.Start</qualifiedname>
+        <briefdescription>
+<para>This method is called when the script instance is being loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/LoadAudioSettings.cs" line="18" column="22" bodyfile="Audio/LoadAudioSettings.cs" bodystart="18" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This script is used to load the audio settings from the player prefs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Audio.LoadAudioSettings</label>
+        <link refid="class_audio_1_1_load_audio_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Audio.LoadAudioSettings</label>
+        <link refid="class_audio_1_1_load_audio_settings"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Audio/LoadAudioSettings.cs" line="9" column="11" bodyfile="Audio/LoadAudioSettings.cs" bodystart="10" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_audio_1_1_load_audio_settings_1abafd2e98e0c75898588aa736e0635ca3" prot="private" virt="non-virtual"><scope>Audio::LoadAudioSettings</scope><name>audioMixer</name></member>
+      <member refid="class_audio_1_1_load_audio_settings_1af7cfd4f84511b441d85d623d91851ae0" prot="private" virt="non-virtual"><scope>Audio::LoadAudioSettings</scope><name>defaultVolume</name></member>
+      <member refid="class_audio_1_1_load_audio_settings_1a553b9cf2a07e48d64ddf13e663ab5fa7" prot="private" virt="non-virtual"><scope>Audio::LoadAudioSettings</scope><name>multiplier</name></member>
+      <member refid="class_audio_1_1_load_audio_settings_1a6cce86b9a49dbdcfa3ea9d10d37ddef4" prot="private" virt="non-virtual"><scope>Audio::LoadAudioSettings</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

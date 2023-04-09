@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_unity_engine_1_1_v_f_x" kind="namespace" language="C#">
+    <compoundname>UnityEngine::VFX</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Bomb/BaseBombController.cs" line="10" column="22"/>
+  </compounddef>
+</doxygen>

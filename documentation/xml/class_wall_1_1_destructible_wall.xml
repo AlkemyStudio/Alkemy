@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_wall_1_1_destructible_wall" kind="class" language="C#" prot="public">
+    <compoundname>Wall::DestructibleWall</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_wall_1_1_destructible_wall_1a7877f879762840de45cd71465d6a55cb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_core_1_1_entity_health" kindref="compound">EntityHealth</ref></type>
+        <definition>EntityHealth Wall.DestructibleWall.entityHealth</definition>
+        <argsstring></argsstring>
+        <name>entityHealth</name>
+        <qualifiedname>Wall.DestructibleWall.entityHealth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="16" column="31" bodyfile="Wall/DestructibleWall.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wall_1_1_destructible_wall_1a70e90b70565f5c52e71517a83a2cb630" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Wall.DestructibleWall.percentageToDropBonus</definition>
+        <argsstring></argsstring>
+        <name>percentageToDropBonus</name>
+        <qualifiedname>Wall.DestructibleWall.percentageToDropBonus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="17" column="24" bodyfile="Wall/DestructibleWall.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wall_1_1_destructible_wall_1abaee88b88d66fea6f31030d445faa949" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Wall.DestructibleWall.explosionPrefab</definition>
+        <argsstring></argsstring>
+        <name>explosionPrefab</name>
+        <qualifiedname>Wall.DestructibleWall.explosionPrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="19" column="29" bodyfile="Wall/DestructibleWall.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wall_1_1_destructible_wall_1a6879399bc6bc658e59c433b31a023d98" prot="private" static="no" mutable="no">
+        <type><ref refid="class_voxel_parser" kindref="compound">VoxelParser</ref></type>
+        <definition>VoxelParser Wall.DestructibleWall.voxelParser</definition>
+        <argsstring></argsstring>
+        <name>voxelParser</name>
+        <qualifiedname>Wall.DestructibleWall.voxelParser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="21" column="29" bodyfile="Wall/DestructibleWall.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wall_1_1_destructible_wall_1a08a61dbc79740759ecf373c24928bd6d" prot="private" static="no" mutable="no">
+        <type>MeshRenderer</type>
+        <definition>MeshRenderer Wall.DestructibleWall.meshRenderer</definition>
+        <argsstring></argsstring>
+        <name>meshRenderer</name>
+        <qualifiedname>Wall.DestructibleWall.meshRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="22" column="30" bodyfile="Wall/DestructibleWall.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_wall_1_1_destructible_wall_1a5eeac411713e4fb687ce0466a875b098" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Wall.DestructibleWall.isDead</definition>
+        <argsstring></argsstring>
+        <name>isDead</name>
+        <qualifiedname>Wall.DestructibleWall.isDead</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="24" column="22" bodyfile="Wall/DestructibleWall.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_wall_1_1_destructible_wall_1a94e5c6e2e3e3f6fafc30bcc7465000ab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Wall.DestructibleWall.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Wall.DestructibleWall.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="26" column="22" bodyfile="Wall/DestructibleWall.cs" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wall_1_1_destructible_wall_1a1f4ef4fb5995fd090269ad7d5df560dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Wall.DestructibleWall.OnDeath</definition>
+        <argsstring>(GameObject go)</argsstring>
+        <name>OnDeath</name>
+        <qualifiedname>Wall.DestructibleWall.OnDeath</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>go</declname>
+        </param>
+        <briefdescription>
+<para>This method is used to destroy the wall with an explosion effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>go</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game object that will be destroyed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="48" column="22" bodyfile="Wall/DestructibleWall.cs" bodystart="48" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wall_1_1_destructible_wall_1a2c38db0b43b2e973bfa3c052326eed4c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Wall.DestructibleWall.ShouldSpawnBonus</definition>
+        <argsstring>()</argsstring>
+        <name>ShouldSpawnBonus</name>
+        <qualifiedname>Wall.DestructibleWall.ShouldSpawnBonus</qualifiedname>
+        <briefdescription>
+<para>This method is used to check if the wall should spawn a bonus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the wall should spawn a bonus, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="89" column="22" bodyfile="Wall/DestructibleWall.cs" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wall_1_1_destructible_wall_1abbbe3d88bfb83214bffa72076f47d951" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Wall.DestructibleWall.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>Wall.DestructibleWall.OnDestroy</qualifiedname>
+        <briefdescription>
+<para>This method is used to unsubscribe from the OnDeath event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="97" column="22" bodyfile="Wall/DestructibleWall.cs" bodystart="97" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_wall_1_1_destructible_wall_1a1def6d51efb529ba61ae1a841fb59ee6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Wall.DestructibleWall.OnValidate</definition>
+        <argsstring>()</argsstring>
+        <name>OnValidate</name>
+        <qualifiedname>Wall.DestructibleWall.OnValidate</qualifiedname>
+        <briefdescription>
+<para>This method is used to validate the component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="105" column="22" bodyfile="Wall/DestructibleWall.cs" bodystart="105" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_wall_1_1_destructible_wall_1a102c8ea8c1a354c122dcedf03e981f5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Wall.DestructibleWall.DestroyWallWithoutEffect</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyWallWithoutEffect</name>
+        <qualifiedname>Wall.DestructibleWall.DestroyWallWithoutEffect</qualifiedname>
+        <briefdescription>
+<para>This method is used to destroy the wall without any effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Wall/DestructibleWall.cs" line="37" column="21" bodyfile="Wall/DestructibleWall.cs" bodystart="37" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is used to manage the destructible wall. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Wall.DestructibleWall</label>
+        <link refid="class_wall_1_1_destructible_wall"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Wall.DestructibleWall</label>
+        <link refid="class_wall_1_1_destructible_wall"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Wall/DestructibleWall.cs" line="14" column="11" bodyfile="Wall/DestructibleWall.cs" bodystart="15" bodyend="109"/>
+    <listofallmembers>
+      <member refid="class_wall_1_1_destructible_wall_1a102c8ea8c1a354c122dcedf03e981f5e" prot="public" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>DestroyWallWithoutEffect</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a7877f879762840de45cd71465d6a55cb" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>entityHealth</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1abaee88b88d66fea6f31030d445faa949" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>explosionPrefab</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a5eeac411713e4fb687ce0466a875b098" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>isDead</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a08a61dbc79740759ecf373c24928bd6d" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>meshRenderer</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a1f4ef4fb5995fd090269ad7d5df560dd" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>OnDeath</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1abbbe3d88bfb83214bffa72076f47d951" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>OnDestroy</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a1def6d51efb529ba61ae1a841fb59ee6" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>OnValidate</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a70e90b70565f5c52e71517a83a2cb630" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>percentageToDropBonus</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a2c38db0b43b2e973bfa3c052326eed4c" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>ShouldSpawnBonus</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a94e5c6e2e3e3f6fafc30bcc7465000ab" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>Start</name></member>
+      <member refid="class_wall_1_1_destructible_wall_1a6879399bc6bc658e59c433b31a023d98" prot="private" virt="non-virtual"><scope>Wall::DestructibleWall</scope><name>voxelParser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_i_a" kind="namespace" language="C#">
+    <compoundname>IA</compoundname>
+    <innerclass refid="struct_i_a_1_1_raycast_result" prot="public">IA::RaycastResult</innerclass>
+    <innerclass refid="class_i_a_1_1_terrain_state_manager" prot="public">IA::TerrainStateManager</innerclass>
+    <innerclass refid="struct_i_a_1_1_touch_data" prot="public">IA::TouchData</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_i_a_1ada681592736518bb3cf380b49af13a52" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TerrainTileState</name>
+        <qualifiedname>IA.TerrainTileState</qualifiedname>
+        <enumvalue id="namespace_i_a_1ada681592736518bb3cf380b49af13a52a6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_i_a_1ada681592736518bb3cf380b49af13a52acd3abfc2f377a4c3fd9181f919d9de82" prot="public">
+          <name>Bomb</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_i_a_1ada681592736518bb3cf380b49af13a52a5e26b7ef8cab8e58371e53c68f61b2d5" prot="public">
+          <name>IndestructibleWall</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_i_a_1ada681592736518bb3cf380b49af13a52a94e8a499539d1a472f3b5dbbb85508c0" prot="public">
+          <name>Wall</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/TerrainStateManager.cs" line="3" column="7" bodyfile="Game/TerrainStateManager.cs" bodystart="4" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>MovementDirection</name>
+        <qualifiedname>IA.MovementDirection</qualifiedname>
+        <enumvalue id="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aa601560b94fbb188919dd1d36c8ab70a4" prot="public">
+          <name>North</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aabf495fc048d8d44b7f32536df5cf3930" prot="public">
+          <name>West</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aa263d7b2cf53802c9ed127b718c0bf9fd" prot="public">
+          <name>South</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aaa99dc62d017d04cf67266593f9c3761e" prot="public">
+          <name>East</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_i_a_1a4ed69a08ace89da547eb1593afd8674aa6adf97f83acf6453d4a6a4b1070f3754" prot="public">
+          <name>None</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/MovementDirection.cs" line="3" column="11" bodyfile="IA/MovementDirection.cs" bodystart="4" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Game/TerrainStateManager.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

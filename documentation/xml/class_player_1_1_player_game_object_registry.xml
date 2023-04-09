@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_player_1_1_player_game_object_registry" kind="class" language="C#" prot="public">
+    <compoundname>Player::PlayerGameObjectRegistry</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_1_1_player_game_object_registry_1ac3c8261fd487f48c52d5b597439efc29" prot="private" static="no" mutable="no">
+        <type>GameObject[]</type>
+        <definition>GameObject [] Player.PlayerGameObjectRegistry.playerPrefabs</definition>
+        <argsstring></argsstring>
+        <name>playerPrefabs</name>
+        <qualifiedname>Player.PlayerGameObjectRegistry.playerPrefabs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerGameObjectRegistry.cs" line="10" column="29" bodyfile="Player/PlayerGameObjectRegistry.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1_1_player_game_object_registry_1a533bba8fbfe9cdf762e2f0e13339d56a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject</type>
+        <definition>GameObject Player.PlayerGameObjectRegistry.GetOneWithIndex</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetOneWithIndex</name>
+        <qualifiedname>Player.PlayerGameObjectRegistry.GetOneWithIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Get the player prefab with the given index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the player prefab </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The player prefab </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Player/PlayerGameObjectRegistry.cs" line="17" column="27" bodyfile="Player/PlayerGameObjectRegistry.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PlayerGameObjectRegistry is used to get the player prefab. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerGameObjectRegistry</label>
+        <link refid="class_player_1_1_player_game_object_registry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Player.PlayerGameObjectRegistry</label>
+        <link refid="class_player_1_1_player_game_object_registry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Player/PlayerGameObjectRegistry.cs" line="8" column="11" bodyfile="Player/PlayerGameObjectRegistry.cs" bodystart="9" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_player_1_1_player_game_object_registry_1a533bba8fbfe9cdf762e2f0e13339d56a" prot="public" virt="non-virtual"><scope>Player::PlayerGameObjectRegistry</scope><name>GetOneWithIndex</name></member>
+      <member refid="class_player_1_1_player_game_object_registry_1ac3c8261fd487f48c52d5b597439efc29" prot="private" virt="non-virtual"><scope>Player::PlayerGameObjectRegistry</scope><name>playerPrefabs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

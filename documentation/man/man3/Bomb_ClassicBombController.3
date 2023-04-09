@@ -1,0 +1,95 @@
+.TH "Bomb.ClassicBombController" 3 "Sun Apr 9 2023" "Alkemy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Bomb.ClassicBombController
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBBomb\&.BaseBombController\fP\&.
+.SS "Additional Inherited Members"
+
+
+Public Member Functions inherited from \fBBomb\&.BaseBombController\fP
+.in +1c
+.ti -1c
+.RI "virtual void \fBSetupBomb\fP (\fBPlayerBombController\fP bombController, int bombPower)"
+.br
+.ti -1c
+.RI "virtual void \fBCancelTimer\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBHasAlreadyExploded\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBStartExplode\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBOnPlayerWalkOutsideTrigger\fP ()"
+.br
+.in -1c
+
+Protected Member Functions inherited from \fBBomb\&.BaseBombController\fP
+.in +1c
+.ti -1c
+.RI "virtual IEnumerator \fBStartTimer\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBExplode\fP (Vector3 position, Vector3 direction, int length)"
+.br
+.ti -1c
+.RI "virtual void \fBPlaySound\fP ()"
+.br
+.in -1c
+
+Protected Attributes inherited from \fBBomb\&.BaseBombController\fP
+.in +1c
+.ti -1c
+.RI "Collider \fBmainCollider\fP"
+.br
+.ti -1c
+.RI "Collider \fBcolliderThatBlockForces\fP"
+.br
+.ti -1c
+.RI "Collider \fBtriggerCollider\fP"
+.br
+.ti -1c
+.RI "MeshRenderer \fBmeshRenderer\fP"
+.br
+.ti -1c
+.RI "\fBExplosion\fP \fBexplosionPrefabs\fP"
+.br
+.ti -1c
+.RI "AudioClip[] \fBbombExplosionSounds\fP"
+.br
+.ti -1c
+.RI "float \fBfuseTime\fP = 3\&.0f"
+.br
+.ti -1c
+.RI "\fBPlayerBombController\fP \fB_playerBombController\fP"
+.br
+.ti -1c
+.RI "int \fB_bombPower\fP"
+.br
+.ti -1c
+.RI "bool \fB_hasAlreadyExploded\fP = false"
+.br
+.ti -1c
+.RI "float \fBspawnTime\fP"
+.br
+.in -1c
+
+Static Protected Attributes inherited from \fBBomb\&.BaseBombController\fP
+.in +1c
+.ti -1c
+.RI "static readonly int \fBFuseTime\fP = Shader\&.PropertyToID('_FuseTime')"
+.br
+.ti -1c
+.RI "static readonly int \fBSpawnTime\fP = Shader\&.PropertyToID('_SpawnTime')"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alkemy from the source code\&.

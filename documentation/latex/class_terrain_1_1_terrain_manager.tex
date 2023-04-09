@@ -1,0 +1,224 @@
+\hypertarget{class_terrain_1_1_terrain_manager}{}\doxysection{Terrain.\+Terrain\+Manager Class Reference}
+\label{class_terrain_1_1_terrain_manager}\index{Terrain.TerrainManager@{Terrain.TerrainManager}}
+
+
+This class is used to manage the terrain.  
+
+
+Inheritance diagram for Terrain.\+Terrain\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_terrain_1_1_terrain_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_aa60ae2e5a077b3c5fe5228cf81cd9ca4}\label{class_terrain_1_1_terrain_manager_aa60ae2e5a077b3c5fe5228cf81cd9ca4}} 
+void {\bfseries Generate\+Terrain} ()
+\begin{DoxyCompactList}\small\item\em This method is used to generate the terrain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terrain_1_1_terrain_manager_a08abbe3fda23329f9287bf66ba557148}{Instantiate\+Floor}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This method is used to instantiate a floor at the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terrain_1_1_terrain_manager_abdda06ed67d9b27857c3c43096e9f1a6}{Instantiate\+Random\+Wall}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This method is used to instantiate a random wall at the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terrain_1_1_terrain_manager_a3abb4cf3926750bcf1878b2078fc49b1}{Instantiate\+Indestructible\+Wall}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This method is used to instantiate an indestructible wall at the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terrain_1_1_terrain_manager_ad2aab597538b0efa84e8c27a2486d5da}{Instantiate\+Entity}} (Game\+Object entity, int x, int y)
+\begin{DoxyCompactList}\small\item\em This method is used to instantiate an entity at the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terrain_1_1_terrain_manager_ae0346f98683660df2d3610481d116e7d}{Set\+Value}} (int x, int y, \mbox{\hyperlink{namespace_terrain_ad9719c4d4d5f99707a9b9aa1d1b593ba}{Terrain\+Entity\+Type}} value)
+\begin{DoxyCompactList}\small\item\em Set the value of the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_terrain_1_1_terrain_manager_aab3bc69a6f86c9d403f4a815735977d6}{Set\+Value}} (Vector2\+Int position, \mbox{\hyperlink{namespace_terrain_ad9719c4d4d5f99707a9b9aa1d1b593ba}{Terrain\+Entity\+Type}} value)
+\begin{DoxyCompactList}\small\item\em Set the value of the given position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_terrain_1_1_terrain_manager_a88df5ab9fd1e20c40d7ec383a2b4dcb5}{Is\+Filled}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Is the given position filled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_terrain_1_1_terrain_manager_abafd802ba54e234947254451cad6d08d}{Is\+Filled}} (Vector2\+Int grid\+Position)
+\begin{DoxyCompactList}\small\item\em Is the given position filled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_terrain_ad9719c4d4d5f99707a9b9aa1d1b593ba}{Terrain\+Entity\+Type}} \mbox{\hyperlink{class_terrain_1_1_terrain_manager_ae68623ab272181d4dd759f183033c11b}{Get\+Terrain\+Entity\+Type}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Get the terrain entity type at the given position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_a2b69f7cad985ff6a5c5a696de81aed41}\label{class_terrain_1_1_terrain_manager_a2b69f7cad985ff6a5c5a696de81aed41}} 
+static \mbox{\hyperlink{class_terrain_1_1_terrain_manager}{Terrain\+Manager}} {\bfseries Instance}
+\item 
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_a7ce5a8c1332c8d6058fa88266ba1b796}\label{class_terrain_1_1_terrain_manager_a7ce5a8c1332c8d6058fa88266ba1b796}} 
+const int {\bfseries Width} = 17
+\item 
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_a6e0ab1b2aa96d8aa80855a756ae45a31}\label{class_terrain_1_1_terrain_manager_a6e0ab1b2aa96d8aa80855a756ae45a31}} 
+const int {\bfseries Height} = 11
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to manage the terrain. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_ae68623ab272181d4dd759f183033c11b}\label{class_terrain_1_1_terrain_manager_ae68623ab272181d4dd759f183033c11b}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!GetTerrainEntityType@{GetTerrainEntityType}}
+\index{GetTerrainEntityType@{GetTerrainEntityType}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{GetTerrainEntityType()}{GetTerrainEntityType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_terrain_ad9719c4d4d5f99707a9b9aa1d1b593ba}{Terrain\+Entity\+Type}} Terrain.\+Terrain\+Manager.\+Get\+Terrain\+Entity\+Type (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Get the terrain entity type at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position\\
+\hline
+{\em y} & y position\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_ad2aab597538b0efa84e8c27a2486d5da}\label{class_terrain_1_1_terrain_manager_ad2aab597538b0efa84e8c27a2486d5da}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!InstantiateEntity@{InstantiateEntity}}
+\index{InstantiateEntity@{InstantiateEntity}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{InstantiateEntity()}{InstantiateEntity()}}
+{\footnotesize\ttfamily void Terrain.\+Terrain\+Manager.\+Instantiate\+Entity (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This method is used to instantiate an entity at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & entity to instantiate\\
+\hline
+{\em x} & x position\\
+\hline
+{\em y} & y position\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_a08abbe3fda23329f9287bf66ba557148}\label{class_terrain_1_1_terrain_manager_a08abbe3fda23329f9287bf66ba557148}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!InstantiateFloor@{InstantiateFloor}}
+\index{InstantiateFloor@{InstantiateFloor}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{InstantiateFloor()}{InstantiateFloor()}}
+{\footnotesize\ttfamily void Terrain.\+Terrain\+Manager.\+Instantiate\+Floor (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This method is used to instantiate a floor at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position\\
+\hline
+{\em y} & y position\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_a3abb4cf3926750bcf1878b2078fc49b1}\label{class_terrain_1_1_terrain_manager_a3abb4cf3926750bcf1878b2078fc49b1}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!InstantiateIndestructibleWall@{InstantiateIndestructibleWall}}
+\index{InstantiateIndestructibleWall@{InstantiateIndestructibleWall}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{InstantiateIndestructibleWall()}{InstantiateIndestructibleWall()}}
+{\footnotesize\ttfamily void Terrain.\+Terrain\+Manager.\+Instantiate\+Indestructible\+Wall (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This method is used to instantiate an indestructible wall at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position\\
+\hline
+{\em y} & y position\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_abdda06ed67d9b27857c3c43096e9f1a6}\label{class_terrain_1_1_terrain_manager_abdda06ed67d9b27857c3c43096e9f1a6}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!InstantiateRandomWall@{InstantiateRandomWall}}
+\index{InstantiateRandomWall@{InstantiateRandomWall}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{InstantiateRandomWall()}{InstantiateRandomWall()}}
+{\footnotesize\ttfamily void Terrain.\+Terrain\+Manager.\+Instantiate\+Random\+Wall (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This method is used to instantiate a random wall at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position\\
+\hline
+{\em y} & y position\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_a88df5ab9fd1e20c40d7ec383a2b4dcb5}\label{class_terrain_1_1_terrain_manager_a88df5ab9fd1e20c40d7ec383a2b4dcb5}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!IsFilled@{IsFilled}}
+\index{IsFilled@{IsFilled}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{IsFilled()}{IsFilled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Terrain.\+Terrain\+Manager.\+Is\+Filled (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Is the given position filled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_abafd802ba54e234947254451cad6d08d}\label{class_terrain_1_1_terrain_manager_abafd802ba54e234947254451cad6d08d}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!IsFilled@{IsFilled}}
+\index{IsFilled@{IsFilled}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{IsFilled()}{IsFilled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Terrain.\+Terrain\+Manager.\+Is\+Filled (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{grid\+Position }\end{DoxyParamCaption})}
+
+
+
+Is the given position filled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid\+Position} & the position to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the given position is filled
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_ae0346f98683660df2d3610481d116e7d}\label{class_terrain_1_1_terrain_manager_ae0346f98683660df2d3610481d116e7d}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Terrain.\+Terrain\+Manager.\+Set\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{namespace_terrain_ad9719c4d4d5f99707a9b9aa1d1b593ba}{Terrain\+Entity\+Type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the value of the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_terrain_1_1_terrain_manager_aab3bc69a6f86c9d403f4a815735977d6}\label{class_terrain_1_1_terrain_manager_aab3bc69a6f86c9d403f4a815735977d6}} 
+\index{Terrain.TerrainManager@{Terrain.TerrainManager}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!Terrain.TerrainManager@{Terrain.TerrainManager}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Terrain.\+Terrain\+Manager.\+Set\+Value (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{position,  }\item[{\mbox{\hyperlink{namespace_terrain_ad9719c4d4d5f99707a9b9aa1d1b593ba}{Terrain\+Entity\+Type}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the value of the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Terrain/Terrain\+Manager.\+cs\end{DoxyCompactItemize}

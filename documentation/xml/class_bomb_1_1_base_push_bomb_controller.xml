@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_bomb_1_1_base_push_bomb_controller" kind="class" language="C#" prot="public">
+    <compoundname>Bomb::BasePushBombController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_bomb_1_1_base_push_bomb_controller_1ac5eeeafce9f944fc8b6b5835128d8cf6" prot="protected" static="no" mutable="no">
+        <type>Rigidbody</type>
+        <definition>Rigidbody Bomb.BasePushBombController.bombRigidbody</definition>
+        <argsstring></argsstring>
+        <name>bombRigidbody</name>
+        <qualifiedname>Bomb.BasePushBombController.bombRigidbody</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="10" column="30" bodyfile="Bomb/BasePushBombController.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_push_bomb_controller_1af5045661f033a8ef2a705eafde8bf8c4" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bomb.BasePushBombController.delayAfterStoppingTheBomb</definition>
+        <argsstring></argsstring>
+        <name>delayAfterStoppingTheBomb</name>
+        <qualifiedname>Bomb.BasePushBombController.delayAfterStoppingTheBomb</qualifiedname>
+        <initializer>= 0.1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="13" column="26" bodyfile="Bomb/BasePushBombController.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_push_bomb_controller_1a4ce824380f1b1fb1de6299ade8e872f1" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bomb.BasePushBombController.bombPushingSpeed</definition>
+        <argsstring></argsstring>
+        <name>bombPushingSpeed</name>
+        <qualifiedname>Bomb.BasePushBombController.bombPushingSpeed</qualifiedname>
+        <initializer>= 10.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="14" column="26" bodyfile="Bomb/BasePushBombController.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_push_bomb_controller_1a40881f9b60b1c59453d0b0a83d6200ca" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bomb.BasePushBombController._lastPushTime</definition>
+        <argsstring></argsstring>
+        <name>_lastPushTime</name>
+        <qualifiedname>Bomb.BasePushBombController._lastPushTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="16" column="25" bodyfile="Bomb/BasePushBombController.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_base_push_bomb_controller_1a0ef217c392ce162f13c4189918f0ac7a" prot="protected" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform Bomb.BasePushBombController._parentTransform</definition>
+        <argsstring></argsstring>
+        <name>_parentTransform</name>
+        <qualifiedname>Bomb.BasePushBombController._parentTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="17" column="29" bodyfile="Bomb/BasePushBombController.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1adce595960bafa7d3a4657564a644f297" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.BasePushBombController.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Bomb.BasePushBombController.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="19" column="22" bodyfile="Bomb/BasePushBombController.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1aae6e7e33f00a91e7cff8effd79c2d080" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Bomb.BasePushBombController.IsMovingInTheSameDirection</definition>
+        <argsstring>(Vector3 otherPosition, Vector3 position)</argsstring>
+        <name>IsMovingInTheSameDirection</name>
+        <qualifiedname>Bomb.BasePushBombController.IsMovingInTheSameDirection</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>otherPosition</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="81" column="22" bodyfile="Bomb/BasePushBombController.cs" bodystart="81" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1a6774355931845246a9029ae250e0c88d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.BasePushBombController.OnTriggerEnter</definition>
+        <argsstring>(Collider other)</argsstring>
+        <name>OnTriggerEnter</name>
+        <qualifiedname>Bomb.BasePushBombController.OnTriggerEnter</qualifiedname>
+        <param>
+          <type>Collider</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="109" column="22" bodyfile="Bomb/BasePushBombController.cs" bodystart="109" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1a9acbf865923f160a0f354d64a9b2a485" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool Bomb.BasePushBombController.IsMoving</definition>
+        <argsstring>()</argsstring>
+        <name>IsMoving</name>
+        <qualifiedname>Bomb.BasePushBombController.IsMoving</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="24" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1af30fd16065cc3a423b045c02e975d673" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BasePushBombController.Push</definition>
+        <argsstring>(Vector3 playerDirection)</argsstring>
+        <name>Push</name>
+        <qualifiedname>Bomb.BasePushBombController.Push</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>playerDirection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="26" column="32" bodyfile="Bomb/BasePushBombController.cs" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1a256af1bc01cb37c3ef7bbc3bd428f322" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.BasePushBombController.StopMove</definition>
+        <argsstring>()</argsstring>
+        <name>StopMove</name>
+        <qualifiedname>Bomb.BasePushBombController.StopMove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="32" column="24" bodyfile="Bomb/BasePushBombController.cs" bodystart="32" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1aab31fd72ed230530da895ec7802cfe55" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Bomb.BasePushBombController.OnTouchSomething</definition>
+        <argsstring>(Collider collision)</argsstring>
+        <name>OnTouchSomething</name>
+        <qualifiedname>Bomb.BasePushBombController.OnTouchSomething</qualifiedname>
+        <param>
+          <type>Collider</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="46" column="32" bodyfile="Bomb/BasePushBombController.cs" bodystart="46" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_bomb_1_1_base_push_bomb_controller_1a489ccdd105c2997abea196682bb54da6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 Bomb.BasePushBombController.ComputeDirection</definition>
+        <argsstring>(Vector3 position, Vector3 otherPosition)</argsstring>
+        <name>ComputeDirection</name>
+        <qualifiedname>Bomb.BasePushBombController.ComputeDirection</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>otherPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/BasePushBombController.cs" line="92" column="32" bodyfile="Bomb/BasePushBombController.cs" bodystart="92" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Bomb.BasePushBombController</label>
+        <link refid="class_bomb_1_1_base_push_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Bomb.BasePushBombController</label>
+        <link refid="class_bomb_1_1_base_push_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Bomb/BasePushBombController.cs" line="7" column="11" bodyfile="Bomb/BasePushBombController.cs" bodystart="8" bodyend="113"/>
+    <listofallmembers>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1a40881f9b60b1c59453d0b0a83d6200ca" prot="protected" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>_lastPushTime</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1a0ef217c392ce162f13c4189918f0ac7a" prot="protected" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>_parentTransform</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1a4ce824380f1b1fb1de6299ade8e872f1" prot="protected" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>bombPushingSpeed</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1ac5eeeafce9f944fc8b6b5835128d8cf6" prot="protected" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>bombRigidbody</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1a489ccdd105c2997abea196682bb54da6" prot="private" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>ComputeDirection</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1af5045661f033a8ef2a705eafde8bf8c4" prot="protected" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>delayAfterStoppingTheBomb</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1a9acbf865923f160a0f354d64a9b2a485" prot="protected" virt="virtual"><scope>Bomb::BasePushBombController</scope><name>IsMoving</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1aae6e7e33f00a91e7cff8effd79c2d080" prot="private" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>IsMovingInTheSameDirection</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1aab31fd72ed230530da895ec7802cfe55" prot="protected" virt="virtual"><scope>Bomb::BasePushBombController</scope><name>OnTouchSomething</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1a6774355931845246a9029ae250e0c88d" prot="private" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>OnTriggerEnter</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1af30fd16065cc3a423b045c02e975d673" prot="protected" virt="virtual"><scope>Bomb::BasePushBombController</scope><name>Push</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1adce595960bafa7d3a4657564a644f297" prot="private" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>Start</name></member>
+      <member refid="class_bomb_1_1_base_push_bomb_controller_1a256af1bc01cb37c3ef7bbc3bd428f322" prot="protected" virt="non-virtual"><scope>Bomb::BasePushBombController</scope><name>StopMove</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

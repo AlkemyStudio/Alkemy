@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_add4754e415d257cb4c4e7691a9b30e0" kind="dir">
+    <compoundname>Terrain</compoundname>
+    <innerfile refid="_terrain_entity_type_8cs">TerrainEntityType.cs</innerfile>
+    <innerfile refid="_terrain_manager_8cs">TerrainManager.cs</innerfile>
+    <innerfile refid="_terrain_utils_8cs">TerrainUtils.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Terrain/"/>
+  </compounddef>
+</doxygen>

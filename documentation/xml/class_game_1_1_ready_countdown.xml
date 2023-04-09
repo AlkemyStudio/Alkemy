@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_game_1_1_ready_countdown" kind="class" language="C#" prot="public">
+    <compoundname>Game::ReadyCountdown</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_1_1_ready_countdown_1acd6d6a68a486bb2faac115d127a5d621" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_1_1_game_state_manager" kindref="compound">GameStateManager</ref></type>
+        <definition>GameStateManager Game.ReadyCountdown.gameStateManager</definition>
+        <argsstring></argsstring>
+        <name>gameStateManager</name>
+        <qualifiedname>Game.ReadyCountdown.gameStateManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="13" column="36" bodyfile="Game/ReadyCountdown.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_ready_countdown_1a641e77e17c45c74ed39ddee557d5cc25" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Game.ReadyCountdown.startGameCanvas</definition>
+        <argsstring></argsstring>
+        <name>startGameCanvas</name>
+        <qualifiedname>Game.ReadyCountdown.startGameCanvas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="14" column="29" bodyfile="Game/ReadyCountdown.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_ready_countdown_1a2a2ef697ce8ac46196478f29f2fe1d2b" prot="private" static="no" mutable="no">
+        <type>TextMeshProUGUI</type>
+        <definition>TextMeshProUGUI Game.ReadyCountdown.textMeshPro</definition>
+        <argsstring></argsstring>
+        <name>textMeshPro</name>
+        <qualifiedname>Game.ReadyCountdown.textMeshPro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="15" column="34" bodyfile="Game/ReadyCountdown.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_ready_countdown_1a86690cbe4fc130a14f5920135c1b06ca" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Game.ReadyCountdown.delayBetweenCountdowns</definition>
+        <argsstring></argsstring>
+        <name>delayBetweenCountdowns</name>
+        <qualifiedname>Game.ReadyCountdown.delayBetweenCountdowns</qualifiedname>
+        <initializer>= 1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="17" column="24" bodyfile="Game/ReadyCountdown.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_ready_countdown_1a31bb5b6f3a44858f9dc0daefda7c7fc7" prot="private" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] Game.ReadyCountdown.countdownMessages</definition>
+        <argsstring></argsstring>
+        <name>countdownMessages</name>
+        <qualifiedname>Game.ReadyCountdown.countdownMessages</qualifiedname>
+        <initializer>= {
+            &quot;3&quot;,
+            &quot;2&quot;,
+            &quot;1&quot;,
+            &quot;FIGHT!&quot;
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="21" column="25" bodyfile="Game/ReadyCountdown.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1_1_ready_countdown_1a8bdd4623e6fdf7c7d082689096e8c709" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game.ReadyCountdown.lastDisplayedCountdownMessageIndex</definition>
+        <argsstring></argsstring>
+        <name>lastDisplayedCountdownMessageIndex</name>
+        <qualifiedname>Game.ReadyCountdown.lastDisplayedCountdownMessageIndex</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="28" column="21" bodyfile="Game/ReadyCountdown.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_1_1_ready_countdown_1aad1cf3ce88e78e063cadca1240f24c50" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.ReadyCountdown.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Game.ReadyCountdown.Awake</qualifiedname>
+        <briefdescription>
+<para>Disable the countdown canvas on awake. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="33" column="22" bodyfile="Game/ReadyCountdown.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_ready_countdown_1a22e339721ceafbf9eb6622641dfe9531" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.ReadyCountdown.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>Game.ReadyCountdown.OnEnable</qualifiedname>
+        <briefdescription>
+<para>Subscribe to the game state changed event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="41" column="22" bodyfile="Game/ReadyCountdown.cs" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_ready_countdown_1a603e64c1be150bd553f88464e67911ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.ReadyCountdown.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>Game.ReadyCountdown.OnDisable</qualifiedname>
+        <briefdescription>
+<para>Unsubscribe from the game state changed event. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="49" column="22" bodyfile="Game/ReadyCountdown.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_ready_countdown_1a7f677240dffdfdf2f9217b779414c003" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.ReadyCountdown.OnOnGameStateStateChanged</definition>
+        <argsstring>(GameState state)</argsstring>
+        <name>OnOnGameStateStateChanged</name>
+        <qualifiedname>Game.ReadyCountdown.OnOnGameStateStateChanged</qualifiedname>
+        <param>
+          <type>GameState</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Start the countdown when the game state is ready. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new game state. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentOutOfRangeException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown when the game state is not handled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="59" column="22" bodyfile="Game/ReadyCountdown.cs" bodystart="59" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_ready_countdown_1a1ce0d091078aebfbf36b88ae06939a45" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.ReadyCountdown.StartCountdown</definition>
+        <argsstring>()</argsstring>
+        <name>StartCountdown</name>
+        <qualifiedname>Game.ReadyCountdown.StartCountdown</qualifiedname>
+        <briefdescription>
+<para>Start the countdown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="83" column="22" bodyfile="Game/ReadyCountdown.cs" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_ready_countdown_1a9e10199bc1aa05b889250bfed640af1d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.ReadyCountdown.OnCountdownTick</definition>
+        <argsstring>()</argsstring>
+        <name>OnCountdownTick</name>
+        <qualifiedname>Game.ReadyCountdown.OnCountdownTick</qualifiedname>
+        <briefdescription>
+<para>Display the next countdown message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="93" column="22" bodyfile="Game/ReadyCountdown.cs" bodystart="93" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1_1_ready_countdown_1a5665a7b9724bee1fcfcabfe79d5f05a4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game.ReadyCountdown.StopCountdown</definition>
+        <argsstring>()</argsstring>
+        <name>StopCountdown</name>
+        <qualifiedname>Game.ReadyCountdown.StopCountdown</qualifiedname>
+        <briefdescription>
+<para>Stop the countdown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/ReadyCountdown.cs" line="109" column="22" bodyfile="Game/ReadyCountdown.cs" bodystart="109" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A countdown that is displayed before the game starts. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Game.ReadyCountdown</label>
+        <link refid="class_game_1_1_ready_countdown"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Game.ReadyCountdown</label>
+        <link refid="class_game_1_1_ready_countdown"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Game/ReadyCountdown.cs" line="11" column="11" bodyfile="Game/ReadyCountdown.cs" bodystart="12" bodyend="115"/>
+    <listofallmembers>
+      <member refid="class_game_1_1_ready_countdown_1aad1cf3ce88e78e063cadca1240f24c50" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>Awake</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a31bb5b6f3a44858f9dc0daefda7c7fc7" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>countdownMessages</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a86690cbe4fc130a14f5920135c1b06ca" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>delayBetweenCountdowns</name></member>
+      <member refid="class_game_1_1_ready_countdown_1acd6d6a68a486bb2faac115d127a5d621" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>gameStateManager</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a8bdd4623e6fdf7c7d082689096e8c709" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>lastDisplayedCountdownMessageIndex</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a9e10199bc1aa05b889250bfed640af1d" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>OnCountdownTick</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a603e64c1be150bd553f88464e67911ca" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>OnDisable</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a22e339721ceafbf9eb6622641dfe9531" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>OnEnable</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a7f677240dffdfdf2f9217b779414c003" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>OnOnGameStateStateChanged</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a1ce0d091078aebfbf36b88ae06939a45" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>StartCountdown</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a641e77e17c45c74ed39ddee557d5cc25" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>startGameCanvas</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a5665a7b9724bee1fcfcabfe79d5f05a4" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>StopCountdown</name></member>
+      <member refid="class_game_1_1_ready_countdown_1a2a2ef697ce8ac46196478f29f2fe1d2b" prot="private" virt="non-virtual"><scope>Game::ReadyCountdown</scope><name>textMeshPro</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

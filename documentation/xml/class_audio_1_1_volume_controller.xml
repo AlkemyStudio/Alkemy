@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_audio_1_1_volume_controller" kind="class" language="C#" prot="public">
+    <compoundname>Audio::VolumeController</compoundname>
+    <basecompoundref refid="class_menu_1_1_setting_entry" prot="public" virt="non-virtual">Menu.SettingEntry</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1ae01a8b6db6c914a8f89855cd223b5685" prot="private" static="no" mutable="no">
+        <type>AudioMixer</type>
+        <definition>AudioMixer Audio.VolumeController.audioMixer</definition>
+        <argsstring></argsstring>
+        <name>audioMixer</name>
+        <qualifiedname>Audio.VolumeController.audioMixer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="15" column="29" bodyfile="Audio/VolumeController.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1a471b48fb0dab810c8ea28649e6f21020" prot="private" static="no" mutable="no">
+        <type>Slider</type>
+        <definition>Slider Audio.VolumeController.slider</definition>
+        <argsstring></argsstring>
+        <name>slider</name>
+        <qualifiedname>Audio.VolumeController.slider</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="16" column="25" bodyfile="Audio/VolumeController.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1a27f142b0e61390d308989c112aec6871" prot="private" static="no" mutable="no">
+        <type>Toggle</type>
+        <definition>Toggle Audio.VolumeController.toggle</definition>
+        <argsstring></argsstring>
+        <name>toggle</name>
+        <qualifiedname>Audio.VolumeController.toggle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="17" column="25" bodyfile="Audio/VolumeController.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1a5633e85d361c571c89c8c42d022859d1" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Audio.VolumeController.audioParameterName</definition>
+        <argsstring></argsstring>
+        <name>audioParameterName</name>
+        <qualifiedname>Audio.VolumeController.audioParameterName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="20" column="25" bodyfile="Audio/VolumeController.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1a8c2c19e91c7faf74be17f718b8f3e05a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Audio.VolumeController.defaultVolume</definition>
+        <argsstring></argsstring>
+        <name>defaultVolume</name>
+        <qualifiedname>Audio.VolumeController.defaultVolume</qualifiedname>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="21" column="25" bodyfile="Audio/VolumeController.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1a0b89925c2f6acd3b6d2979a23a6da71c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Audio.VolumeController.multiplier</definition>
+        <argsstring></argsstring>
+        <name>multiplier</name>
+        <qualifiedname>Audio.VolumeController.multiplier</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="22" column="24" bodyfile="Audio/VolumeController.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1af55004af54a311425a8d83aafdd1651b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Audio.VolumeController.tempSliderValue</definition>
+        <argsstring></argsstring>
+        <name>tempSliderValue</name>
+        <qualifiedname>Audio.VolumeController.tempSliderValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="25" column="23" bodyfile="Audio/VolumeController.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_audio_1_1_volume_controller_1ac6bfe902a07c789fcd59b12204cec0ff" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Audio.VolumeController.isUpdatingToggle</definition>
+        <argsstring></argsstring>
+        <name>isUpdatingToggle</name>
+        <qualifiedname>Audio.VolumeController.isUpdatingToggle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="26" column="22" bodyfile="Audio/VolumeController.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_audio_1_1_volume_controller_1a61cd1cd3649cf452f71b16000d2f2182" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Audio.VolumeController.AudioParameterToggleKey</definition>
+        <argsstring></argsstring>
+        <name>AudioParameterToggleKey</name>
+        <qualifiedname>Audio.VolumeController.AudioParameterToggleKey</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="24" column="24" bodyfile="Audio/VolumeController.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_audio_1_1_volume_controller_1a4a6bbf19c2c6c305fe389c65cef649d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.VolumeController.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>Audio.VolumeController.OnEnable</qualifiedname>
+        <briefdescription>
+<para>This method is called when the script instance is being loaded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="31" column="22" bodyfile="Audio/VolumeController.cs" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_1_1_volume_controller_1acdf3bcbbeb0de819207c45718adc12d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.VolumeController.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>Audio.VolumeController.OnDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="40" column="22" bodyfile="Audio/VolumeController.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_1_1_volume_controller_1a1e0da1a8ceb800155fa25535af3d1e75" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.VolumeController.HandleSliderValueChange</definition>
+        <argsstring>(float value)</argsstring>
+        <name>HandleSliderValueChange</name>
+        <qualifiedname>Audio.VolumeController.HandleSliderValueChange</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="52" column="22" bodyfile="Audio/VolumeController.cs" bodystart="52" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_audio_1_1_volume_controller_1aab5709d8e8032f3c9788c4f1368d767c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Audio.VolumeController.HandleToggleValueChanged</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>HandleToggleValueChanged</name>
+        <qualifiedname>Audio.VolumeController.HandleToggleValueChanged</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="62" column="22" bodyfile="Audio/VolumeController.cs" bodystart="62" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_audio_1_1_volume_controller_1ae64a8579e31205e8afc8c30904e20194" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Audio.VolumeController.Save</definition>
+        <argsstring>()</argsstring>
+        <name>Save</name>
+        <qualifiedname>Audio.VolumeController.Save</qualifiedname>
+        <reimplements refid="class_menu_1_1_setting_entry_1ad4fee9309558a8b8f192a92f04be60a9">Save</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Audio/VolumeController.cs" line="46" column="30" bodyfile="Audio/VolumeController.cs" bodystart="46" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This script is used to control the volume of an audio mixer parameter. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Audio.VolumeController</label>
+        <link refid="class_audio_1_1_volume_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="2">
+        <label>SettingEntry</label>
+        <link refid="class_menu_1_1_setting_entry"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Audio.VolumeController</label>
+        <link refid="class_audio_1_1_volume_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="2">
+        <label>SettingEntry</label>
+        <link refid="class_menu_1_1_setting_entry"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Audio/VolumeController.cs" line="12" column="11" bodyfile="Audio/VolumeController.cs" bodystart="13" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_audio_1_1_volume_controller_1ae01a8b6db6c914a8f89855cd223b5685" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>audioMixer</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a5633e85d361c571c89c8c42d022859d1" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>audioParameterName</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a61cd1cd3649cf452f71b16000d2f2182" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>AudioParameterToggleKey</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a8c2c19e91c7faf74be17f718b8f3e05a" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>defaultVolume</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a1e0da1a8ceb800155fa25535af3d1e75" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>HandleSliderValueChange</name></member>
+      <member refid="class_audio_1_1_volume_controller_1aab5709d8e8032f3c9788c4f1368d767c" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>HandleToggleValueChanged</name></member>
+      <member refid="class_audio_1_1_volume_controller_1ac6bfe902a07c789fcd59b12204cec0ff" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>isUpdatingToggle</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a0b89925c2f6acd3b6d2979a23a6da71c" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>multiplier</name></member>
+      <member refid="class_audio_1_1_volume_controller_1acdf3bcbbeb0de819207c45718adc12d6" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>OnDisable</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a4a6bbf19c2c6c305fe389c65cef649d0" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>OnEnable</name></member>
+      <member refid="class_audio_1_1_volume_controller_1ae64a8579e31205e8afc8c30904e20194" prot="public" virt="virtual"><scope>Audio::VolumeController</scope><name>Save</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a471b48fb0dab810c8ea28649e6f21020" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>slider</name></member>
+      <member refid="class_audio_1_1_volume_controller_1af55004af54a311425a8d83aafdd1651b" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>tempSliderValue</name></member>
+      <member refid="class_audio_1_1_volume_controller_1a27f142b0e61390d308989c112aec6871" prot="private" virt="non-virtual"><scope>Audio::VolumeController</scope><name>toggle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

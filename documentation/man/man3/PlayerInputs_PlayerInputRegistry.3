@@ -1,0 +1,121 @@
+.TH "PlayerInputs.PlayerInputRegistry" 3 "Sun Apr 9 2023" "Alkemy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PlayerInputs.PlayerInputRegistry \- PlayerInputRegistry is used to keep track of all the \fBPlayerInputs\fP in the scene\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "PlayerInput[] \fBGetPlayerInputs\fP ()"
+.br
+.RI "This method is used to get the PlayerInput of a player\&. "
+.ti -1c
+.RI "\fBPlayerState\fP[] \fBGetPlayerStates\fP ()"
+.br
+.RI "This method is used to get the PlayerState of a player\&. "
+.ti -1c
+.RI "int \fBGetPlayerCount\fP ()"
+.br
+.RI "This method is used to get the number of players\&. "
+.ti -1c
+.RI "void \fBRegister\fP (\fBPlayerState\fP playerState)"
+.br
+.RI "Register a new player state\&. "
+.ti -1c
+.RI "void \fBRegisterAll\fP (IEnumerable< \fBPlayerState\fP > newPlayerStates)"
+.br
+.RI "Register all player states contained in the given list\&. "
+.ti -1c
+.RI "void \fBRemove\fP (int playerIndex)"
+.br
+.RI "Remove a player state\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBPlayerInputRegistry\fP \fBInstance\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+PlayerInputRegistry is used to keep track of all the \fBPlayerInputs\fP in the scene\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "int PlayerInputs\&.PlayerInputRegistry\&.GetPlayerCount ()"
+
+.PP
+This method is used to get the number of players\&. 
+.PP
+\fBReturns\fP
+.RS 4
+
+.RE
+.PP
+
+.SS "PlayerInput[] PlayerInputs\&.PlayerInputRegistry\&.GetPlayerInputs ()"
+
+.PP
+This method is used to get the PlayerInput of a player\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The PlayerInput of the player 
+.RE
+.PP
+
+.SS "\fBPlayerState\fP[] PlayerInputs\&.PlayerInputRegistry\&.GetPlayerStates ()"
+
+.PP
+This method is used to get the PlayerState of a player\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The PlayerState of the player 
+.RE
+.PP
+
+.SS "void PlayerInputs\&.PlayerInputRegistry\&.Register (\fBPlayerState\fP playerState)"
+
+.PP
+Register a new player state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplayerState\fP The player state to register 
+.RE
+.PP
+
+.SS "void PlayerInputs\&.PlayerInputRegistry\&.RegisterAll (IEnumerable< \fBPlayerState\fP > newPlayerStates)"
+
+.PP
+Register all player states contained in the given list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInewPlayerStates\fP The list of player states to register 
+.RE
+.PP
+
+.SS "void PlayerInputs\&.PlayerInputRegistry\&.Remove (int playerIndex)"
+
+.PP
+Remove a player state\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplayerIndex\fP The player index of the player state to remove 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Alkemy from the source code\&.

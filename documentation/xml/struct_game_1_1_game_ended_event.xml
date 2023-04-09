@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_game_1_1_game_ended_event" kind="struct" language="C#" prot="public">
+    <compoundname>Game::GameEndedEvent</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_game_1_1_game_ended_event_1ae616bf22181764cc3e556f449d6ea417" prot="public" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] Game.GameEndedEvent.WinnerNames</definition>
+        <argsstring></argsstring>
+        <name>WinnerNames</name>
+        <qualifiedname>Game.GameEndedEvent.WinnerNames</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameEndedEvent.cs" line="6" column="23" bodyfile="Game/GameEndedEvent.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_game_1_1_game_ended_event_1a19b5ca80d6d40e8e1e9df1b040b562cb" prot="public" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] Game.GameEndedEvent.LastPlayerNamesDeadAtTheSameTime</definition>
+        <argsstring></argsstring>
+        <name>LastPlayerNamesDeadAtTheSameTime</name>
+        <qualifiedname>Game.GameEndedEvent.LastPlayerNamesDeadAtTheSameTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameEndedEvent.cs" line="7" column="23" bodyfile="Game/GameEndedEvent.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_game_1_1_game_ended_event_1afb45c2f5d37be649d4cae4fc07d46b73" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Game.GameEndedEvent.GameEndTime</definition>
+        <argsstring></argsstring>
+        <name>GameEndTime</name>
+        <qualifiedname>Game.GameEndedEvent.GameEndTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Game/GameEndedEvent.cs" line="8" column="22" bodyfile="Game/GameEndedEvent.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Game/GameEndedEvent.cs" line="4" column="11" bodyfile="Game/GameEndedEvent.cs" bodystart="5" bodyend="9"/>
+    <listofallmembers>
+      <member refid="struct_game_1_1_game_ended_event_1afb45c2f5d37be649d4cae4fc07d46b73" prot="public" virt="non-virtual"><scope>Game::GameEndedEvent</scope><name>GameEndTime</name></member>
+      <member refid="struct_game_1_1_game_ended_event_1a19b5ca80d6d40e8e1e9df1b040b562cb" prot="public" virt="non-virtual"><scope>Game::GameEndedEvent</scope><name>LastPlayerNamesDeadAtTheSameTime</name></member>
+      <member refid="struct_game_1_1_game_ended_event_1ae616bf22181764cc3e556f449d6ea417" prot="public" virt="non-virtual"><scope>Game::GameEndedEvent</scope><name>WinnerNames</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

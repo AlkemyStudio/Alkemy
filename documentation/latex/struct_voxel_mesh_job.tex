@@ -1,0 +1,89 @@
+\hypertarget{struct_voxel_mesh_job}{}\doxysection{Voxel\+Mesh\+Job Struct Reference}
+\label{struct_voxel_mesh_job}\index{VoxelMeshJob@{VoxelMeshJob}}
+Inheritance diagram for Voxel\+Mesh\+Job\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_voxel_mesh_job}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_ac1248e136a951d839d8a5290bd39c5b0}\label{struct_voxel_mesh_job_ac1248e136a951d839d8a5290bd39c5b0}} 
+void {\bfseries Execute} ()
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_acf1cedeb7ee97116ba1ba98098ec84d9}\label{struct_voxel_mesh_job_acf1cedeb7ee97116ba1ba98098ec84d9}} 
+void {\bfseries Naive\+Meshing} ()
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a14dea9d602a9a6d295356555de794f9d}\label{struct_voxel_mesh_job_a14dea9d602a9a6d295356555de794f9d}} 
+void {\bfseries Greedy\+Meshing} ()
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a1c34f484ceae6aa78024e978ee3a93f5}\label{struct_voxel_mesh_job_a1c34f484ceae6aa78024e978ee3a93f5}} 
+Vector3\+Int {\bfseries Convert\+To\+Face\+Coordinate} (int x, int y, int z, Face\+Direction direction)
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a869afc9d4ce09d7570549e2424a0549f}\label{struct_voxel_mesh_job_a869afc9d4ce09d7570549e2424a0549f}} 
+Vector3 {\bfseries Convert\+To\+Face\+Coordinate} (Vector3 vector, Face\+Direction direction)
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a4aacb86d784967c1f56937a1a5b51fab}\label{struct_voxel_mesh_job_a4aacb86d784967c1f56937a1a5b51fab}} 
+bool {\bfseries Is\+Voxel\+Occluded} (int x, int y, int z, Face\+Direction direction)
+\item 
+void \mbox{\hyperlink{struct_voxel_mesh_job_a8d7f07c6850b959e2c913c2d0cdd04cb}{Generate\+Sliced\+Voxel\+Mesh}} (Face\+Direction direction)
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a3fb4e92c383085a91d6b420996008fea}\label{struct_voxel_mesh_job_a3fb4e92c383085a91d6b420996008fea}} 
+bool {\bfseries Is\+Voxel\+Empty} (int x, int y, int z)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a540321092e24404bcc52a90bdb5d0d95}\label{struct_voxel_mesh_job_a540321092e24404bcc52a90bdb5d0d95}} 
+Native\+Array$<$ int $>$ {\bfseries voxels}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_ab208b9e3e6285728be9c855d95b87ae2}\label{struct_voxel_mesh_job_ab208b9e3e6285728be9c855d95b87ae2}} 
+Vector3 {\bfseries origin}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a0d1a3c24df3c3f3592552ac571f87e61}\label{struct_voxel_mesh_job_a0d1a3c24df3c3f3592552ac571f87e61}} 
+Vector3 {\bfseries scale}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_abe44a5ad47b43e85bc3d1efb17440264}\label{struct_voxel_mesh_job_abe44a5ad47b43e85bc3d1efb17440264}} 
+int {\bfseries width}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a84e68585cfe29a8045317e007070aaca}\label{struct_voxel_mesh_job_a84e68585cfe29a8045317e007070aaca}} 
+int {\bfseries height}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a6488408b8424e6af5885468e8a67fdd8}\label{struct_voxel_mesh_job_a6488408b8424e6af5885468e8a67fdd8}} 
+int {\bfseries depth}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a57be18352de317b3c60b58f2fb442ac0}\label{struct_voxel_mesh_job_a57be18352de317b3c60b58f2fb442ac0}} 
+Meshing\+Algorithm {\bfseries algorithm}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a855eb8ba44deebd08d125d95c8f4e839}\label{struct_voxel_mesh_job_a855eb8ba44deebd08d125d95c8f4e839}} 
+Native\+List$<$ Vector3 $>$ {\bfseries vertices}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a66218a53c606e0ab6b43997a7b159954}\label{struct_voxel_mesh_job_a66218a53c606e0ab6b43997a7b159954}} 
+Native\+List$<$ int $>$ {\bfseries triangles}
+\item 
+\mbox{\Hypertarget{struct_voxel_mesh_job_a6d06b9ef7111c979bd548010f473c417}\label{struct_voxel_mesh_job_a6d06b9ef7111c979bd548010f473c417}} 
+Native\+List$<$ Color32 $>$ {\bfseries colors}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_voxel_mesh_job_a8d7f07c6850b959e2c913c2d0cdd04cb}\label{struct_voxel_mesh_job_a8d7f07c6850b959e2c913c2d0cdd04cb}} 
+\index{VoxelMeshJob@{VoxelMeshJob}!GenerateSlicedVoxelMesh@{GenerateSlicedVoxelMesh}}
+\index{GenerateSlicedVoxelMesh@{GenerateSlicedVoxelMesh}!VoxelMeshJob@{VoxelMeshJob}}
+\doxysubsubsection{\texorpdfstring{GenerateSlicedVoxelMesh()}{GenerateSlicedVoxelMesh()}}
+{\footnotesize\ttfamily void Voxel\+Mesh\+Job.\+Generate\+Sliced\+Voxel\+Mesh (\begin{DoxyParamCaption}\item[{Face\+Direction}]{direction }\end{DoxyParamCaption})}
+
+Slice the voxel data into 2D slices
+
+Find the first voxel that has not been visited yet and that is not empty and not occluded
+
+Expand along the Column as long as the voxel is not empty and has not been visited yet Compute the expanded height
+
+Expand along the Rows as long as all the voxel in the column have the same color and have not been visited yet
+
+Push the face to the mesh
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Voxel\+Mesher/core/Voxel\+Mesher\+Job.\+cs\end{DoxyCompactItemize}

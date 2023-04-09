@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_011decac3049046805a0a603ed9d9492" kind="dir">
+    <compoundname>PlayerInputs</compoundname>
+    <innerfile refid="_game_player_input_manager_8cs">GamePlayerInputManager.cs</innerfile>
+    <innerfile refid="_i_player_handler_8cs">IPlayerHandler.cs</innerfile>
+    <innerfile refid="_player_input_handler_8cs">PlayerInputHandler.cs</innerfile>
+    <innerfile refid="_player_input_registry_8cs">PlayerInputRegistry.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="PlayerInputs/"/>
+  </compounddef>
+</doxygen>

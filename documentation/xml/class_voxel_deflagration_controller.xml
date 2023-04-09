@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_voxel_deflagration_controller" kind="class" language="C#" prot="public">
+    <compoundname>VoxelDeflagrationController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_voxel_deflagration_controller_1a65118d945b05596a820819aab83b01b3" prot="private" static="no" mutable="no">
+        <type>VisualEffect</type>
+        <definition>VisualEffect VoxelDeflagrationController.visualEffect</definition>
+        <argsstring></argsstring>
+        <name>visualEffect</name>
+        <qualifiedname>VoxelDeflagrationController.visualEffect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/VoxelDeflagrationController.cs" line="10" column="26" bodyfile="Bomb/VoxelDeflagrationController.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_deflagration_controller_1a342523518f5a5951958ef59e67752cc3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VoxelDeflagrationController.waitForEnd</definition>
+        <argsstring></argsstring>
+        <name>waitForEnd</name>
+        <qualifiedname>VoxelDeflagrationController.waitForEnd</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/VoxelDeflagrationController.cs" line="11" column="18" bodyfile="Bomb/VoxelDeflagrationController.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_deflagration_controller_1a23cfe99aa69289ed7ea9f8995cad899f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VoxelDeflagrationController.particlesSpawned</definition>
+        <argsstring></argsstring>
+        <name>particlesSpawned</name>
+        <qualifiedname>VoxelDeflagrationController.particlesSpawned</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/VoxelDeflagrationController.cs" line="12" column="18" bodyfile="Bomb/VoxelDeflagrationController.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_voxel_deflagration_controller_1af64884828dc6d3d86697b26017d6154c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelDeflagrationController.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>VoxelDeflagrationController.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/VoxelDeflagrationController.cs" line="13" column="10" bodyfile="Bomb/VoxelDeflagrationController.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_deflagration_controller_1aefbb543566e71c1c71ed4f4cf6eaf666" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelDeflagrationController.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>VoxelDeflagrationController.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/VoxelDeflagrationController.cs" line="25" column="10" bodyfile="Bomb/VoxelDeflagrationController.cs" bodystart="25" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_voxel_deflagration_controller_1a34b1cbba745b7391b012b118a4dec947" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelDeflagrationController.Play</definition>
+        <argsstring>()</argsstring>
+        <name>Play</name>
+        <qualifiedname>VoxelDeflagrationController.Play</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/VoxelDeflagrationController.cs" line="18" column="17" bodyfile="Bomb/VoxelDeflagrationController.cs" bodystart="18" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>VoxelDeflagrationController</label>
+        <link refid="class_voxel_deflagration_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>VoxelDeflagrationController</label>
+        <link refid="class_voxel_deflagration_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Bomb/VoxelDeflagrationController.cs" line="7" column="7" bodyfile="Bomb/VoxelDeflagrationController.cs" bodystart="8" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_voxel_deflagration_controller_1af64884828dc6d3d86697b26017d6154c" prot="private" virt="non-virtual"><scope>VoxelDeflagrationController</scope><name>Awake</name></member>
+      <member refid="class_voxel_deflagration_controller_1a23cfe99aa69289ed7ea9f8995cad899f" prot="private" virt="non-virtual"><scope>VoxelDeflagrationController</scope><name>particlesSpawned</name></member>
+      <member refid="class_voxel_deflagration_controller_1a34b1cbba745b7391b012b118a4dec947" prot="public" virt="non-virtual"><scope>VoxelDeflagrationController</scope><name>Play</name></member>
+      <member refid="class_voxel_deflagration_controller_1aefbb543566e71c1c71ed4f4cf6eaf666" prot="private" virt="non-virtual"><scope>VoxelDeflagrationController</scope><name>Update</name></member>
+      <member refid="class_voxel_deflagration_controller_1a65118d945b05596a820819aab83b01b3" prot="private" virt="non-virtual"><scope>VoxelDeflagrationController</scope><name>visualEffect</name></member>
+      <member refid="class_voxel_deflagration_controller_1a342523518f5a5951958ef59e67752cc3" prot="private" virt="non-virtual"><scope>VoxelDeflagrationController</scope><name>waitForEnd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

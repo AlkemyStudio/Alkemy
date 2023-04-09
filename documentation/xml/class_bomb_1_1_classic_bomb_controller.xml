@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_bomb_1_1_classic_bomb_controller" kind="class" language="C#" prot="public">
+    <compoundname>Bomb::ClassicBombController</compoundname>
+    <basecompoundref refid="class_bomb_1_1_base_bomb_controller" prot="public" virt="non-virtual">Bomb.BaseBombController</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bomb_1_1_classic_bomb_controller_1a9d3219146b6b29e48ddbede6d7abcfb3" prot="private" static="no" mutable="no">
+        <type>AnimationCurve</type>
+        <definition>AnimationCurve Bomb.ClassicBombController.flickeringCurve</definition>
+        <argsstring></argsstring>
+        <name>flickeringCurve</name>
+        <qualifiedname>Bomb.ClassicBombController.flickeringCurve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/ClassicBombController.cs" line="7" column="33" bodyfile="Bomb/ClassicBombController.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_classic_bomb_controller_1ab98a704da1322b72a5a1de031c08f2cd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bomb.ClassicBombController.baseFlickeringSpeed</definition>
+        <argsstring></argsstring>
+        <name>baseFlickeringSpeed</name>
+        <qualifiedname>Bomb.ClassicBombController.baseFlickeringSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/ClassicBombController.cs" line="8" column="24" bodyfile="Bomb/ClassicBombController.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bomb_1_1_classic_bomb_controller_1ae84f1d9d99c070bd0f0aa77f65c55330" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bomb.ClassicBombController.finalFlickeringSpeed</definition>
+        <argsstring></argsstring>
+        <name>finalFlickeringSpeed</name>
+        <qualifiedname>Bomb.ClassicBombController.finalFlickeringSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/ClassicBombController.cs" line="9" column="24" bodyfile="Bomb/ClassicBombController.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_bomb_1_1_classic_bomb_controller_1a51f1102bfd1e8dfced4cb59b7f8c8692" prot="private" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int Bomb.ClassicBombController.FlickerSpeed</definition>
+        <argsstring></argsstring>
+        <name>FlickerSpeed</name>
+        <qualifiedname>Bomb.ClassicBombController.FlickerSpeed</qualifiedname>
+        <initializer>= Shader.PropertyToID(&quot;_FlickerSpeed&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/ClassicBombController.cs" line="11" column="37" bodyfile="Bomb/ClassicBombController.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bomb_1_1_classic_bomb_controller_1a17ce20335ca47e2afd7ad7e0e64e0c98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bomb.ClassicBombController.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>Bomb.ClassicBombController.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bomb/ClassicBombController.cs" line="13" column="22" bodyfile="Bomb/ClassicBombController.cs" bodystart="13" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BaseBombController</label>
+        <link refid="class_bomb_1_1_base_bomb_controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Bomb.ClassicBombController</label>
+        <link refid="class_bomb_1_1_classic_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BaseBombController</label>
+        <link refid="class_bomb_1_1_base_bomb_controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>explosionPrefabs</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_playerBombController</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>FuseTime</edgelabel>
+          <edgelabel>SpawnTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Bomb.ClassicBombController</label>
+        <link refid="class_bomb_1_1_classic_bomb_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Bomb.Explosion</label>
+        <link refid="class_bomb_1_1_explosion"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="5">
+        <label>Player.PlayerBombController</label>
+        <link refid="class_player_1_1_player_bomb_controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>static</label>
+      </node>
+    </collaborationgraph>
+    <location file="Bomb/ClassicBombController.cs" line="5" column="11" bodyfile="Bomb/ClassicBombController.cs" bodystart="6" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a1d754776cb3847171f24349366a605be" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>_bombPower</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a86f96226f858bce0af84568758cf01a4" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>_hasAlreadyExploded</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a9be0abb19531f3412830b88abad194f7" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>_playerBombController</name></member>
+      <member refid="class_bomb_1_1_classic_bomb_controller_1ab98a704da1322b72a5a1de031c08f2cd" prot="private" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>baseFlickeringSpeed</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ad93f65c6b446c17b9035a7cfd6df5021" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>bombExplosionSounds</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ac5ae943831d024fa77e0e25aa1702a78" prot="public" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>CancelTimer</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a971952d85bfab773a904d45e38f697d7" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>colliderThatBlockForces</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1aa3ddf6c595ff700f8e89e9462fee57b5" prot="protected" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>Explode</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a875a14ee959214da64113987ea95baa4" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>explosionPrefabs</name></member>
+      <member refid="class_bomb_1_1_classic_bomb_controller_1ae84f1d9d99c070bd0f0aa77f65c55330" prot="private" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>finalFlickeringSpeed</name></member>
+      <member refid="class_bomb_1_1_classic_bomb_controller_1a9d3219146b6b29e48ddbede6d7abcfb3" prot="private" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>flickeringCurve</name></member>
+      <member refid="class_bomb_1_1_classic_bomb_controller_1a51f1102bfd1e8dfced4cb59b7f8c8692" prot="private" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>FlickerSpeed</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1aed56e768d05c423a747f892f190034b7" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>fuseTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a6e65f5dd0d812c7804214a4491bba1e6" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>FuseTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a86e745a74d7f05ecbeb3f1190060a05b" prot="public" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>HasAlreadyExploded</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a6ce5fecd080e02716c94cf3280cf0dc3" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>mainCollider</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a5e09ac78c8b4db60665f4c57989e81d5" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>meshRenderer</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ac7450e2298c7c82dac4993447a5a55b1" prot="public" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>OnPlayerWalkOutsideTrigger</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1af836dfb540c98d151aa5d08ee5624323" prot="protected" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>PlaySound</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a840895d32bfdb004172fc6ec0ebac97e" prot="public" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>SetupBomb</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1ad78f26bbd5e3c7de86830add8a73ad89" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>spawnTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a487a5d1980e54c35b4f8b5f04c437675" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>SpawnTime</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a3e45337fb4a8f5f1ea5b3aca0558eead" prot="public" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>StartExplode</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a01a03037a8ab9aa43099c9c9c84b1e04" prot="protected" virt="virtual"><scope>Bomb::ClassicBombController</scope><name>StartTimer</name></member>
+      <member refid="class_bomb_1_1_base_bomb_controller_1a32dfe349d20be38155cd56f8e0b5bc6d" prot="protected" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>triggerCollider</name></member>
+      <member refid="class_bomb_1_1_classic_bomb_controller_1a17ce20335ca47e2afd7ad7e0e64e0c98" prot="private" virt="non-virtual"><scope>Bomb::ClassicBombController</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

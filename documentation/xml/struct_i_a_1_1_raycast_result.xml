@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_i_a_1_1_raycast_result" kind="struct" language="C#" prot="public">
+    <compoundname>IA::RaycastResult</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_i_a_1_1_raycast_result_1a3b953d866af94188bf7d0b2400d93140" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_i_a_1_1_touch_data" kindref="compound">TouchData</ref></type>
+        <definition>TouchData IA.RaycastResult.top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <qualifiedname>IA.RaycastResult.top</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/RaycastResult.cs" line="5" column="26" bodyfile="IA/RaycastResult.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_a_1_1_raycast_result_1a9fed4a4634a0a259248ec6f42e495df1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_i_a_1_1_touch_data" kindref="compound">TouchData</ref></type>
+        <definition>TouchData IA.RaycastResult.right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <qualifiedname>IA.RaycastResult.right</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/RaycastResult.cs" line="6" column="26" bodyfile="IA/RaycastResult.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_a_1_1_raycast_result_1ae9f4242ad4fcfc04dc5945238ebe37be" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_i_a_1_1_touch_data" kindref="compound">TouchData</ref></type>
+        <definition>TouchData IA.RaycastResult.bottom</definition>
+        <argsstring></argsstring>
+        <name>bottom</name>
+        <qualifiedname>IA.RaycastResult.bottom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/RaycastResult.cs" line="7" column="26" bodyfile="IA/RaycastResult.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_i_a_1_1_raycast_result_1a6760313eb0b8ef0e2b531598c0c2ca61" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_i_a_1_1_touch_data" kindref="compound">TouchData</ref></type>
+        <definition>TouchData IA.RaycastResult.left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <qualifiedname>IA.RaycastResult.left</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/RaycastResult.cs" line="8" column="26" bodyfile="IA/RaycastResult.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_i_a_1_1_raycast_result_1a69724d997decbbe11403648c6cf1d184" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IA.RaycastResult.ContainsBomb</definition>
+        <argsstring>()</argsstring>
+        <name>ContainsBomb</name>
+        <qualifiedname>IA.RaycastResult.ContainsBomb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="IA/RaycastResult.cs" line="10" column="14" bodyfile="IA/RaycastResult.cs" bodystart="10" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>IA.RaycastResult</label>
+        <link refid="struct_i_a_1_1_raycast_result"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>bottom</edgelabel>
+          <edgelabel>left</edgelabel>
+          <edgelabel>right</edgelabel>
+          <edgelabel>top</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IA.TouchData</label>
+        <link refid="struct_i_a_1_1_touch_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="IA/RaycastResult.cs" line="3" column="11" bodyfile="IA/RaycastResult.cs" bodystart="4" bodyend="14"/>
+    <listofallmembers>
+      <member refid="struct_i_a_1_1_raycast_result_1ae9f4242ad4fcfc04dc5945238ebe37be" prot="public" virt="non-virtual"><scope>IA::RaycastResult</scope><name>bottom</name></member>
+      <member refid="struct_i_a_1_1_raycast_result_1a69724d997decbbe11403648c6cf1d184" prot="public" virt="non-virtual"><scope>IA::RaycastResult</scope><name>ContainsBomb</name></member>
+      <member refid="struct_i_a_1_1_raycast_result_1a6760313eb0b8ef0e2b531598c0c2ca61" prot="public" virt="non-virtual"><scope>IA::RaycastResult</scope><name>left</name></member>
+      <member refid="struct_i_a_1_1_raycast_result_1a9fed4a4634a0a259248ec6f42e495df1" prot="public" virt="non-virtual"><scope>IA::RaycastResult</scope><name>right</name></member>
+      <member refid="struct_i_a_1_1_raycast_result_1a3b953d866af94188bf7d0b2400d93140" prot="public" virt="non-virtual"><scope>IA::RaycastResult</scope><name>top</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

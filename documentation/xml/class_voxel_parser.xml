@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_voxel_parser" kind="class" language="C#" prot="public">
+    <compoundname>VoxelParser</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_voxel_parser_1a0a27f35e4e30390ce7ab6aaa1a19c363" prot="public" static="no" mutable="no">
+        <type>TextAsset</type>
+        <definition>TextAsset VoxelParser.file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <qualifiedname>VoxelParser.file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelParser.cs" line="10" column="22" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_parser_1af1b45ef26b97e4ab98ad84e04b0499cc" prot="public" static="no" mutable="no">
+        <type><ref refid="class_voxel_data" kindref="compound">VoxelData</ref></type>
+        <definition>VoxelData VoxelParser.voxelData</definition>
+        <argsstring></argsstring>
+        <name>voxelData</name>
+        <qualifiedname>VoxelParser.voxelData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelParser.cs" line="12" column="22" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_parser_1a0562b7526fa1b854527217b257a40f56" prot="public" static="no" mutable="no">
+        <type>JobHandle</type>
+        <definition>JobHandle VoxelParser.parserJobHandle</definition>
+        <argsstring></argsstring>
+        <name>parserJobHandle</name>
+        <qualifiedname>VoxelParser.parserJobHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelParser.cs" line="15" column="22" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_voxel_parser_1ade883f57cadbd77106c928eea607e555" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_ply_voxel_parse_job" kindref="compound">PlyVoxelParseJob</ref></type>
+        <definition>PlyVoxelParseJob VoxelParser.parseJob</definition>
+        <argsstring></argsstring>
+        <name>parseJob</name>
+        <qualifiedname>VoxelParser.parseJob</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelParser.cs" line="16" column="30" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_voxel_parser_1a5a54e58b18219f8fb992c18370690533" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool VoxelParser.isParsing</definition>
+        <argsstring></argsstring>
+        <name>isParsing</name>
+        <qualifiedname>VoxelParser.isParsing</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelParser.cs" line="17" column="18" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_voxel_parser_1af8cb98bc1eef8d08cc8ec811ee6b1826" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelParser.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>VoxelParser.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelParser.cs" line="20" column="18" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="20" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_voxel_parser_1a5aa4d48158c25d45fc9695c6170ca539" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VoxelParser.LateUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>LateUpdate</name>
+        <qualifiedname>VoxelParser.LateUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/VoxelParser.cs" line="47" column="18" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="47" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>VoxelParser</label>
+        <link refid="class_voxel_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>VoxelData</label>
+        <link refid="class_voxel_data"/>
+      </node>
+      <node id="1">
+        <label>VoxelParser</label>
+        <link refid="class_voxel_parser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>voxelData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="VoxelMesher/VoxelParser.cs" line="8" column="7" bodyfile="VoxelMesher/VoxelParser.cs" bodystart="9" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_voxel_parser_1a0a27f35e4e30390ce7ab6aaa1a19c363" prot="public" virt="non-virtual"><scope>VoxelParser</scope><name>file</name></member>
+      <member refid="class_voxel_parser_1a5a54e58b18219f8fb992c18370690533" prot="private" virt="non-virtual"><scope>VoxelParser</scope><name>isParsing</name></member>
+      <member refid="class_voxel_parser_1a5aa4d48158c25d45fc9695c6170ca539" prot="private" virt="non-virtual"><scope>VoxelParser</scope><name>LateUpdate</name></member>
+      <member refid="class_voxel_parser_1ade883f57cadbd77106c928eea607e555" prot="private" virt="non-virtual"><scope>VoxelParser</scope><name>parseJob</name></member>
+      <member refid="class_voxel_parser_1a0562b7526fa1b854527217b257a40f56" prot="public" virt="non-virtual"><scope>VoxelParser</scope><name>parserJobHandle</name></member>
+      <member refid="class_voxel_parser_1af8cb98bc1eef8d08cc8ec811ee6b1826" prot="private" virt="non-virtual"><scope>VoxelParser</scope><name>Start</name></member>
+      <member refid="class_voxel_parser_1af1b45ef26b97e4ab98ad84e04b0499cc" prot="public" virt="non-virtual"><scope>VoxelParser</scope><name>voxelData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_job_voxel_data" kind="struct" language="C#" prot="public">
+    <compoundname>JobVoxelData</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_job_voxel_data_1aa45d0cc777c9ccc09a538b1534c0cc81" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int JobVoxelData.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>JobVoxelData.width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelData.cs" line="50" column="16" bodyfile="VoxelMesher/core/VoxelData.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_job_voxel_data_1af6b51ac9f05cbf25f9779d5fc528f34e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int JobVoxelData.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>JobVoxelData.height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelData.cs" line="51" column="16" bodyfile="VoxelMesher/core/VoxelData.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_job_voxel_data_1a85bf725682bfc6f58a2c69af71e05e15" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int JobVoxelData.depth</definition>
+        <argsstring></argsstring>
+        <name>depth</name>
+        <qualifiedname>JobVoxelData.depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelData.cs" line="52" column="16" bodyfile="VoxelMesher/core/VoxelData.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_job_voxel_data_1a598895e465337245d9d857dd9598b048" prot="public" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 JobVoxelData.origin</definition>
+        <argsstring></argsstring>
+        <name>origin</name>
+        <qualifiedname>JobVoxelData.origin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelData.cs" line="53" column="20" bodyfile="VoxelMesher/core/VoxelData.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_job_voxel_data_1a04a2af09917915a5199729e3952c1ef7" prot="public" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 JobVoxelData.scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>JobVoxelData.scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelData.cs" line="54" column="20" bodyfile="VoxelMesher/core/VoxelData.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_job_voxel_data_1af94ea4b3d54862b651f6f4d61607373d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool JobVoxelData.canExplode</definition>
+        <argsstring></argsstring>
+        <name>canExplode</name>
+        <qualifiedname>JobVoxelData.canExplode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VoxelMesher/core/VoxelData.cs" line="55" column="17" bodyfile="VoxelMesher/core/VoxelData.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VoxelMesher/core/VoxelData.cs" line="49" column="7" bodyfile="VoxelMesher/core/VoxelData.cs" bodystart="49" bodyend="56"/>
+    <listofallmembers>
+      <member refid="struct_job_voxel_data_1af94ea4b3d54862b651f6f4d61607373d" prot="public" virt="non-virtual"><scope>JobVoxelData</scope><name>canExplode</name></member>
+      <member refid="struct_job_voxel_data_1a85bf725682bfc6f58a2c69af71e05e15" prot="public" virt="non-virtual"><scope>JobVoxelData</scope><name>depth</name></member>
+      <member refid="struct_job_voxel_data_1af6b51ac9f05cbf25f9779d5fc528f34e" prot="public" virt="non-virtual"><scope>JobVoxelData</scope><name>height</name></member>
+      <member refid="struct_job_voxel_data_1a598895e465337245d9d857dd9598b048" prot="public" virt="non-virtual"><scope>JobVoxelData</scope><name>origin</name></member>
+      <member refid="struct_job_voxel_data_1a04a2af09917915a5199729e3952c1ef7" prot="public" virt="non-virtual"><scope>JobVoxelData</scope><name>scale</name></member>
+      <member refid="struct_job_voxel_data_1aa45d0cc777c9ccc09a538b1534c0cc81" prot="public" virt="non-virtual"><scope>JobVoxelData</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

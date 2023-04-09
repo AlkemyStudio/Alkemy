@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_2c56ce8104ec34f09ff7361d46438040" kind="dir">
+    <compoundname>VoxelMesher</compoundname>
+    <innerdir refid="dir_c35d8822243b4962c17aa786959091ad">VoxelMesher/core</innerdir>
+    <innerfile refid="_multi_voxel_mesh_generator_8cs">MultiVoxelMeshGenerator.cs</innerfile>
+    <innerfile refid="_multi_voxel_parser_8cs">MultiVoxelParser.cs</innerfile>
+    <innerfile refid="_voxel_graph_8cs">VoxelGraph.cs</innerfile>
+    <innerfile refid="_voxel_mesh_filter_8cs">VoxelMeshFilter.cs</innerfile>
+    <innerfile refid="_voxel_parser_8cs">VoxelParser.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VoxelMesher/"/>
+  </compounddef>
+</doxygen>

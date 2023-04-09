@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespace_bomb" kind="namespace" language="C#">
+    <compoundname>Bomb</compoundname>
+    <innerclass refid="class_bomb_1_1_base_bomb_controller" prot="public">Bomb::BaseBombController</innerclass>
+    <innerclass refid="class_bomb_1_1_base_push_bomb_controller" prot="public">Bomb::BasePushBombController</innerclass>
+    <innerclass refid="struct_bomb_1_1_bomb_data" prot="public">Bomb::BombData</innerclass>
+    <innerclass refid="class_bomb_1_1_classic_bomb_controller" prot="public">Bomb::ClassicBombController</innerclass>
+    <innerclass refid="class_bomb_1_1_explosion" prot="public">Bomb::Explosion</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Bomb/BaseBombController.cs" line="13" column="1"/>
+  </compounddef>
+</doxygen>
