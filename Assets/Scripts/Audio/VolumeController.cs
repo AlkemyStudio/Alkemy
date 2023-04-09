@@ -59,6 +59,10 @@ namespace Audio
             isUpdatingToggle = false;
         }
         
+        /// <summary>
+        /// Sets the slider value to 0 if the toggle is on.
+        /// </summary>
+        /// <param name="value">The new value of the toggle.</param>
         private void HandleToggleValueChanged(bool value)
         {
             if (isUpdatingToggle)

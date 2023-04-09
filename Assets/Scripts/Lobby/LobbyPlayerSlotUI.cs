@@ -20,7 +20,6 @@ namespace Lobby
         private int _playerIndex;
         private LobbyCharacterRegistry _lobbyCharacterRegistry;
         private GameObject _characterGameObject;
-        private int _previousCharacterIndex = -1;
 
         public bool IsDisable => _playerIndex == -1;
         
@@ -30,11 +29,9 @@ namespace Lobby
                 if (readyMark != null) {
                     readyMark.SetActive(playerState.IsReady);
                 }
+                UpdateCharacterRenderer(playerState.CharacterIndex);
+            } catch {
 
-                if (_previousCharacterIndex != playerState.CharacterIndex) {
-                    UpdateCharacterRenderer(playerState.CharacterIndex);
-                }
-            } catch(Exception e) {
             }
             // TODO: Update player connection state
         }
@@ -46,7 +43,6 @@ namespace Lobby
                 Destroy(_characterGameObject);
             }
             
-            _previousCharacterIndex = characterIndex;
             GameObject prefab = _lobbyCharacterRegistry.GetPrefabWithIndex(characterIndex);
             GameObject newGameObject = Instantiate(prefab, characterGameObjectPosition.transform);
             _characterGameObject = newGameObject;

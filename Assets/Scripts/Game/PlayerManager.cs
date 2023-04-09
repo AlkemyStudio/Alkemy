@@ -50,6 +50,9 @@ namespace Game
             DoSpawnPlayers();
         }
 
+        // This function is called when the game is over.
+        // It destroys all of the instantiated player objects and clears the list of input handlers.
+        // This is done to ensure that the game is in a known state.
         private void ClearOldPlayer()
         {
             _playerInputHandlers.Clear();
@@ -58,7 +61,10 @@ namespace Game
             }
             _instantiatedPlayer.Clear();
         }
-        
+
+        // This method spawns the players and assigns them a player input handler.
+        // It also adds a listener to the OnDeath event of each player's entity health component.
+
         private void DoSpawnPlayers()
         {
 #if UNITY_EDITOR
@@ -90,6 +96,10 @@ namespace Game
             _alivePlayerCount = _instantiatedPlayer.Count;
         }
         
+        // When a player dies, this method is called.
+        // It creates an explosion object, and destroys the player object.
+        // It also starts a coroutine to check if the game should end.
+
         private void OnPlayerDeath(GameObject player)
         {
             VoxelParser voxelParser = player.GetComponentInChildren<VoxelParser>();
@@ -133,6 +143,8 @@ namespace Game
             voxelGraph.enabled = true;
         }
         
+        // This code controls the logic of the game
+        // It is called when the game is over.
         private IEnumerator EndGame()
         {
             yield return new WaitForSeconds(timeBeforeEndGame);

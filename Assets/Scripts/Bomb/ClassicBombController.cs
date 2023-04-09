@@ -10,6 +10,8 @@ namespace Bomb
 
         private static readonly int FlickerSpeed = Shader.PropertyToID("_FlickerSpeed");
 
+        //This code is used to update the bomb's appearance to make it look like it is burning.
+        //It uses a curve to change the speed of the flickering based on how long the bomb has been alive.
         private void Update()
         {
             float bombLifeTime = Mathf.Min(Time.time - spawnTime, fuseTime) / fuseTime;

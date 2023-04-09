@@ -51,6 +51,10 @@ namespace Lobby
             gamePlayerInputManager.SetPlayerHandler(this);
         }
 
+        // This function will be called when a player joins the lobby.
+        // If the player has already joined the lobby, it will update the UI.
+        // If it is a new player, it will set the first selectable character, create a PlayerState, and update the UI.
+
         public void HandlePlayerJoined(PlayerInput playerInput)
         {
             if (LobbyPlayerStates.ContainsKey(playerInput.playerIndex))
@@ -80,6 +84,10 @@ namespace Lobby
             CreateInputBindings(playerInput);
         }
 
+        //This code is used to handle the player input
+        //The player input is handled by the PlayerInputHandler class
+        //The PlayerInputHandler class is attached to the PlayerInput object
+
         private void CreateInputBindings(PlayerInput playerInput)
         {
             PlayerInputHandler playerInputHandler = playerInput.GetComponent<PlayerInputHandler>();
@@ -88,6 +96,9 @@ namespace Lobby
             playerInputHandler.OnCancel += OnCancelHandler;
         }
         
+       // This function is called whenever a player leaves the lobby.
+       // It updates the LobbyPlayerStates dictionary and then calls the UpdateSlotUI function in the LobbyUI class.
+
         public void HandlePlayerLeft(PlayerInput playerInput)
         {
             if (!LobbyPlayerStates.ContainsKey(playerInput.playerIndex)) return;
@@ -98,10 +109,12 @@ namespace Lobby
 
         public void OnPlayerRemoveHandler(int playerIndex)
         {
+            // Remove the player from the lobby
             if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
             lobbyCharacterRegistry.SetSelectable(LobbyPlayerStates[playerIndex].CharacterIndex, false);
             LobbyPlayerStates.Remove(playerIndex);
 
+            // If the removed player was the first player, find out who is the first player now
             if (_firstPlayerIndex == playerIndex)
             {
                 if (gamePlayerInputManager.GetPlayerCount() > 0)
@@ -110,9 +123,16 @@ namespace Lobby
                     _firstPlayerIndex = -1;
             }
 
+            // Disable the player slot UI
             lobbyUI.DisableSlotUI(playerIndex);
+
+            // Remove the player from the game
             gamePlayerInputManager.RemovePlayer(playerIndex);
         }
+
+
+        // Gets the player index of the first connected player in the lobby.
+        // Returns -1 if no players are connected.
 
         private int GetFirstConnectedPlayerIndex()
         {
@@ -129,25 +149,35 @@ namespace Lobby
         
         private void OnConfirmHandler(int playerIndex)
         {
+            // If the player isn't in the lobby, return
             if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
             
             if (LobbyPlayerStates[playerIndex].IsReady == false)
             {
+                // Set the player's ready state to true
                 SetPlayerReady(playerIndex, true);
 
+                // If all players are ready, show the start game text
                 if (IsAllPlayersReady())
                 {
                     lobbyUI.ShowStartGameText();
                 }
 
+                // Update the slot UI
                 lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerIndex]);
                 return;
             }
 
+            // If the player is already ready and they aren't the first player, return
             if (_firstPlayerIndex != playerIndex || !IsAllPlayersReady()) return;
 
+            // Start the game
             StartGame();
         }
+
+        // This function will load the scene that the player has selected in the lobby.
+        // It will also pass the list of players that have been selected to the scene
+        // so that the scene knows which players are in the game.
 
         private void StartGame()
         {
@@ -157,6 +187,9 @@ namespace Lobby
             SceneManager.LoadScene(sceneBuildIndexToLoad);
         }
 
+        // <summary>
+        // Disable all the player input controls for the players in the lobby.
+        // </summary>
         private void DisableAllPlayerInputControls()
         {
             foreach (PlayerState playerState in LobbyPlayerStates.Values)
@@ -165,14 +198,17 @@ namespace Lobby
                 playerInputHandler.OnDirection -= OnDirectionHandler;
                 playerInputHandler.OnConfirm -= OnConfirmHandler;
                 playerInputHandler.OnCancel -= OnCancelHandler;
-                
+
                 playerInputHandler.DisableInput();
             }
         }
+
         
         public void ReturnToMainMenu()
         {
+            // Destroy the gamePlayerInputManager object
             Destroy(gamePlayerInputManager.gameObject);
+            // Load the main menu scene
             SceneManager.LoadScene(0);
         }
         
@@ -186,6 +222,10 @@ namespace Lobby
             OnDirectionHandler(Vector2.right, playerIndex);
         }
 
+        // This function is called when a player moves the character selection wheel on the lobby menu.
+        // It moves the character selection wheel to the left or right, depending on the direction
+        // the player moved the wheel.
+        // It also updates the player's character index.
         private void OnDirectionHandler(Vector2 direction, int playerIndex)
         {
             if (!LobbyPlayerStates.ContainsKey(playerIndex)) return;
@@ -210,6 +250,11 @@ namespace Lobby
             lobbyUI.UpdateSlotUI(LobbyPlayerStates[playerIndex]);
         }
 
+
+
+        // Checks if all players are ready and if the number of players is greater than the minimum required to start the game.
+        // Returns true if all players are ready and the minimum number of players is reached, false otherwise.
+
         private bool IsAllPlayersReady()
         {
             return 
@@ -217,6 +262,11 @@ namespace Lobby
                 LobbyPlayerStates.Count >= minPlayerCountToStart;
         }
         
+        /// <summary>
+        /// This function is called when a player presses the cancel button on the lobby menu.
+        /// If the player is ready, it will set the player's ready state to false.
+        /// If the player is not ready, it will return the player to the main menu.
+        /// </summary>
         private void OnCancelHandler(int playerIndex)
         {
             if (!LobbyPlayerStates.ContainsKey(playerIndex)) 
@@ -230,6 +280,10 @@ namespace Lobby
             lobbyUI.HideStartGameText();
         }
         
+        /// <summary>
+        /// This function is called when a player presses the start button on the lobby menu.
+        /// If the player is the first player in the lobby, it will start the game.
+        /// </summary>
         private void SetIsConnected(int playerIndex, bool state)
         {
             PlayerState playerState = LobbyPlayerStates[playerIndex];
@@ -237,6 +291,10 @@ namespace Lobby
             LobbyPlayerStates[playerIndex] = playerState;
         }
         
+        /// <summary>
+        /// This function is called when a player presses the start button on the lobby menu.
+        /// If the player is the first player in the lobby, it will start the game.
+        /// </summary>
         private void SetPlayerReady(int playerIndex, bool state)
         {
             PlayerState playerState = LobbyPlayerStates[playerIndex];
@@ -244,6 +302,10 @@ namespace Lobby
             LobbyPlayerStates[playerIndex] = playerState;
         }
 
+        /// <summary>
+        /// This function is called when a player presses the start button on the lobby menu.
+        /// If the player is the first player in the lobby, it will start the game.
+        /// </summary>
         private void SetPlayerCharacterIndex(int playerIndex, int characterIndex)
         {
             PlayerState playerState = LobbyPlayerStates[playerIndex];

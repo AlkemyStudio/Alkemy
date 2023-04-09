@@ -19,6 +19,12 @@ namespace IA
 
 		public void Init()
 		{
+			// This function is responsible for generating the terrain for the game.
+			// The terrain is a 2D array of ints, each representing a type of tile.
+			// The terrain is surrounded by a border of indestructible walls.
+			// The following code iterates through each tile in the terrain, setting
+			// the tile to a wall if it is not on the border, and to an indestructible
+			// wall if it is on the border.
 			for (int y = 0; y < Height + 2; y++)
 			{
 				for (int x = 0; x < Width + 2; x++)
@@ -33,6 +39,9 @@ namespace IA
 				}
 			}
 
+			// This code is responsible for creating the four corners of the map.
+			// This is done by setting the tiles around the corners to None, thus
+			// creating a gap in the indestructible wall border.
 			// Left Top Corner
 			SetTileState(1, 1, TerrainTileState.None);
 			SetTileState(2, 1, TerrainTileState.None);

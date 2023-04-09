@@ -34,6 +34,11 @@ namespace Bomb
         protected static readonly int FuseTime = Shader.PropertyToID("_FuseTime");
         protected static readonly int SpawnTime = Shader.PropertyToID("_SpawnTime");
 
+        // This code is used to ignore collisions between three different colliders.
+        // This is done by using the Physics.IgnoreCollision function, which takes two colliders as parameters.
+        // The colliders thatBlockForces and triggerCollider are set to ignore collisions with mainCollider,
+        // and the collider mainCollider is set to ignore collisions with triggerCollider.
+        // This is done to prevent the player from being pushed by the mainCollider when they are on top of the triggerCollider.
         private void Awake()
         {
             Physics.IgnoreCollision(mainCollider, colliderThatBlockForces, true);
@@ -41,6 +46,9 @@ namespace Bomb
             Physics.IgnoreCollision(colliderThatBlockForces, triggerCollider, true);
         }
 
+        // This function is called when the game starts.
+        // It assigns the material to the mesh renderer, and sets the values of the
+        // spawn time and fuse time shader properties.
         private void Start()
         {
             spawnTime = Time.time;
@@ -49,6 +57,8 @@ namespace Bomb
             meshRenderer.sharedMaterial.SetFloat(SpawnTime, spawnTime);
         }
 
+        // Sets up the bomb controller and power, as well as setting up the game state change event handler
+        // and starting the timer for the bomb.
         public virtual void SetupBomb(PlayerBombController bombController, int bombPower)
         {
             _playerBombController = bombController;
@@ -59,12 +69,14 @@ namespace Bomb
         
         private void OnGameStateChanged(GameState gameState)
         {
+            // If the game has ended, destroy the game object that this script is attached to
             if (gameState == GameState.Ended)
             {
                 Destroy(gameObject);
             }
         }
 
+        // This function starts the fuse timer for the bomb
         protected virtual IEnumerator StartTimer()
         {
             yield return new WaitForSeconds(fuseTime);
@@ -73,14 +85,25 @@ namespace Bomb
         
         public virtual void CancelTimer()
         {
+            //  Cancel the timer by stopping all coroutines
             StopAllCoroutines();
         }
 
+                // This method checks if the bomb has already exploded.
+        // The method is called by the method IsExploded()
+        // It returns true if the bomb has already exploded, false otherwise.
         public virtual bool HasAlreadyExploded()
         {
             return _hasAlreadyExploded;
         }
+
         
+        // This method is used to explode the bomb in 4 directions.
+        // The bomb position is the position of the bomb in the terrain.
+        // The direction is the direction in which the bomb will explode. 
+        // The power is the power of the explosion.
+        // The bomb will explode in the direction given for the power given.
+
         public virtual void StartExplode()
         {
             _hasAlreadyExploded = true;
