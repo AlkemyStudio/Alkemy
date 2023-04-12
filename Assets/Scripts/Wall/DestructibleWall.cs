@@ -4,6 +4,7 @@ using Core;
 using Game;
 using Terrain;
 using UnityEngine;
+using VoxelMesher;
 
 namespace Wall
 {

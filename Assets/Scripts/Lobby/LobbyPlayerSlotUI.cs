@@ -34,7 +34,10 @@ namespace Lobby
                 if (_previousCharacterIndex != playerState.CharacterIndex) {
                     UpdateCharacterRenderer(playerState.CharacterIndex);
                 }
-            } catch(Exception e) {
+            }
+            catch
+            {
+                // ignored
             }
             // TODO: Update player connection state
         }

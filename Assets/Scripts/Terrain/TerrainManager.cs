@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Game;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Terrain
@@ -19,7 +20,8 @@ namespace Terrain
 
         [SerializeField] private List<GameObject> wallPrefabs;
         [SerializeField] private GameObject indestructibleWallPrefab;
-        [SerializeField] private GameObject floor;
+        [SerializeField] private GameObject floorPrefab;
+        [SerializeField] private GameObject boundPrefab;
 
         private TerrainEntityType[] _filledTiles;
         private List<GameObject> _previouslyInstantiated;
@@ -32,13 +34,39 @@ namespace Terrain
             _previouslyInstantiated = new List<GameObject>();
         }
 
+        private void Start()
+        {
+            GenerateUnmodifiableTerrain();
+        }
+
+        private void GenerateUnmodifiableTerrain()
+        {
+            GenerateTerrainBounds();
+            GeneratePersistentTiles();
+        }
+
+        private void GeneratePersistentTiles()
+        {
+            for (int y = 0; y < Height; y++)
+            {
+                for (int x = 0; x < Width; x++)
+                {
+                    if (x % 2 == 1 && y % 2 == 1) {
+                        InstantiateIndestructibleWall(x, y);
+                        continue;
+                    }
+                    InstantiateFloor(x, y);
+                }
+            }
+        }
+
         /// <summary>
         /// This method is used to generate the terrain
         /// </summary>
         public void GenerateTerrain()
         {
             ClearOldGeneration();
-            GenerateDefaultTerrainData();
+            GenerateTerrainData();
             GenerateSpawnsData();
             GenerateTerrainEntities();
         }
@@ -61,7 +89,7 @@ namespace Terrain
         /// <summary>
         /// This method is used to instantiate a floor
         /// </summary>
-        private void GenerateDefaultTerrainData()
+        private void GenerateTerrainData()
         {
             int arraySize = Width * Height;
             _filledTiles = new TerrainEntityType[arraySize];
@@ -87,7 +115,6 @@ namespace Terrain
             GenerateBottomRightCornerSpawn();
             GenerateTopLeftCornerSpawn();
             GenerateTopRightCornerSpawn();
-            GenerateTerrainBounds();
         }
 
         /// <summary>
@@ -146,8 +173,8 @@ namespace Terrain
         {
             for (int x = -1; x < Width + 1; x++)
             {
-                InstantiateIndestructibleWall(x, -1);
-                InstantiateIndestructibleWall(x, Height);
+                InstantiateBound(x, -1);
+                InstantiateBound(x, Height);
             }
         }
 
@@ -158,8 +185,8 @@ namespace Terrain
         {
             for (int y = 0; y < Height; y++)
             {
-                InstantiateIndestructibleWall(-1, y);
-                InstantiateIndestructibleWall(Width, y);
+                InstantiateBound(-1, y);
+                InstantiateBound(Width, y);
             }
         }
 
@@ -174,17 +201,8 @@ namespace Terrain
                 {
                     TerrainEntityType entityType = GetTerrainEntityType(x, y);
 
-                    switch (entityType)
-                    {
-                        case TerrainEntityType.Wall:
-                            InstantiateRandomWall(x, y);
-                            break;
-                        case TerrainEntityType.None:
-                            InstantiateFloor(x, y);
-                            break;
-                        case TerrainEntityType.IndestructibleEntity:
-                            InstantiateIndestructibleWall(x, y);
-                            break;
+                    if (entityType == TerrainEntityType.Wall) { 
+                        InstantiateRandomWall(x, y);
                     }
                 }
             }
@@ -197,7 +215,12 @@ namespace Terrain
         /// <param name="y">y position</param>
         public void InstantiateFloor(int x, int y)
         {
-            InstantiateEntity(floor, x, y);
+            InstantiateEntity(
+                floorPrefab,
+                x, y,
+                elevation: 0,
+                register: false
+            );
         }
 
         /// <summary>
@@ -217,7 +240,21 @@ namespace Terrain
         /// <param name="y">y position</param>
         public void InstantiateIndestructibleWall(int x, int y)
         {
-            InstantiateEntity(indestructibleWallPrefab, x, y);
+            InstantiateEntity(
+                indestructibleWallPrefab,
+                x, y,
+                register: false
+            );
+        }
+        
+        public void InstantiateBound(int x, int y)
+        {
+            InstantiateEntity(
+                boundPrefab,
+                x, y,
+                elevation: 0,
+                register: false
+            );
         }
 
         /// <summary>
@@ -226,10 +263,11 @@ namespace Terrain
         /// <param name="entity"> entity to instantiate</param>
         /// <param name="x">x position</param>
         /// <param name="y">y position</param>
-        public void InstantiateEntity(GameObject entity, int x, int y)
+        public void InstantiateEntity(GameObject entity, int x, int y, float elevation = 0.025F, bool register = true)
         {
-            GameObject instantiateGameObject = Instantiate(entity, new Vector3(x + 0.5F, 0, y + 0.5F), Quaternion.identity);
-            _previouslyInstantiated.Add(instantiateGameObject);
+            GameObject instantiateGameObject = Instantiate(entity, new Vector3(x + 0.5F, elevation, y + 0.5F), Quaternion.identity);
+            if (register)
+                _previouslyInstantiated.Add(instantiateGameObject);
         }
 
         /// <summary>

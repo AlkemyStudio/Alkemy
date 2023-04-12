@@ -10,6 +10,7 @@ using Terrain;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Utils;
+using VoxelMesher;
 using PlayerState = Lobby.PlayerState;
 
 namespace Game
